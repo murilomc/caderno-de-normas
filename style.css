@@ -1,0 +1,557 @@
+<style>
+
+body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #f7f5f5;
+      height: 100%;
+      margin: 0;
+  }
+  h1 {
+  font-size: 30px;
+ 
+}
+
+.two-lines {
+  text-align: left; /* Alinha o texto à esquerda */
+  white-space: pre-wrap;
+  margin-left: 50px;
+
+}
+
+h2 {
+  text-align-last: center;
+  font-size: 13px;
+}
+
+
+.top {
+  position: sticky;
+  top: 0;
+  background-color: #004361;
+  padding: 20px;
+  text-align: center;
+  z-index: 999;
+  width: 100%;
+}
+
+.top-topic {
+  max-width: 900px;
+  display: flex;
+
+  align-items: center;
+  margin: 0 auto;
+padding-right: 60px;
+      
+}
+
+.search-container {
+  text-align: center;
+  display: flex;
+  margin-left: auto;
+  margin-: auto; /* Alinha o conteúdo à direita */
+}
+.search-container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 300px; /* Definindo uma largura máxima para manter tudo alinhado */
+            margin: auto;
+        }
+
+        .search-container select, 
+        .search-container input, 
+        .search-container button {
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            transition: all 0.3s;
+        }
+
+        .search-container input {
+            width: 100%; 
+            border-radius: 4px;
+            outline: none;
+            border: 2px solid transparent;
+        }
+
+        .search-container input:focus {
+            border-color: #007BFF;
+        }
+
+        .search-container button {
+            background-color: #007BFF;
+            color: #FFF;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            flex: 1; 
+        }
+
+        .search-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+            width: 100%; 
+            margin-top: 10px; 
+        }
+        
+       .button-container button[type="submit"] {
+        padding: 5px 10px;
+        background-color: #4CAF50;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .container {
+            margin: 20px auto;
+          
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos da barra de navegação */
+        .navbar {
+            background-color: #333;
+            overflow: auto;
+            padding: 0 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #007BFF;
+            color: white;
+        }
+
+ /* Estilos das seções de links */
+ .sections-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; /* espaço entre as seções */
+        }
+
+        .section {
+            flex: 1;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 10px;
+        }
+
+        .links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Garante que não haja margem extra */
+}
+
+.links-list li {
+    margin-bottom: 15px; /* Espaçamento um pouco maior entre os itens */
+    background: #fdfdfd; /* Uma cor de fundo mais clara */
+    padding: 10px 15px; /* Mais espaço interno para melhor legibilidade */
+    border-radius: 8px; /* Bordas mais arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve para um efeito "elevado" */
+    transition: background 0.3s, box-shadow 0.3s; /* Suaviza a transição da sombra e do fundo */
+}
+
+.links-list li a {
+    color: #0056b3; /* Cor de link padrão */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: 500; /* Torna o texto um pouco mais grosso */
+    transition: color 0.3s; /* Suaviza a transição de cor */
+}
+
+
+.links-list li:hover {
+    background: #f0f0f0; /* Fundo um pouco mais escuro ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada ao passar o mouse */
+}
+
+    .content {
+  position: relative;
+  flex-grow: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #333333;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  text-align: justify;
+  max-width: 900px;
+  margin: 0 auto;
+ 
+}
+
+.content > section {
+  scroll-margin-top: 150px; /* ou qualquer outro valor desejado */
+}
+    section {
+      padding-top: 50px;
+     
+      }
+
+    section h2 {
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+
+.menu-toggle {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  z-index: 9999;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Estilo do menu quando visível */
+.sidebar.active {
+  left: 0;
+}
+
+/* Ajuste do conteúdo quando o menu está visível */
+.content.active {
+  margin-left: 200px;
+}
+
+/* Default styles for .sidebar */
+.sidebar {
+  padding-top: 50px;
+  position: fixed;
+  top: 0;
+  left: -200px; /* Oculta o menu lateral */
+  width: 200px;
+  height: 100vh;
+  background-color: #004361;
+  transition: left 0.3s ease;
+  color: #ffffff;
+  width: 200px;
+}
+
+.sidebar a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #ffcc00;
+}
+
+
+.menu-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: #3498DB;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+ position
+  right: auto;
+  left: 2px;
+  top: 2px;
+}
+
+.menu-btn span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-btn.active {
+  background-color: #ff6b6b;
+  z-index: 1;
+}
+
+.menu-btn.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0; /* Posiciona o menu à esquerda da tela */
+  width: 150px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu.show-menu {
+  display: block;
+}
+
+.menu a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: #333;
+}
+
+    .juridical-info {
+      background-color: #fdfdfd;
+      border: 1px solid #ddd;
+      padding-right: 25px;
+      padding-left: 25px;
+      margin-bottom: 0px;
+   
+       text-align: justify;
+    }
+
+    .juridical-info h2 {
+      font-size: 20px;
+      color: #337ab7;
+    }
+
+    .juridical-info p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .footer {
+      background-color: #004361;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+     /* Styles for screens up to 600px */
+     @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 16px;
+      }
+
+      h2 {
+        font-size: 11px;
+      }
+
+      .top-topic {
+        padding-right: 30px;
+      }
+
+      .content {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .juridical-info h2 {
+        font-size: 16px;
+      }
+
+      .juridical-info p {
+        font-size: 12px;
+      }
+    }
+
+    /* Styles for screens up to 900px */
+    @media screen and (max-width: 900px) {
+      h1 {
+        font-size: 18px;
+      }
+
+      h2 {
+        font-size: 12px;
+      }
+    }
+
+    label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            padding: 5px 10px;
+            margin-top: 10px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .highlight {
+          background-color: yellow !important;
+        }
+
+        .comentario {
+      background-color: #f0f0f0; /* Define a cor de fundo do comentário */
+      padding: 10px; /* Define um espaçamento interno de 10 pixels */
+      border: 1px solid #ccc; /* Define uma borda de 1 pixel com cor cinza */
+      margin: 10px 0; /* Define margens superiores e inferiores de 10 pixels */
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave */
+      border-radius: 5px; /* Adiciona arredondamento nas bordas */
+      margin-bottom: 15px;
+    }
+.artigo {
+
+  color:#333333;
+  margin-right: 20px; /* Espaçamento entre o ícone e o texto */
+   }
+
+   /* Media Query para telas menores, ajuste o max-width conforme necessário */
+@media (max-width: 768px) {
+  .artigo {
+    margin-right: 20px; /* Reduza o espaçamento entre o ícone e o texto em telas menores */
+  }
+}
+
+   .highlight {
+  background-color: yellow;
+ 
+}
+.topico {
+  font-weight: bold;
+}
+
+.links-area {
+  margin-top: auto; /* Move os links para a parte inferior do topo */
+  text-align-last: center;
+}
+
+.links-area ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Centraliza os links horizontalmente */
+}
+
+.links-area li {
+  margin-right: 20px;
+}
+
+.links-area a {
+  text-decoration: none;
+  color: #fff; /* Cor dos links no topo */
+}
+
+/* Estilização dos links quando o mouse passa por cima */
+.links-area a:hover {
+  text-decoration: underline;
+
+}
+
+ /* Estilo do botão de voltar ao topo */
+ #backToTop {
+            display: none; /* Inicialmente oculto */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        #backToTop:hover {
+            opacity: 0.8;
+        }
+      /* Estilo do botão */
+      #toggleButton {
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            background-color: #007BFF;
+            color: #FFF;
+            border-radius: 4px;
+            outline: none;
+            transition: background-color 0.3s; /* Adiciona transição para o hover do botão */
+        }
+
+        #toggleButton:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos para a animação */
+        #textContainer {
+            max-height: 0px;
+            overflow: hidden;
+            opacity: 0;
+            transition: opacity 0.5s, max-height 0.5s ease-in-out; /* Junta ambas transições em uma */
+            margin-top: 20px; /* Margem adicionada para afastar do botão */
+        }
+
+         /* Estilo do botão */
+         .toggleButton {
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            background-color: #007BFF;
+            color: #FFF;
+            border-radius: 4px;
+            outline: none;
+            transition: background-color 0.3s;
+        }
+
+        .toggleButton:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos para a animação */
+        .textContainer {
+            max-height: 0px;
+            overflow: hidden;
+            opacity: 0;
+            transition: opacity 0.5s, max-height 0.5s ease-in-out;
+            margin-top: 20px;
+        }
+</style>

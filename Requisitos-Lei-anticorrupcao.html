@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Caderno de Normas - Requisitos Lei Anticorrupção</title>
+
+ 
+  <!-- Hreflang para especificar o idioma -->
+  <link rel="alternate" hreflang="pt-BR" href="https://www.cadernodenormas.com.br/">
+  
+  <!-- Favicons do gov.br -->
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.gov.br/++theme++padrao_govbr/favicons/favicon-32x32.png">
+  <link rel="shortcut icon" type="image/png" href="https://www.gov.br/++theme++padrao_govbr/favicons/favicon-48x48.png">
+
+
+<style>
+  .anticorrupcao-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .anticorrupcao-table th, .anticorrupcao-table td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+  }
+
+  .anticorrupcao-table th {
+    background-color: #003366; /* Azul escuro */
+    color: white;
+  }
+
+  .anticorrupcao-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  .anticorrupcao-table tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+
+  .obs {
+    background-color: #fdd835;
+    font-style: italic; /* Mudança para itálico ao invés de negrito para diferenciar as observações */
+    font-weight: normal;
+  }
+
+.title-row th {
+    background-color: #007bff; /* Azul mais claro para o título */
+    color: white;
+    font-size: 1.5em; /* Tamanho maior para o título */
+  }
+
+ /* Estilo adicional para os campos de entrada de texto */
+  input[type="text"] {
+    width: 100%; /* Faz com que o campo de texto ocupe toda a largura da célula */
+    box-sizing: border-box; /* Garante que o padding não aumente a largura do campo */
+  }
+
+  /* Estilo para o botão de impressão */
+  .print-button {
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .print-button i {
+    margin-right: 8px;
+  }
+
+/* Estilo do link */
+  .tooltip-link {
+    position: relative;
+    text-decoration: none;
+    color: #007bff;
+  }
+
+  /* Estilo do tooltip */
+  .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+   
+    /* Posicionamento */
+    position: absolute;
+    z-index: 1;
+    top: 125%; /* Posiciona abaixo do link */
+    left: 50%;
+    margin-left: -60px; /* Metade da largura para centralizar */
+
+    /* Efeitos */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  /* Exibe o tooltip quando o usuário passa o mouse sobre o link */
+  .tooltip-link:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+#ato-ilicito {
+            width: 500px; /* Define a largura do campo select */
+            height: 35px; /* Define a altura do campo select, isso afeta a barra de rolagem interna e não o número de opções visíveis ao abrir o dropdown */
+            border: 1px solid #ccc; /* Opcional: ajusta a borda do campo */
+            border-radius: 4px; /* Opcional: adiciona bordas arredondadas */
+            padding: 5px; /* Opcional: adiciona um pouco de espaço interno para que o texto não fique muito próximo da borda */
+        }
+
+
+</style>
+</head>
+<body>
+
+<table class="anticorrupcao-table">
+<tbody><tr class="title-row">
+    <th colspan="4">Caderno de Normas do Direito Administrativo Sancionador - Requisitos para enquadramento de fatos/atos cometidos por empresas na Lei anticorrupção</th>
+  </tr>
+
+
+  <tr>
+    <th>nº</th>
+    <th>Requisito</th>
+    <th>Sim/Não</th>
+    <th>Detalhamento da Pessoa jurídica/Pessoa natural/Benefício/Patrimônio público e/ou Princípio lesionados/Enquadramento legal/Vantagem indevida</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Envolve a participação de pessoa jurídica? (<a href="#" class="tooltip-link">art. 2º<span class="tooltip-text">Art.
+ 2º As pessoas jurídicas serão responsabilizadas objetivamente, nos 
+âmbitos administrativo e civil, pelos atos lesivos previstos nesta Lei 
+praticados em seu interesse ou benefício, exclusivo ou não. </span></a>)</td>
+    <td><select><option value="" selected="selected">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select></td>
+    <td><input type="text" name="descricao1"></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>É possível identificar a pessoa natural que agiu em nome da empresa e o seu perfil? (<a href="#" class="tooltip-link">art. 3º<span class="tooltip-text">Art. 3º A responsabilização da pessoa jurídica não exclui a responsabilidade individual de seus dirigentes ou administradores ou de qualquer pessoa natural, autora, coautora ou partícipe do ato ilícito.  
+praticados em seu interesse ou benefício, exclusivo ou não. </span></a>)</td>
+    <td><select><option value="" selected="selected">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select></td>
+    <td><input type="text" name="descricao1"></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>O ato foi praticado em interesse ou benefício, exclusivo ou não? (<a href="#" class="tooltip-link">art. 2º<span class="tooltip-text">Art.
+ 2º As pessoas jurídicas serão responsabilizadas objetivamente, nos 
+âmbitos administrativo e civil, pelos atos lesivos previstos nesta Lei 
+praticados em seu interesse ou benefício, exclusivo ou não. </span></a>)</td>
+    <td><select><option value="" selected="selected">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select></td>
+    <td><input type="text" name="descricao2"></td>
+  </tr>
+<tr>
+    <td>4</td>
+    <td>Atentou contra o patrimônio público nacional? (<a href="#" class="tooltip-link">art. 5º, caput<span class="tooltip-text">Art.
+ 5º Constituem atos lesivos à administração pública, nacional ou 
+estrangeira, para os fins desta Lei, todos aqueles praticados pelas 
+pessoas jurídicas mencionadas no parágrafo único do art. 1º , que 
+atentem contra o patrimônio público nacional ou estrangeiro, contra 
+princípios da administração pública ou contra os compromissos 
+internacionais assumidos pelo Brasil, assim definidos:  </span></a>)</td>
+    <td><select><option value="" selected="selected">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select></td>
+    <td><input type="text" name="descricao3"></td>
+  </tr>
+<tr>
+    <td>5</td>
+    <td>Atentou contra princípio da Administração pública? (<a href="#" class="tooltip-link">art. 5º, caput<span class="tooltip-text">Art.
+ 5º Constituem atos lesivos à administração pública, nacional ou 
+estrangeira, para os fins desta Lei, todos aqueles praticados pelas 
+pessoas jurídicas mencionadas no parágrafo único do art. 1º , que 
+atentem contra o patrimônio público nacional ou estrangeiro, contra 
+princípios da administração pública ou contra os compromissos 
+internacionais assumidos pelo Brasil, assim definidos:  </span></a>)</td>
+     <td><select><option value="" selected="selected">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select></td>
+    <td><input type="text" name="descricao4"></td>
+  </tr>
+<tr>
+    <td>6</td>
+    <td>Atentou contra compromissos internacionais assumidos pelo Brasil? (<a href="#" class="tooltip-link">art. 5º, caput<span class="tooltip-text">Art.
+ 5º Constituem atos lesivos à administração pública, nacional ou 
+estrangeira, para os fins desta Lei, todos aqueles praticados pelas 
+pessoas jurídicas mencionadas no parágrafo único do art. 1º , que 
+atentem contra o patrimônio público nacional ou estrangeiro, contra 
+princípios da administração pública ou contra os compromissos 
+internacionais assumidos pelo Brasil, assim definidos:  </span></a>)</td>
+     <td><select><option value="" selected="selected">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select></td>
+    <td><input type="text" name="descricao5"></td>
+  </tr>
+<tr>
+    <td>7</td>
+    <td>O fato/ato identificado é passível de enquadramento em algum inciso do art. 5º? Se sim, selecione o ilícito!</td>
+     <td><select><option value="" selected="selected">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select></td>
+<td>
+<select id="ato-ilicito" name="ato-ilicito">
+Selecione:
+<option value="1" selected="selected">------</option>
+    <option value="2">I - Prometer, oferecer ou dar, direta ou 
+indiretamente, vantagem indevida a agente público, ou a terceira pessoa a
+ ele relacionada;</option>
+    <option value="3">II - Comprovadamente, financiar, custear, 
+patrocinar ou de qualquer modo subvencionar a prática dos atos ilícitos 
+previstos nesta Lei;</option>
+    <option value="4">III - Comprovadamente, utilizar-se de interposta 
+pessoa física ou jurídica para ocultar ou dissimular seus reais 
+interesses ou a identidade dos beneficiários dos atos praticados;</option>
+    <option value="5a">IV - no tocante a licitações e contratos: a) 
+Frustrar ou fraudar, mediante ajuste, combinação ou qualquer outro 
+expediente, o caráter competitivo de procedimento licitatório público;</option>
+    <option value="6b">IV - no tocante a licitações e contratos: b) 
+Impedir, perturbar ou fraudar a realização de qualquer ato de 
+procedimento licitatório público;</option>
+    <option value="7c">IV - no tocante a licitações e contratos: c) 
+Afastar ou procurar afastar licitante, por meio de fraude ou 
+oferecimento de vantagem de qualquer tipo;</option>
+    <option value="8d">IV - no tocante a licitações e contratos: d) Fraudar licitação pública ou contrato dela decorrente;</option>
+    <option value="9e">IV - no tocante a licitações e contratos: e) 
+Criar, de modo fraudulento ou irregular, pessoa jurídica para participar
+ de licitação pública ou celebrar contrato administrativo;</option>
+    <option value="10f">IV - no tocante a licitações e contratos: f) 
+Obter vantagem ou benefício indevido, de modo fraudulento, de 
+modificações ou prorrogações de contratos celebrados com a administração
+ pública, sem autorização em lei, no ato convocatório da licitação 
+pública ou nos respectivos instrumentos contratuais;</option>
+    <option value="11g">IV - no tocante a licitações e contratos: g) 
+Manipular ou fraudar o equilíbrio econômico-financeiro dos contratos 
+celebrados com a administração pública;</option>
+    <option value="12">V - Dificultar atividade de investigação ou 
+fiscalização de órgãos, entidades ou agentes públicos, ou intervir em 
+sua atuação, inclusive no âmbito das agências reguladoras e dos órgãos 
+de fiscalização do sistema financeiro nacional</option>
+</select>
+
+</td>
+  </tr>
+<tr>
+    <td>8</td>
+    <td>É possível identificar a vantagem indevida obtida? (<a href="#" class="tooltip-link">art. 6º, inciso I<span class="tooltip-text">I
+ - multa, no valor de 0,1% (um décimo por cento) a 20% (vinte por cento)
+ do faturamento bruto do último exercício anterior ao da instauração do 
+processo administrativo, excluídos os tributos, a qual nunca será 
+inferior à vantagem auferida, quando for possível sua estimação; e </span></a>)</td>
+     <td><select><option value="" selected="selected">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select></td>
+    <td><input type="text" name="descricao7"></td>
+  </tr>
+<tr>
+    <td>9</td>
+    <td>A vantagem indevida pode se estimada? (<a href="#" class="tooltip-link">art. 6º, inciso I<span class="tooltip-text">I
+ - multa, no valor de 0,1% (um décimo por cento) a 20% (vinte por cento)
+ do faturamento bruto do último exercício anterior ao da instauração do 
+processo administrativo, excluídos os tributos, a qual nunca será 
+inferior à vantagem auferida, quando for possível sua estimação; e </span></a>)</td>
+     <td><select><option value="" selected="selected">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select></td>
+    <td><input type="text" name="descricao1"></td>
+  </tr>
+  <!-- Repetir as linhas abaixo para os demais itens da tabela -->
+  <tr>
+    <td>...</td>
+    <td>...</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <!-- Observações -->
+  <tr class="obs">
+    <td colspan="4">Obs1: Os item de 3 a 5 são alternativos, podendo o fato/ato atender somente 1 ou todos eles.</td>
+  </tr>
+  <tr class="obs">
+    <td colspan="4">Obs2: A não estimativa da vantagem indevida não é um requisito excludente.</td>
+  </tr>
+</tbody></table>
+
+<!-- Botões de ação após a tabela -->
+<div class="action-buttons">
+  <button onclick="window.print();" class="print-button">
+    🖨️ Imprimir
+  </button>
+  <button onclick="resetForm();" class="print-button">
+    🗑️ Limpar
+  </button>
+</div>
+
+<script>
+function resetForm() {
+  // Reseta os seletores para o valor padrão
+  document.querySelectorAll('.anticorrupcao-table select').forEach(function(select) {
+    select.selectedIndex = 0;
+  });
+  
+  // Limpa todos os campos de texto
+  document.querySelectorAll('.anticorrupcao-table input[type="text"]').forEach(function(input) {
+    input.value = '';
+  });
+}
+</script>
+
+
+
+</body></html>

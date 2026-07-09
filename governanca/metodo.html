@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Método em cinco passos</title>
+  <meta name="description" content="Roteiro prático em cinco passos para integrar governança e gestão.">
+  <style>
+    :root {
+      --bg: #0a0f1e;
+      --line: rgba(255,255,255,0.12);
+      --text: #e6edf3;
+      --muted: #a6b3c6;
+      --accent: #38bdf8;
+      --accent2: #7dd3fc;
+      --ok: #22c55e;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(120% 120% at 50% 0%, #1b2744 0%, var(--bg) 60%);
+      color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header.nav {
+      position: sticky; top: 0; z-index: 30;
+      background: rgba(10,15,30,0.7); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: .8rem 1rem; }
+    .brand { display: flex; align-items: center; gap: .6rem; font-weight: 700; letter-spacing: .2px; }
+    .brand-dot { width: 10px; height: 10px; border-radius: 999px; background: var(--accent); box-shadow: 0 0 12px var(--accent); }
+    .menu a { margin-left: 1rem; font-weight: 600; opacity: .9; }
+    .menu a:hover { opacity: 1; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem 3rem; }
+    h1 { font-size: clamp(1.8rem, 3vw, 2.4rem); margin: 1.2rem 0 1rem; color: var(--accent2); text-shadow: 0 0 18px rgba(56, 189, 248, 0.25); }
+    h2 { font-size: clamp(1.3rem, 2.2vw, 1.8rem); margin: 1.2rem 0 .8rem; }
+    p { color: var(--muted); }
+    .card { background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 14px 40px rgba(0,0,0,.25); overflow: hidden; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    @media (max-width: 900px) { .grid-3, .grid-2 { grid-template-columns: 1fr; } }
+    .btn { display: inline-block; background: var(--accent); color: #00111a; font-weight: 800; padding: .8rem 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,.15); text-decoration: none; transition: transform .15s ease, box-shadow .15s ease; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(56, 189, 248, .25); text-decoration: none; }
+    footer { border-top: 1px solid var(--line); color: var(--muted); }
+    .foot { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+
+    .diagram { position: relative; border-radius: 14px; overflow: hidden; }
+    .diagram img { display: block; width: 100%; height: auto; border-radius: 14px; }
+    .hotspot { position: absolute; transform: translate(-50%, -50%); width: 14%; height: 8%; cursor: help; }
+    .tip::after {
+      content: attr(aria-label);
+      position: absolute;
+      left: 50%;
+      bottom: calc(100% + 10px);
+      transform: translateX(-50%);
+      background: rgba(0,0,0,.92);
+      color: #fff;
+      font-size: clamp(11px, 1.2vw, 14px);
+      line-height: 1.35;
+      padding: 8px 10px;
+      border-radius: 8px;
+      white-space: normal;
+      width: max-content;
+      max-width: 320px;
+      text-align: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s ease;
+      z-index: 5;
+      border: 1px solid rgba(255,255,255,.15);
+    }
+    .tip:hover::after, .tip:focus::after { opacity: 1; }
+    .tip:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .lead { font-size: 1.05rem; }
+    .list { margin: .4rem 0 1rem; padding-left: 1rem; }
+    .list li { margin: .3rem 0; color: var(--muted); }
+  </style>
+
+<style id="responsive-overrides">
+
+/* ===== Ajustes responsivos e acessibilidade ===== */
+:root{ --touch: 44px; }
+h1{ font-size: clamp(1.6rem, 3.2vw, 2.4rem); }
+h2{ font-size: clamp(1.2rem, 2.2vw, 1.8rem); }
+p, li{ font-size: clamp(0.98rem, 1.3vw, 1.05rem); }
+img, video, canvas, iframe{ max-width: 100%; height: auto; }
+.diagram{ border-radius: 14px; overflow: hidden; }
+.diagram img{ width: 100%; height: auto; display: block; }
+.menu{ flex-wrap: wrap; gap: .5rem; }
+.menu a{ padding: .5rem .7rem; border-radius: 10px; }
+@media (max-width: 640px){
+  .nav-inner{ padding: .6rem .7rem; }
+  .menu a{ font-size: .95rem; padding: .45rem .6rem; }
+}
+.container, .wrap{ max-width: 1200px; margin-inline: auto; padding: 1.4rem .9rem 2.2rem; }
+.grid-3, .grid-2{ display: grid; gap: 1rem; }
+.grid-3{ grid-template-columns: repeat(3, 1fr); }
+.grid-2{ grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 1024px){
+  .grid-3{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 900px){
+  .grid-3, .grid-2{ grid-template-columns: 1fr; }
+}
+.btn{ min-height: var(--touch); line-height: 1.1; display: inline-flex; align-items: center; justify-content: center; }
+.tip::after{ max-width: min(88vw, 360px); word-wrap: break-word; }
+@media (max-width: 480px){
+  .tip::after{ bottom: calc(100% + 6px); padding: 6px 8px; font-size: .9rem; }
+}
+.mat{ display: grid; grid-template-columns: 1.6fr 2.2fr 220px; }
+@media (max-width: 900px){
+  .mat{ grid-template-columns: 1fr; }
+  .mat .h{ display: none; }
+  .mat .r{ display: contents; }
+  .mat .r .cell{ border-right: 0; }
+  .mat .r .cell:nth-child(1)::before,
+  .mat .r .cell:nth-child(2)::before,
+  .mat .r .cell:nth-child(3)::before{
+    display: block;
+    content: attr(data-label);
+    color: var(--muted);
+    font-size: .9rem;
+    margin-bottom: .25rem;
+  }
+}
+@media (max-width: 900px){
+  .mat .r .cell:nth-child(1):not([data-label])::before{ content: "Atividade ou decisão"; }
+  .mat .r .cell:nth-child(2):not([data-label])::before{ content: "Descrição"; }
+  .mat .r .cell:nth-child(3):not([data-label])::before{ content: "Responsável"; }
+}
+@media (max-width: 480px){
+  .container, .wrap{ padding: 1rem .8rem 1.6rem; }
+  .card{ border-radius: 12px; }
+}
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+}
+
+</style>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand"><span class="brand-dot"></span> Interação Governança e Gestão</div>
+      <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="diagrama.html">Diagrama</a>
+        <a href="metodo.html">Método</a>
+        <a href="beneficios.html">Benefícios</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+
+  <h1>Método em cinco passos</h1>
+  <p class="lead">Um roteiro prático para sair do conceito e chegar à aplicação. Cada passo tem objetivos, entregáveis e artefatos.</p>
+  <div class="grid-3">
+    <div class="card" style="padding:1rem;">
+      <h2>Diagnosticar</h2>
+      <p>Mapeie maturidade, riscos e lacunas. Evidências objetivas para priorização.</p>
+      <p><a class="btn" href="passo_diagnosticar.html">Abrir passo</a></p>
+    </div>
+    <div class="card" style="padding:1rem;">
+      <h2>Integrar</h2>
+      <p>Conecte processos, metas e controles. Evite redundâncias e zonas de ninguém.</p>
+      <p><a class="btn" href="passo_integrar.html">Abrir passo</a></p>
+    </div>
+    <div class="card" style="padding:1rem;">
+      <h2>Planejar Estratégico</h2>
+      <p>Traduza direção em metas e indicadores com cadência clara.</p>
+      <p><a class="btn" href="passo_planejar_estrategico.html">Abrir passo</a></p>
+    </div>
+  </div>
+  <div class="grid-2" style="margin-top:1rem;">
+    <div class="card" style="padding:1rem;">
+      <h2>Executar e Medir</h2>
+      <p>Implemente, acompanhe, remova impedimentos, ajuste rotas.</p>
+      <p><a class="btn" href="passo_executar_medir.html">Abrir passo</a></p>
+    </div>
+    <div class="card" style="padding:1rem;">
+      <h2>Prestar Contas e Aprender</h2>
+      <p>Comunique resultados, consolide lições, fortaleça accountability.</p>
+      <p><a class="btn" href="passo_prestar_contas_aprender.html">Abrir passo</a></p>
+    </div>
+  </div>
+
+  </main>
+  <footer>
+    <div class="foot">
+      <small>© 2025 • Conteúdo autoral • Todos os direitos reservados</small>
+      <div><a class="btn" href="contato.html">Fale conosco</a></div>
+    </div>
+  </footer>
+</body>
+</html>

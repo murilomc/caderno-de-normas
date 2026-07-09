@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Caderno de Normas - Nota de regularidade de um Processo Administrativo Disciplinar</title>
+
+  <!-- Hreflang para especificar o idioma -->
+  <link rel="alternate" hreflang="pt-BR" href="https://www.cadernodenormas.com.br/">
+  
+  <!-- Favicons do gov.br -->
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.gov.br/++theme++padrao_govbr/favicons/favicon-32x32.png">
+  <link rel="shortcut icon" type="image/png" href="https://www.gov.br/++theme++padrao_govbr/favicons/favicon-48x48.png">
+
+<style>
+  .anticorrupcao-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .anticorrupcao-table th, .anticorrupcao-table td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+  }
+
+  .anticorrupcao-table th {
+    background-color: #003366; /* Azul escuro */
+    color: white;
+  }
+
+  .anticorrupcao-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  .anticorrupcao-table tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+
+  .obs {
+    background-color: #fdd835;
+    font-style: italic; /* Mudança para itálico ao invés de negrito para diferenciar as observações */
+    font-weight: normal;
+  }
+
+.title-row th {
+    background-color: #007bff; /* Azul mais claro para o título */
+    color: white;
+    font-size: 1.5em; /* Tamanho maior para o título */
+  }
+
+ /* Estilo adicional para os campos de entrada de texto */
+  input[type="text"] {
+    width: 100%; /* Faz com que o campo de texto ocupe toda a largura da célula */
+    box-sizing: border-box; /* Garante que o padding não aumente a largura do campo */
+  }
+
+  /* Estilo para o botão de impressão */
+  .print-button {
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .print-button i {
+    margin-right: 8px;
+  }
+
+/* Estilo do link */
+  .tooltip-link {
+    position: relative;
+    text-decoration: none;
+    color: #007bff;
+  }
+
+  /* Estilo do tooltip */
+  .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+   
+    /* Posicionamento */
+    position: absolute;
+    z-index: 1;
+    top: 125%; /* Posiciona abaixo do link */
+    left: 50%;
+    margin-left: -60px; /* Metade da largura para centralizar */
+
+    /* Efeitos */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  /* Exibe o tooltip quando o usuário passa o mouse sobre o link */
+  .tooltip-link:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+#ato-ilicito {
+            width: 500px; /* Define a largura do campo select */
+            height: 35px; /* Define a altura do campo select, isso afeta a barra de rolagem interna e não o número de opções visíveis ao abrir o dropdown */
+            border: 1px solid #ccc; /* Opcional: ajusta a borda do campo */
+            border-radius: 4px; /* Opcional: adiciona bordas arredondadas */
+            padding: 5px; /* Opcional: adiciona um pouco de espaço interno para que o texto não fique muito próximo da borda */
+        }
+</style>
+</head>
+<body>
+
+  <table class="anticorrupcao-table">
+    <tbody>
+      <tr class="title-row">
+        <th colspan="4">Caderno de Normas do Direito Administrativo Sancionador - Elementos da nota de regularidade de um Processo Administrativo de Responsabilização - PAR</th>
+      </tr>
+      <tr>
+        <th>nº</th>
+        <th>Aspectos formais</th>
+        <th>Sim/Não</th>
+        <th>Observação:</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>A autoridade instauradora detém competência para instauração? (<a href="#" class="tooltip-link">Art. 8º e seu caput da Lei nº 12.846/13<span class="tooltip-text">
+          Art. 8º A instauração e o julgamento de processo administrativo para apuração da responsabilidade de pessoa jurídica cabem à autoridade máxima de cada órgão ou entidade dos Poderes Executivo, Legislativo e Judiciário, que agirá de ofício ou mediante provocação, observados o contraditório e a ampla defesa.
+        </br></br>§ 1º A competência para a instauração e o julgamento do processo administrativo de apuração de responsabilidade da pessoa jurídica poderá ser delegada, vedada a subdelegação. </span></a>)</td>
+        <td>
+          <select>
+            <option value="" selected="selected">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </td>
+        <td><input type="text" name="descricao1"></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>A designação da comissão e suas respectivas prorrogações e reconduções observaram o disposto no art. 10 da Lei nº 12.846/13?</td>
+        <td>
+          <select>
+            <option value="" selected="selected">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </td>
+        <td><input type="text" name="descricao2"></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Todos os atos praticados pela comissão ocorreram sob o abrigo de portarias devidamente publicadas no Diário Oficial da União?</td>
+        <td>
+          <select>
+            <option value="" selected="selected">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </td>
+        <td><input type="text" name="descricao3"></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Todos os atos praticados pela Comissão foram consignados em atas, ofícios, termos de juntada e demais documentos pertinentes?</td>
+        <td>
+          <select>
+            <option value="" selected="selected">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </td>
+        <td><input type="text" name="descricao4"></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>A comissão possibilitou que a pessoa jurídica acompanhasse o PAR por meio de seus representantes legais ou procuradores? (<a href="#" class="tooltip-link">Art. 9 do Decreto nº 11.129/22<span class="tooltip-text">
+          Art. 9º  A pessoa jurídica poderá acompanhar o PAR por meio de seus representantes legais ou procuradores, sendo-lhes assegurado amplo acesso aos autos.</span></a>)</td>
+        <td>
+          <select>
+            <option value="" selected="selected">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </td>
+        <td><input type="text" name="descricao5"></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>A pessoa jurídica foi intimada para apresentação de defesa, em observação ao <a href="#" class="tooltip-link">Art. 11 da Lei nº 12.846/13<span class="tooltip-text">
+          Art. 11. No processo administrativo para apuração de responsabilidade, será concedido à pessoa jurídica prazo de 30 (trinta) dias para defesa, contados a partir da intimação.</span></a>?</td>
+        <td>
+          <select>
+            <option value="" selected="selected">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </td>
+        <td><input type="text" name="descricao6"></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>O termo de indiciação contém os elementos mínimos do <a href="#" class="tooltip-link">Art. 6º, § 2º, do Decreto nº 11.129/22 <span class="tooltip-text">
+          § 2º  O ato de indiciação conterá, no mínimo:
+      </br></br>I - a descrição clara e objetiva do ato lesivo imputado à pessoa jurídica, com a descrição das circunstâncias relevantes;
+      </br></br>II - o apontamento das provas que sustentam o entendimento da comissão pela ocorrência do ato lesivo imputado; e
+     </br></br>III - o enquadramento legal do ato lesivo imputado à pessoa jurídica processada.</span></a>?</td>
+        <td>
+          <select>
+            <option value="" selected="selected">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </td>
+        <td><input type="text" name="descricao7"></td>
+      </tr>
+     
+      <tr>
+        <th>nº</th>
+        <th>Aspectos materiais</th>
+        <th>Sim/Não</th>
+        <th>Observação:</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>A pessoa jurídica apresentou a sua defesa escrita? (<a href="#" class="tooltip-link">Art. 8º do Decreto nº 11.129/22
+          <span class="tooltip-text">
+          Art. 8º  Recebida a defesa escrita, a comissão avaliará a pertinência de produzir as provas eventualmente 
+          requeridas pela pessoa jurídica processada, podendo indeferir de forma motivada os pedidos de produção de provas 
+          que sejam ilícitas, impertinentes, desnecessárias, protelatórias ou intempestivas.</span></a>)<td>
+          <select>
+            <option value="" selected="selected">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </td>
+        <td><input type="text" name="descricao1"></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>A comissão analisou a defesa escrita e apresentou seus argumentos no relatório final?</td>
+        <td>
+          <select>
+            <option value="" selected="selected">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </td>
+        <td><input type="text" name="descricao2"></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>As provas obtidas foram suficientes à elucidação dos fatos e estão em conformidade com a conclusão da Comissão?</td>
+        <td>
+          <select>
+            <option value="" selected="selected">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </td>
+        <td><input type="text" name="descricao3"></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>A comissão avaliou a prescrição da pretensão punitiva da Administração? (art. 25 da Lei nº 12.846/13)</td>
+        <td>
+          <select>
+            <option value="" selected="selected">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </td>
+        <td><input type="text" name="descricao4"></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>A comissão utilizou a calculadora de penalidade administrativa da CGU para indicar a penalidade?</td>
+        <td>
+          <select>
+            <option value="" selected="selected">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </td>
+        <td><input type="text" name="descricao5"></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>A comissão elaborou relatório final a respeito dos fatos apurados e da eventual responsabilidade administrativa da pessoa jurídica, e sugeriu, de forma motivada, as sanções a serem aplicadas ou o arquivamento do processo? (art. 11 da Lei nº 12.846/13)</td>
+        <td>
+          <select>
+            <option value="" selected="selected">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </td>
+        <td><input type="text" name="descricao6"></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Após a conclusão do relatório final, a comissão redigiu a ata de encerramento dos trabalhos e enviou o Processo Administrativo de Responsabilização (PAR) à autoridade instauradora? (art. 12 da Lei nº 12.846/13)</td>
+        <td>
+          <select>
+            <option value="" selected="selected">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </td>
+        <td><input type="text" name="descricao7"></td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>A entidade processada foi intimada a apresentar alegações finais, no prazo de 10 dias? (art. 12 da Lei nº 12.846/13)</td>
+        <td>
+          <select>
+            <option value="" selected="selected">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </td>
+        <td><input type="text" name="descricao8"></td>
+      </tr>
+    </tbody>
+  </table>
+  
+
+<!-- Botões de ação após a tabela -->
+<div class="action-buttons">
+  <button onclick="window.print();" class="print-button">
+    🖨️ Imprimir
+  </button>
+  <button onclick="resetForm();" class="print-button">
+    🗑️ Limpar
+  </button>
+</div>
+
+<script>
+function resetForm() {
+  // Reseta os seletores para o valor padrão
+  document.querySelectorAll('.anticorrupcao-table select').forEach(function(select) {
+    select.selectedIndex = 0;
+  });
+  
+  // Limpa todos os campos de texto
+  document.querySelectorAll('.anticorrupcao-table input[type="text"]').forEach(function(input) {
+    input.value = '';
+  });
+}
+</script>
+</body></html>

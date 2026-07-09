@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Caderno de Normas - Critérios de priorização</title>
+
+  <!-- Hreflang para especificar o idioma -->
+  <link rel="alternate" hreflang="pt-BR" href="https://www.cadernodenormas.com.br/">
+  
+  <!-- Favicons do gov.br -->
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.gov.br/++theme++padrao_govbr/favicons/favicon-32x32.png">
+  <link rel="shortcut icon" type="image/png" href="https://www.gov.br/++theme++padrao_govbr/favicons/favicon-48x48.png">
+
+<style>
+  .anticorrupcao-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .anticorrupcao-table th, .anticorrupcao-table td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+  }
+
+  .anticorrupcao-table th {
+    background-color: #003366; /* Azul escuro */
+    color: white;
+  }
+
+  .anticorrupcao-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  .anticorrupcao-table tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+
+  .obs {
+    background-color: #fdd835;
+    font-style: italic; /* Mudança para itálico ao invés de negrito para diferenciar as observações */
+    font-weight: normal;
+  }
+
+.title-row th {
+    background-color: #007bff; /* Azul mais claro para o título */
+    color: white;
+    font-size: 1.5em; /* Tamanho maior para o título */
+  }
+
+  /* Estilo adicional para os campos de entrada de texto */
+  input[type="text"] {
+    width: 100%; /* Faz com que o campo de texto ocupe toda a largura da célula */
+    box-sizing: border-box; /* Garante que o padding não aumente a largura do campo */
+  }
+
+  /* Estilo para o botão de impressão */
+  .print-button {
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .print-button i {
+    margin-right: 8px;
+  }
+
+.consideracoes{
+    margin-top: 20px;
+
+  }
+ 
+
+#ato-ilicito {
+    width: 500px; /* Define a largura do campo select */
+    height: 35px; /* Define a altura do campo select, isso afeta a barra de rolagem interna e não o número de opções visíveis ao abrir o dropdown */
+    border: 1px solid #ccc; /* Opcional: ajusta a borda do campo */
+    border-radius: 4px; /* Opcional: adiciona bordas arredondadas */
+    padding: 5px; /* Opcional: adiciona um pouco de espaço interno para que o texto não fique muito próximo da borda */
+}
+
+.readable-text {
+    font-family: 'Arial', sans-serif; /* Fonte legível */
+    font-size: 1rem; /* Tamanho de fonte relativo */
+    color: #333; /* Cor escura para contraste adequado em fundo claro */
+    line-height: 1.6; /* Espaçamento entre linhas para facilitar a leitura */
+    padding: 20px; /* Espaçamento interno para não tocar nas bordas */
+    background-color: #f9f9f9; /* Cor de fundo suave */
+    border: 1px solid #ccc; /* Borda sutil */
+    border-radius: 8px; /* Bordas arredondadas para estética suave */
+    margin: 20px auto; /* Centraliza o div e adiciona margem */
+    max-width: 90%; /* Limita a largura máxima e torna responsivo */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil para elevação */
+}
+
+@media (max-width: 768px) {
+    .readable-text {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte em telas menores */
+        padding: 15px; /* Reduz o padding em telas menores */
+        max-width: 95%; /* Aumenta a largura máxima para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .readable-text {
+        font-size: 0.8rem; /* Reduz ainda mais o tamanho da fonte em telas muito pequenas */
+        padding: 10px; /* Reduz ainda mais o padding */
+        max-width: 100%; /* Utiliza a largura total em telas muito pequenas */
+    }
+}
+</style>
+<script>
+  var weights = {
+    "Selecione": 0,  // Assume que "Selecione" é o valor inicial que não agrega peso
+    "Prescrito": 0,
+    "Prescreve em mais de 2 anos": 1,
+    "Prescreve entre 181 dias e 2 anos": 2,
+    "Prescreve entre 91 e 180 dias": 4,
+    "Prescreve em até 90 dias": 6,
+    "Externa": 1,
+    "Interna": 3,
+    "Gravidade baixa": 1,
+    "Gravidade média": 3,
+    "Gravidade alta": 5,
+    "Origem": {
+      "Externa": 1,
+      "Interna": 2
+    },
+    "Agente público não ocupante de cargo": 0,
+    "Agente público ocupante de FCPE de níveis 2 a 4": 1,
+    "Agente público ocupante de FCPE de níveis 5 e acima": 2,
+    "MEI, ME e EPP": 1,
+    "Empresa medio porte": 3,
+    "Empresa grande porte": 5,
+    "Baixa": 1,
+    "Média": 2,
+    "Alta": 3
+  };
+  
+  function updateWeight(selectElement) {
+    var weightCell = selectElement.parentNode.nextElementSibling;
+    var selectedValue = selectElement.value;
+    weightCell.innerText = weights[selectedValue] !== undefined ? weights[selectedValue] : "Error";
+    updateTotal();
+  }
+  
+  function updateTotal() {
+    var total = 0;
+    var weightCells = document.querySelectorAll('table tbody tr td:last-child:not(#totalRow)');
+    weightCells.forEach(function(weightCell) {
+      total += parseInt(weightCell.innerText) || 0;
+    });
+    document.getElementById('totalRow').innerText = total;
+  }
+  
+  function resetWeights() {
+    document.querySelectorAll('table select').forEach(function(select) {
+      select.selectedIndex = 0;
+      updateWeight(select); // Update each row weight after reset
+    });
+    document.getElementById('totalRow').innerText = 0;
+  }
+  </script>
+  
+</head>
+<body>
+<table class="anticorrupcao-table">
+  <thead>
+    <tr class="title-row">
+      <th colspan="4">Caderno de Normas
+        do Direito Administrativo Sancionador - Priorização de processos correcionais</th>
+    </tr>
+    <tr>
+      <th>Critérios</th>
+      <th>Pontuação</th>
+      <th>Parâmetros</th>
+      <th>Peso</th>
+    </tr>
+  </thead>
+  <tbody>
+   <tr>
+  <td>1. Prazo Prescricional</td>
+  <td>De 0 a 6 pontos</td>
+  <td>
+    <select onchange="updateWeight(this)" id="ato-ilicito">
+      <option value="Selecione">Selecione</option>
+      <option value="Prescrito">Prescrito</option>
+      <option value="Prescreve em mais de 2 anos">Prescreve em mais de 2 anos</option>
+      <option value="Prescreve entre 181 dias e 2 anos">Prescreve entre 181 dias e 2 anos</option>
+      <option value="Prescreve entre 91 e 180 dias">Prescreve entre 91 e 180 dias</option>
+      <option value="Prescreve em até 90 dias">Prescreve em até 90 dias</option>
+    </select>
+  </td>
+  <td>0</td> 
+</tr>
+<tr>
+  <td>2. A gravidade da conduta em tese praticada</td>
+  <td>De 1 a 5 pontos</td>
+  <td>
+    <select onchange="updateWeight(this)">
+      <option value="Selecione">Selecione</option>
+      <option value="Gravidade baixa">Baixa</option>
+      <option value="Gravidade média">Média</option>
+      <option value="Gravidade alta">Alta</option>
+    </select>
+  </td>
+  <td>0</td> <!-- O peso inicial será ajustado pelo script -->
+</tr>
+<tr>
+  <td>3. Origem</td>
+  <td>De 1 a 3 pontos</td>
+  <td>
+    <select onchange="updateWeight(this)">
+      <option value="Selecione">Selecione</option>
+      <option value="Externa">Externa (cidadão, imprensa)</option>
+      <option value="Interna">Interna (Órgão, Siscor)</option>
+    </select>
+  </td>
+  <td>0</td>
+</tr>
+
+<tr>
+  <td>4. Cargo do agente público envolvido</td>
+  <td>De 0 a 2 pontos</td>
+  <td>
+    <select onchange="updateWeight(this)">
+      <option value="Selecione">Selecione</option>
+      <option value="Agente público não ocupante de cargo">Agente público não ocupante de cargo</option>
+      <option value="Agente público ocupante de FCPE de níveis 2 a 4">Agente público ocupante de FCPE de níveis 2 a 4</option>
+      <option value="Agente público ocupante de FCPE de níveis 5 e acima">Agente público ocupante de FCPE de níveis 5 e acima</option>
+    </select>
+  </td>
+  <td>0</td> 
+</tr>
+
+<tr>
+  <td>5. O porte do ente privado envolvido</td>
+  <td>De 1 a 5 pontos</td>
+  <td>
+    <select onchange="updateWeight(this)">
+      <option value="Selecione">Selecione</option>
+      <option value="MEI, ME e EPP">MEI, ME e EPP</option>
+      <option value="Empresa medio porte">Empresa de médio porte</option>
+      <option value="Empresa grande porte">Empresa de grande porte</option>
+    </select>
+  </td>
+  <td>0</td> 
+</tr>
+<tr>
+  <td>6. Repercussão dos fatos no âmbito da Administração Pública</td>
+  <td>De 1 a 3 pontos</td>    
+  
+  <td>
+    <select onchange="updateWeight(this)">
+      <option value="Selecione">Selecione</option>
+      <option value="Baixa">Baixa</option>
+      <option value="Média">Média</option>
+      <option value="Alta">Alta</option>
+    </select>
+  </td>
+  <td>0</td> 
+</tr>
+ 
+    <tr>
+      <td>Total</td>
+      <td>Mínimo de 4 e máximo de 24 pontos</td>
+      <td></td>
+      <td id="totalRow">0</td>
+    </tr>
+  </tbody>
+</table>
+<button onclick="window.print();" class="print-button">
+  🖨️ Imprimir
+</button>
+<button onclick="resetWeights()" class="print-button">
+  🗑️ Limpar
+</button>
+
+
+<div class="readable-text"><p>Os critérios de priorização serão classificados de acordo com as seguintes orientações:</p>
+<ol><li><strong>Prazo Prescricional:</strong> Será considerada a data do conhecimento dos fatos pela autoridade competente 
+  (<a href="https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm#art142§1" target="_blank">PAD</a>) ou pela ciência da infração pela autoridade competente (<a href="https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12846.htm#art25" target="_blank">PAR</a>) e, no caso de infração permanente ou continuada, do dia em que tiver cessado, caso a cessação se dê em momento posterior à ciência pela referida autoridade.</li><strong>Observações:</strong> Para definição dos prazos prescricionais da pretensão punitiva em procedimento em desfavor de agente público ou privado serão consideradas a aplicabilidade das penas em perspectiva, considerando-se os fatos narrados no momento da análise para classificação do processo.Considerando que os prazos prescricionais dos processos acusatórios (PAD, Sindicância Acusatória e PAR) não se interrompem novamente após o primeiro ato de sua instauração, ser-lhes-á atribuída pontuação mais elevada e diferenciada dos demais processos.</li><li><strong>Gravidade da conduta do agente público:</strong> Será considerada de gravidade baixa aquela com penalidade, em tese, de advertência ou suspensão até 30 dias; de gravidade moderada aquela com penalidade, em tese, de suspensão acima de 30 dias e de gravidade alta aquela com penalidade, em tese, de demissão.</li><li><strong>Gravidade da conduta do ente privado:</strong> Serão considerados a tolerância ou ciência de pessoas do corpo diretivo ou gerencial da pessoa jurídica; a existência de indícios de pagamento de vantagem indevida a agente público; a ocorrência, em razão dos fatos apurados, de interrupção no fornecimento de serviço público ou na execução de obra contratada; e o valor dos contratos mantidos ou pretendidos, relacionados aos fatos em apuração.</li><li><strong>Cargo do agente público envolvido:</strong> Será considerado o cargo ao qual o agente público estiver vinculado no momento de ocorrência dos fatos, devendo-se considerar, no caso de mais de uma gente envolvido, a ocupação do cargo de maior hierarquia.</li><li><strong>Porte do ente privado envolvido:</strong> Serão considerados os dados cadastrais fiscais da empresa e, na falta de tais dados, nas demais informações disponíveis e na legislação em vigor, considerando-se a definição constante de seu cadastro ou atribuída pela legislação em vigor no momento da análise, para classificação do processo, devendo-se considerar, no caso de mais de um ente privado envolvido, aquele de maior porte.</li><li><strong>Repercussão dos fatos no âmbito da Administração Pública:</strong> Serão considerados o número de agentes públicos, de entes privados e de unidades administrativas envolvidos; o impacto à imagem institucional perante a sociedade; a veiculação dos fatos na mídia; a existência de indícios de grave dano ao erário; o impacto gerado em razão do alcance dimensional do local de ocorrência dos fatos (nacional > regional > local) e/ou estrutura hierárquica envolvida; a existência de inquérito policial para apuração dos fatos na seara criminal; e o grau de efetividade da eventual penalidade a ser aplicada.</li></ol></div>
+</body>
+</html>

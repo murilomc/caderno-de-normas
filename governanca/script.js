@@ -1,0 +1,7 @@
+const KEY_RACI_RESP='raci_resp_site_governanca_v1';
+function loadVals(){try{return JSON.parse(localStorage.getItem(KEY_RACI_RESP)||'{}')}catch(e){return{}}}
+function saveVals(o){localStorage.setItem(KEY_RACI_RESP,JSON.stringify(o))}
+document.addEventListener('input',e=>{if(e.target.matches('input.short')){const r=e.target.closest('.r');const id=r.dataset.row;const s=loadVals();s[id]=e.target.value.toUpperCase().slice(0,8);e.target.value=s[id];saveVals(s)}});
+function aplicarStorage(){const s=loadVals();document.querySelectorAll('.mat .r').forEach(r=>{const id=r.dataset.row;const i=r.querySelector('input.short');if(s[id]) i.value=s[id]})}
+function exportar(){let t='Matriz de Responsáveis\n';document.querySelectorAll('.mat .r').forEach(r=>{const n=r.querySelector('strong').textContent.trim();const d=r.querySelector('.cell:nth-child(2) .muted').textContent.trim();const resp=r.querySelector('input.short').value.trim()||'(vazio)';t+=n+' | '+d+' | Responsável: '+resp+'\n'});const out=document.getElementById('saida');out.value=t;navigator.clipboard.writeText(t).then(()=>{const b=document.getElementById('exportar');if(b){b.textContent='Resumo copiado';setTimeout(()=>b.textContent='Exportar resumo',1400)}})}
+function limpar(){localStorage.removeItem(KEY_RACI_RESP);document.querySelectorAll('input.short').forEach(i=>i.value='');const out=document.getElementById('saida');if(out) out.value=''}

@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Caderno de Normas - Passo a passo de um PAD e atas deliberativas</title>
+
+<!-- Hreflang para especificar o idioma -->
+<link rel="alternate" hreflang="pt-BR" href="https://www.cadernodenormas.com.br/">
+
+<!-- Favicons do gov.br -->
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.cadernodenormas.com.br/flavicon2.png">
+<link rel="shortcut icon" type="image/png" href="https://www.cadernodenormas.com.br/flavicon2.png">
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+        line-height: 1.6;
+    }
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        background-color: #007BFF;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    h2, h3, h4 {
+        color: #2F4F4F;
+    }
+    h2 {
+        text-align: center;
+        border-bottom: 2px solid #4CAF50;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    h3 {
+        margin-top: 30px;
+    }
+    
+    ol {
+        counter-reset: item;
+        padding-left: 20px;
+    }
+    ul {
+        list-style-type: none;
+        padding-left: 20px;
+    }
+    ul > li {
+        position: relative;
+        margin-bottom: 10px;
+        padding-left: 10px;
+    }
+   
+    .ata {
+        font-weight: bold;
+        color: #FF4500;
+        font-size: 1.1em;
+        margin: 15px;
+        text-align: justify;
+    }
+    .ata + ul {
+        margin-left: 20px;
+    }
+    p {
+        margin: 15px 0;
+        text-align: justify;
+    }
+    .flex-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    .circle {
+        width: 30px;
+        height: 30px;
+        background-color: #3F5E86; /* Cor de fundo azul */
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+    @media (max-width: 768px) {
+        .container {
+            padding: 20px;
+        }
+        ul {
+            padding-left: 15px;
+        }
+        ul > li:before {
+            font-size: 14px;
+            left: -15px;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        h3 {
+            font-size: 1.2em;
+        }
+        h4 {
+            font-size: 1em;
+            
+        }
+        .ata h4 {
+    line-height: 1.5;
+  }
+        .circle {
+            width: 25px;
+            height: 25px;
+            font-size: 14px;
+        }
+        .flex-container {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    @media (max-width: 600px) {
+        .ata h4 {
+    font-size: 1.2em; /* Ajuste o valor conforme necessário */
+  }
+    @media (max-width: 480px) {
+        .container {
+            padding: 10px;
+        }
+        ul {
+            padding-left: 10px;
+        }
+        ul > li:before {
+            font-size: 12px;
+            left: -10px;
+        }
+        h2 {
+            font-size: 1.2em;
+        }
+        h3, h4 {
+            font-size: 1em;
+        }
+        .ata h4 {
+            font-size: 1.2em;
+        }
+        .circle {
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+        }
+        .flex-container {
+            flex-direction: column;
+            align-items: flex-start;
+            font-size: 1em;
+        }
+    }
+    /* Estilos das seções de links */
+    .sections-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px; /* espaço entre as seções */
+    }
+
+    .section {
+        flex: 1;
+        padding: 20px;
+        background: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .section h2 {
+        border-bottom: 2px solid #007BFF;
+        padding-bottom: 10px;
+    }
+
+ table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+    }
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+        color: #333;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h2>Passo a Passo de um Processo Administrativo Disciplinar com a sequência das atas deliberativas e exemplos</h2>
+
+        <h3>Fase I – Instauração (inciso I do art. 151 da Lei 8.112/90)</h3>
+        <h4>Ato de Instauração, seus elementos e publicação:</h4>
+        <ul>
+            <li>a) Identificação de um processo administrativo com um juízo de admissibilidade de instauração de PAD.</li>
+            <li>b) Emissão do ato administrativo que formaliza a 
+instauração do processo disciplinar, com a designação dos membros da 
+comissão responsável pelo processo.</li>
+            <li>c) Publicação do ato de instauração no meio oficial de 
+comunicação da instituição (Boletim de pessoal ou de serviço).  Conheça 
+alguns exemplos: <a href="#section1">Portarias de instauração</a>, <a href="#section2">Portaria de prorrogação</a> e <a href="#section3">Portaria de recondução</a>.</li>
+        </ul>
+        
+        <h3>Fase II - Inquérito Administrativo (inciso II do art. 151 da Lei 8.112/90)</h3>
+        <h4>Instrução dos autos pela Comissão, com as seguintes atas deliberativas:</h4>
+        <ul>
+            <div class="flex-container"><div class="circle">1</div><div class="ata">Ata de instalação e início dos trabalhos, contendo:</div></div>
+            <ul>
+                <li>a) A notificação inicial do acusado(a), de forma 
+pessoal ou por intermédio de procurador(a), sobre a instauração do 
+processo e definindo prazo para resposta, sendo oportunizada a indicação
+ de testemunhas e de provas que prentenda produzir;</li>                
+                <li>b) A cientificação por e-mail da autoridade instauradora sobre o início dos trabalhos da comissão;</li>
+                <li>c) Comunicar ao setor de recursos humanos sobre a 
+instauração do presente processo administrativo disciplinar, para 
+observância do disposto no art. 172 da Lei nº 8.112/90; bem como 
+solicitar os assentamentos funcionais da acusado(a), onde constam 
+penalidades eventualmente aplicadas e seu local de lotação e exercício;</li>
+                <li>d) A decisão da comissão pelo estudo dos autos, com a
+ definição de prazo (15 ou 30 dias, a depender do número de envolvidos e
+ complexidade do processo).</li>
+                <li>Conheça alguns exemplos: <a href="#section4">Ata de instalação e início dos trabalhos</a>, <a href="#section5">Notificação prévia</a> e <a href="#section6">Ofício ao setor de recursos humanos.</a></li>
+            </ul>
+            <div class="flex-container"><div class="circle">2</div><div class="ata">Segunda Ata Deliberativa, contendo:</div></div>
+            <ul>
+                <li>a) Definição pela comissão do rol de testemunhas ou 
+informantes a serem ouvidos, com o estabelecimento de hora, data e local
+ para cada oitiva; (o estudo realizado deve ser direcionado a 
+compreender quem seriam as testemunhas ou informantes a serem ouvidos e 
+as perguntas a serem realizadas);</li>
+                <li>b) Deliberação sobre a coleta de evidências ou não 
+(a comissão pode expedir ofícios com o objetivo de solicitar documentos 
+ou informações);</li>
+                <p><strong>Observação:</strong> nas audiências, existe um rito que deve ser seguido!</p>
+                <li>Conheça alguns exemplos: <a href="#section7">Ata de deliberação com o rol testemunhas a serem ouvidas</a> e <a href="#section8">Intimação para a oitiva de testemunha</a>.</li>    
+            </ul>
+            <div class="flex-container"><div class="circle">3</div><div class="ata">Terceira Ata Deliberativa, contendo:</div></div>
+            <ul>
+                <li>a) Análise pela comissão das oitivas realizadas e das evidências coletadas;</li>
+                <li>b) Nova deliberação sobre a oitiva de novas testemunhas e/ou a coleta de outras provas;</li>
+                <p><strong>Observação:</strong> o termo informante é 
+usado quando a comissão sabe que o interrogado não pode ser 
+compromissado com a verdade, por motivos de impedimento ou suspeição.</p>
+                <li>Conheça alguns exemplos: <a href="#section9">Ata de Audiência.</a></li> 
+            </ul>
+            <div class="flex-container"><div class="circle">4</div><div class="ata">Quarta Ata Deliberativa, contendo:</div></div>
+            <ul>
+                <li>A comissão delibera pelo encerramento da instrução processual com o agendamento do interrogatório do acusado.</li>
+            </ul>
+            <div class="flex-container"><div class="circle">5</div><div class="ata">Quinta Ata Deliberativa, contendo:</div></div>
+            <ul>
+                <li>a) A comissão decide pelo indiciamento ou não do acusado, com a elaboração do termo de indiciamento pela comissão;
+                    </li><li>Conheça um exemplo: <a href="#section10">Ata de reunião - Indiciamento.</a> e <a href="#section11">Termo de indiciação.</a></li> 
+                
+                <li>b) A comissão realiza a citação do(s) acusado(s) com o termo de indiciamento para apresentação de defesa (10 dias para 1 
+indiciado, ou 20 dias para 2 ou mais indiciados);</li>
+		<li>Conheça um exemplo: <a href="#section12">Citação.</a></li> 
+                <p><strong>Observação:</strong> neste momento, há a alteração de nomenclatura para o servidor envolvido, de acusado para indiciado.</p>
+            </ul>
+            <div class="flex-container"><div class="circle">6</div><div class="ata">Sexta Ata Deliberativa, contendo:</div></div>
+            <ul>
+                <li>a) A avaliação preliminar se a defesa escrita 
+apresentada tem uma argumentação coerente, fundamentação legal, pedido 
+claro, a fim de determinar se atende aos requisitos mínimos de uma 
+defesa válida;</li>
+                <li>b) Após, deliberação da comissão pela elaboração do relatório final.</li>
+            </ul>
+        </ul>
+
+        <h3>Relatório final:</h3>
+        <ul>
+            <div class="flex-container"><div class="circle">7</div><div class="ata">Elaboração do Relatório Final:</div></div>
+            <ul>
+                <li>a) Redação do Relatório da Comissão: Inclui a 
+análise dos fatos, as provas testemunhais e documentais, e os argumentos
+ da manifestação prévia e da defesa escrita;</li>
+                <li>b) Conclusões da Comissão: Abrangem a conduta, o 
+nexo de causalidade e a culpabilidade (culpa ou dolo) do agente público,
+ com o devido enquadramento legal, tudo suportado pelas provas 
+apresentadas;</li>
+                <li>c) Recomendações da Comissão: Indicação pela 
+comissão da responsabilização ou não do agente público e os 
+encaminhamentos propostos.</li>
+<li>Conheça um exemplo: <a href="#section13">Relatório final.</a></li> 
+            </ul>
+            <div class="flex-container"><div class="circle">8</div><div class="ata">Encaminhamento do Relatório:</div></div>
+            <ul>
+                <li>Envio do relatório final à autoridade competente para julgamento, conforme o art. 167 da Lei nº 8.112/90.</li>
+            </ul>
+        </ul>
+
+        <h3>Fase III – Julgamento (inciso III do art. 151 da Lei 8.112/90)</h3>
+        <ul>
+            <li>Art. 168.  O julgamento acatará o relatório da comissão, salvo quando contrário às provas dos autos.</li>
+            <li>Parágrafo único.  Quando o relatório da comissão 
+contrariar as provas dos autos, a autoridade julgadora poderá, 
+motivadamente, agravar a penalidade proposta, abrandá-la ou isentar o 
+servidor de responsabilidade.</li>
+        </ul>
+        
+        <h3>Exemplos:</h3>
+        <section id="section1">
+        <h4>Modelo de Portaria de instauração de comissão de PAD:</h4>
+        
+            <div class="container">
+                <p style="text-align: center;">BGP - Publicado em 04/04/2024 - Ano 8 Edição 4.4 </p>
+                <div class="header-info">
+                    <p style="text-align: left;">Brasília, 04 de abril 2024</p>
+                    <p style="text-align: right;">ISSN 1111-1111</p>
+                </div>
+                <h2 style="text-align: center;">MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS</h2>
+                <h2>Corregedoria</h2>
+                <h2>Portaria CORREG/MDIC nº 50, de 3 de abril de 2024</h2>
+
+                <p>O CORREGEDOR DO MINISTÉRIO DO DESENVOLVIMENTO, 
+INDÚSTRIA, COMÉRCIO E SERVIÇOS, no uso da competência que lhe conferem o
+ artigo 10, inciso IV, do Anexo I do Decreto nº 11.427, de 2 de março de
+ 2023, com fundamento nos artigos 143 e 152 da Lei nº 8.112, de 11 de 
+dezembro de 1990, bem como no artigo 76, §1º, da Portaria Normativa CGU 
+Nº 27, de 11 de outubro de 2022, resolve:</p>
+
+                <p><strong>Art. 1º</strong> - Designar (nome do 
+servidor), (cargo do servidor), matrícula SIAPE nº (número), (nome do 
+servidor), (cargo do servidor), matrícula SIAPE nº (número), 
+                    e (nome do servidor), (cargo do servidor), matrícula
+ SIAPE nº (número), para, sob a presidência do primeiro, constituírem 
+Comissão de Processo Administrativo Disciplinar, para dar início às 
+apurações disciplinares contidas nos autos do processo administrativo nº
+ <a href="" target="_blank">(número do processo)</a>, ante as razões apresentadas no Despacho Decisório nº (número do despacho).</p>
+
+                <p><strong>Art. 2º</strong> - Estabelecer o prazo de 60 (sessenta) dias para conclusão dos trabalhos da referida Comissão.</p>
+
+                <p><strong>Art. 3º</strong> - Esta Portaria entra em vigor na data de sua publicação.</p>
+
+                <div class="signature">
+                    <p style="text-align: center;"><strong>(nome do Corregedor)</strong></p>
+                    <p style="text-align: center;">Corregedor do Ministério do Desenvolvimento, Indústria, Comércio e Serviços</p>
+                </div>
+            </div>
+        </section>
+        <section id="section2">
+        <h4>Modelo de Portaria de prorrogação de comissão de PAD:</h4>
+        
+            <div class="container">
+                <p style="text-align: center;">BGP - Publicado em 03/06/2024 - Ano 8 Edição 6.1</p>
+                <div class="header-info">
+                    <p style="text-align: left;">Brasília, 03 de junho de 2024</p>
+                    <p style="text-align: right;">ISSN 1111-1111</p>
+                </div>
+
+                <h2>MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS</h2>
+                <h2>Corregedoria</h2>
+                <h2>Portaria CORREG/MDIC nº 156, de 29 de maio de 2024</h2>
+
+                <p>O CORREGEDOR DO MINISTÉRIO DO DESENVOLVIMENTO, 
+INDÚSTRIA, COMÉRCIO E SERVIÇOS, no uso da competência que lhe conferem o
+ artigo 10, inciso IV, do Anexo I do Decreto nº 11.427, de 2 de março de
+ 2023, com fundamento no artigo 152 da Lei nº 8.112, de 11 de dezembro 
+de 1990, bem como no artigo 76, §3º, da Portaria Normativa CGU Nº 27, de
+ 11 de outubro de 2022, resolve:</p>
+
+                <p><strong>Art. 1º</strong> - Prorrogar por 60 
+(sessenta) dias o prazo para a conclusão dos trabalhos da Comissão de 
+Processo Administrativo Disciplinar, designada pela Portaria da nº 50, 
+de 03 de abril de 2024, publicada no BGP Ano 8, Edição 4.4, de 04 de 
+abril de 2024, referente ao processo nº <a href="" target="_blank">(número do processo)</a>.</p>
+
+                <p><strong>Art. 2º</strong> - Esta Portaria entra em vigor na data da sua publicação.</p>
+
+                <div class="signature">
+                    <p style="text-align: center;"><strong>(nome do Corregedor)</strong></p>
+                    <p style="text-align: center;">Corregedor do Ministério do Desenvolvimento, Indústria, Comércio e Serviços</p>
+                </div>
+            </div>
+        </section>
+
+<section id="section3">
+        <h4>Modelo de Portaria de recondução de comissão de PAD:</h4>
+        
+            <div class="container">
+                <p style="text-align: center;">BGP - Publicado em 04/04/2024 - Ano 8 Edição 4.4 </p>
+                <div class="header-info">
+                    <p style="text-align: left;">Brasília, 04 de abril 2024</p>
+                    <p style="text-align: right;">ISSN 1111-1111</p>
+                </div>
+                <h2 style="text-align: center;">MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS</h2>
+                <h2>Corregedoria</h2>
+                <h2>Portaria CORREG/MDIC nº XX, de (dia) de (mês) de (ano)</h2>
+
+                <p>O CORREGEDOR DO MINISTÉRIO DO DESENVOLVIMENTO, 
+INDÚSTRIA, COMÉRCIO E SERVIÇOS, no uso da competência que lhe conferem o
+ artigo 10, inciso IV, do Anexo I do Decreto nº 11.427, de 2 de março de
+ 2023, com fundamento nos artigos 143 e 152 da Lei nº 8.112, de 11 de 
+dezembro de 1990, bem como no artigo 76, §1º, da Portaria Normativa CGU 
+Nº 27, de 11 de outubro de 2022, resolve:</p>
+                <p><strong>Art. 1º</strong> - Reconduzir a Comissão de 
+Processo Administrativo Disciplinar, designada inicialmente pela 
+Portaria nº 186, de 23 de junho de 2023, publicada no Diário Oficial da 
+União, de 26 de junho de 2023, e tendo como último ato a prorrogação 
+efetivada pela Portaria nº 359, de 20 de dezembro de 2023, publicada no 
+Diário Oficial da União, de 21 de dezembro de 2023, referente ao 
+processo nº XXXX.</p>
+                <p><strong>Art. 2º</strong> - Estabelecer o prazo de 60 (sessenta) dias para conclusão dos trabalhos da referida Comissão.</p>
+                <p><strong>Art. 3º</strong> - Esta Portaria entra em vigor na data de sua publicação.</p>
+
+                <div class="signature">
+                    <p style="text-align: center;"><strong>(nome do Corregedor)</strong></p>
+                    <p style="text-align: center;">Corregedor do Ministério do Desenvolvimento, Indústria, Comércio e Serviços</p>
+                </div>
+            </div>
+        </section>
+        <section id="section4">
+            <h4>Modelo de Ata de Instalação e Início dos Trabalhos:</h4>
+            <div class="container">
+                <h2>MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS</h2>
+                <h3 style="text-align: center;">Ata de Instalação e Início dos Trabalhos</h3>
+        
+                <p>Em XX, às XX, por meio de videoconferência, utilizando o aplicativo Teams, a Comissão de 
+                Processo Administrativo Disciplinar (CPAD), designada pela Portaria nº XX, de XX, do XXX, 
+                 publicada no Boletim de Gestão de Pessoas (BGP) de XX/XX/XXXX, reuniu-se objetivando à 
+                instalação e início dos trabalhos relacionados à apuração dos fatos constantes do processo nº 
+                XXXX, ao tempo em que DELIBEROU por:</p>
+         
+                <p>a. comunicar a instalação e início dos trabalhos da comissão ao XXX;</p>
+        
+                <p>b. comunicar à Coordenação-Geral de Pessoal do XXXX, para os fins do disposto no art. 172, 
+                da Lei n.º 8.112/90, que o(a) servidor(a) XXX, CPF XXX, encontra-se na condição de 
+                acusado no âmbito deste PAD;</p>
+        
+                <p>c. solicitar ao XXX os assentamentos funcionais do(a) acusado(a) XXX;</p>
+        
+                <p>d. registrar que, no âmbito do (nome do Órgão), não 
+mais existem processos físicos, sendo 
+                todos eletrônicos. Desse modo, o acesso aos autos do 
+processo ao acusado e seus 
+                procuradores, bem como a juntada de documentos ao 
+processo, se dará via Internet, 
+                exclusivamente por meio do Sistema Eletrônico de 
+Informações - SEI, no qual devem se cadastrar o acusado e/ou seu 
+procurador(es);</p>
+        
+                <p>e. notificar o(a) servidor(a) XXX, comunicando a respeito da sua condição de acusado neste 
+                PAD e concedendo-lhe pleno acesso aos autos, para, nos termos do art. 156, da Lei nº 
+                8.112/90, acompanhar o processo pessoalmente ou por intermédio de procurador, arrolar e 
+                reinquirir testemunhas, produzir provas e contraprovas e formular quesitos, quando se tratar 
+                de prova pericial;</p>
+                
+                <p>Nada mais havendo a ser tratado, foi lavrada esta ata que vai assinada pelo presidente e pelos 
+                membros.</p>
+        
+                <div class="signature">
+                    
+                    <p style="text-align: center;">(Nome do servidor) - Membro</p>
+                    <p style="text-align: center;">(Nome do servidor) - Membro</p>
+                    <p style="text-align: center;">(Nome do servidor) - Presidente</p>
+                </div>
+            </div>
+
+        </section>
+        <section id="section5">
+            <h4>Modelo de Ata de Instalação e Início dos Trabalhos:</h4>
+
+            <div class="container">
+            <h2>MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS</h2>
+            <h3 style="text-align: center;">Notificação Prévia</h3>
+    
+            <p>Ao Sr. (nome do acusado)<br>
+            SIAPE nº XXX<br>
+            CPF nº XXXX<br>
+            E-mail: XXXX</p>
+    
+            <p>O Presidente da Comissão de Processo Administrativo Disciplinar nº XXXX,
+            designada pela Portaria CORREG/MDIC nº XX, de (dia) de (mês) de (ano), publicada no Boletim de Gestão de
+            Pessoas (BGP) de XX/XX/XXXX, da lavra do Corregedor do Ministério do Desenvolvimento, Indústria,
+            Comércio e Serviços (SEI XXX), NOTIFICA que Vossa Senhoria se encontra na condição de ACUSADO,
+            conforme fatos constantes no sobredito processo, sendo-lhe facultado acompanhá-lo, pessoalmente ou
+            por procurador devidamente constituído, ter vista dos autos, arrolar e reinquirir testemunhas, produzir
+            provas e contraprovas e formular quesitos quando se tratar de prova pericial, nos termos do art. 156 da Lei
+            8.112, de 11 de dezembro de 1990.</p>
+    
+            <p>Nesta oportunidade, faculto à Vossa Senhoria, no prazo de 10 (dez) dias contados do
+            recebimento desta, especificar as provas que pretende produzir, indicando a pertinência com o assunto no
+            presente processo e apresentar o rol de testemunhas a serem ouvidas por esta Comissão Processante,
+            indicando-se a pertinência do seu testemunho com os fatos tratados nos autos, sob pena de indeferimento,
+            declinando, na oportunidade, o nome, endereço residencial, endereço eletrônico (e-mail), e números de
+            telefone celular, residencial e comercial de cada uma delas. Em se tratando de testemunha servidor
+            público, informar o cargo e a respectiva lotação, para fins do disposto nos arts. 157, parágrafo único, e 173,
+            inciso I, ambos da Lei nº 8.112, de 1990.</p>
+    
+            <p>O acesso à íntegra dos autos do processo pode ser requerido por meio de mensagem
+            enviada ao Presidente da Comissão no endereço eletrônico (e-mail da corregedoria), depois de
+            cumpridas as orientações constantes no ANEXO. O mencionado endereço eletrônico também poderá ser
+            usado para a solicitação de esclarecimentos adicionais.</p>
+    
+            <p style="margin: 15px 0;">Adverte-se, por fim, que o acesso ao processo tem por finalidade garantir a máxima
+            concretização dos direitos da ampla defesa e do contraditório. A utilização indevida dos documentos,
+            áudios e imagens constantes dos autos, em especial no que se refere à veiculação irregular da imagem de
+            terceiros ou ao tratamento inadequado de seus dados pessoais, poderá, nos termos da legislação vigente,
+            gerar procedimento específico de responsabilização.</p>
+    
+            <p style="text-align: center;">Brasília/DF, (dia) de (mês) de (ano).</p>
+    
+            <p style="text-align: center;">Documento assinado eletronicamente</p>
+    
+            <div class="signature">
+                <p style="text-align: center;"><strong>(nome do presidente)</strong></p>
+                <p style="text-align: center;">Presidente</p>
+            </div>
+    
+            <h3 style="text-align: center;">ANEXO</h3>
+            <p style="text-align: center;">(ORIENTAÇÕES PARA ACESSO EXTERNO AO SISTEMA DE PROCESSO ELETRÔNICO)</p>
+    
+            <p>Acerca da atuação e acompanhamento de processos eletrônicos, o Ministério do Desenvolvimento,
+            Indústria, Comércio e Serviços dispõe do Sistema Eletrônico de Informações - SEI, por meio do qual
+            podem ser cadastrados usuários externos, a fim de permitir o acesso aos autos e aos documentos
+            eletrônicos anexados no processo. Para fins de segurança da base de dados e das informações
+            sigilosas referentes à apuração em comento, a liberação de tal cadastro deverá atender às condições
+            exigidas pelo Administrador e por este Ministério.</p>
+    
+            <p>Destaca-se que, realizado tal cadastro e liberado o acesso pela Comissão, a parte interessada ou seu
+            procurador terão acesso irrestrito, via internet, aos autos digitais que constam do SEI.</p>
+    
+            <p>Para tanto, será necessária a realização do cadastro no SEI como “Usuário Externo”, adotando-se o
+            seguinte passo-a-passo:</p>
+    
+            <p><strong>1ª Etapa</strong></p>
+    
+            <p>Cadastro de Usuário Externo - Acessar a página do SEI por meio do link: </p>
+            <p><a target="_blank" href="https://sei.economia.gov.br/sei/controlador_externo.php?acao=usuario_externo_avisar_cadastro&amp;id_orgao_acesso_externo=0">Cadastro de Usuário Externo</a>.</p>
+    
+            <p>Em seguida, clique em "clique aqui para continuar”, e será feito um novo redirecionamento para a
+            página do formulário "Cadastro de Usuário Externo".</p>
+    
+            <p>Preencher os "Dados cadastrais" com seu nome e dados pessoais. Em seguida preencher os "Dados
+            de Autenticação" com e-mail pessoal e senha.</p>
+    
+            <p>Enviado o formulário, o acusado/ou seu procurador terá realizado o cadastro e deverão aguardar a
+            liberação de acesso, a qual está condicionada ao atendimento da próxima etapa e à análise, a ser
+            realizada pelo Administrador do Sistema Eletrônico de Informações.</p>
+    
+            <p><strong>2ª Etapa</strong></p>
+    
+            <p>Iniciar com o download do Termo de Concordância e Veracidade e siga as instruções abaixo, de
+            acordo com o tipo de assinatura a ser realizada:</p>
+    
+            <p>a)  assinatura de próprio punho : preencha todos os campos obrigatórios com os mesmos dados
+            informados no cadastro online (passo 1), imprima o Termo, assine-o com caneta, e escaneie ou fotografe o
+            documento assinado, salvando-o em PDF; ou</p>
+    
+            <p>b)  assinatura com o Assinador Digital do Governo Federal : preencha todos os campos obrigatórios com os
+            mesmos dados informados no cadastro online (passo 1), salve esse documento, acesse assinador.iti.br, faça
+            seu login no Portal de Serviços gov.br (Login Único do Governo Federal), siga as orientações apresentadas
+            na página do serviço, e faça o download do documento assinado;</p>
+    
+            <p>c) assinatura com Certificado Digital ICP-Brasil : preencha todos os campos obrigatórios com os mesmos
+            dados informados no cadastro online (passo 1), salve esse documento, acesse o Portal de assinatura digital
+            de sua preferência (do Serpro, do Certisign etc.), faça seu login, siga as orientações apresentadas na página
+            do serviço, e faça o download do documento assinado;</p>
+    
+            <p><strong>3ª Etapa</strong></p>
+    
+            <p>Faça uma cópia em PDF de seu RG e CPF, ou de outro documento de identificação oficial com foto no
+            qual conste CPF.</p>
+    
+            <p><strong>4ª Etapa</strong></p>
+    
+            <p>Envie os arquivos gerados (passos 2 e 3) para o Protocolo Digital ou via e-mail para
+            sei@economia.gov.br, de acordo com o tipo de assinatura efetuada:</p>
+    
+            <p>a)  assinatura de próprio punho / documento digitalizado:</p>
+    
+            <p>a.1) acesse o Protocolo Digital do Ministério do Desenvolvimento, Indústria, Comércio e Serviços leia com
+            atenção todas as instruções (esse portal NÃO é o SEI, e vai servir para suprir a falta de autenticação da
+            assinatura do Termo);</p>
+    
+            <p>a.2) clique em "Iniciar" e faça seu login no Portal de Serviços gov.br (Login Único do Governo Federal);</p>
+    
+            <p>a.3) No item “Dados da Solicitação”, selecione o tipo de solicitação "9 - Solicitar cadastro de usuário
+            externo no SEI" e siga com atenção as orientações apresentadas em cada etapa para a protocolização dos
+            documentos.</p>
+    
+            <p>Em caso de dúvidas sobre o uso do Protocolo Digital, acesse a <a href="https://www.gov.br/economia/pt-br/acesso-a-informacao/sei/arquivos/cartilha_protocolo-digital-cidadao-1.pdf">Cartilha do Protocolo Digital - Cidadão</a>.</p>
+    
+            <p>b)  assinatura com o Assinador Digital do Governo Federal ou com Certificado Digital ICP-Brasil / documento
+            original: encaminhe os documentos via e-mail para sei@economia.gov.br, com o assunto "Cadastro de
+            Usuário Externo";</p>
+    
+            <p><strong>5ª Etapa</strong></p>
+    
+            <p>Aguarde resposta da análise da documentação no e-mail informado no cadastro. Se a documentação
+            enviada no passo 4 estiver em conformidade, seu acesso ao SEI/ME como usuário externo será
+            liberado. Em caso de inconsistência, siga as instruções apresentadas no e-mail para regularização da
+            pendência.</p>
+    
+            <p><strong>ATENÇÃO:</strong> O prazo para liberação do cadastro de usuário externo é de até três dias úteis após o
+            recebimento da documentação, podendo, eventualmente, ser estendido em caso de aumento da
+            demanda. Caso sejam verificadas pendências, o cadastro não será liberado e o solicitante será
+            informado por e-mail para as devidas providências.</p>
+    
+            <p><strong>6ª Etapa</strong></p>
+    
+            <p>Após a liberação do cadastro, para efetuar o login no ambiente de usuário externo do SEI/ME acesse
+            o link "Já estou cadastrado", utilizando e-mail e senha cadastrados (passo 1). Caso não se lembre da
+            senha, basta em clicar "Esqueci minha senha" e informar os dados para recuperação.</p>
+    
+            <p><strong>Acesso ao processo</strong></p>
+    
+            <p>A liberação do cadastro no SEI não implica na disponibilização automática de acesso ao processo
+            (quando for o caso), que será objeto de análise da unidade na qual ele se encontra em tramitação.
+            Assim, após cadastro liberado, o usuário que requer acesso ao conteúdo de determinado processo
+            deve entrar em contato com a comissão responsável, para a concessão de acesso ao processo.</p>
+    
+            <p>Para a disponibilização de acesso ao processo, a unidade onde ele se encontra em andamento poderá
+            solicitar documentação adicional, tais como: cópia do ato constitutivo da pessoa jurídica, quando for
+            o caso; cópia da procuração com poderes específicos para representação do interessado, quando for
+            o caso; ou em caso de procurador de pessoa jurídica, cópia do RG e CPF do outorgante, ou de outro
+            documento de identificação oficial com foto no qual conste CPF.</p>
+    
+        </div>
+        </section>    
+    
+<section id="section6">
+            <h4>Modelo de Ofício para a Coordenação de pessoal comunicando a instauração de PAD:</h4>
+	<div class="container">
+        <h2 style="text-align: center;">MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS</h2>
+     
+        <p style="text-align: right;">Brasília-DF, XXX</p>
+
+        <p>Ao Senhor/ À Senhora Coordenador(a)-Geral de Pessoal<br>     e-mail: (e-mail da coordenação)</p>
+
+        <p><strong>Assunto:</strong> Comunica a instauração de Processo Administrativo Disciplinar.</p>
+
+        <p>Senhor(a) Coordenador(a)-Geral de Pessoal,</p>
+
+        <p>1. Na condição de presidente da Comissão de Processo Administrativo Disciplinar (PAD), designada pela
+        Portaria nº XXX, de XXX, do XXX, publicada no Boletim de Gestão de Pessoas (BGP) de XX/XX/XXXX, incumbida de
+        apurar eventuais responsabilidades administrativas descritas no Processo nº XXX, COMUNICO que,
+        mediante lavratura de Ata de Deliberação, de XXX, foi decidido por notificar previamente, na condição de
+        acusado, o seguinte agente:</p>
+
+        <p style="text-align: center;">(nome do servidor), (cargo ocupado), Siape XXX</p>
+
+        <p>2. Informo que, nos termos do art. 172 da Lei nº 8.112/90, encontra-se vedada a concessão de
+        aposentadoria voluntária ou exoneração a pedido do servidor citado antes de concluído o presente
+        processo.</p>
+
+        <p>3. Ademais, solicito que essa comissão seja consultada previamente sobre a possibilidade de se autorizar
+        a concessão de férias ou quaisquer outros afastamentos que a lei atribua à Administração o
+        poder discricionário para seu deferimento, enquanto necessário o comparecimento do agente acusado
+        perante a comissão, sob pena de prejudicar o andamento do processo.</p>
+
+        <p>4. Igualmente, solicito disponibilizar cópia dos assentamentos funcionais do agente acima relacionado,
+        em que constem penalidades eventualmente aplicadas, inclusive informando o local de lotação e
+        exercício. Alerta-se que tais assentamentos não se restringem a listagem do conteúdo das pastas, e sim envio
+        de cópias de todos os documentos arquivados.</p>
+
+        <p>5. As informações solicitadas devem ser encaminhadas a esta Comissão, por meio eletrônico, para o e-
+        mail XXX, fazendo referência ao processo XXXX. Para outros esclarecimentos, coloco-me à disposição
+        pelo e-mail já mencionado ou pelo telefone XXX.</p>
+
+        <p>6. Oportuno registrar que, ao conteúdo solicitado, aplica-se o art. 20 do Decreto n° 7.724/2012, que restringe
+        o acesso aos documentos de natureza preparatória ou informação neles contidas, e o art. 150 da Lei nº
+        8.112/90, que assegura o sigilo necessário à elucidação do fato ou exigido pelo interesse da administração, no
+        âmbito de processos administrativos disciplinares.</p>
+
+        <p>Atenciosamente,</p>
+
+        <div class="signature">
+            <p style="text-align: center;"><strong>(nome do presidente)</strong></p>
+                <p style="text-align: center;">Presidente</p>
+        </div>
+    </div>
+
+</section>    
+
+<section id="section7">
+            <h4>Ata de deliberação com o rol testemunhas a serem ouvidas:</h4>
+            <div class="container">
+                <h2>MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS</h2>
+                <h3 style="text-align: center;">Ata de deliberação</h3>
+        
+                <p>Em XX, às XX, por meio de videoconferência, utilizando o aplicativo Teams, a Comissão de 
+                Processo Administrativo Disciplinar (CPAD), designada pela Portaria nº XX, de XX, do XXX, 
+                 publicada no Boletim de Gestão de Pessoas (BGP) de XX/XX/XXXX, reuniu-se ao tempo em que DELIBEROU por:</p>
+         
+                  <p>a. Apresentar o agendamento das oitivas de 
+testemunhas, para o dia (DATA DA OITIVA), a serem realizadas por 
+videoconferência, transmitidas em tempo real via Sistema TEAMS, conforme
+ horários abaixo dispostos:</p>
+
+          <table>
+            <tbody><tr>
+                <th>Testemunha</th>
+                <th>Data da oitiva</th>
+                <th>Horário da oitiva</th>
+                <th>Local da oitiva</th>
+            </tr>
+            <tr>
+                <td>Testemunha 1</td>
+                <td>01/01/2024</td>
+                <td>09:00</td>
+                <td>Videoconferência</td>
+            </tr>
+            <tr>
+                <td>Testemunha 2</td>
+                <td>01/01/2024</td>
+                <td>10:00</td>
+                <td>Videoconferência</td>
+            </tr>
+            <tr>
+                <td>Testemunha 3</td>
+                <td>01/01/2024</td>
+                <td>11:00</td>
+                <td>Videoconferência</td>
+            </tr>
+            <tr>
+                <td>Testemunha 4</td>
+                <td>01/01/2024</td>
+                <td>13:00</td>
+                <td>Videoconferência</td>
+            </tr>
+            <tr>
+                <td>Testemunha 5</td>
+                <td>01/01/2024</td>
+                <td>14:00</td>
+                <td>Videoconferência</td>
+            </tr>
+        </tbody></table>
+
+        <p>b. notificar o(a) servidor(a) XXX, comunicando a respeito da deliberação contida nesta ata.</p>
+        <p>Nada mais havendo a ser tratado, foi lavrada esta ata que vai assinada pelo presidente e pelos membros.</p>
+        
+                <div class="signature">
+                    
+                    <p style="text-align: center;">(Nome do servidor) - Membro</p>
+                    <p style="text-align: center;">(Nome do servidor) - Membro</p>
+                    <p style="text-align: center;">(Nome do servidor) - Presidente</p>
+                </div>
+            </div>
+
+        </section>
+
+<section id="section8">
+<h4>Modelo de intimação para a oitiva de testemunha:</h4>
+ <div class="container">
+        <h2 style="text-align: center;">MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS</h2>
+     
+
+        <p>Ao Senhor/ À Senhora <br>
+        <strong>XXXXXXXXXXXXXXXX</strong><br>
+        e-mail: (preencher)</p>
+
+        <p>1. Na condição de Presidente da Comissão de Processo 
+Administrativo Disciplinar n.º XXXX designada pela Portaria nº ---, de 
+-- de ------ de 20XX, 
+publicada no Boletim de Gestão de Pessoas (BGP) de XX/XX/XXXX, 
+que apura possíveis infrações disciplinares relacionadas a fatos 
+ocorridos/apontados no
+        [órgão/programa de governo/relatório de auditoria/Operação 
+Policial], no uso das atribuições a mim
+        conferidas, com fundamento no art. 4°, IV da Lei n° 9.784/99, 
+INTIMO-O(A) para prestar depoimento
+        perante esta Comissão, na condição de TESTEMUNHA, no (dia) de 
+(mês) de (ano), às --:--h.</p>
+
+        <p>2. A participação do(a) Senhor(a) no ato ocorrerá a partir de sua própria residência ou de
+        algum outro local de sua preferência, utilizando computador com acesso à internet, equipado com
+        webcam, microfone e áudio, ou celular com câmera frontal. A oitiva será realizada por meio do Sistema
+        TEAMS, sendo necessário o prévio download do aplicativo em seu computador ou celular, o qual
+        está disponível gratuitamente no endereço eletrônico <a href="https://teams.microsoft.com/downloads">https://teams.microsoft.com/downloads</a>.</p>
+
+        <p>3. No dia e horário designados, deverá ser feito acesso ao 
+ambiente da reunião através do e-mail encaminhado ou pelo seguinte link 
+ou QR Code:</p>
+
+        <p><a href="https://teams.microsoft.com/l/meetup-join/(ajustar%20com%20os%20dados%20do%20link)">Link para a Reunião no TEAMS(ajustar com os dados do link)</a></p>
+
+        <p>4. Recomenda-se o ingresso no sistema com 10 minutos de 
+antecedência, para realização dos respectivos testes de conexão com 
+todos os participantes e apresentação de documento de identificação 
+        com foto.</p>
+
+        <p>5. Nos termos do artigo 106, § 1º, da Portaria CGU nº 27/2022, as 
+        audiências realizadas por meio de teletransmissão de sons, imagens ao vivo e em tempo real, possuem 
+        caráter reservado, e serão gravadas e armazenadas no âmbito do respectivo processo disciplinar.</p>
+
+        <p>6. Em conformidade com a Lei nº 13.709/2018, comunica-se que os 
+        dados, termos, áudios e imagens decorrentes da audiência poderão ser utilizados para instrumentalizar 
+        procedimentos e processos de responsabilização administrativa, podendo ser compartilhado, nas hipóteses 
+        legais, com instituições e órgãos públicos responsáveis pelas atividades de persecução civil ou criminal. ​</p>
+
+        <p>7. Esta comissão continua à disposição para esclarecimentos adicionais pelo endereço eletrônico
+        <a href="">(e-mail da comissão)</a> ou pelo telefone (XX) XXXX-XXXX, devendo ser reportada com antecedência de pelo menos 3 dias eventual ausência de acesso
+        aos equipamentos indicados, situação em que poderá ser disponibilizado local para sua participação no ato.</p>
+
+        <p>Atenciosamente,</p>
+
+        <div class="signature">
+            <p style="text-align: center;"><strong>(nome do presidente)</strong></p>
+            <p style="text-align: center;">Presidente</p>
+        </div>
+    </div>
+</section>    
+
+
+<section id="section9">
+<h4>Modelo de Ata de audiência:</h4>
+ <div class="container">
+        <h2 style="text-align: center;">MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS</h2>
+
+        <h3 style="text-align: center;">ATA DE AUDIÊNCIA</h3>
+
+        <p>Aos (data) do mês de (mês) do ano de dois mil e vinte e XXX, 
+às 11h27, por meio de videoconferência, realizada pelo aplicativo Teams,
+ reuniu-se às (hora) do dia XXX, horário de Brasília/DF, para realizar o
+ depoimento de (nome completo), SIAPE XXX (ou dados de carteira de 
+identidade, no caso de particular), nos termos do art. 155 da Lei nº 
+8.112/90, combinado com a Portaria Normativa CGU nº 27, de 11 de outubro
+ de 2022.</p>
+
+	<p>Presentes ainda os participantes (nome completo e descrição do 
+participante, tal como advogado). A conferência da identificação do 
+depoente foi realizada com a aproximação do documento à câmera.</p> 
+
+        <p>Foi comunicado que, nos termos do Art. 110 da Portaria nº 
+27/2022, a audiência seria gravada, com a posterior juntada dos 
+registros audiovisuais nos autos do presente PAD, ficando disponível nos
+ autos para acesso pela defesa. Bem como, não haverá a transcrição da 
+presente audiência.</p>
+
+        <p>Alertou-se sobre o caráter reservado da audiência, sendo 
+proibido o acesso de terceiros não autorizados ou a divulgação do ato, 
+sob pena de eventual responsabilização nos termos do artigo 153 
+parágrafo 1º-A do Código Penal c/c artigo 25, parágrafo 2º, da Lei nº 
+12.527/2011.</p>
+
+        <p>Desta forma, indagou-se ao depoente e aos demais presentes se
+ os ambientes em que se encontravam eram reservados, ao que responderam 
+que XXX.</p>
+
+        <p>Perguntado sobre hipóteses de suspeição ou impedimento, o 
+depoente nada declarou, razão pela qual a CPAD tomou seu depoimento como
+ testemunha. Foi advertido de que, na condição de testemunha, estará 
+compromissada com a verdade, sob pena de cometimento do crime previsto 
+no art. 342 do Código Penal. </p>    
+
+	<p>Quando o depoente é trazido na condição de informante, usar o seguinte texto: </p>
+    <hr>
+	<p>Realizando as medidas de praxe, considerando a documentação e 
+manifestação do senhor (a) XXX, bem como ponderando que o resultado 
+deste processo poderia vir a repercutir em desfavor do intimado, a 
+Presidente informou que o depoente seria ouvido na condição de 
+informante.</p>
+     
+    <p>Alertou-se ao intimado que não seria compromissado com a verdade,
+ que poderia ficar em silêncio em relação a alguma pergunta que pudesse 
+vir a prejudicá-la judicialmente, administrativamente ou incriminá-la, 
+tendo em vista que ninguém é obrigado a se autoincriminar ou produzir 
+prova contra si mesmo.</p>
+        <hr>
+	<p>Ao término dos questionamentos da comissão ao depoente, foi 
+concedida a palavra para o advogado do acusado, que realizou as suas 
+perguntas. Ademais, o advogado requereu a deliberação da comissão sobre 
+determinado assunto, ou mesmo apresentou uma documentação para juntada 
+aos autos. </p>
+    <p> Por fim, oferecida a palavra ao depoente em caso desejasse 
+acrescentar algo em seu depoimento, ele não teve nada a declarar.	
+Procedeu-se ao encerramento do depoimento e à dispensa do depoente. </p><p> O Presidente lavrou a presente Ata.</p>
+      
+        <div class="signature">
+            <p style="text-align: center;"><strong>(nome do presidente)</strong></p>
+            <p style="text-align: center;">Presidente</p>
+        </div>
+    </div>
+</section> 
+
+<section id="section10">
+    <h4>Modelo de Ata de Reunião - Indiciamento:</h4>
+    <div class="container">
+        <h2>MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS</h2>
+        <h3 style="text-align: center;">Ata de Reunião - Indiciamento</h3>
+
+        <p>Em XX, às XX, por meio de videoconferência, utilizando o aplicativo Teams, a Comissão de 
+        Processo Administrativo Disciplinar (CPAD), designada pela Portaria nº XX, de XX, do XXX, 
+         publicada no Boletim de Gestão de Pessoas (BGP) de XX/XX/XXXX, reuniu-se objetivando à 
+       dar andamento dos trabalhos relacionados à apuração dos fatos constantes do processo nº 
+        XXXX, ao tempo em que DELIBEROU por:</p>
+ 
+        <p>a. aprovar o Termo de indiciação (Documento XXX);</p>
+
+        <p>b. indiciar o servidor XXX, SIAPE nº [número], CPF nº 
+[número], que à época dos fatos ocupava o cargo de [nome do cargo 
+efetivo ou comissionado] do MDIC, pelas razões expostas no referido 
+Termo de Indiciação (Documento XXX);</p>
+
+        <p>c. proceder à citação do servidor para apresentar defesa 
+final, no prazo de 10 (dez) dias, na forma do art. 161, §1º, da Lei 
+8.112, de 1990.</p>
+    
+        <p>Nada mais havendo a ser tratado, foi lavrada esta ata que vai assinada pelo presidente e pelos 
+        membros.</p>
+
+        <div class="signature">
+            
+            <p style="text-align: center;">(Nome do servidor) - Membro</p>
+            <p style="text-align: center;">(Nome do servidor) - Membro</p>
+            <p style="text-align: center;">(Nome do servidor) - Presidente</p>
+        </div>
+    </div>
+
+</section>
+
+<section id="section11">
+    <h4>Modelo de Termo de indiciação:</h4>
+    <div class="container">
+        <h2 style="text-align: center;">MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS</h2>
+        <section>
+            <h2>TERMO DE INDICIAÇÃO</h2>
+            <p>1. A Comissão de Processo Administrativo Disciplinar designada pela Portaria nº ___, de
+            __ de __ de __, publicada no __(Boletim Interno ou DOU) nº _, de __ de __ de 20__),
+            do(a) ______ (especificar o órgão), e tendo como último ato a designação feita pela Portaria ___,
+            de __ de __ de 20_, publicada no __ (DOU ou Boletim Interno) nº __, de __ de _ de ___, após
+            ultimar a coleta de todas as provas hábeis à formação de seu convencimento, decide por INDICIAR o servidor
+            ________, (nacionalidade, estado civil, ocupação, cargo, lotação, matrícula, carteira de
+            identidade e CPF), conforme a(s) irregularidade(s), o conjunto probatório, ato(s) e fato(s) a seguir elencados:</p>
+            <h3>IRREGULARIDADE 01:</h3>
+            <ul>
+                <li>a) Descrever os agentes envolvidos, as respectivas condutas e o eventual resultado;</li>
+                <li>b) Especificar as provas que levaram ao convencimento do colegiado (evidências);</li>
+                <li>c) O nexo causal entre a conduta e a irregularidade identificada;</li>
+                <li>d) A tipificação expressa.</li>
+            </ul>
+            <p>Exemplo:
+            Quanto a essa acusação especificada no item “a”, o documento contido à folha __ comprova que o
+            Indiciado foi o autor dessa infração ao ______ (descrever a pratica do ato, especificando se o ato foi
+            praticado de forma culposa ou dolosa, apontando os elementos).</p>
+            <p>O documento contido à folha __ demonstra que o Indiciado praticou essa infração ao ____
+            (descrever a pratica do ato, especificando se o ato foi praticado de forma culposa ou dolosa).</p>
+            <p>Ainda, a testemunha __, cujo depoimento foi colhido à folha ___, afirmou:
+            “xxxx xxxx xxxx xxxx xxxx xxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+            xxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxx xxxx xxxx”.</p>
+            <p>Pelo exposto, presentes a materialidade, a antijuridicidade, a conduta reprovável e a culpabilidade do
+            servidor ___, esta comissão o indicia pelo cometimento da infração capitulada no(s) art.(s) __, ___ e
+            ___ da Lei nº 8.112, de 1990.</p>
+            <h3>IRREGULARIDADE 02:</h3>
+            <p>(...)</p>
+            <h3>IRREGULARIDADE 03:</h3>
+            <p>(...)</p>
+            <p>2. Assim, feita a análise do conjunto probatório, dos atos praticados e suas consequentes subsunções
+            aos teores das normas reputadas por violadas, acham-se os autos em condições de obter vista do indiciado, que
+            deverá ser imediatamente citado para apresentar defesa no prazo de __ dias (especificar se em dez dias, caso de
+            apenas um indiciado, ou vinte dias, caso de mais de um indiciado ), na forma do art. 161 da Lei nº 8.112, de 1990.</p>
+        </section>
+        <div class="signature">
+                  <p style="text-align: center;">(Nome do servidor) - Membro</p>
+                    <p style="text-align: center;">(Nome do servidor) - Membro</p>
+                    <p style="text-align: center;">(Nome do servidor) - Presidente</p>
+        </div>
+    </div>
+</section>
+
+<section id="section12">
+    <h4>Modelo de Citação para Apresentação de Defesa Escrita:</h4>
+    <div class="container">
+        <h2 style="text-align: center;">MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS</h2>
+        <h2>Citação</h2>
+	
+        <p>Ao Senhor/ À Senhora <br>
+        <strong>(nome do indiciado)</strong><br>
+        Endereço: (endereço do indiciado)</p>
+
+        <p>1. Na condição de Presidente da Comissão de Processo 
+Administrativo Disciplinar designada pela Portaria nº ___, de ____ de 
+_________ de ______, publicada no (Boletim de Pessol/DOU), de _____ de 
+_______de _________, constituída
+para apurar irregularidades constantes do Processo nº _______________, 
+CITO Vossa Senhoria para apresentação de defesa escrita no prazo de 10 
+dias (se houver apenas um indiciado) ou 20 dias (se houver mais de um 
+indiciado). </p><p>
+        </p><p>2. Informo que o prazo para apresentação da defesa é 
+contado a partir do recebimento desta citação, conforme estabelecido nos
+ § 1º e § 2º do art. 161 da Lei nº 8.112/90, sendo assegurado vista do 
+processo de forma eletrônica.</p>
+        <p>3. Esta comissão encontra-se à disposição para esclarecimentos adicionais pelo endereço eletrônico <a href="">(e-mail da comissão)</a> ou pelo telefone (XX) XXXX-XXXX.</p>
+        <p>Atenciosamente,</p>
+        <div class="signature">
+            <p style="text-align: center;"><strong>(Nome do presidente da comissão)</strong></p>
+            <p style="text-align: center;">Presidente</p>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="section13">
+<h4>Modelo de Relatório final:</h4>
+<div class="container">
+        <h2 style="text-align: center;">MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS</h2>
+        <h2>RELATÓRIO FINAL</h2>
+        <p>Ao(a) Senhor(a) (Autoridade Instauradora)</p>
+    </header>
+    <section id="introducao">
+        <p>
+            1. A Comissão de Processo Administrativo Disciplinar (CPAD) designada pela Portaria nº _____, de (data), 
+            publicada no (veículo de publicação), de (data), com o objetivo de apurar eventuais responsabilidades 
+            administrativas descritas no processo nº _________________________, bem como proceder ao exame de outros 
+            fatos, ações e omissões que porventura venham a ser identificados no curso de seus trabalhos e que guardem 
+            conexão com o objeto presente, vem, respeitosamente, apresentar o respectivo relatório final.
+        </p>
+    </section>
+    <section id="antecedentes">
+        <h3>DOS ANTECEDENTES</h3>
+        <p>
+            2. A presente apuração decorreu de _______________.
+        </p>
+    </section>
+    <section id="instauracao">
+        <h3>DA INSTAURAÇÃO</h3>
+        <p>
+            3. A Comissão foi instaurada pela Portaria nº _____, de (data), do (autoridade instauradora), publicada no 
+            (veículo de publicação), de (data), prorrogada pela Portaria nº _____, de (data), publicada no (veículo de 
+            publicação), de (data), reconduzida pela Portaria nº _____, de (data), publicada no (veículo de publicação), 
+            de (data), (especificar todas as prorrogações e reconduções).
+        </p>
+    </section>
+    <section id="instrucao">
+        <h3>DA INSTRUÇÃO</h3>
+        <p>5. Esta CPAD iniciou seus trabalhos no dia _____________ (data), conforme Ata de Instalação e Inícios dos Trabalhos.</p>
+    </section>
+    <section id="indiciacao">
+        <h3>DA INDICIAÇÃO</h3>
+      
+	<p>6. Esse tópico deve ser redigido com base no termo de indiciação, detalhando as irregularidades identificadas, as provas consideradas, o nexo causal entre essas provas e as irregularidades praticadas, a autoria atribuída e a tipificação jurídica adotada. Deverão ser abordados os seguintes pontos:</p>
+
+<p><strong>Descrição das irregularidades:</strong> Apresentar de forma clara e objetiva os atos ou omissões que configuram as irregularidades, indicando os dispositivos legais ou normativos infringidos.</p>
+
+<p><strong>Especificação das provas:</strong> Relatar as evidências colhidas no processo que fundamentam a constatação das irregularidades, sejam elas documentais, testemunhais, periciais ou outras.</p>
+
+<p><strong>Nexo causal:</strong> Demonstrar a conexão direta entre as provas apresentadas e os fatos irregulares apurados, explicando como as evidências confirmam a ocorrência da irregularidade.</p>
+
+<p><strong>Identificação da autoria:</strong> Indicar, com base nos elementos de prova, os responsáveis pela prática das irregularidades, destacando sua conduta e eventual dolo ou culpa.</p>
+
+<p><strong>Tipificação jurídica:</strong> Enquadrar os atos praticados na legislação aplicável, especificando os artigos, incisos ou alíneas violados e a penalidade correspondente.</p>
+
+<p>A redação deve ser técnica e precisa, com a finalidade de embasar as etapas subsequentes do processo e possibilitar o contraditório e a ampla defesa.</p>
+  
+      
+    </section>
+    <section id="defesa">
+        <h3>DA DEFESA ESCRITA</h3>
+        <p>
+            7. O servidor _____________________________ apresentou defesa escrita em ____________ 
+            (data), por meio da qual formulou as seguintes alegações:    </p>
+           
+            <p>- Das preliminares (especificar e analisar as alegações preliminares):</p>
+            <p>a) ________________________________________;</p>
+            <p>b) ________________________________________;</p>
+            <p>c) ________________________________________.</p>
+            <p>- Do mérito (especificar e analisar as alegações de mérito):</p>
+            <p>a) ________________________________________;</p>
+            <p>b) ________________________________________;</p>
+            <p>c) ________________________________________.</p>
+     
+    </section>
+    <section id="conclusao">
+        <h3>DA CONCLUSÃO</h3>
+        <p> <strong> a) Sugestão de texto de absolvição: </strong>  </p>
+            <p> 8. Em virtude de todo o exposto, com atenção ao devido processo legal, à ampla defesa e ao contraditório, 
+            esta comissão entende pela absolvição do servidor ______________, matrícula __________, lotado na 
+            _________________(unidade de lotação) e em exercício na _______________(unidade de exercício), pelos 
+            seguintes motivos:  (...). </p>
+       <p><strong> Sugestão de motivos: </strong> </p>
+       <p><strong>1. Ausência de comprovação da autoria</strong></p>
+<p>Não foi demonstrado, com provas concretas, que o servidor tenha praticado o ato irregular. A autoria não foi atribuída de forma inequívoca, havendo dúvidas razoáveis sobre a responsabilidade do servidor.</p>
+
+<p><strong>2. Falta de materialidade da infração</strong></p>
+<p>Não há evidências suficientes que comprovem a ocorrência do fato irregular. As provas apresentadas são insuficientes, inconsistentes ou contraditórias para demonstrar que a irregularidade ocorreu.</p>
+
+<p><strong>3. Inexistência de dolo ou culpa</strong></p>
+<p>Não foi constatado dolo (intenção) ou culpa (negligência, imprudência ou imperícia) por parte do servidor na prática do ato. A conduta do servidor não caracteriza violação aos deveres funcionais previstos na Lei nº 8.112/90.
+Avaliar a aplicação ou não do 
+<a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del4657.htm#art28" target="_blank" >art. 28 da Lei de Introdução às normas do Direito Brasileiro.</a> (Art. 28. O agente público responderá pessoalmente por suas decisões ou opiniões técnicas em caso de dolo ou erro grosseiro.)
+</p>
+
+<p><strong>4. Erro justificável</strong></p>
+<p>A ação ou omissão do servidor ocorreu em razão de um erro justificável, como má orientação de superiores, dúvidas razoáveis quanto à interpretação de normas, falta de clareza em procedimentos internos, situação excepcional ou de urgência e outros. </p>
+
+<p><strong>5. Ausência de nexo causal</strong></p>
+<p>Não há relação direta entre a conduta do servidor e o resultado irregular apurado. As irregularidades podem ser atribuídas a fatores externos ou a outros agentes.</p>
+
+<p><strong>6. Falta de previsão legal para punição</strong></p>
+<p>A conduta do servidor não está tipificada como irregularidade em nenhuma norma ou regulamento aplicável. Não há fundamento legal para aplicação de penalidade.</p>
+
+<p><strong>7. Prescrição</strong></p>
+<p>O prazo para apuração da infração e aplicação de penalidade já expirou, de acordo com os prazos prescricionais previstos na legislação aplicável.</p>
+
+        <p> <strong> b) Sugestão de texto de condenação: </strong></p>
+           <p> 9. Em virtude de todo o exposto, com atenção ao devido processo legal, à ampla defesa e ao contraditório, 
+            esta comissão entende que o servidor ______________, matrícula __________, lotado na _________________
+            (unidade de lotação) e em exercício na _______________(unidade de exercício), pelos fatos acima descritos, 
+            incorreu nas seguintes infrações _________________________________, respectivamente enquadradas nos arts. 
+            ____________________ da Lei nº 8.112, de 1990.
+        </p>
+        <p>
+            10. Como atenuantes, apontam-se _______________________________.
+        </p>
+        <p>
+            11. Como agravantes identificam-se _____________________________.
+        </p>
+        <p>
+            12. Nesse sentido, este colegiado manifesta-se ao Senhor pela aplicação da pena de ___________ ao servidor 
+            ______________, matrícula __________.
+        </p>
+        <p><strong><a href=https://epad.cgu.gov.br/publico/calculadora/calc.html?tipo=pad target="_blank"> -> Usar a Calculadora de Penalidade Administrativa</a></strong> </p>
+
+    </section>
+    <section id="recomendacoes">
+        <h3>DAS RECOMENDAÇÕES</h3>
+        <p>
+            13. Por fim, recomenda-se encaminhar cópia do presente Relatório Final ao __________________ (órgão/autoridade competente), em razão de __________________________________ (especificar os motivos ou sugestões de medidas de melhorias de gestão).
+        </p>
+    </section>
+    <section id="encaminhamento">
+        <h3>DO ENCAMINHAMENTO À AUTORIDADE INSTAURADORA</h3>
+        <p>
+            14. Encerrados os trabalhos, a Comissão de Processo Administrativo Disciplinar submete à apreciação de Vossa 
+            Senhoria os autos do presente processo, nos termos do art. 166 da Lei n° 8.112, de 1990.
+        </p>
+
+<div class="signature">
+                  <p style="text-align: center;">(Nome do servidor) - Membro</p>
+                    <p style="text-align: center;">(Nome do servidor) - Membro</p>
+                    <p style="text-align: center;">(Nome do servidor) - Presidente</p>
+        </div>
+
+</div>
+    </section>
+
+
+</div>
+
+    <div class="back-to-top" id="back-to-top" style="display: block;">Voltar ao Topo</div>
+
+    <script>
+        // Mostrar o botão de voltar ao topo quando a página for rolada para baixo
+        window.addEventListener('scroll', function() {
+            const backToTopButton = document.getElementById('back-to-top');
+            if (window.pageYOffset > 100) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        // Função para rolar suavemente ao topo da página
+        document.getElementById('back-to-top').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+
+</body></html>
