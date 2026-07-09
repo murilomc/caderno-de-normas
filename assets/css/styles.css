@@ -1,0 +1,792 @@
+﻿body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #f7f5f5;
+      height: 100%;
+      margin: 0;
+  }
+  h1 {
+  font-size: 30px;
+ 
+}
+
+.two-lines {
+  text-align: left; /* Alinha o texto à esquerda */
+  white-space: pre-wrap;
+  margin-left: 50px;
+
+}
+
+h2 {
+  text-align-last: center;
+  font-size: 13px;
+}
+
+
+.top {
+  position: sticky;
+  top: 0;
+  background-color: #004361;
+  padding: 10px;
+  text-align: center;
+  z-index: 999;
+  width: 100%;
+}
+
+.top-topic {
+  max-width: 900px;
+  display: flex;
+
+  align-items: center;
+  margin: 0 auto;
+padding-right: 60px;
+      
+}
+
+.search-container {
+  text-align: center;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+.search-container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 300px; /* Definindo uma largura máxima para manter tudo alinhado */
+            margin: auto;
+        }
+
+        .search-container select, 
+        .search-container input, 
+        .search-container button {
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            transition: all 0.3s;
+        }
+
+        .search-container input {
+            width: 100%; 
+            border-radius: 4px;
+            outline: none;
+            border: 2px solid transparent;
+        }
+
+        .search-container input:focus {
+            border-color: #007BFF;
+        }
+
+        .search-container button {
+            background-color: #007BFF;
+            color: #FFF;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            flex: 1; 
+        }
+
+        .search-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+            width: 100%; 
+            margin-top: 10px; 
+        }
+        
+       .button-container button[type="submit"] {
+        padding: 5px 10px;
+        background-color: #4CAF50;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .container {
+            margin: 20px auto;
+          
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos da barra de navegação */
+        .navbar {
+            background-color: #333;
+            overflow: auto;
+            padding: 0 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #007BFF;
+            color: white;
+        }
+
+ /* Estilos das seções de links */
+ .sections-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; /* espaço entre as seções */
+        }
+
+        .section {
+            flex: 1;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 10px;
+        }
+
+        .links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Garante que não haja margem extra */
+}
+
+.links-list li {
+    margin-bottom: 15px; /* Espaçamento um pouco maior entre os itens */
+    background: #fdfdfd; /* Uma cor de fundo mais clara */
+    padding: 10px 15px; /* Mais espaço interno para melhor legibilidade */
+    border-radius: 8px; /* Bordas mais arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve para um efeito "elevado" */
+    transition: background 0.3s, box-shadow 0.3s; /* Suaviza a transição da sombra e do fundo */
+}
+
+.links-list li a {
+    color: #0056b3; /* Cor de link padrão */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: 500; /* Torna o texto um pouco mais grosso */
+    transition: color 0.3s; /* Suaviza a transição de cor */
+}
+
+
+.links-list li:hover {
+    background: #f0f0f0; /* Fundo um pouco mais escuro ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada ao passar o mouse */
+}
+
+    .content {
+  position: relative;
+  flex-grow: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #333333;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  text-align: justify;
+  max-width: 900px;
+  margin: 0 auto;
+ 
+}
+
+.content > section {
+  scroll-margin-top: 150px; /* ou qualquer outro valor desejado */
+}
+    section {
+      padding-top: 30px;
+     
+      }
+
+    section h2 {
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+
+.menu-toggle {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  z-index: 9999;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Estilo do menu quando visível */
+.sidebar.active {
+  left: 0;
+}
+
+/* Ajuste do conteúdo quando o menu está visível */
+.content.active {
+  margin-left: 200px;
+}
+
+/* Default styles for .sidebar */
+.sidebar {
+  padding-top: 50px;
+  position: fixed;
+  top: 0;
+  left: -200px; /* Oculta o menu lateral */
+  width: 200px;
+  height: 100vh;
+  background-color: #004361;
+  transition: left 0.3s ease;
+  color: #ffffff;
+  width: 200px;
+}
+
+.sidebar a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #ffcc00;
+}
+
+
+.menu-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: #3498DB;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+ position: relative;
+  right: auto;
+  left: 2px;
+  top: 2px;
+}
+
+.menu-btn span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-btn.active {
+  background-color: #ff6b6b;
+  z-index: 1;
+}
+
+.menu-btn.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0; /* Posiciona o menu à esquerda da tela */
+  width: 150px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu.show-menu {
+  display: block;
+}
+
+.menu a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: #333;
+}
+
+    .juridical-info {
+      background-color: #fdfdfd;
+      border: 1px solid #ddd;
+      padding-right: 25px;
+      padding-left: 25px;
+      margin-bottom: 0px;
+   
+       text-align: justify;
+    }
+
+    .juridical-info h2 {
+      font-size: 20px;
+      color: #337ab7;
+    }
+
+    .juridical-info p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .footer {
+      background-color: #004361;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+     /* Styles for screens up to 600px */
+     @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 16px;
+      }
+
+      h2 {
+        font-size: 11px;
+      }
+
+      .top-topic {
+        padding-right: 30px;
+      }
+
+      .content {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .juridical-info h2 {
+        font-size: 16px;
+      }
+
+      .juridical-info p {
+        font-size: 12px;
+      }
+    }
+
+    /* Styles for screens up to 900px */
+    @media screen and (max-width: 900px) {
+      h1 {
+        font-size: 18px;
+      }
+
+      h2 {
+        font-size: 12px;
+      }
+    }
+
+    label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            padding: 5px 10px;
+            margin-top: 10px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .highlight {
+          background-color: yellow !important;
+        }
+
+        .comentario {
+      background-color: #f0f0f0; /* Define a cor de fundo do comentário */
+      padding: 10px; /* Define um espaçamento interno de 10 pixels */
+      border: 1px solid #ccc; /* Define uma borda de 1 pixel com cor cinza */
+      margin: 10px 0; /* Define margens superiores e inferiores de 10 pixels */
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave */
+      border-radius: 5px; /* Adiciona arredondamento nas bordas */
+      margin-bottom: 15px;
+    }
+.artigo {
+
+  color:#333333;
+  margin-right: 20px; /* Espaçamento entre o ícone e o texto */
+   }
+
+   /* Media Query para telas menores, ajuste o max-width conforme necessário */
+@media (max-width: 768px) {
+  .artigo {
+    margin-right: 20px; /* Reduza o espaçamento entre o ícone e o texto em telas menores */
+  }
+}
+
+.topico {
+  font-weight: bold;
+}
+
+.links-area {
+  margin-top: auto; /* Move os links para a parte inferior do topo */
+  text-align-last: center;
+}
+
+.links-area ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Centraliza os links horizontalmente */
+}
+
+.links-area li {
+  margin-right: 20px;
+}
+
+.links-area a {
+  text-decoration: none;
+  color: #fff; /* Cor dos links no topo */
+}
+
+/* Estilização dos links quando o mouse passa por cima */
+.links-area a:hover {
+  text-decoration: underline;
+
+}
+
+ /* Estilo do botão de voltar ao topo */
+ #backToTop {
+            display: none; /* Inicialmente oculto */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        #backToTop:hover {
+            opacity: 0.8;
+        }
+      /* Estilo do botão */
+      #toggleButton {
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            background-color: #007BFF;
+            color: #FFF;
+            border-radius: 4px;
+            outline: none;
+            transition: background-color 0.3s; /* Adiciona transição para o hover do botão */
+        }
+
+        #toggleButton:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos para a animação */
+        #textContainer {
+            max-height: 0px;
+            overflow: hidden;
+            opacity: 0;
+            transition: opacity 0.5s, max-height 0.5s ease-in-out; /* Junta ambas transições em uma */
+            margin-top: 20px; /* Margem adicionada para afastar do botão */
+        }
+
+         /* Estilo do botão */
+         .toggleButton {
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            background-color: #007BFF;
+            color: #FFF;
+            border-radius: 4px;
+            outline: none;
+            transition: background-color 0.3s;
+        }
+
+        .toggleButton:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos para a animação */
+        .textContainer {
+            max-height: 0px;
+            overflow: hidden;
+            opacity: 0;
+            transition: opacity 0.5s, max-height 0.5s ease-in-out;
+            margin-top: 20px;
+        }
+
+:root{
+    /* Paleta aproximada do seu site */
+    --cn-primary: #0b4f63;      /* azul petróleo (header) */
+    --cn-primary-2: #063a49;    /* mais escuro para hover */
+    --cn-accent: #0d6efd;       /* azul dos botões */
+    --cn-bg: #f4f7fb;           /* fundo claro */
+    --cn-text: #0f172a;         /* texto */
+    --cn-muted: #64748b;        /* texto secundário */
+    --cn-border: #dbe3ef;       /* borda suave */
+    --cn-white: #ffffff;
+  }
+
+  #cn-chat-btn{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,.08);
+    cursor: pointer;
+    background: var(--cn-primary);
+    color: var(--cn-white);
+    box-shadow: 0 14px 30px rgba(2, 20, 28, .28);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    transition: transform .12s ease, background .12s ease, box-shadow .12s ease;
+  }
+  #cn-chat-btn:hover{
+    background: var(--cn-primary-2);
+    transform: translateY(-1px);
+    box-shadow: 0 18px 36px rgba(2, 20, 28, .34);
+  }
+
+  #cn-chat-panel{
+    position: fixed;
+    right: 20px;
+    bottom: 90px;
+    width: 420px;
+    max-width: calc(100vw - 40px);
+    height: 650px;
+    max-height: calc(100vh - 140px);
+    background: var(--cn-white);
+    border: 1px solid var(--cn-border);
+    border-radius: 18px;
+    box-shadow: 0 22px 60px rgba(2, 20, 28, .22);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 99999;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+
+  #cn-chat-panel.open{
+  display: flex;
+  flex-direction: column;
+}
+
+  #cn-chat-header{
+    background: linear-gradient(180deg, var(--cn-primary), var(--cn-primary-2));
+    color: var(--cn-white);
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #cn-chat-header strong{
+    font-size: 14px;
+    letter-spacing: .2px;
+  }
+  #cn-chat-close{
+    border: none;
+    background: rgba(255,255,255,.10);
+    color: var(--cn-white);
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    padding: 8px 10px;
+    border-radius: 12px;
+    transition: background .12s ease;
+  }
+  #cn-chat-close:hover{
+    background: rgba(255,255,255,.18);
+  }
+
+  #cn-chat-expand {
+  border: none;
+    background: rgba(255,255,255,.10);
+    color: var(--cn-white);
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    padding: 8px 10px;
+    border-radius: 12px;
+    transition: background .12s ease;
+}
+
+#cn-chat-expand:hover {
+   background: rgba(255,255,255,.18);
+}
+
+/* Modo tela cheia */
+#cn-chat-panel.fullscreen {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  border-radius: 0 !important;
+  z-index: 999999 !important;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mensagens ocupando espaço corretamente */
+#cn-chat-panel.fullscreen #cn-chat-messages {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Footer fixo no fullscreen */
+#cn-chat-panel.fullscreen #cn-chat-footer {
+  flex-shrink: 0;
+}
+
+
+  #cn-chat-messages{
+    flex: 1;
+    padding: 12px;
+    overflow: auto;
+    background: var(--cn-bg);
+  }
+
+  .cn-msg{
+    margin: 10px 0;
+    display: flex;
+  }
+  .cn-msg.user{
+    justify-content: flex-end;
+  }
+
+  .cn-bubble{
+    max-width: 86%;
+    padding: 10px 12px;
+    border-radius: 14px;
+    font-size: 13px;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  /* Usuário: azul do site */
+  .cn-msg.user .cn-bubble{
+    background: var(--cn-accent);
+    color: var(--cn-white);
+    border-bottom-right-radius: 8px;
+  }
+
+  /* Bot: branco com borda leve */
+  .cn-msg.bot .cn-bubble{
+    background: var(--cn-white);
+    color: var(--cn-text);
+    border: 1px solid var(--cn-border);
+    border-bottom-left-radius: 8px;
+  }
+
+  #cn-chat-footer{
+    border-top: 1px solid var(--cn-border);
+    padding: 10px;
+    background: var(--cn-white);
+  }
+
+  #cn-chat-form{
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  align-items: flex-end;
+}
+
+  #cn-chat-input{
+    flex: 1;
+    border: 1px solid var(--cn-border);
+    border-radius: 14px;
+    padding: 11px 12px;
+    font-size: 13px;
+    outline: none;
+    background: #fff;
+    color: var(--cn-text);
+    height: 80px;        /* altura da caixa */
+  line-height: 1.4;     /* texto começa no topo e fica confortável */
+  resize: none;         /* impede o usuário de redimensionar com o mouse */
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 14px;
+  }
+  #cn-chat-input:focus{
+    border-color: rgba(13,110,253,.65);
+    box-shadow: 0 0 0 3px rgba(13,110,253,.14);
+  }
+
+  #cn-chat-send{
+    border: none;
+    cursor: pointer;
+    background: var(--cn-primary);
+    color: var(--cn-white);
+    padding: 11px 14px;
+    border-radius: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background .12s ease, transform .12s ease;
+    white-space: nowrap;
+  }
+  #cn-chat-send:hover{
+    background: var(--cn-primary-2);
+    transform: translateY(-1px);
+  }
+  #cn-chat-send:disabled{
+    opacity: .6;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  #cn-chat-note{
+    font-size: 11px;
+    color: var(--cn-muted);
+    margin-top: 6px;
+  }
+
+  /* Scrollbar mais discreta */
+  #cn-chat-messages::-webkit-scrollbar{
+    width: 10px;
+  }
+  #cn-chat-messages::-webkit-scrollbar-thumb{
+    background: rgba(6,58,73,.25);
+    border-radius: 10px;
+    border: 3px solid var(--cn-bg);
+  }
