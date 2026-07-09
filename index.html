@@ -19,10 +19,562 @@
 
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css">
-  <link rel="stylesheet" href="assets/css/styles.css">
 
   <title>Caderno de Normas de Direito Sancionador</title>
+  
+  <style>
 
+body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #f7f5f5;
+      height: 100%;
+      margin: 0;
+  }
+  h1 {
+  font-size: 30px;
+ 
+}
+
+.two-lines {
+  text-align: left; /* Alinha o texto à esquerda */
+  white-space: pre-wrap;
+  margin-left: 50px;
+
+}
+
+h2 {
+  text-align-last: center;
+  font-size: 13px;
+}
+
+
+.top {
+  position: sticky;
+  top: 0;
+  background-color: #004361;
+  padding: 10px;
+  text-align: center;
+  z-index: 999;
+  width: 100%;
+}
+
+.top-topic {
+  max-width: 900px;
+  display: flex;
+
+  align-items: center;
+  margin: 0 auto;
+padding-right: 60px;
+      
+}
+
+.search-container {
+  text-align: center;
+  display: flex;
+  margin-left: auto;
+  margin-: auto; /* Alinha o conteúdo à direita */
+}
+.search-container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 300px; /* Definindo uma largura máxima para manter tudo alinhado */
+            margin: auto;
+        }
+
+        .search-container select, 
+        .search-container input, 
+        .search-container button {
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            transition: all 0.3s;
+        }
+
+        .search-container input {
+            width: 100%; 
+            border-radius: 4px;
+            outline: none;
+            border: 2px solid transparent;
+        }
+
+        .search-container input:focus {
+            border-color: #007BFF;
+        }
+
+        .search-container button {
+            background-color: #007BFF;
+            color: #FFF;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            flex: 1; 
+        }
+
+        .search-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+            width: 100%; 
+            margin-top: 10px; 
+        }
+        
+       .button-container button[type="submit"] {
+        padding: 5px 10px;
+        background-color: #4CAF50;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .container {
+            margin: 20px auto;
+          
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos da barra de navegação */
+        .navbar {
+            background-color: #333;
+            overflow: auto;
+            padding: 0 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #007BFF;
+            color: white;
+        }
+
+ /* Estilos das seções de links */
+ .sections-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; /* espaço entre as seções */
+        }
+
+        .section {
+            flex: 1;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 10px;
+        }
+
+        .links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Garante que não haja margem extra */
+}
+
+.links-list li {
+    margin-bottom: 15px; /* Espaçamento um pouco maior entre os itens */
+    background: #fdfdfd; /* Uma cor de fundo mais clara */
+    padding: 10px 15px; /* Mais espaço interno para melhor legibilidade */
+    border-radius: 8px; /* Bordas mais arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve para um efeito "elevado" */
+    transition: background 0.3s, box-shadow 0.3s; /* Suaviza a transição da sombra e do fundo */
+}
+
+.links-list li a {
+    color: #0056b3; /* Cor de link padrão */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: 500; /* Torna o texto um pouco mais grosso */
+    transition: color 0.3s; /* Suaviza a transição de cor */
+}
+
+
+.links-list li:hover {
+    background: #f0f0f0; /* Fundo um pouco mais escuro ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada ao passar o mouse */
+}
+
+    .content {
+  position: relative;
+  flex-grow: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #333333;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  text-align: justify;
+  max-width: 900px;
+  margin: 0 auto;
+ 
+}
+
+.content > section {
+  scroll-margin-top: 150px; /* ou qualquer outro valor desejado */
+}
+    section {
+      padding-top: 30px;
+     
+      }
+
+    section h2 {
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+
+.menu-toggle {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  z-index: 9999;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Estilo do menu quando visível */
+.sidebar.active {
+  left: 0;
+}
+
+/* Ajuste do conteúdo quando o menu está visível */
+.content.active {
+  margin-left: 200px;
+}
+
+/* Default styles for .sidebar */
+.sidebar {
+  padding-top: 50px;
+  position: fixed;
+  top: 0;
+  left: -200px; /* Oculta o menu lateral */
+  width: 200px;
+  height: 100vh;
+  background-color: #004361;
+  transition: left 0.3s ease;
+  color: #ffffff;
+  width: 200px;
+}
+
+.sidebar a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #ffcc00;
+}
+
+
+.menu-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: #3498DB;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+ position
+  right: auto;
+  left: 2px;
+  top: 2px;
+}
+
+.menu-btn span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-btn.active {
+  background-color: #ff6b6b;
+  z-index: 1;
+}
+
+.menu-btn.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0; /* Posiciona o menu à esquerda da tela */
+  width: 150px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu.show-menu {
+  display: block;
+}
+
+.menu a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: #333;
+}
+
+    .juridical-info {
+      background-color: #fdfdfd;
+      border: 1px solid #ddd;
+      padding-right: 25px;
+      padding-left: 25px;
+      margin-bottom: 0px;
+   
+       text-align: justify;
+    }
+
+    .juridical-info h2 {
+      font-size: 20px;
+      color: #337ab7;
+    }
+
+    .juridical-info p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .footer {
+      background-color: #004361;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+     /* Styles for screens up to 600px */
+     @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 16px;
+      }
+
+      h2 {
+        font-size: 11px;
+      }
+
+      .top-topic {
+        padding-right: 30px;
+      }
+
+      .content {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .juridical-info h2 {
+        font-size: 16px;
+      }
+
+      .juridical-info p {
+        font-size: 12px;
+      }
+    }
+
+    /* Styles for screens up to 900px */
+    @media screen and (max-width: 900px) {
+      h1 {
+        font-size: 18px;
+      }
+
+      h2 {
+        font-size: 12px;
+      }
+    }
+
+    label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            padding: 5px 10px;
+            margin-top: 10px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .highlight {
+          background-color: yellow !important;
+        }
+
+        .comentario {
+      background-color: #f0f0f0; /* Define a cor de fundo do comentário */
+      padding: 10px; /* Define um espaçamento interno de 10 pixels */
+      border: 1px solid #ccc; /* Define uma borda de 1 pixel com cor cinza */
+      margin: 10px 0; /* Define margens superiores e inferiores de 10 pixels */
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave */
+      border-radius: 5px; /* Adiciona arredondamento nas bordas */
+      margin-bottom: 15px;
+    }
+.artigo {
+
+  color:#333333;
+  margin-right: 20px; /* Espaçamento entre o ícone e o texto */
+   }
+
+   /* Media Query para telas menores, ajuste o max-width conforme necessário */
+@media (max-width: 768px) {
+  .artigo {
+    margin-right: 20px; /* Reduza o espaçamento entre o ícone e o texto em telas menores */
+  }
+}
+
+.topico {
+  font-weight: bold;
+}
+
+.links-area {
+  margin-top: auto; /* Move os links para a parte inferior do topo */
+  text-align-last: center;
+}
+
+.links-area ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Centraliza os links horizontalmente */
+}
+
+.links-area li {
+  margin-right: 20px;
+}
+
+.links-area a {
+  text-decoration: none;
+  color: #fff; /* Cor dos links no topo */
+}
+
+/* Estilização dos links quando o mouse passa por cima */
+.links-area a:hover {
+  text-decoration: underline;
+
+}
+
+ /* Estilo do botão de voltar ao topo */
+ #backToTop {
+            display: none; /* Inicialmente oculto */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        #backToTop:hover {
+            opacity: 0.8;
+        }
+      /* Estilo do botão */
+      #toggleButton {
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            background-color: #007BFF;
+            color: #FFF;
+            border-radius: 4px;
+            outline: none;
+            transition: background-color 0.3s; /* Adiciona transição para o hover do botão */
+        }
+
+        #toggleButton:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos para a animação */
+        #textContainer {
+            max-height: 0px;
+            overflow: hidden;
+            opacity: 0;
+            transition: opacity 0.5s, max-height 0.5s ease-in-out; /* Junta ambas transições em uma */
+            margin-top: 20px; /* Margem adicionada para afastar do botão */
+        }
+
+         /* Estilo do botão */
+         .toggleButton {
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            background-color: #007BFF;
+            color: #FFF;
+            border-radius: 4px;
+            outline: none;
+            transition: background-color 0.3s;
+        }
+
+        .toggleButton:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos para a animação */
+        .textContainer {
+            max-height: 0px;
+            overflow: hidden;
+            opacity: 0;
+            transition: opacity 0.5s, max-height 0.5s ease-in-out;
+            margin-top: 20px;
+        }
+</style>
 </head>
 <body>
 <div class="top">
@@ -116,7 +668,7 @@
           <b class="titulo" style="text-align: center;">Acessar pelo Qrcode:</b>
         <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
          
-          <img src="http://www.cadernodenormas.com.br/qrcode.jpg" alt="Qrcode" style="margin-top: 20px; width: auto; max-width: 100%; height: auto;">
+          <img src="https://www.cadernodenormas.com.br/qrcode.jpg" alt="Qrcode" style="margin-top: 20px; width: auto; max-width: 100%; height: auto;">
       </div>
       </div>
 </div> 
@@ -169,7 +721,7 @@
 <div class="juridical-info">
 <h2>Lei nº 8.112/1990</h2>
 <p><span class="descricao">Descrição: Dispõe sobre o regime jurídico dos servidores públicos civis da União, das autarquias e das fundações públicas federais.</span></p> 
-<p>Conheça a: <a href="http://www.cadernodenormas.com.br/Matriz-de-maturidade.htm" target="_blank">Matriz de responsabilidade do processo administrativo disciplinar</a>.</p>
+<p>Conheça a: <a href="https://www.cadernodenormas.com.br/Matriz-de-maturidade.htm" target="_blank">Matriz de responsabilidade do processo administrativo disciplinar</a>.</p>
 <p class="topico">Recursos administrativos</p>
 <p>Artigos 107 a 114: Dispõe sobre os recursos administrativos no âmbito do serviço público, permitindo que os servidores recorram de decisões e penalidades.</p>
 <p> <a class="artigo" href="https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm#art107" target="_blank"><span class="fa fa-balance-scale"></span></a>Art. 107.</span> Caberá recurso:</p>
@@ -432,8 +984,8 @@ Pena - detenção, de seis meses a dois anos, ou multa.</p>
     no art. 132 da Lei n. 8.112/1990.</p>
 </div>
 <p>I - crime contra a administração pública; (Ver <a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm" target="_blank"> artigos 321 a 327 do Código penal</a>)</p>
- <p>II - abandono de cargo; (Ver <a href="http://www.cadernodenormas.com.br/#art138" target="_blank"> artigo 138 da Lei nº 8.112/90</a>)</p>
-<p>III - inassiduidade habitual; (Ver <a href="http://www.cadernodenormas.com.br/#art139" target="_blank"> artigo 139 da Lei nº 8.112/90</a>)</p>
+ <p>II - abandono de cargo; (Ver <a href="https://www.cadernodenormas.com.br/#art138" target="_blank"> artigo 138 da Lei nº 8.112/90</a>)</p>
+<p>III - inassiduidade habitual; (Ver <a href="https://www.cadernodenormas.com.br/#art139" target="_blank"> artigo 139 da Lei nº 8.112/90</a>)</p>
 <p>IV - improbidade administrativa; (Vide <a href="https://repositorio.cgu.gov.br/bitstream/1/76917/1/Parecer_%20001_2022_CNPAD_CGU_AGU.pdf" target="_blank"> PARECER n. 00001/2022/CNPAD/CGU/AGU - Enriquecimento Ilícito</a> e <a href="https://www.in.gov.br/en/web/dou/-/despacho-do-presidente-da-republica-442916526" target="_blank"> PARECER Nº BBL – 08 - Irretroatividade da LEI Nº 14.230/21</a>)</p>
 <p>V - incontinência pública e conduta escandalosa, na repartição; (Vide <a href="https://www.planalto.gov.br/ccivil_03/AGU/Pareceres/2023-2026/PRC-JM-03-2023.htm" target="_blank">PARECER  Nº JM – 03, Assédio Sexual</a>)</p>
 <div class="comentario">
@@ -679,7 +1231,7 @@ Pena - detenção, de seis meses a dois anos, ou multa.</p>
 <p>II - inquérito administrativo, que compreende instrução, defesa e relatório;</p>
 <p>III - julgamento.</p>
 <div class="comentario">
-  <p><span class="combination"><b>Comentário:</b></span> <a href="http://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAD-e-atas-deliberativas.htm" target="_blank">Conheça aqui o Passo a passo </a>de um Processo Administrativo Disciplinar com a Sequência das Atas Deliberativas.</p>
+  <p><span class="combination"><b>Comentário:</b></span> <a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAD-e-atas-deliberativas.htm" target="_blank">Conheça aqui o Passo a passo </a>de um Processo Administrativo Disciplinar com a Sequência das Atas Deliberativas.</p>
 </div>
 
 <p class="topico">Prazo inicial do PAD e previsão de prorrogação</p>
@@ -1100,7 +1652,7 @@ Pena - detenção, de seis meses a dois anos, ou multa.</p>
   <section id="section5">
     <div class="juridical-info">
         <h2>Lei nº 12.846/13 </h2>
-         <p>Descrição: Dispõe sobre a responsabilização administrativa e civil de pessoas jurídicas pela prática de atos contra a administração pública, nacional ou estrangeira, e dá outras providências.         <p>Conheça os: <a href="http://www.cadernodenormas.com.br/Requisitos-Lei-anticorrupcao.html" target="_blank">Requisitos para enquadramento de fatos/atos na Lei anticorrupção</a>.</p>
+         <p>Descrição: Dispõe sobre a responsabilização administrativa e civil de pessoas jurídicas pela prática de atos contra a administração pública, nacional ou estrangeira, e dá outras providências.         <p>Conheça os: <a href="https://www.cadernodenormas.com.br/Requisitos-Lei-anticorrupcao.html" target="_blank">Requisitos para enquadramento de fatos/atos na Lei anticorrupção</a>.</p>
          <a class="artigo" href="https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12846.htm#art1" target="_blank"><span class="fa fa-balance-scale"></span></a>Art. 1º.</span> Esta Lei dispõe sobre a responsabilização objetiva administrativa e civil de pessoas jurídicas pela prática de atos contra a administração pública, nacional ou estrangeira. </p>
          <div class="comentario">
           <p><span class="combination"><strong>Combina com:</strong></span>
@@ -1597,17 +2149,17 @@ Pena - detenção, de seis meses a dois anos, ou multa.</p>
     <div class="juridical-info">
         <h2>Materiais de Apoio, com guias e passo a passo.</h2>
         <p><strong>PAD</strong>
-        <p><a href="http://www.cadernodenormas.com.br/Matriz-de-responsabilizacao.htm" target="_blank">1) Matriz de responsabilização do processo administrativo disciplinar;</a> </p>
-        <p><a href="http://www.cadernodenormas.com.br/Nota-de-regularidade-PAD.html" target="_blank">2) Elementos da nota de regularidade de um Processo Administrativo Disciplinar - PAD;</a> </p>   
-        <p><a href="http://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAD-e-atas-deliberativas.htm" target="_blank">3) Passo a Passo de um Processo Administrativo Disciplinar com a Sequência das Atas Deliberativas;</a> </p>   
+        <p><a href="https://www.cadernodenormas.com.br/Matriz-de-responsabilizacao.htm" target="_blank">1) Matriz de responsabilização do processo administrativo disciplinar;</a> </p>
+        <p><a href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAD.html" target="_blank">2) Elementos da nota de regularidade de um Processo Administrativo Disciplinar - PAD;</a> </p>   
+        <p><a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAD-e-atas-deliberativas.htm" target="_blank">3) Passo a Passo de um Processo Administrativo Disciplinar com a Sequência das Atas Deliberativas;</a> </p>   
        
         <strong>PAR</strong>
-        <p><a href="http://www.cadernodenormas.com.br/Requisitos-Lei-anticorrupcao.html" target="_blank">4) Requisitos para enquadramento de fatos/atos cometidos por empresas na Lei anticorrupção.</a> </p>
-        <p><a href="http://www.cadernodenormas.com.br/Nota-de-regularidade-PAR.html" target="_blank">5) Elementos da nota de regularidade de um Processo Administrativo de Responsabilização - PAR;</a> </p>
-        <p><a href="http://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAR-e-atas-deliberativas.htm" target="_blank">5) Passo a Passo de um Processo Administrativo de Responsabilização com a Sequência das Atas Deliberativas;</a> </p>   
+        <p><a href="https://www.cadernodenormas.com.br/Requisitos-Lei-anticorrupcao.html" target="_blank">4) Requisitos para enquadramento de fatos/atos cometidos por empresas na Lei anticorrupção.</a> </p>
+        <p><a href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAR.html" target="_blank">5) Elementos da nota de regularidade de um Processo Administrativo de Responsabilização - PAR;</a> </p>
+        <p><a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAR-e-atas-deliberativas.htm" target="_blank">5) Passo a Passo de um Processo Administrativo de Responsabilização com a Sequência das Atas Deliberativas;</a> </p>   
        
         <strong>Gestão da Corregedoria</strong>
-<p><a href="http://www.cadernodenormas.com.br/criterios-de-priorizacao.html" target="_blank">6) Priorização de processos correcionais.</a> </p>
+<p><a href="https://www.cadernodenormas.com.br/criterios-de-priorizacao.html" target="_blank">6) Priorização de processos correcionais.</a> </p>
                 
 </br>
 
@@ -1863,13 +2415,13 @@ function rolarParaOcorrenciaAnterior() {
 <footer class="footer">
   
     <p> Desenvolvido por Murilo de Mello Campos<br>
-      Sugestões de melhorias: murilo.campos@mdic.gov.br</p>
+      Sugestões de melhorias: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="127f67607b7e7d3c71737f627d61527f767b713c757d643c7060">[email&#160;protected]</a></p>
   </footer>
 
   <!-- Botão de voltar ao topo -->
   <button id="backToTop" onclick="scrollToTop()">Voltar ao topo</button>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
       // Seleciona o botão
       const btn = document.getElementById("backToTop");
 
@@ -2364,6 +2916,7 @@ if (expandBtn) {
 </script>
 
 
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"9463c914ca684b92a43be8d35b8ddcda","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
 
