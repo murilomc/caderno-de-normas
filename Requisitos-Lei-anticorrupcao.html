@@ -7,7 +7,7 @@
   <link rel="canonical" href="https://www.cadernodenormas.com.br/Requisitos-Lei-anticorrupcao.html">
   <link rel="alternate" hreflang="pt-BR" href="https://www.cadernodenormas.com.br/Requisitos-Lei-anticorrupcao.html">
   <link rel="icon" type="image/png" sizes="32x32" href="https://www.gov.br/++theme++padrao_govbr/favicons/favicon-32x32.png">
-  <title>Requisitos para enquadramento na Lei Anticorrupção</title>
+  <title>Matriz de Requisitos da Lei Anticorrupção</title>
 
   <script type="application/ld+json">
   {
@@ -35,7 +35,7 @@
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Requisitos Lei Anticorrupção",
+        "name": "Matriz de Requisitos da Lei Anticorrupção",
             "item": "https://www.cadernodenormas.com.br/Requisitos-Lei-anticorrupcao.html"
           }
         ]
@@ -43,7 +43,7 @@
       {
         "@type": "Article",
         "@id": "https://www.cadernodenormas.com.br/Requisitos-Lei-anticorrupcao.html#article",
-        "headline": "Requisitos para enquadramento de fatos e atos na Lei Anticorrupção",
+        "headline": "Matriz de Requisitos da Lei Anticorrupção",
         "about": "Lei nº 12.846/2013",
         "inLanguage": "pt-BR"
       }
@@ -67,6 +67,8 @@
       --success: #0f766e;
       --danger: #a83232;
       --shadow: 0 12px 30px rgba(17, 33, 45, 0.08);
+      --topbar-height: 122px;
+      --toolbar-sticky-height: 64px;
     }
 
     * {
@@ -89,12 +91,6 @@
       color: var(--accent);
     }
 
-    .page-header {
-      background: var(--primary);
-      color: #fff;
-      padding: 32px 20px;
-    }
-
     .page-header__inner,
     main,
     .footer {
@@ -107,31 +103,167 @@
       gap: 8px;
       flex-wrap: wrap;
       margin-bottom: 18px;
-      color: rgba(255, 255, 255, 0.84);
+      color: var(--muted);
       font-size: 0.92rem;
     }
 
     .breadcrumb a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .page-header {
+      background: #f3f5f8;
+      color: var(--text);
+      padding: var(--topbar-height) 0 0;
+    }
+
+    .page-header__inner {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      width: 100%;
+      margin-left: 0;
+      background: #004361;
+      color: #fff;
+      box-shadow: 0 16px 34px rgba(4, 29, 58, 0.18);
+    }
+
+    .topbar__inner {
+      display: grid;
+      grid-template-columns: minmax(240px, 386px) 1fr auto;
+      align-items: center;
+      gap: 24px;
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 86px;
+      padding: 18px 0;
+    }
+
+    .site-brand {
+      display: flex;
+      align-items: center;
+      min-width: 0;
       color: #fff;
       text-decoration: none;
     }
 
-    h1 {
-      margin: 0;
-      max-width: 900px;
-      font-size: clamp(1.7rem, 3vw, 2.6rem);
-      line-height: 1.15;
+    .brand-image {
+      display: block;
+      width: min(386px, 100%);
+      height: auto;
     }
 
-    .lead {
-      max-width: 900px;
-      margin: 16px 0 0;
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 1rem;
+    .menu-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 42px;
+      padding: 9px 14px;
+      border: 1px solid rgba(255,255,255,0.42);
+      border-radius: 4px;
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      font: inherit;
+      font-weight: 750;
+      cursor: pointer;
     }
+
+    .menu-toggle:hover,
+    .menu-toggle:focus-visible {
+      background: rgba(255,255,255,0.16);
+      outline: none;
+    }
+
+    .menu-toggle__icon {
+      position: relative;
+      width: 18px;
+      height: 12px;
+      border-top: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+    }
+
+    .menu-toggle__icon::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      border-top: 2px solid currentColor;
+      transform: translateY(-50%);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: clamp(14px, 2.4vw, 30px);
+      white-space: nowrap;
+      font-size: 0.96rem;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+      text-decoration: underline;
+      text-underline-offset: 6px;
+    }
+
+.title-panel {
+    background: #fff;
+    padding: 28px 36px 30px;
+    border: 1px solid #e8edf2;
+    border-top: 0;
+    box-shadow: 0 8px 18px rgba(0, 67, 97, 0.05);
+    text-align: center;
+}
+
+.title-panel .breadcrumb {
+    margin: 0 0 12px;
+    color: var(--muted);
+    font-size: .90rem;
+}
+
+.title-panel .breadcrumb a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.title-panel h1 {
+    margin: 0 auto;
+    max-width: 1120px;
+    color: #111827;
+    font-size: clamp(2.1rem, 3.85vw, 3.15rem);
+    font-weight: 850;
+    line-height: 1.05;
+    letter-spacing: 0;
+    text-transform: none;
+    text-wrap: balance;
+}
+
+.title-panel .lead {
+    max-width: 920px;
+    margin: 14px auto 0;
+    color: #4b5563;
+    font-size: clamp(1.02rem, 1.4vw, 1.22rem);
+    line-height: 1.5;
+}
 
     main {
-      padding: 24px 0 40px;
+      padding: 0 0 40px;
     }
 
     .notice,
@@ -144,10 +276,13 @@
     }
 
     .notice {
-      padding: 16px 18px;
+      padding: 14px 18px;
       border-left: 5px solid var(--warning-border);
+      border-bottom: 0;
       background: var(--warning);
-      margin-bottom: 18px;
+      margin-top: 14px;
+      margin-bottom: 0;
+      box-shadow: none;
     }
 
     .notice strong {
@@ -157,15 +292,17 @@
 
     .toolbar {
       position: sticky;
-      top: 0;
-      z-index: 20;
+      top: var(--topbar-height);
+      z-index: 900;
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       padding: 12px;
-      margin-bottom: 18px;
+      margin-bottom: 0;
+      border-top: 0;
+      box-shadow: none;
     }
 
     .toolbar__group {
@@ -214,15 +351,20 @@
     .summary-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 12px;
-      margin-bottom: 18px;
+      gap: 0;
+      margin-bottom: 14px;
     }
 
     .summary-card {
       background: var(--surface);
       border: 1px solid var(--border);
+      border-left: 0;
       padding: 14px;
-      box-shadow: var(--shadow);
+      box-shadow: none;
+    }
+
+    .summary-card:first-child {
+      border-left: 1px solid var(--border);
     }
 
     .summary-card span {
@@ -266,9 +408,6 @@
     }
 
     thead th {
-      position: sticky;
-      top: 66px;
-      z-index: 10;
       background: var(--primary);
       color: #fff;
       font-size: 0.92rem;
@@ -406,7 +545,16 @@
       font-size: 0.92rem;
     }
 
-    @media (max-width: 760px) {
+    @media (max-width: 980px) {
+      :root {
+        --topbar-height: 102px;
+        --toolbar-sticky-height: 0px;
+      }
+
+      .page-header {
+        padding: var(--topbar-height) 0 0;
+      }
+
       .toolbar {
         position: static;
       }
@@ -420,6 +568,63 @@
       .footer {
         width: min(100% - 20px, 1180px);
       }
+
+      .topbar__inner {
+        grid-template-columns: minmax(0, 1fr) auto;
+        min-height: 74px;
+        gap: 12px;
+        width: min(100% - 24px, 1180px);
+        padding: 14px 0;
+      }
+
+      .brand-image {
+        width: min(300px, calc(100vw - 106px));
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .nav-links {
+        display: none;
+        grid-column: 1 / -1;
+        width: 100%;
+        white-space: normal;
+        font-size: 0.94rem;
+      }
+
+      .nav-links.is-open {
+        display: grid;
+        gap: 0;
+        padding: 10px 0 2px;
+      }
+
+      .title-panel {
+        padding: 20px 18px 22px;
+      }
+
+      .title-panel .breadcrumb {
+        justify-content: center;
+        margin-bottom: 12px;
+      }
+
+      .title-panel h1 {
+        font-size: clamp(1.75rem, 9vw, 2.35rem);
+      }
+
+      .title-panel .lead {
+        margin-top: 12px;
+        font-size: 1rem;
+      }
+
+      .notice {
+        margin-top: 10px;
+        padding: 12px 14px;
+      }
+
+      .toolbar {
+        gap: 8px;
+      }
     }
 
     @media print {
@@ -430,6 +635,7 @@
       .toolbar,
       .footer,
       .breadcrumb,
+      .topbar,
       .report button {
         display: none !important;
       }
@@ -470,18 +676,220 @@
         border: 0;
       }
     }
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown::after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 8px;
+}
+
+.dropdown:hover::after,
+.dropdown:focus-within::after {
+    display: block;
+}
+
+.dropdown-btn {
+    background: transparent;
+    border: 0;
+    color: rgba(255,255,255,.92);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 12px 6px;
+    border-radius: 4px;
+}
+
+.dropdown-btn:hover,
+.dropdown-btn:focus-visible {
+    background: rgba(255,255,255,0.10);
+    color: #fff;
+    outline: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    min-width: 260px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(0,0,0,.18);
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 18px;
+    color: #17212b;
+    text-decoration: none;
+    font-weight: 500;
+    background: #fff;
+}
+
+.dropdown-content a:hover {
+    background: #eef4f8;
+    color: var(--primary);
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+@media (max-width: 980px) {
+    .dropdown::after {
+        display: none !important;
+    }
+
+    .nav-links a,
+    .dropdown-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        min-height: 44px;
+        padding: 11px 0;
+        color: #fff;
+        text-align: left;
+        border-top: 1px solid rgba(255,255,255,0.16);
+    }
+
+    .nav-links a:hover,
+    .dropdown-btn:hover,
+    .dropdown-btn:focus-visible {
+        background: transparent;
+        text-decoration: none;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: grid;
+        min-width: 0;
+        margin: 0 0 8px;
+        padding: 0 0 4px 14px;
+        background: transparent;
+        border-left: 2px solid rgba(255,255,255,0.22);
+        border-radius: 0;
+        box-shadow: none;
+        overflow: visible;
+    }
+
+    .dropdown-content a {
+        min-height: 38px;
+        padding: 8px 0;
+        color: rgba(255,255,255,0.86);
+        background: transparent;
+        font-size: 0.92rem;
+        font-weight: 600;
+        border-top: 0;
+    }
+
+    .dropdown-content a:hover {
+        background: transparent;
+        color: #fff;
+    }
+}
+
   </style>
 </head>
 <body>
   <header class="page-header">
     <div class="page-header__inner">
-      <nav class="breadcrumb" aria-label="Caminho">
+      <nav class="topbar" aria-label="Navegação principal">
+        <div class="topbar__inner">
+          <a class="site-brand" href="https://www.cadernodenormas.com.br/" aria-label="Página inicial do Caderno de Normas">
+            <img class="brand-image" src="logo-caderno-normas.png" alt="Caderno de Normas do Direito Administrativo Sancionador">
+          </a>
+
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+            <span class="menu-toggle__icon" aria-hidden="true"></span>
+            <span>Menu</span>
+          </button>
+
+          <div class="nav-links" id="primary-menu">
+            <a href="https://www.cadernodenormas.com.br/">Início</a>
+            <a href="https://www.cadernodenormas.com.br/#section1">Constituição Federal</a>
+
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-expanded="false">
+                PAD <span aria-hidden="true">▾</span>
+              </button>
+
+              <div class="dropdown-content">
+                <a href="https://www.cadernodenormas.com.br/Matriz-de-responsabilizacao.htm">Matriz de responsabilização</a>
+                <a href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAD.html">Nota de regularidade</a>
+                <a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAD-e-atas-deliberativas.htm">Passo a passo de um PAD (LAI)</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-expanded="false">
+                PAR <span aria-hidden="true">▾</span>
+              </button>
+
+              <div class="dropdown-content">
+                <a href="https://www.cadernodenormas.com.br/Requisitos-Lei-anticorrupcao.html">Matriz de requisitos</a>
+                <a href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAR.html">Nota de regularidade</a>
+                <a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAR-e-atas-deliberativas.htm">Passo a passo de um PAR (LAI)</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-expanded="false">
+                Leis <span aria-hidden="true">▾</span>
+              </button>
+
+              <div class="dropdown-content">
+                <a href="https://www.cadernodenormas.com.br/#section2">Lei nº 8.112/1990</a>
+                <a href="https://www.cadernodenormas.com.br/#section3">Lei nº 9.784/1999</a>
+                <a href="https://www.cadernodenormas.com.br/#section4">Lei nº 12.527/2011 (LAI)</a>
+                <a href="https://www.cadernodenormas.com.br/#section5">Lei nº 12.846/2013</a>
+                <a href="https://www.cadernodenormas.com.br/#section6">Decreto nº 11.129/2022</a>
+                <a href="https://www.cadernodenormas.com.br/#section7">Decreto nº 1.171/1994</a>
+                <a href="https://www.cadernodenormas.com.br/#section8">Lei nº 5.172/1966 (CTN)</a>
+                <a href="https://www.cadernodenormas.com.br/#section9">Decreto-Lei nº 4.657/1942 (LINDB)</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-expanded="false">
+                Gestão <span aria-hidden="true">▾</span>
+              </button>
+
+              <div class="dropdown-content">
+                <a href="https://www.cadernodenormas.com.br/criterios-de-priorizacao.html">Critérios de priorização</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section class="title-panel" aria-labelledby="page-title">
+    <p class="breadcrumb">
         <a href="https://www.cadernodenormas.com.br/">Caderno de Normas</a>
         <span aria-hidden="true">›</span>
-        <span>Lei Anticorrupção</span>
-      </nav>
-      <h1>Requisitos para enquadramento na Lei Anticorrupção</h1>
-      <p class="lead">Matriz de apoio para análise preliminar de fatos ou atos cometidos por pessoas jurídicas à luz da Lei nº 12.846/2013.</p>
+        Lei Anticorrupção
+    </p>
+
+        <h1 id="page-title">
+            Matriz de Requisitos da Lei Anticorrupção
+        </h1>
+
+        <p class="lead">
+            Ferramenta de apoio para análise preliminar de fatos praticados por pessoas jurídicas
+            com base na Lei nº 12.846/2013.
+        </p>
+</section>
     </div>
   </header>
 
@@ -731,6 +1139,8 @@
   <script>
     (() => {
       const STORAGE_KEY = 'requisitos-lei-anticorrupcao-v2';
+      const menuToggle = document.querySelector('.menu-toggle');
+      const primaryMenu = document.getElementById('primary-menu');
       const formFields = Array.from(document.querySelectorAll('select, textarea'));
       const reportOutput = document.getElementById('reportOutput');
       const saveStatus = document.getElementById('saveStatus');
@@ -738,6 +1148,27 @@
       const resposta7 = document.getElementById('resposta7');
       const atoIlicitoField = document.getElementById('atoIlicitoField');
       const atoIlicito = document.getElementById('ato-ilicito');
+
+      function closeMenu() {
+        if (!menuToggle || !primaryMenu) return;
+        primaryMenu.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+
+      if (menuToggle && primaryMenu) {
+        menuToggle.addEventListener('click', () => {
+          const isOpen = primaryMenu.classList.toggle('is-open');
+          menuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        primaryMenu.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', closeMenu);
+        });
+
+        window.addEventListener('resize', () => {
+          if (window.innerWidth > 980) closeMenu();
+        });
+      }
 
       function getState() {
         return formFields.reduce((state, field) => {
