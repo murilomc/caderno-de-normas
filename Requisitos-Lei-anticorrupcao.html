@@ -571,6 +571,7 @@
 
       .topbar__inner {
         grid-template-columns: minmax(0, 1fr) auto;
+        align-items: start;
         min-height: 74px;
         gap: 12px;
         width: min(100% - 24px, 1180px);
@@ -588,14 +589,20 @@
       .nav-links {
         display: none;
         grid-column: 1 / -1;
+        justify-self: stretch;
         width: 100%;
         white-space: normal;
         font-size: 0.94rem;
+        text-align: left;
+        justify-content: stretch;
       }
 
       .nav-links.is-open {
         display: grid;
+        grid-template-columns: minmax(0, 1fr);
         gap: 0;
+        justify-items: stretch;
+        align-items: start;
         padding: 10px 0 2px;
         max-height: calc(100vh - 86px);
         overflow-y: auto;
@@ -862,6 +869,10 @@
 @media (max-width: 980px) {
     .dropdown::after {
         display: none !important;
+    }
+
+    .nav-links .dropdown {
+        width: 100%;
     }
 
     .nav-links a,
