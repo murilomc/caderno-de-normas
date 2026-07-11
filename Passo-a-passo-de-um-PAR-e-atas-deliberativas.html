@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Caderno de Normas - Passo a passo de um PAR e atas deliberativas</title>
+
+<!-- Hreflang para especificar o idioma -->
+<link rel="alternate" hreflang="pt-BR" href="https://www.cadernodenormas.com.br/">
+
+<!-- Favicons do gov.br -->
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.gov.br/++theme++padrao_govbr/favicons/favicon-32x32.png">
+<link rel="shortcut icon" type="image/png" href="https://www.gov.br/++theme++padrao_govbr/favicons/favicon-48x48.png">
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+        line-height: 1.6;
+    }
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        background-color: #007BFF;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    h2, h3, h4 {
+        color: #2F4F4F;
+    }
+    h2 {
+        text-align: center;
+        border-bottom: 2px solid #4CAF50;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    h3 {
+        margin-top: 30px;
+    }
+    
+    ol {
+        counter-reset: item;
+        padding-left: 20px;
+    }
+    ul {
+        list-style-type: none;
+        padding-left: 20px;
+    }
+    ul > li {
+        position: relative;
+        margin-bottom: 10px;
+        padding-left: 10px;
+    }
+   
+    .ata {
+        font-weight: bold;
+        color: #FF4500;
+        font-size: 1.1em;
+        margin: 15px;
+        text-align: justify;
+    }
+    .ata + ul {
+        margin-left: 20px;
+    }
+    p {
+        margin: 15px 0;
+        text-align: justify;
+    }
+    .flex-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    .circle {
+        width: 30px;
+        height: 30px;
+        background-color: #3F5E86; /* Cor de fundo azul */
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+    @media (max-width: 768px) {
+        .container {
+            padding: 20px;
+        }
+        ul {
+            padding-left: 15px;
+        }
+        ul > li:before {
+            font-size: 14px;
+            left: -15px;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        h3 {
+            font-size: 1.2em;
+        }
+        h4 {
+            font-size: 1em;
+        }
+        .circle {
+            width: 25px;
+            height: 25px;
+            font-size: 14px;
+        }
+        .flex-container {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    @media (max-width: 480px) {
+        .container {
+            padding: 10px;
+        }
+        ul {
+            padding-left: 10px;
+        }
+        ul > li:before {
+            font-size: 12px;
+            left: -10px;
+        }
+        h2 {
+            font-size: 1.2em;
+        }
+        h3, h4 {
+            font-size: 1em;
+        }
+        .ata {
+            font-size: 1em;
+        }
+        .circle {
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+        }
+        .flex-container {
+            flex-direction: column;
+            align-items: flex-start;
+            font-size: 1em;
+        }
+    }
+    /* Estilos das seções de links */
+    .sections-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px; /* espaço entre as seções */
+    }
+
+    .section {
+        flex: 1;
+        padding: 20px;
+        background: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .section h2 {
+        border-bottom: 2px solid #007BFF;
+        padding-bottom: 10px;
+    }
+
+ table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+    }
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+        color: #333;
+    }
+</style>
+
+<style id="modern-top-styles">
+  :root {
+    --top-primary: #004361;
+    --top-primary-strong: #063447;
+    --top-surface: #ffffff;
+    --top-text: #17212b;
+    --top-muted: #5f6f7f;
+    --top-border: #e6edf3;
+    --top-bg: #f5f7fb;
+    --top-height: 122px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background: var(--top-bg);
+  }
+
+  .modern-page-header {
+    background: var(--top-bg);
+    color: var(--top-text);
+    padding: var(--top-height) 0 0;
+  }
+
+  .modern-page-header__inner {
+    width: min(900px, calc(100% - 32px));
+    margin: 0 auto;
+  }
+
+  .modern-topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3000;
+    width: 100%;
+    background: var(--top-primary);
+    color: #fff;
+    box-shadow: 0 16px 34px rgba(4, 29, 58, 0.18);
+  }
+
+  .modern-topbar__inner {
+    display: grid;
+    grid-template-columns: minmax(240px, 386px) 1fr auto;
+    align-items: center;
+    gap: 24px;
+    width: min(1180px, calc(100% - 32px));
+    min-height: 86px;
+    margin: 0 auto;
+    padding: 18px 0;
+  }
+
+  .modern-site-brand {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .modern-brand-image {
+    display: block;
+    width: min(386px, 100%);
+    height: auto;
+  }
+
+  .modern-menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 110px;
+    min-width: 110px;
+    height: 46px;
+    min-height: 46px;
+    padding: 0 14px;
+    background: #fff;
+    color: var(--top-primary);
+    border: 0;
+    border-radius: 10px;
+    font: inherit;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color .25s ease, box-shadow .25s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  }
+
+  .modern-menu-toggle:hover,
+  .modern-menu-toggle:focus-visible {
+    background: #f5f7fa;
+    outline: none;
+    box-shadow: 0 5px 16px rgba(0,0,0,.14);
+  }
+
+  .modern-menu-toggle .icon-open,
+  .modern-menu-toggle .icon-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    font-size: 1.45rem;
+    line-height: 1;
+    font-weight: 400;
+  }
+
+  .modern-menu-toggle .icon-close {
+    display: none;
+  }
+
+  .modern-menu-toggle[aria-expanded="true"] .icon-open {
+    display: none;
+  }
+
+  .modern-menu-toggle[aria-expanded="true"] .icon-close {
+    display: inline-flex;
+  }
+
+  .modern-nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(14px, 2.4vw, 30px);
+    white-space: nowrap;
+    font-size: .96rem;
+    font-weight: 700;
+  }
+
+  .modern-nav-links > a {
+    color: rgba(255,255,255,.92);
+    text-decoration: none;
+  }
+
+  .modern-nav-links > a:hover {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
+
+  .modern-dropdown {
+    position: relative;
+  }
+
+  .modern-dropdown::after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 8px;
+  }
+
+  .modern-dropdown:hover::after,
+  .modern-dropdown:focus-within::after {
+    display: block;
+  }
+
+  .modern-dropdown-btn {
+    min-height: 40px;
+    padding: 12px 6px;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    color: rgba(255,255,255,.92);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .modern-dropdown-btn:hover,
+  .modern-dropdown-btn:focus-visible {
+    background: rgba(255,255,255,.10);
+    color: #fff;
+    outline: none;
+  }
+
+  .modern-dropdown-content {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    z-index: 3100;
+    min-width: 260px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 12px 30px rgba(0,0,0,.18);
+  }
+
+  .modern-dropdown-content a {
+    display: block;
+    padding: 12px 18px;
+    background: #fff;
+    color: var(--top-text);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .modern-dropdown-content a:hover {
+    background: #eef4f8;
+    color: var(--top-primary);
+  }
+
+  .modern-dropdown:hover .modern-dropdown-content,
+  .modern-dropdown:focus-within .modern-dropdown-content {
+    display: block;
+  }
+
+  .modern-title-panel {
+    padding: 28px 36px 34px;
+    margin-bottom: 0;
+    border: 1px solid var(--top-border);
+    border-top: 0;
+    border-bottom: 0;
+    background: #fff;
+    text-align: center;
+    box-shadow: none;
+  }
+
+  .modern-breadcrumb {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 0 0 12px;
+    color: var(--top-muted);
+    font-size: .90rem;
+  }
+
+  .modern-breadcrumb a {
+    color: var(--top-primary);
+    text-decoration: none;
+  }
+
+  .modern-title-panel h1 {
+    max-width: 1120px;
+    margin: 0 auto;
+    color: #111827;
+    font-size: clamp(2.1rem, 3.85vw, 3.15rem);
+    font-weight: 850;
+    line-height: 1.05;
+    text-wrap: balance;
+  }
+
+  .modern-title-panel .modern-lead {
+    max-width: 920px;
+    margin: 14px auto 0;
+    color: #4b5563;
+    font-size: clamp(1.02rem, 1.4vw, 1.22rem);
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .modern-title-divider {
+    width: 100%;
+    height: 2px;
+    margin: 28px 0 0;
+    border: 0;
+    background: #5cb85c;
+  }
+
+  body > .container {
+    margin-top: 0;
+    padding-top: 30px;
+    border: 1px solid var(--top-border);
+    border-top: 0;
+    background: #fff;
+    box-shadow: none;
+  }
+
+  @media (max-width: 980px) {
+    :root {
+      --top-height: 102px;
+    }
+
+    .modern-page-header {
+      padding-top: var(--top-height);
+    }
+
+    .modern-page-header__inner {
+      width: min(100% - 20px, 900px);
+    }
+
+    .modern-topbar__inner {
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: start;
+      gap: 12px;
+      width: min(100% - 24px, 1180px);
+      min-height: 74px;
+      padding: 14px 0;
+    }
+
+    .modern-brand-image {
+      width: min(300px, calc(100vw - 134px));
+    }
+
+    .modern-menu-toggle {
+      display: inline-flex;
+    }
+
+    .modern-nav-links {
+      display: none;
+      grid-column: 1 / -1;
+      justify-self: stretch;
+      width: 100%;
+      white-space: normal;
+      font-size: .94rem;
+      text-align: left;
+    }
+
+    .modern-nav-links.is-open {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0;
+      justify-items: stretch;
+      align-items: start;
+      max-height: calc(100vh - 86px);
+      padding: 10px 0 2px;
+      overflow-y: auto;
+    }
+
+    .modern-dropdown::after {
+      display: none !important;
+    }
+
+    .modern-nav-links .modern-dropdown {
+      width: 100%;
+    }
+
+    .modern-nav-links > a,
+    .modern-dropdown-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      min-height: 44px;
+      padding: 11px 0;
+      border-top: 1px solid rgba(255,255,255,.16);
+      color: #fff;
+      text-align: left;
+    }
+
+    .modern-nav-links > a:hover,
+    .modern-dropdown-btn:hover,
+    .modern-dropdown-btn:focus-visible {
+      background: transparent;
+      text-decoration: none;
+    }
+
+    .modern-dropdown-content {
+      position: static;
+      display: none;
+      min-width: 0;
+      margin: 0 0 8px;
+      padding: 0 0 4px 14px;
+      overflow: visible;
+      border-left: 2px solid rgba(255,255,255,.22);
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .modern-nav-links .modern-dropdown.is-open .modern-dropdown-content {
+      display: grid;
+    }
+
+    .modern-nav-links .modern-dropdown:not(.is-open):hover .modern-dropdown-content,
+    .modern-nav-links .modern-dropdown:not(.is-open):focus-within .modern-dropdown-content {
+      display: none;
+    }
+
+    .modern-dropdown-content a {
+      min-height: 38px;
+      padding: 8px 0;
+      border-top: 0;
+      background: transparent;
+      color: rgba(255,255,255,.86);
+      font-size: .92rem;
+      font-weight: 600;
+    }
+
+    .modern-dropdown-content a:hover {
+      background: transparent;
+      color: #fff;
+    }
+
+    .modern-title-panel {
+      padding: 20px 18px 22px;
+    }
+
+    .modern-title-panel h1 {
+      font-size: clamp(1.75rem, 9vw, 2.35rem);
+    }
+
+    .modern-title-panel .modern-lead {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .modern-menu-toggle {
+      width: 100px;
+      min-width: 100px;
+      padding: 0 10px;
+    }
+  }
+
+  @media print {
+    .modern-topbar,
+    .modern-breadcrumb {
+      display: none !important;
+    }
+
+    .modern-page-header {
+      padding: 0;
+      background: #fff;
+    }
+
+    .modern-page-header__inner {
+      width: 100%;
+    }
+
+    .modern-title-panel {
+      border: 0;
+      box-shadow: none;
+    }
+  }
+</style>
+
+</head>
+<body>
+
+<header class="modern-page-header">
+  <div class="modern-page-header__inner">
+    <nav class="modern-topbar" aria-label="Navegação principal">
+      <div class="modern-topbar__inner">
+        <a class="modern-site-brand" href="https://www.cadernodenormas.com.br/" aria-label="Página inicial do Caderno de Normas">
+          <img class="modern-brand-image" src="logo-caderno-normas.png" alt="Caderno de Normas do Direito Administrativo Sancionador">
+        </a>
+
+        <button class="modern-menu-toggle" type="button" aria-expanded="false" aria-controls="modern-primary-menu" aria-label="Abrir menu de navegação">
+          <span class="icon-open" aria-hidden="true">☰</span>
+          <span class="icon-close" aria-hidden="true">×</span>
+          <span class="menu-text">Menu</span>
+        </button>
+
+        <div class="modern-nav-links" id="modern-primary-menu">
+          <a href="https://www.cadernodenormas.com.br/">Início</a>
+          <a href="https://www.cadernodenormas.com.br/#section1">Constituição Federal</a>
+
+          <div class="modern-dropdown">
+            <button class="modern-dropdown-btn" type="button" aria-expanded="false">
+              PAD <span aria-hidden="true">▾</span>
+            </button>
+            <div class="modern-dropdown-content">
+              <a href="https://www.cadernodenormas.com.br/Matriz-de-responsabilizacao.htm">Matriz de responsabilização</a>
+              <a href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAD.html">Nota de regularidade</a>
+              <a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAD-e-atas-deliberativas.htm">Passo a passo de um PAD</a>
+            </div>
+          </div>
+
+          <div class="modern-dropdown">
+            <button class="modern-dropdown-btn" type="button" aria-expanded="false">
+              PAR <span aria-hidden="true">▾</span>
+            </button>
+            <div class="modern-dropdown-content">
+              <a href="https://www.cadernodenormas.com.br/Requisitos-Lei-anticorrupcao.html">Matriz de requisitos</a>
+              <a href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAR.html">Nota de regularidade</a>
+              <a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAR-e-atas-deliberativas.htm">Passo a passo de um PAR</a>
+            </div>
+          </div>
+
+          <div class="modern-dropdown">
+            <button class="modern-dropdown-btn" type="button" aria-expanded="false">
+              Leis <span aria-hidden="true">▾</span>
+            </button>
+            <div class="modern-dropdown-content">
+              <a href="https://www.cadernodenormas.com.br/#section2">Lei nº 8.112/1990</a>
+              <a href="https://www.cadernodenormas.com.br/#section3">Lei nº 9.784/1999</a>
+              <a href="https://www.cadernodenormas.com.br/#section4">Lei nº 12.527/2011</a>
+              <a href="https://www.cadernodenormas.com.br/#section5">Lei nº 12.846/2013</a>
+              <a href="https://www.cadernodenormas.com.br/#section6">Decreto nº 11.129/2022</a>
+            </div>
+          </div>
+
+          <div class="modern-dropdown">
+            <button class="modern-dropdown-btn" type="button" aria-expanded="false">
+              Gestão <span aria-hidden="true">▾</span>
+            </button>
+            <div class="modern-dropdown-content">
+              <a href="https://www.cadernodenormas.com.br/criterios-de-priorizacao.html">Critérios de priorização</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="modern-title-panel" aria-labelledby="modern-page-title">
+      <p class="modern-breadcrumb">
+        <a href="https://www.cadernodenormas.com.br/">Caderno de Normas</a>
+        <span aria-hidden="true">›</span>
+        Processo Administrativo de Responsabilização
+      </p>
+
+      <h1 id="modern-page-title">Passo a passo de um PAR e atas deliberativas</h1>
+      <p class="modern-lead">
+        Guia prático das etapas do Processo Administrativo de Responsabilização, com modelos de atos, atas e documentos.
+      </p>
+      <hr class="modern-title-divider">
+    </section>
+  </div>
+</header>
+
+    <div class="container">
+
+        <h3>Fase I – Instauração (art. 8º da Lei nº 12.846/13 c/c art. 5º do Decreto nº 11.129/22)</h3>
+        <h4>Ato de Instauração, seus elementos e publicação:</h4>
+        <ul>
+            <li>a) Identificação de um processo administrativo com um juízo de admissibilidade de instauração de PAR.</li>
+            <li>b) Emissão do ato administrativo que formaliza a instauração do processo administrativo de responsabilização, com a designação de 2 (dois) ou mais servidores estáveis.</li>
+            <li>c) Publicação do ato de instauração no meio oficial de comunicação da instituição (Diário Oficial).  Conheça 
+alguns exemplos: <a href="#section1">Portarias de instauração</a>.</li>
+        </ul>
+        
+        <h3>Fase II - Inquérito Administrativo (art. 10 da Lei nº 12.846/13 c/c art. 6º do Decreto nº 11.129/22)</h3>
+        <h4>Instrução dos autos pela Comissão, com as seguintes atas deliberativas:</h4>
+        <ul>
+            <div class="flex-container"><div class="circle">1</div><div class="ata">Ata de instalação e início dos trabalhos, contendo:</div></div>
+            <ul>
+                <li>a) Registro da instalação da Comissão e do início dos trabalhos;</li>                
+                <li>b) Solicitação de compartilhamento das informações fiscais da empresa (nome da empresa) , CNPJ nº (número), à Secretaria da Receita Federal do Brasil, para eventuais cálculos de multa nos termos dos artigos 22 e 23 do Decreto nº 11.129/2022;</li>
+                <li>c) Deliberação da comissão de eventual juntada de documentos aos autos;</li>
+                <li>d) Decisão da comissão pelo estudo dos autos, com a  definição de prazo (15 ou 30 dias, a depender da complexidade do processo).</li>
+                <li>Conheça alguns exemplos: <a href="#section4">Ata de instalação e início dos trabalhos</a>, <a href="#section5">Ofício para a Secretaria da Receita Federal do Brasil.</a></li>
+            </ul>
+            <div class="flex-container"><div class="circle">2</div><div class="ata">Segunda Ata Deliberativa, contendo:</div></div>
+            <ul>
+                <li>a) Consignar que a comissão está procedendo ao estudo dos autos, para posterior indiciação nos termos do art. 6º do Decreto nº 11.129/2022;</li>
+                <li>b) Intimar a pessoa jurídica interessada a tomar ciência dos trabalhos da Comissão e, querendo, ter acesso aos autos eletrônicos;</li>
+                <li>Conheça alguns exemplos: <a href="#section6">Mandado de Intimação</a>.</li>    
+            </ul>
+            
+        
+        <h3>Exemplos:</h3>
+        <section id="section1">
+        <h4>Modelo de Portaria de instauração de comissão de PAR:</h4>
+        
+            <div class="container">
+                <p style="text-align: center;">DOU Nº 119 - Publicado em 26/04/2024 - Ano 8 Edição 4.4 </p>
+                <div class="header-info">
+                    <p style="text-align: left;">Brasília, de abril 2024</p>
+                    <p style="text-align: right;">ISSN 1677-7050</p>
+                </div>
+                <h2 style="text-align: center;">MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS</h2>
+                <h2>SECRETARIA EXECUTIVA</h2>
+                <h2>Portaria CORREG/MDIC nº 27, de 25 de abril de 2024</h2>
+
+                <p>O SECRETÁRIO-EXECUTIVO DO MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA,
+COMÉRCIO E SERVIÇOS, no uso das atribuições que lhe foram delegadas pelo Ministro de
+Estado do Desenvolvimento, Indústria, Comércio e Serviços por meio da Portaria GM/MDIC
+nº 117, de 26 de maio de 2023, publicada no Diário Oficial da União nº 101, de 29 de maio
+de 2023, e considerando o disposto no artigo 8º, caput e § 1º, da Lei nº 12.846, de 1º de
+agosto de 2013, regulamentada pelo Decreto nº 11.129, de 11 de julho de 2022, que
+dispõe sobre a responsabilização de pessoas jurídicas, resolve:</p>
+
+<p>Art. 1º - Instaurar Processo Administrativo de Responsabilização, sob o nº
+(número do processo), destinado à apuração de supostas irregularidades praticadas pela
+empresa (nome da empresa), CNPJ (número), constantes do
+Processo Administrativo nº (número do processo).</p>
+
+                <p><strong>Art. 2º</strong> - Designar (nome do 
+servidor), (cargo do servidor), matrícula SIAPE nº (número), (nome do 
+servidor), (cargo do servidor), matrícula SIAPE nº (número), 
+                    e (nome do servidor), (cargo do servidor), matrícula
+ SIAPE nº (número), para, sob a presidência do primeiro, constituírem a respectiva Comissão processante.</p>
+
+                <p><strong>Art. 3º</strong> - Estabelecer o prazo de 180 (cento e oitenta) dias para conclusão dos trabalhos da referida Comissão.</p>
+
+                <p><strong>Art. 4º</strong> - Esta Portaria entra em vigor na data de sua publicação.</p>
+
+                <div class="signature">
+                    <p style="text-align: center;"><strong>(nome da autoridade instauradora)</strong></p>
+              
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="section4">
+            <h4>Modelo de Ata de Instalação e Início dos Trabalhos:</h4>
+            <div class="container">
+                <h2>MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS</h2>
+                <h3 style="text-align: center;">Ata de Instalação e Início dos Trabalhos</h3>
+        
+                <p>Em XX, às XX, por meio de videoconferência, presentes (nomes do presidente e membro(s)), respectivamente Presidente e Vogais da Comissão de Processo Administrativo de Responsabilização nº (número), designada pela Portaria nº XX, de XX, do XXX, 
+                 publicada no Diário Oficial da União de XX/XX/XXXX, da lavra do Secretário-Executivo do MDIC, reuniu-se objetivando à instalação e início dos trabalhos relacionados à apuração dos fatos constantes do processo nº 
+                XXXX, ao tempo em que DELIBEROU por:</p>
+         
+                <p>a. comunicar a instalação e início dos trabalhos da comissão à autoridade instauradora;</p>
+              
+                <p>b. solicitar à Secretaria da Receita Federal do Brasil o compartilhamento das informações fiscais da empresa (nome) , CNPJ nº (número), para eventuais cálculos de multa nos termos dos artigos 22 e 23 do Decreto nº 11.129/2022;;</p>
+                       
+                <p>c. juntar aos autos os documentos XXX, necessários à instrução do processo administrativo de responsabilização;</p>
+
+                <p>d. proceder ao estudo dos autos para deliberações ulteriores.</p>
+                
+                <p>Nada mais havendo a ser tratado, foi lavrada esta ata que vai assinada pelo presidente e pelos 
+                membros.</p>
+        
+                <div class="signature">
+                    
+                    <p style="text-align: center;">(Nome do servidor) - Membro</p>
+                    <p style="text-align: center;">(Nome do servidor) - Membro</p>
+                    <p style="text-align: center;">(Nome do servidor) - Presidente</p>
+                </div>
+            </div>
+
+        </section>
+           
+    
+<section id="section5">
+            <h4>Modelo de Ofício para a Secretaria da Receita Federal do Brasil:</h4>
+	<div class="container">
+        <h2 style="text-align: center;">MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS</h2>
+     
+        <p style="text-align: right;">Brasília-DF, XXX</p>
+
+	 <p>Ao Senhor/ À Senhora <br>
+        <strong>(nome da autoridade)</strong></br>
+    
+        Endereço: Esplanada dos Ministérios, Bloco P, 7° andar</br>
+        Zona Cívico-Administrativa</br>
+        70048-900 Brasília-DF</br> 
+        <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1d6e687f7a7c7f336f7b7f5d6f7b7f337a726b337f6f">[email&#160;protected]</a></p>
+
+        <p><strong>Assunto:</strong> Solicitação de informações fiscais para instrução de processo administrativo de responsabilização - PAR.</p>
+
+        <p>Senhora Subsecretária,</p>
+
+        <p>1. Solicito vossos préstimos no sentido de compartilhar com esta Comissão de PAR, com fundamento no art. 198, § 1°, inciso II do CTN (Lei nº 5.172/1966) 
+        e no art. 20, parágrafo único, inciso I do Decreto 11.129/2022, informações referentes à pessoa jurídica (nome), CNPJ nº (número).</p>
+
+        <p>2. Para tanto informo, conforme Nota Cosit n.º 03, de 07/01/2004, item 16.1:</p>
+
+        <p>I - atos administrativos que determinaram a instauração do processo administrativo: Portaria SE/MDIC nº 175, de 23 de junho de 2023, publicada no Diário Oficial da União de 26/06/2023, da lavra do Secretário-Executivo do MDIC;</p>
+        <p>II - número do processo administrativo e a data de sua instauração: (número do processo) , instaurado em (data);</p>
+        <p>III - fundamento legal da instauração do processo administrativo: art. 8º da Lei nº 12.846/2013;</p>
+        <p>IV - demonstração de que o órgão ou entidade ao qual a autoridade administrativa representa tem competência para investigar o sujeito passivo pela prática da infração administrativa: Despacho Numerado 13 (número SEI), o qual demonstra que, 
+        em razão da participação de agente público à época lotado no MDIC, esta Pasta foi o órgão atingido pelas iregularidades supostamente praticadas pela (nome da pessoa jurídica).</p>
+        <p>3. Informo haver absoluta pertinência entre as informações fiscais requeridas, o sujeito passivo e a infração administrativa investigada, possivelmente cometida pelo mesmo sujeito passivo a que os dados sigilosos se referem. 
+        Esclareço não ser possível o fornecimento de informações mais detalhadas em função do caráter reservado do processo, previsto pelo Decreto 11.129/2022, art. 5º, § 3º.</p>
+        <p>4. Diante disso, solicito a essa Subsecretaria enviar à esta Comissão:</p>
+
+        <p>a) o faturamento bruto, excluídos os tributos, no ano de 2022, que corresponde ao exercício anterior ao da instauração do processo administrativo - Lei nº 12.846/2013, art. 6°, I; Decreto nº 11.129/2022, art. 20, caput;</p>
+        <p>b) os índices de Solvência Geral - SG, de Liquidez Geral - LG e o lucro líquido no exercício de 2022, ano anterior ao da ocorrência do ato lesivo - Lei n° 12.846/2013 art. 7°, VI; Decreto nº 11.129/2022, art. 22, IV;</p>
+        <p>c) os parâmetros de que trata o art. 21 do Decreto n° 11.129/2022, no caso de não ser possível recuperar as informações indicadas anteriormente.</p>
+        <p>5. Por fim, solicito que as informações referidas acima sejam encaminhadas a esta Comissão de PAR da Corregedoria do MDIC, pelo e-mail [endereço de e-mail].</p>
+
+        <p>Atenciosamente,</p>
+
+        <div class="signature">
+            <p style="text-align: center;"><strong>(nome do presidente)</strong></p>
+                <p style="text-align: center;">Presidente</p>
+        </div>
+    </div>
+
+</section>    
+
+
+<section id="section6">
+<h4>Modelo de Mandado de Intimação:</h4>
+ <div class="container">
+    <h2 style="text-align: center;">MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS</h2>
+    <h3 style="text-align: center;">Corregedoria</h3>
+        
+    <h4 style="text-align: center;">Mandado de Intimação SEI Nº 38220007/2023</h4>
+    <p>Ref.: Processo nº 00190.105884/2022-11</p>
+    
+    <p>À empresa <strong>[Nome da Empresa]</strong></p>
+    <p>Endereço: [Endereço]</p>
+    <p>E-mail: [e-mail]</p>
+    
+    <p>O presidente da Comissão de Processo Administrativo de Responsabilização de que trata a Portaria SE/MDIC nº 175, de 23 de junho de 2023, publicada no Diário Oficial da União de 26/06/2023, da lavra do Secretário-Executivo do MDIC, INTIMA a pessoa jurídica em epígrafe, para tomar ciência da instauração do Processo Administrativo de Responsabilização (PAR) nº 00190.105884/2022-11, de interesse dessa pessoa jurídica, e para, querendo, ter acesso aos autos eletrônicos.</p>
+    
+    <p>Para a liberação de acesso aos autos é necessário seguir as orientações do ADENDO II a esta intimação.</p>
+    
+    <p>Esclarece-se que a Comissão ainda está procedendo ao estudo dos autos, para posterior indiciação nos termos do art. 6º do Decreto nº 11.129/2022. Desse modo, NÃO está em curso o prazo para a apresentação da defesa a que se refere o art. 11 da Lei nº 12.846/2013.</p>
+    
+    <p>Por fim, comunicamos a existência da possibilidade de pedido de julgamento antecipado, nos termos da Portaria Normativa CGU nº 19/2022, instrumento negocial relacionado ao processo administrativo de responsabilização de pessoa jurídica, conforme o ADENDO I.</p>
+    
+    <p>Brasília, 31 de outubro de 2023.</p>
+    
+    <p style="text-align: center;"><strong>(NOME)</strong></p>
+    <p style="text-align: center;">Presidente da Comissão</p>
+ 
+    <h4>ADENDO I - POSSIBILIDADE DE SOLUÇÃO NEGOCIADA</h4>
+    <p>A título de informação, ressalta-se que a regulamentação referente à Lei n° 12.846/2013 prevê a possibilidade de a pessoa jurídica propor resolução negociada do processo administrativo de responsabilização, quando reconhece sua responsabilidade objetiva pelos atos praticados, por meio de instrumentos específicos. Destaca-se aqui o pedido de julgamento antecipado.</p>
+    
+    <p>Previsto pela Portaria Normativa CGU nº 19/2022, o julgamento antecipado poderá ensejar:</p>
+    <ul>
+        <li>a concessão de atenuantes de até 3,5% na definição da alíquota da multa prevista pela Lei nº 12.846/2013;</li>
+        <li>a isenção da publicação extraordinária; e, em sendo o caso,</li>
+        <li>atenuação das sanções impeditivas de contratar com o Poder Público.</li>
+    </ul>
+    
+    <p>O pedido de julgamento antecipado será deferido para a pessoa jurídica que admite sua responsabilidade objetiva pelos atos lesivos investigados e se compromete a:</p>
+    <ol>
+        <li>Assumir o compromisso de ressarcir os valores correspondentes aos danos a que tenha dado causa;</li>
+        <li>Devolver a vantagem auferida por meio de fraude;</li>
+        <li>Pagar a multa disposta no inciso I, do art. 6º, da Lei nº 12.846, de 2013, acompanhada dos elementos que permitam o seu cálculo e dosimetria;</li>
+        <li>Atender a pedidos de informação relacionados aos fatos do processo e que sejam de seu conhecimento;</li>
+        <li>Dispensar apresentação de peça de defesa;</li>
+        <li>Desistir de ações judiciais relativas ao processo administrativo.</li>
+    </ol>
+    
+    <p>Maiores informações sobre o novo instrumento normativo, incluindo a forma de protocolar o pedido junto à CGU, poderão ser encontradas no site: <a href="https://www.gov.br/corregedorias/pt-br/assuntos/painel-de-responsabilizacao/responsabilizacao-entes-privados/julgamento-antecipado">Clique aqui</a>.</p>
+    
+    <h4>ADENDO II - ORIENTAÇÕES PARA ACESSO EXTERNO AO SISTEMA DE PROCESSO ELETRÔNICO</h4>
+    <p>Acerca da atuação e acompanhamento de processos eletrônicos, o Ministério do Desenvolvimento, Indústria, Comércio e Serviço dispõe do Sistema Eletrônico de Informações - SEI, por meio do qual podem ser cadastrados usuários externos, a fim de permitir o acesso aos autos e aos documentos eletrônicos anexados no processo. Para fins de segurança da base de dados e das informações sigilosas referentes à apuração em comento, a liberação de tal cadastro deverá atender às condições exigidas pelo Administrador e por este Ministério.</p>
+    
+    <p>Para mais detalhes, acesse: <a href="https://sei.economia.gov.br/sei/controlador_externo.php?acao=documento_conferir&id_orgao_acesso_externo=0">Clique aqui</a>.</p>
+</div>
+</section>
+
+
+
+
+</div>
+
+    <div class="back-to-top" id="back-to-top">Voltar ao Topo</div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Mostrar o botão de voltar ao topo quando a página for rolada para baixo
+        window.addEventListener('scroll', function() {
+            const backToTopButton = document.getElementById('back-to-top');
+            if (window.pageYOffset > 100) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        // Função para rolar suavemente ao topo da página
+        document.getElementById('back-to-top').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"9463c914ca684b92a43be8d35b8ddcda","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+
+<script id="modern-top-script">
+  (() => {
+    const menuToggle = document.querySelector('.modern-menu-toggle');
+    const primaryMenu = document.getElementById('modern-primary-menu');
+    const dropdownButtons = Array.from(document.querySelectorAll('.modern-dropdown-btn'));
+
+    function closeDropdowns() {
+      document.querySelectorAll('.modern-dropdown.is-open').forEach((dropdown) => {
+        dropdown.classList.remove('is-open');
+        dropdown.querySelector('.modern-dropdown-btn')?.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    function closeMenu() {
+      if (!menuToggle || !primaryMenu) return;
+      primaryMenu.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Abrir menu de navegação');
+      closeDropdowns();
+    }
+
+    if (menuToggle && primaryMenu) {
+      menuToggle.addEventListener('click', () => {
+        const isOpen = primaryMenu.classList.toggle('is-open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
+      });
+
+      primaryMenu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', closeMenu);
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 980) closeMenu();
+      });
+    }
+
+    dropdownButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        if (window.innerWidth > 980) return;
+        const dropdown = button.closest('.modern-dropdown');
+        if (!dropdown) return;
+        const willOpen = !dropdown.classList.contains('is-open');
+        closeDropdowns();
+        dropdown.classList.toggle('is-open', willOpen);
+        button.setAttribute('aria-expanded', String(willOpen));
+      });
+    });
+
+    document.addEventListener('click', (event) => {
+      if (
+        window.innerWidth <= 980 &&
+        primaryMenu &&
+        !primaryMenu.contains(event.target) &&
+        !event.target.closest('.modern-menu-toggle')
+      ) {
+        closeMenu();
+      }
+    });
+  })();
+</script>
+
+</body></html>
