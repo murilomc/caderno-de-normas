@@ -1,307 +1,1484 @@
 <!DOCTYPE html>
-<html lang="pt-br"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta charset="UTF-8">
-<title>Caderno de Normas - Requisitos Lei Anticorrupção</title>
-
- 
-  <!-- Hreflang para especificar o idioma -->
-  <link rel="alternate" hreflang="pt-BR" href="https://www.cadernodenormas.com.br/">
-  
-  <!-- Favicons do gov.br -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ferramenta de apoio para análise preliminar dos requisitos de enquadramento de fatos e atos praticados por empresas na Lei nº 12.846/2013, Lei Anticorrupção.">
+  <link rel="canonical" href="https://www.cadernodenormas.com.br/Requisitos-Lei-anticorrupcao.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://www.cadernodenormas.com.br/Requisitos-Lei-anticorrupcao.html">
   <link rel="icon" type="image/png" sizes="32x32" href="https://www.gov.br/++theme++padrao_govbr/favicons/favicon-32x32.png">
-  <link rel="shortcut icon" type="image/png" href="https://www.gov.br/++theme++padrao_govbr/favicons/favicon-48x48.png">
+  <title>Matriz de Requisitos da Lei Anticorrupção</title>
 
-
-<style>
-  .anticorrupcao-table {
-    width: 100%;
-    border-collapse: collapse;
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LegalService",
+        "@id": "https://www.cadernodenormas.com.br/#legalservice",
+        "name": "Caderno de Normas de Direito Administrativo Sancionador",
+        "url": "https://www.cadernodenormas.com.br/",
+        "description": "Página de consulta com normas, comentários e materiais de apoio sobre Direito Administrativo Sancionador.",
+        "areaServed": { "@type": "Country", "name": "Brasil" },
+        "inLanguage": "pt-BR"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.cadernodenormas.com.br/Requisitos-Lei-anticorrupcao.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Caderno de Normas",
+            "item": "https://www.cadernodenormas.com.br/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+        "name": "Matriz de Requisitos da Lei Anticorrupção",
+            "item": "https://www.cadernodenormas.com.br/Requisitos-Lei-anticorrupcao.html"
+          }
+        ]
+      },
+      {
+        "@type": "Article",
+        "@id": "https://www.cadernodenormas.com.br/Requisitos-Lei-anticorrupcao.html#article",
+        "headline": "Matriz de Requisitos da Lei Anticorrupção",
+        "about": "Lei nº 12.846/2013",
+        "inLanguage": "pt-BR"
+      }
+    ]
   }
+  </script>
 
-  .anticorrupcao-table th, .anticorrupcao-table td {
-    border: 1px solid #000;
-    padding: 8px;
-    text-align: left;
-  }
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --surface: #ffffff;
+      --surface-soft: #eef4f8;
+      --text: #17212b;
+      --muted: #5f6f7f;
+      --primary: #004361;
+      --primary-strong: #063447;
+      --accent: #0b6fae;
+      --warning: #fff6cf;
+      --warning-border: #d7a300;
+      --border: #d7e0e7;
+      --success: #0f766e;
+      --danger: #a83232;
+      --shadow: 0 12px 30px rgba(17, 33, 45, 0.08);
+      --topbar-height: 122px;
+      --toolbar-sticky-height: 64px;
+    }
 
-  .anticorrupcao-table th {
-    background-color: #003366; /* Azul escuro */
-    color: white;
-  }
+    * {
+      box-sizing: border-box;
+    }
 
-  .anticorrupcao-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
+    html {
+      scroll-behavior: smooth;
+    }
 
-  .anticorrupcao-table tr:nth-child(odd) {
-    background-color: #ffffff;
-  }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.5;
+    }
 
-  .obs {
-    background-color: #fdd835;
-    font-style: italic; /* Mudança para itálico ao invés de negrito para diferenciar as observações */
-    font-weight: normal;
-  }
+    a {
+      color: var(--accent);
+    }
 
-.title-row th {
-    background-color: #007bff; /* Azul mais claro para o título */
-    color: white;
-    font-size: 1.5em; /* Tamanho maior para o título */
-  }
+    .page-header__inner,
+    main,
+    .footer {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
 
- /* Estilo adicional para os campos de entrada de texto */
-  input[type="text"] {
-    width: 100%; /* Faz com que o campo de texto ocupe toda a largura da célula */
-    box-sizing: border-box; /* Garante que o padding não aumente a largura do campo */
-  }
+    .breadcrumb {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
 
-  /* Estilo para o botão de impressão */
-  .print-button {
-    margin-top: 20px;
-    font-size: 16px;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    padding: 8px 12px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-  }
+    .breadcrumb a {
+      color: var(--primary);
+      text-decoration: none;
+    }
 
-  .print-button i {
-    margin-right: 8px;
-  }
+    .page-header {
+      background: #f3f5f8;
+      color: var(--text);
+      padding: var(--topbar-height) 0 0;
+    }
 
-/* Estilo do link */
-  .tooltip-link {
-    position: relative;
-    text-decoration: none;
-    color: #007bff;
-  }
+    .page-header__inner {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
 
-  /* Estilo do tooltip */
-  .tooltip-text {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      width: 100%;
+      margin-left: 0;
+      background: #004361;
+      color: #fff;
+      box-shadow: 0 16px 34px rgba(4, 29, 58, 0.18);
+    }
+
+    .topbar__inner {
+      display: grid;
+      grid-template-columns: minmax(240px, 386px) 1fr auto;
+      align-items: center;
+      gap: 24px;
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 86px;
+      padding: 18px 0;
+    }
+
+    .site-brand {
+      display: flex;
+      align-items: center;
+      min-width: 0;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .brand-image {
+      display: block;
+      width: min(386px, 100%);
+      height: auto;
+    }
+
+    .menu-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 42px;
+      padding: 9px 14px;
+      border: 1px solid rgba(255,255,255,0.42);
+      border-radius: 4px;
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      font: inherit;
+      font-weight: 750;
+      cursor: pointer;
+    }
+
+    .menu-toggle:hover,
+    .menu-toggle:focus-visible {
+      background: rgba(255,255,255,0.16);
+      outline: none;
+    }
+
+    .menu-toggle__icon {
+      position: relative;
+      width: 18px;
+      height: 12px;
+      border-top: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+    }
+
+    .menu-toggle__icon::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      border-top: 2px solid currentColor;
+      transform: translateY(-50%);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: clamp(14px, 2.4vw, 30px);
+      white-space: nowrap;
+      font-size: 0.96rem;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+      text-decoration: underline;
+      text-underline-offset: 6px;
+    }
+
+.title-panel {
+    background: #fff;
+    padding: 28px 36px 30px;
+    border: 1px solid #e8edf2;
+    border-top: 0;
+    box-shadow: 0 8px 18px rgba(0, 67, 97, 0.05);
     text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    
-   
-    /* Posicionamento */
+}
+
+.title-panel .breadcrumb {
+    margin: 0 0 12px;
+    color: var(--muted);
+    font-size: .90rem;
+}
+
+.title-panel .breadcrumb a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.title-panel h1 {
+    margin: 0 auto;
+    max-width: 1120px;
+    color: #111827;
+    font-size: clamp(2.1rem, 3.85vw, 3.15rem);
+    font-weight: 850;
+    line-height: 1.05;
+    letter-spacing: 0;
+    text-transform: none;
+    text-wrap: balance;
+}
+
+.title-panel .lead {
+    max-width: 920px;
+    margin: 14px auto 0;
+    color: #4b5563;
+    font-size: clamp(1.02rem, 1.4vw, 1.22rem);
+    line-height: 1.5;
+}
+
+    main {
+      padding: 0 0 40px;
+    }
+
+    .notice,
+    .toolbar,
+    .report,
+    .checklist-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .notice {
+      padding: 14px 18px;
+      border-left: 5px solid var(--warning-border);
+      border-bottom: 0;
+      background: var(--warning);
+      margin-top: 14px;
+      margin-bottom: 0;
+      box-shadow: none;
+    }
+
+    .notice strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .toolbar {
+      position: sticky;
+      top: var(--topbar-height);
+      z-index: 900;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px;
+      margin-bottom: 0;
+      border-top: 0;
+      box-shadow: none;
+    }
+
+    .toolbar__group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .status {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    button {
+      min-height: 40px;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      padding: 9px 13px;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 650;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-strong);
+    }
+
+    .btn-secondary {
+      background: var(--surface-soft);
+      color: var(--primary);
+      border-color: var(--border);
+    }
+
+    .btn-danger {
+      background: #fff;
+      color: var(--danger);
+      border-color: #e0b8b8;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0;
+      margin-bottom: 14px;
+    }
+
+    .summary-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 0;
+      padding: 14px;
+      box-shadow: none;
+    }
+
+    .summary-card:first-child {
+      border-left: 1px solid var(--border);
+    }
+
+    .summary-card span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .summary-card strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 1.6rem;
+      color: var(--primary);
+    }
+
+    .checklist-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 980px;
+    }
+
+    caption {
+      text-align: left;
+      padding: 16px;
+      background: var(--surface-soft);
+      color: var(--primary);
+      font-weight: 750;
+      font-size: 1.1rem;
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    thead th {
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.92rem;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #fafcfd;
+    }
+
+    tbody tr.is-required td:first-child::after {
+      content: " essencial";
+      display: block;
+      width: max-content;
+      margin-top: 6px;
+      border-radius: 999px;
+      padding: 2px 8px;
+      background: #e7f3f1;
+      color: var(--success);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .narrow {
+      width: 72px;
+    }
+
+    .answer {
+      width: 138px;
+    }
+
+    .details {
+      width: 38%;
+    }
+
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid #c7d3dd;
+      border-radius: 6px;
+      background: #fff;
+      color: var(--text);
+      font: inherit;
+    }
+
+    select {
+      min-height: 40px;
+      padding: 8px;
+    }
+
+    textarea {
+      min-height: 86px;
+      padding: 9px 10px;
+      resize: vertical;
+    }
+
+    .act-select {
+      min-height: 56px;
+    }
+
+    .conditional-field {
+      margin-top: 10px;
+    }
+
+    .conditional-field[hidden] {
+      display: none;
+    }
+
+    .legal-ref {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      border: 0;
+      border-bottom: 1px dotted var(--accent);
+      padding: 0;
+      background: transparent;
+      color: var(--accent);
+      cursor: help;
+      font: inherit;
+      font-weight: 700;
+    }
+
+    .tooltip {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 130%;
+      z-index: 30;
+      width: min(420px, calc(100vw - 48px));
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      background: #102a3a;
+      color: #fff;
+      box-shadow: var(--shadow);
+      font-weight: 400;
+      line-height: 1.45;
+    }
+
+    .legal-ref:hover .tooltip,
+    .legal-ref:focus .tooltip,
+    .legal-ref.is-open .tooltip {
+      display: block;
+    }
+
+    .obs-row td {
+      background: var(--warning);
+      border-left: 5px solid var(--warning-border);
+      font-style: italic;
+    }
+
+    .report {
+      margin-top: 18px;
+      padding: 18px;
+    }
+
+    .report h2 {
+      margin: 0 0 12px;
+      color: var(--primary);
+    }
+
+    .report-output {
+      min-height: 160px;
+      white-space: pre-wrap;
+      border: 1px solid var(--border);
+      background: #f9fbfc;
+      padding: 14px;
+      overflow-x: auto;
+    }
+
+    .footer {
+      padding: 20px 0 36px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 980px) {
+      :root {
+        --topbar-height: 102px;
+        --toolbar-sticky-height: 0px;
+      }
+
+      .page-header {
+        padding: var(--topbar-height) 0 0;
+      }
+
+      .toolbar {
+        position: static;
+      }
+
+      .summary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .page-header__inner,
+      main,
+      .footer {
+        width: min(100% - 20px, 1180px);
+      }
+
+      .topbar__inner {
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: start;
+        min-height: 74px;
+        gap: 12px;
+        width: min(100% - 24px, 1180px);
+        padding: 14px 0;
+      }
+
+      .brand-image {
+        width: min(300px, calc(100vw - 106px));
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .nav-links {
+        display: none;
+        grid-column: 1 / -1;
+        justify-self: stretch;
+        width: 100%;
+        white-space: normal;
+        font-size: 0.94rem;
+        text-align: left;
+        justify-content: stretch;
+      }
+
+      .nav-links.is-open {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+        justify-items: stretch;
+        align-items: start;
+        padding: 10px 0 2px;
+        max-height: calc(100vh - 86px);
+        overflow-y: auto;
+      }
+
+      .title-panel {
+        padding: 20px 18px 22px;
+      }
+
+      .title-panel .breadcrumb {
+        justify-content: center;
+        margin-bottom: 12px;
+      }
+
+      .title-panel h1 {
+        font-size: clamp(1.75rem, 9vw, 2.35rem);
+      }
+
+      .title-panel .lead {
+        margin-top: 12px;
+        font-size: 1rem;
+      }
+
+      .notice {
+        margin-top: 10px;
+        padding: 12px 14px;
+      }
+
+      .toolbar {
+        gap: 8px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .title-panel h1 {
+        font-size: clamp(1.55rem, 8vw, 2.05rem);
+      }
+
+      .toolbar__group {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+      }
+
+      .toolbar__group button {
+        width: 100%;
+      }
+
+      .status {
+        width: 100%;
+      }
+
+      .checklist-wrap {
+        overflow: visible;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+      }
+
+      table,
+      tbody {
+        display: block;
+        width: 100%;
+        min-width: 0;
+      }
+
+      caption {
+        display: block;
+        margin-bottom: 10px;
+        border: 1px solid var(--border);
+      }
+
+      thead {
+        display: none;
+      }
+
+      tbody tr[data-row],
+      .obs-row {
+        display: block;
+        margin-bottom: 12px;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        box-shadow: 0 8px 18px rgba(17, 33, 45, 0.06);
+      }
+
+      tbody tr:nth-child(even) {
+        background: var(--surface);
+      }
+
+      tbody tr[data-row] td,
+      .obs-row td {
+        display: block;
+        width: 100%;
+        padding: 10px 12px;
+        border-bottom: 0;
+      }
+
+      tbody tr[data-row] td + td {
+        border-top: 1px solid #edf2f6;
+      }
+
+      tbody tr[data-row] td::before {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--muted);
+        font-size: 0.78rem;
+        font-weight: 750;
+        text-transform: uppercase;
+      }
+
+      tbody tr[data-row] td:nth-child(1)::before {
+        content: "Item";
+      }
+
+      tbody tr[data-row] td:nth-child(2)::before {
+        content: "Requisito";
+      }
+
+      tbody tr[data-row] td:nth-child(3)::before {
+        content: "Resposta";
+      }
+
+      tbody tr[data-row] td:nth-child(4)::before {
+        content: "Detalhamento";
+      }
+
+      tbody tr.is-required td:first-child::after {
+        display: inline-block;
+        margin: 0 0 0 8px;
+        vertical-align: middle;
+      }
+
+      textarea {
+        min-height: 108px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .toolbar__group,
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .toolbar,
+      .footer,
+      .breadcrumb,
+      .topbar,
+      .report button {
+        display: none !important;
+      }
+
+      .page-header {
+        padding: 0 0 12px;
+        background: #fff;
+        color: #000;
+      }
+
+      .lead {
+        color: #333;
+      }
+
+      main,
+      .page-header__inner {
+        width: 100%;
+      }
+
+      .notice,
+      .report,
+      .checklist-wrap,
+      .summary-card {
+        box-shadow: none;
+      }
+
+      table {
+        min-width: 0;
+        font-size: 0.82rem;
+      }
+
+      thead th {
+        position: static;
+      }
+
+      textarea,
+      select {
+        border: 0;
+      }
+    }
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown::after {
+    content: "";
+    display: none;
     position: absolute;
-    z-index: 1;
-    top: 125%; /* Posiciona abaixo do link */
-    left: 50%;
-    margin-left: -60px; /* Metade da largura para centralizar */
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 8px;
+}
 
-    /* Efeitos */
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
+.dropdown:hover::after,
+.dropdown:focus-within::after {
+    display: block;
+}
 
-  /* Exibe o tooltip quando o usuário passa o mouse sobre o link */
-  .tooltip-link:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-  }
+.dropdown-btn {
+    background: transparent;
+    border: 0;
+    color: rgba(255,255,255,.92);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 12px 6px;
+    border-radius: 4px;
+}
 
-#ato-ilicito {
-            width: 500px; /* Define a largura do campo select */
-            height: 35px; /* Define a altura do campo select, isso afeta a barra de rolagem interna e não o número de opções visíveis ao abrir o dropdown */
-            border: 1px solid #ccc; /* Opcional: ajusta a borda do campo */
-            border-radius: 4px; /* Opcional: adiciona bordas arredondadas */
-            padding: 5px; /* Opcional: adiciona um pouco de espaço interno para que o texto não fique muito próximo da borda */
-        }
+.dropdown-btn:hover,
+.dropdown-btn:focus-visible {
+    background: rgba(255,255,255,0.10);
+    color: #fff;
+    outline: none;
+}
 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    min-width: 260px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(0,0,0,.18);
+    overflow: hidden;
+    z-index: 1000;
+}
 
-</style>
+.dropdown-content a {
+    display: block;
+    padding: 12px 18px;
+    color: #17212b;
+    text-decoration: none;
+    font-weight: 500;
+    background: #fff;
+}
+
+.dropdown-content a:hover {
+    background: #eef4f8;
+    color: var(--primary);
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+@media (max-width: 980px) {
+    .dropdown::after {
+        display: none !important;
+    }
+
+    .nav-links .dropdown {
+        width: 100%;
+    }
+
+    .nav-links a,
+    .dropdown-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        min-height: 44px;
+        padding: 11px 0;
+        color: #fff;
+        text-align: left;
+        border-top: 1px solid rgba(255,255,255,0.16);
+    }
+
+    .nav-links a:hover,
+    .dropdown-btn:hover,
+    .dropdown-btn:focus-visible {
+        background: transparent;
+        text-decoration: none;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        min-width: 0;
+        margin: 0 0 8px;
+        padding: 0 0 4px 14px;
+        background: transparent;
+        border-left: 2px solid rgba(255,255,255,0.22);
+        border-radius: 0;
+        box-shadow: none;
+        overflow: visible;
+    }
+
+    .nav-links .dropdown.is-open .dropdown-content {
+        display: grid;
+    }
+
+    .nav-links .dropdown:not(.is-open):hover .dropdown-content,
+    .nav-links .dropdown:not(.is-open):focus-within .dropdown-content {
+        display: none;
+    }
+
+    .dropdown-content a {
+        min-height: 38px;
+        padding: 8px 0;
+        color: rgba(255,255,255,0.86);
+        background: transparent;
+        font-size: 0.92rem;
+        font-weight: 600;
+        border-top: 0;
+    }
+
+    .dropdown-content a:hover {
+        background: transparent;
+        color: #fff;
+    }
+}
+
+  </style>
 </head>
 <body>
+  <header class="page-header">
+    <div class="page-header__inner">
+      <nav class="topbar" aria-label="Navegação principal">
+        <div class="topbar__inner">
+          <a class="site-brand" href="https://www.cadernodenormas.com.br/" aria-label="Página inicial do Caderno de Normas">
+            <img class="brand-image" src="logo-caderno-normas.png" alt="Caderno de Normas do Direito Administrativo Sancionador">
+          </a>
 
-<table class="anticorrupcao-table">
-<tbody><tr class="title-row">
-    <th colspan="4">Caderno de Normas do Direito Administrativo Sancionador - Requisitos para enquadramento de fatos/atos cometidos por empresas na Lei anticorrupção</th>
-  </tr>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+            <span class="menu-toggle__icon" aria-hidden="true"></span>
+            <span>Menu</span>
+          </button>
 
+          <div class="nav-links" id="primary-menu">
+            <a href="https://www.cadernodenormas.com.br/">Início</a>
+            <a href="https://www.cadernodenormas.com.br/#section1">Constituição Federal</a>
 
-  <tr>
-    <th>nº</th>
-    <th>Requisito</th>
-    <th>Sim/Não</th>
-    <th>Detalhamento da Pessoa jurídica/Pessoa natural/Benefício/Patrimônio público e/ou Princípio lesionados/Enquadramento legal/Vantagem indevida</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Envolve a participação de pessoa jurídica? (<a href="#" class="tooltip-link">art. 2º<span class="tooltip-text">Art.
- 2º As pessoas jurídicas serão responsabilizadas objetivamente, nos 
-âmbitos administrativo e civil, pelos atos lesivos previstos nesta Lei 
-praticados em seu interesse ou benefício, exclusivo ou não. </span></a>)</td>
-    <td><select><option value="" selected="selected">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select></td>
-    <td><input type="text" name="descricao1"></td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>É possível identificar a pessoa natural que agiu em nome da empresa e o seu perfil? (<a href="#" class="tooltip-link">art. 3º<span class="tooltip-text">Art. 3º A responsabilização da pessoa jurídica não exclui a responsabilidade individual de seus dirigentes ou administradores ou de qualquer pessoa natural, autora, coautora ou partícipe do ato ilícito.  
-praticados em seu interesse ou benefício, exclusivo ou não. </span></a>)</td>
-    <td><select><option value="" selected="selected">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select></td>
-    <td><input type="text" name="descricao1"></td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>O ato foi praticado em interesse ou benefício, exclusivo ou não? (<a href="#" class="tooltip-link">art. 2º<span class="tooltip-text">Art.
- 2º As pessoas jurídicas serão responsabilizadas objetivamente, nos 
-âmbitos administrativo e civil, pelos atos lesivos previstos nesta Lei 
-praticados em seu interesse ou benefício, exclusivo ou não. </span></a>)</td>
-    <td><select><option value="" selected="selected">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select></td>
-    <td><input type="text" name="descricao2"></td>
-  </tr>
-<tr>
-    <td>4</td>
-    <td>Atentou contra o patrimônio público nacional? (<a href="#" class="tooltip-link">art. 5º, caput<span class="tooltip-text">Art.
- 5º Constituem atos lesivos à administração pública, nacional ou 
-estrangeira, para os fins desta Lei, todos aqueles praticados pelas 
-pessoas jurídicas mencionadas no parágrafo único do art. 1º , que 
-atentem contra o patrimônio público nacional ou estrangeiro, contra 
-princípios da administração pública ou contra os compromissos 
-internacionais assumidos pelo Brasil, assim definidos:  </span></a>)</td>
-    <td><select><option value="" selected="selected">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select></td>
-    <td><input type="text" name="descricao3"></td>
-  </tr>
-<tr>
-    <td>5</td>
-    <td>Atentou contra princípio da Administração pública? (<a href="#" class="tooltip-link">art. 5º, caput<span class="tooltip-text">Art.
- 5º Constituem atos lesivos à administração pública, nacional ou 
-estrangeira, para os fins desta Lei, todos aqueles praticados pelas 
-pessoas jurídicas mencionadas no parágrafo único do art. 1º , que 
-atentem contra o patrimônio público nacional ou estrangeiro, contra 
-princípios da administração pública ou contra os compromissos 
-internacionais assumidos pelo Brasil, assim definidos:  </span></a>)</td>
-     <td><select><option value="" selected="selected">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select></td>
-    <td><input type="text" name="descricao4"></td>
-  </tr>
-<tr>
-    <td>6</td>
-    <td>Atentou contra compromissos internacionais assumidos pelo Brasil? (<a href="#" class="tooltip-link">art. 5º, caput<span class="tooltip-text">Art.
- 5º Constituem atos lesivos à administração pública, nacional ou 
-estrangeira, para os fins desta Lei, todos aqueles praticados pelas 
-pessoas jurídicas mencionadas no parágrafo único do art. 1º , que 
-atentem contra o patrimônio público nacional ou estrangeiro, contra 
-princípios da administração pública ou contra os compromissos 
-internacionais assumidos pelo Brasil, assim definidos:  </span></a>)</td>
-     <td><select><option value="" selected="selected">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select></td>
-    <td><input type="text" name="descricao5"></td>
-  </tr>
-<tr>
-    <td>7</td>
-    <td>O fato/ato identificado é passível de enquadramento em algum inciso do art. 5º? Se sim, selecione o ilícito!</td>
-     <td><select><option value="" selected="selected">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select></td>
-<td>
-<select id="ato-ilicito" name="ato-ilicito">
-Selecione:
-<option value="1" selected="selected">------</option>
-    <option value="2">I - Prometer, oferecer ou dar, direta ou 
-indiretamente, vantagem indevida a agente público, ou a terceira pessoa a
- ele relacionada;</option>
-    <option value="3">II - Comprovadamente, financiar, custear, 
-patrocinar ou de qualquer modo subvencionar a prática dos atos ilícitos 
-previstos nesta Lei;</option>
-    <option value="4">III - Comprovadamente, utilizar-se de interposta 
-pessoa física ou jurídica para ocultar ou dissimular seus reais 
-interesses ou a identidade dos beneficiários dos atos praticados;</option>
-    <option value="5a">IV - no tocante a licitações e contratos: a) 
-Frustrar ou fraudar, mediante ajuste, combinação ou qualquer outro 
-expediente, o caráter competitivo de procedimento licitatório público;</option>
-    <option value="6b">IV - no tocante a licitações e contratos: b) 
-Impedir, perturbar ou fraudar a realização de qualquer ato de 
-procedimento licitatório público;</option>
-    <option value="7c">IV - no tocante a licitações e contratos: c) 
-Afastar ou procurar afastar licitante, por meio de fraude ou 
-oferecimento de vantagem de qualquer tipo;</option>
-    <option value="8d">IV - no tocante a licitações e contratos: d) Fraudar licitação pública ou contrato dela decorrente;</option>
-    <option value="9e">IV - no tocante a licitações e contratos: e) 
-Criar, de modo fraudulento ou irregular, pessoa jurídica para participar
- de licitação pública ou celebrar contrato administrativo;</option>
-    <option value="10f">IV - no tocante a licitações e contratos: f) 
-Obter vantagem ou benefício indevido, de modo fraudulento, de 
-modificações ou prorrogações de contratos celebrados com a administração
- pública, sem autorização em lei, no ato convocatório da licitação 
-pública ou nos respectivos instrumentos contratuais;</option>
-    <option value="11g">IV - no tocante a licitações e contratos: g) 
-Manipular ou fraudar o equilíbrio econômico-financeiro dos contratos 
-celebrados com a administração pública;</option>
-    <option value="12">V - Dificultar atividade de investigação ou 
-fiscalização de órgãos, entidades ou agentes públicos, ou intervir em 
-sua atuação, inclusive no âmbito das agências reguladoras e dos órgãos 
-de fiscalização do sistema financeiro nacional</option>
-</select>
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-expanded="false">
+                PAD <span aria-hidden="true">▾</span>
+              </button>
 
-</td>
-  </tr>
-<tr>
-    <td>8</td>
-    <td>É possível identificar a vantagem indevida obtida? (<a href="#" class="tooltip-link">art. 6º, inciso I<span class="tooltip-text">I
- - multa, no valor de 0,1% (um décimo por cento) a 20% (vinte por cento)
- do faturamento bruto do último exercício anterior ao da instauração do 
-processo administrativo, excluídos os tributos, a qual nunca será 
-inferior à vantagem auferida, quando for possível sua estimação; e </span></a>)</td>
-     <td><select><option value="" selected="selected">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select></td>
-    <td><input type="text" name="descricao7"></td>
-  </tr>
-<tr>
-    <td>9</td>
-    <td>A vantagem indevida pode se estimada? (<a href="#" class="tooltip-link">art. 6º, inciso I<span class="tooltip-text">I
- - multa, no valor de 0,1% (um décimo por cento) a 20% (vinte por cento)
- do faturamento bruto do último exercício anterior ao da instauração do 
-processo administrativo, excluídos os tributos, a qual nunca será 
-inferior à vantagem auferida, quando for possível sua estimação; e </span></a>)</td>
-     <td><select><option value="" selected="selected">Selecione</option><option value="sim">Sim</option><option value="nao">Não</option></select></td>
-    <td><input type="text" name="descricao1"></td>
-  </tr>
-  <!-- Repetir as linhas abaixo para os demais itens da tabela -->
-  <tr>
-    <td>...</td>
-    <td>...</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <!-- Observações -->
-  <tr class="obs">
-    <td colspan="4">Obs1: Os item de 3 a 5 são alternativos, podendo o fato/ato atender somente 1 ou todos eles.</td>
-  </tr>
-  <tr class="obs">
-    <td colspan="4">Obs2: A não estimativa da vantagem indevida não é um requisito excludente.</td>
-  </tr>
-</tbody></table>
+              <div class="dropdown-content">
+                <a href="https://www.cadernodenormas.com.br/Matriz-de-responsabilizacao.htm">Matriz de responsabilização</a>
+                <a href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAD.html">Nota de regularidade</a>
+                <a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAD-e-atas-deliberativas.htm">Passo a passo de um PAD</a>
+              </div>
+            </div>
 
-<!-- Botões de ação após a tabela -->
-<div class="action-buttons">
-  <button onclick="window.print();" class="print-button">
-    🖨️ Imprimir
-  </button>
-  <button onclick="resetForm();" class="print-button">
-    🗑️ Limpar
-  </button>
-</div>
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-expanded="false">
+                PAR <span aria-hidden="true">▾</span>
+              </button>
 
-<script>
-function resetForm() {
-  // Reseta os seletores para o valor padrão
-  document.querySelectorAll('.anticorrupcao-table select').forEach(function(select) {
-    select.selectedIndex = 0;
-  });
-  
-  // Limpa todos os campos de texto
-  document.querySelectorAll('.anticorrupcao-table input[type="text"]').forEach(function(input) {
-    input.value = '';
-  });
-}
-</script>
+              <div class="dropdown-content">
+                <a href="https://www.cadernodenormas.com.br/Requisitos-Lei-anticorrupcao.html">Matriz de requisitos</a>
+                <a href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAR.html">Nota de regularidade</a>
+                <a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAR-e-atas-deliberativas.htm">Passo a passo de um PAR</a>
+              </div>
+            </div>
 
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-expanded="false">
+                Leis <span aria-hidden="true">▾</span>
+              </button>
 
+              <div class="dropdown-content">
+                <a href="https://www.cadernodenormas.com.br/#section2">Lei nº 8.112/1990</a>
+                <a href="https://www.cadernodenormas.com.br/#section3">Lei nº 9.784/1999</a>
+                <a href="https://www.cadernodenormas.com.br/#section4">Lei nº 12.527/2011 (LAI)</a>
+                <a href="https://www.cadernodenormas.com.br/#section5">Lei nº 12.846/2013</a>
+                <a href="https://www.cadernodenormas.com.br/#section6">Decreto nº 11.129/2022</a>
+                <a href="https://www.cadernodenormas.com.br/#section7">Decreto nº 1.171/1994</a>
+                <a href="https://www.cadernodenormas.com.br/#section8">Lei nº 5.172/1966 (CTN)</a>
+                <a href="https://www.cadernodenormas.com.br/#section9">Decreto-Lei nº 4.657/1942 (LINDB)</a>
+              </div>
+            </div>
 
-</body></html>
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-expanded="false">
+                Gestão <span aria-hidden="true">▾</span>
+              </button>
+
+              <div class="dropdown-content">
+                <a href="https://www.cadernodenormas.com.br/criterios-de-priorizacao.html">Critérios de priorização</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section class="title-panel" aria-labelledby="page-title">
+    <p class="breadcrumb">
+        <a href="https://www.cadernodenormas.com.br/">Caderno de Normas</a>
+        <span aria-hidden="true">›</span>
+        Lei Anticorrupção
+    </p>
+
+        <h1 id="page-title">
+            Matriz de Requisitos da Lei Anticorrupção
+        </h1>
+
+        <p class="lead">
+            Ferramenta de apoio para análise preliminar de fatos praticados por pessoas jurídicas
+            com base na Lei nº 12.846/2013.
+        </p>
+</section>
+    </div>
+  </header>
+
+  <main>
+    <section class="notice" aria-label="Aviso jurídico">
+      <strong>Uso informativo e de apoio</strong>
+      Esta ferramenta não substitui a análise jurídica do caso concreto nem a consulta à legislação oficial vigente. Revise os fundamentos antes de utilizar o relatório.
+    </section>
+
+    <section class="toolbar" aria-label="Ações da ferramenta">
+      <div class="toolbar__group">
+        <button type="button" class="btn-primary" id="generateReport">Gerar relatório</button>
+        <button type="button" class="btn-secondary" id="copyReport">Copiar relatório</button>
+        <button type="button" class="btn-secondary" id="printPage">Imprimir</button>
+        <button type="button" class="btn-danger" id="clearForm">Limpar</button>
+      </div>
+      <span class="status" id="saveStatus">Preenchimento salvo automaticamente neste navegador.</span>
+    </section>
+
+    <section class="summary-grid" aria-label="Resumo do preenchimento">
+      <div class="summary-card">
+        <span>Respondidos</span>
+        <strong id="answeredCount">0</strong>
+      </div>
+      <div class="summary-card">
+        <span>Marcados como Sim</span>
+        <strong id="yesCount">0</strong>
+      </div>
+      <div class="summary-card">
+        <span>Pendentes</span>
+        <strong id="pendingCount">9</strong>
+      </div>
+      <div class="summary-card">
+        <span>Detalhamentos</span>
+        <strong id="detailCount">0</strong>
+      </div>
+    </section>
+
+    <section class="checklist-wrap" aria-label="Matriz de requisitos">
+      <table class="anticorrupcao-table">
+        <caption>Requisitos de análise</caption>
+        <thead>
+          <tr>
+            <th class="narrow">Nº</th>
+            <th>Requisito</th>
+            <th class="answer">Sim/Não</th>
+            <th class="details">Detalhamento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="is-required" data-row="1">
+            <td>1</td>
+            <td>
+              Envolve a participação de pessoa jurídica?
+              <button type="button" class="legal-ref">art. 2º
+                <span class="tooltip">Art. 2º As pessoas jurídicas serão responsabilizadas objetivamente, nos âmbitos administrativo e civil, pelos atos lesivos previstos nesta Lei praticados em seu interesse ou benefício, exclusivo ou não.</span>
+              </button>
+            </td>
+            <td>
+              <select name="resposta1" aria-label="Resposta do requisito 1">
+                <option value="">Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+              </select>
+            </td>
+            <td><textarea name="descricao1" placeholder="Identifique a pessoa jurídica envolvida e sua relação com o fato."></textarea></td>
+          </tr>
+
+          <tr data-row="2">
+            <td>2</td>
+            <td>
+              É possível identificar a pessoa natural que agiu em nome da empresa e o seu perfil?
+              <button type="button" class="legal-ref">art. 3º
+                <span class="tooltip">Art. 3º A responsabilização da pessoa jurídica não exclui a responsabilidade individual de seus dirigentes, administradores ou de qualquer pessoa natural, autora, coautora ou partícipe do ato ilícito.</span>
+              </button>
+            </td>
+            <td>
+              <select name="resposta2" aria-label="Resposta do requisito 2">
+                <option value="">Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+              </select>
+            </td>
+            <td><textarea name="descricao2" placeholder="Indique nome, cargo, vínculo, função ou evidências de atuação."></textarea></td>
+          </tr>
+
+          <tr class="is-required" data-row="3">
+            <td>3</td>
+            <td>
+              O ato foi praticado em interesse ou benefício, exclusivo ou não, da pessoa jurídica?
+              <button type="button" class="legal-ref">art. 2º
+                <span class="tooltip">A responsabilidade objetiva exige análise do interesse ou benefício da pessoa jurídica, ainda que não exclusivo.</span>
+              </button>
+            </td>
+            <td>
+              <select name="resposta3" aria-label="Resposta do requisito 3">
+                <option value="">Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+              </select>
+            </td>
+            <td><textarea name="descricao3" placeholder="Explique o interesse, benefício pretendido ou benefício obtido."></textarea></td>
+          </tr>
+
+          <tr class="is-required" data-row="4">
+            <td>4</td>
+            <td>
+              Atentou contra o patrimônio público nacional ou estrangeiro?
+              <button type="button" class="legal-ref">art. 5º, caput
+                <span class="tooltip">Art. 5º Constituem atos lesivos aqueles que atentem contra o patrimônio público nacional ou estrangeiro, contra princípios da administração pública ou contra compromissos internacionais assumidos pelo Brasil.</span>
+              </button>
+            </td>
+            <td>
+              <select name="resposta4" aria-label="Resposta do requisito 4">
+                <option value="">Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+              </select>
+            </td>
+            <td><textarea name="descricao4" placeholder="Descreva dano, risco, prejuízo ou impacto patrimonial."></textarea></td>
+          </tr>
+
+          <tr class="is-required" data-row="5">
+            <td>5</td>
+            <td>
+              Atentou contra princípio da Administração Pública?
+              <button type="button" class="legal-ref">art. 5º, caput
+                <span class="tooltip">Avalie violação a princípios como legalidade, impessoalidade, moralidade, publicidade, eficiência, competitividade, isonomia ou probidade.</span>
+              </button>
+            </td>
+            <td>
+              <select name="resposta5" aria-label="Resposta do requisito 5">
+                <option value="">Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+              </select>
+            </td>
+            <td><textarea name="descricao5" placeholder="Indique o princípio afetado e os elementos do fato."></textarea></td>
+          </tr>
+
+          <tr class="is-required" data-row="6">
+            <td>6</td>
+            <td>
+              Atentou contra compromissos internacionais assumidos pelo Brasil?
+              <button type="button" class="legal-ref">art. 5º, caput
+                <span class="tooltip">Considere compromissos internacionais de combate à corrupção, integridade pública e responsabilização de pessoas jurídicas.</span>
+              </button>
+            </td>
+            <td>
+              <select name="resposta6" aria-label="Resposta do requisito 6">
+                <option value="">Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+              </select>
+            </td>
+            <td><textarea name="descricao6" placeholder="Relacione o fato ao compromisso internacional eventualmente afetado."></textarea></td>
+          </tr>
+
+          <tr class="is-required" data-row="7">
+            <td>7</td>
+            <td>O fato ou ato é passível de enquadramento em algum inciso do art. 5º?</td>
+            <td>
+              <select name="resposta7" id="resposta7" aria-label="Resposta do requisito 7">
+                <option value="">Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+              </select>
+            </td>
+            <td>
+              <div class="conditional-field" id="atoIlicitoField" hidden>
+                <label for="ato-ilicito">Selecione o ato lesivo</label>
+                <select class="act-select" id="ato-ilicito" name="atoIlicito">
+                  <option value="">Selecione o enquadramento</option>
+                  <option value="I - Prometer, oferecer ou dar vantagem indevida a agente público ou a terceira pessoa relacionada">I - Prometer, oferecer ou dar vantagem indevida a agente público ou a terceira pessoa relacionada.</option>
+                  <option value="II - Financiar, custear, patrocinar ou subvencionar atos ilícitos">II - Financiar, custear, patrocinar ou subvencionar atos ilícitos.</option>
+                  <option value="III - Utilizar interposta pessoa para ocultar ou dissimular interesses ou beneficiários">III - Utilizar interposta pessoa para ocultar ou dissimular interesses ou beneficiários.</option>
+                  <option value="IV-a - Frustrar ou fraudar o caráter competitivo de procedimento licitatório público">IV, a - Frustrar ou fraudar o caráter competitivo de procedimento licitatório público.</option>
+                  <option value="IV-b - Impedir, perturbar ou fraudar ato de procedimento licitatório público">IV, b - Impedir, perturbar ou fraudar ato de procedimento licitatório público.</option>
+                  <option value="IV-c - Afastar ou procurar afastar licitante mediante fraude ou vantagem">IV, c - Afastar ou procurar afastar licitante mediante fraude ou vantagem.</option>
+                  <option value="IV-d - Fraudar licitação pública ou contrato dela decorrente">IV, d - Fraudar licitação pública ou contrato dela decorrente.</option>
+                  <option value="IV-e - Criar pessoa jurídica fraudulenta ou irregular para licitar ou contratar">IV, e - Criar pessoa jurídica fraudulenta ou irregular para licitar ou contratar.</option>
+                  <option value="IV-f - Obter vantagem indevida em modificações ou prorrogações contratuais">IV, f - Obter vantagem indevida em modificações ou prorrogações contratuais.</option>
+                  <option value="IV-g - Manipular ou fraudar equilíbrio econômico-financeiro de contrato">IV, g - Manipular ou fraudar equilíbrio econômico-financeiro de contrato.</option>
+                  <option value="V - Dificultar investigação ou fiscalização pública">V - Dificultar investigação ou fiscalização pública.</option>
+                </select>
+              </div>
+              <textarea name="descricao7" placeholder="Detalhe o enquadramento legal e a correspondência com o fato."></textarea>
+            </td>
+          </tr>
+
+          <tr data-row="8">
+            <td>8</td>
+            <td>
+              É possível identificar a vantagem indevida obtida?
+              <button type="button" class="legal-ref">art. 6º, I
+                <span class="tooltip">A multa nunca será inferior à vantagem auferida, quando for possível sua estimação.</span>
+              </button>
+            </td>
+            <td>
+              <select name="resposta8" aria-label="Resposta do requisito 8">
+                <option value="">Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+              </select>
+            </td>
+            <td><textarea name="descricao8" placeholder="Descreva a vantagem, se identificada."></textarea></td>
+          </tr>
+
+          <tr data-row="9">
+            <td>9</td>
+            <td>
+              A vantagem indevida pode ser estimada?
+              <button type="button" class="legal-ref">art. 6º, I
+                <span class="tooltip">A não estimativa da vantagem indevida não afasta, por si só, a análise de responsabilização.</span>
+              </button>
+            </td>
+            <td>
+              <select name="resposta9" aria-label="Resposta do requisito 9">
+                <option value="">Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+              </select>
+            </td>
+            <td><textarea name="descricao9" placeholder="Indique base de cálculo, método de estimativa ou razão da impossibilidade."></textarea></td>
+          </tr>
+
+          <tr class="obs-row">
+            <td colspan="4">Obs. 1: Os itens 4, 5 e 6 são alternativos. O fato pode atender apenas um deles ou mais de um.</td>
+          </tr>
+          <tr class="obs-row">
+            <td colspan="4">Obs. 2: A impossibilidade de estimar a vantagem indevida não é requisito excludente.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="report" aria-label="Relatório gerado">
+      <h2>Conclusão preliminar</h2>
+      <div class="report-output" id="reportOutput">Clique em "Gerar relatório" para consolidar as respostas.</div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Última atualização da ferramenta: 09/07/2026. Confira sempre a legislação oficial aplicável antes de usar o resultado.
+  </footer>
+
+  <script>
+    (() => {
+      const STORAGE_KEY = 'requisitos-lei-anticorrupcao-v2';
+      const menuToggle = document.querySelector('.menu-toggle');
+      const primaryMenu = document.getElementById('primary-menu');
+      const dropdownButtons = Array.from(document.querySelectorAll('.dropdown-btn'));
+      const formFields = Array.from(document.querySelectorAll('select, textarea'));
+      const reportOutput = document.getElementById('reportOutput');
+      const saveStatus = document.getElementById('saveStatus');
+      const answerSelects = Array.from(document.querySelectorAll('select[name^="resposta"]'));
+      const resposta7 = document.getElementById('resposta7');
+      const atoIlicitoField = document.getElementById('atoIlicitoField');
+      const atoIlicito = document.getElementById('ato-ilicito');
+
+      function closeDropdowns() {
+        document.querySelectorAll('.dropdown.is-open').forEach((dropdown) => {
+          dropdown.classList.remove('is-open');
+          dropdown.querySelector('.dropdown-btn')?.setAttribute('aria-expanded', 'false');
+        });
+      }
+
+      function closeMenu() {
+        if (!menuToggle || !primaryMenu) return;
+        primaryMenu.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        closeDropdowns();
+      }
+
+      if (menuToggle && primaryMenu) {
+        menuToggle.addEventListener('click', () => {
+          const isOpen = primaryMenu.classList.toggle('is-open');
+          menuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        primaryMenu.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', closeMenu);
+        });
+
+        window.addEventListener('resize', () => {
+          if (window.innerWidth > 980) closeMenu();
+        });
+      }
+
+      dropdownButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          if (window.innerWidth > 980) return;
+          const dropdown = button.closest('.dropdown');
+          if (!dropdown) return;
+          const willOpen = !dropdown.classList.contains('is-open');
+          closeDropdowns();
+          dropdown.classList.toggle('is-open', willOpen);
+          button.setAttribute('aria-expanded', String(willOpen));
+        });
+      });
+
+      document.addEventListener('click', (event) => {
+        if (window.innerWidth <= 980 && primaryMenu && !primaryMenu.contains(event.target) && !event.target.closest('.menu-toggle')) {
+          closeMenu();
+        }
+      });
+
+      function getState() {
+        return formFields.reduce((state, field) => {
+          state[field.name || field.id] = field.value;
+          return state;
+        }, {});
+      }
+
+      function saveState() {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(getState()));
+        updateSummary();
+        saveStatus.textContent = 'Preenchimento salvo automaticamente neste navegador.';
+      }
+
+      function restoreState() {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return;
+        try {
+          const state = JSON.parse(raw);
+          formFields.forEach((field) => {
+            const key = field.name || field.id;
+            if (Object.prototype.hasOwnProperty.call(state, key)) field.value = state[key];
+          });
+        } catch (error) {
+          console.warn('Não foi possível restaurar o preenchimento.', error);
+        }
+      }
+
+      function updateConditionalFields() {
+        const showAct = resposta7.value === 'sim';
+        atoIlicitoField.hidden = !showAct;
+        if (!showAct) atoIlicito.value = '';
+      }
+
+      function updateSummary() {
+        const answered = answerSelects.filter((field) => field.value).length;
+        const yes = answerSelects.filter((field) => field.value === 'sim').length;
+        const details = Array.from(document.querySelectorAll('textarea')).filter((field) => field.value.trim()).length;
+        document.getElementById('answeredCount').textContent = answered;
+        document.getElementById('yesCount').textContent = yes;
+        document.getElementById('pendingCount').textContent = answerSelects.length - answered;
+        document.getElementById('detailCount').textContent = details;
+      }
+
+      function rowText(row) {
+        const number = row.dataset.row;
+        const requirement = row.children[1].childNodes[0].textContent.trim().replace(/\s+/g, ' ');
+        const answer = row.querySelector('select[name^="resposta"]')?.value || 'pendente';
+        const detail = row.querySelector('textarea')?.value.trim() || 'Sem detalhamento.';
+        return { number, requirement, answer, detail };
+      }
+
+      function validateRequired() {
+        const pending = [];
+        document.querySelectorAll('tr.is-required').forEach((row) => {
+          const data = rowText(row);
+          if (!row.querySelector('select[name^="resposta"]')?.value) pending.push(data.number);
+        });
+        if (resposta7.value === 'sim' && !atoIlicito.value) pending.push('7 - enquadramento do ato lesivo');
+        return pending;
+      }
+
+      function generateReport() {
+        const rows = Array.from(document.querySelectorAll('tbody tr[data-row]')).map(rowText);
+        const yesRows = rows.filter((row) => row.answer === 'sim');
+        const noRows = rows.filter((row) => row.answer === 'nao');
+        const pendingRows = rows.filter((row) => row.answer === 'pendente');
+        const pendingRequired = validateRequired();
+
+        const conclusion = pendingRequired.length
+          ? `Há campos essenciais pendentes: ${pendingRequired.join(', ')}.`
+          : 'Os campos essenciais foram preenchidos para análise preliminar.';
+
+        const report = [
+          'RELATÓRIO PRELIMINAR - LEI ANTICORRUPÇÃO',
+          '',
+          `Conclusão preliminar: ${conclusion}`,
+          atoIlicito.value ? `Ato lesivo selecionado: ${atoIlicito.value}` : 'Ato lesivo selecionado: não informado.',
+          '',
+          `Itens marcados como Sim: ${yesRows.length}`,
+          yesRows.map((row) => `- Item ${row.number}: ${row.requirement}\n  Detalhamento: ${row.detail}`).join('\n') || '- Nenhum.',
+          '',
+          `Itens marcados como Não: ${noRows.length}`,
+          noRows.map((row) => `- Item ${row.number}: ${row.requirement}`).join('\n') || '- Nenhum.',
+          '',
+          `Itens pendentes: ${pendingRows.length}`,
+          pendingRows.map((row) => `- Item ${row.number}: ${row.requirement}`).join('\n') || '- Nenhum.',
+          '',
+          'Aviso: resultado de apoio, sem substituir análise jurídica do caso concreto ou consulta à legislação oficial vigente.'
+        ].join('\n');
+
+        reportOutput.textContent = report;
+        return report;
+      }
+
+      formFields.forEach((field) => {
+        field.addEventListener('input', saveState);
+        field.addEventListener('change', () => {
+          updateConditionalFields();
+          saveState();
+        });
+      });
+
+      document.querySelectorAll('.legal-ref').forEach((button) => {
+        button.addEventListener('click', () => {
+          document.querySelectorAll('.legal-ref.is-open').forEach((openButton) => {
+            if (openButton !== button) openButton.classList.remove('is-open');
+          });
+          button.classList.toggle('is-open');
+        });
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!event.target.closest('.legal-ref')) {
+          document.querySelectorAll('.legal-ref.is-open').forEach((button) => button.classList.remove('is-open'));
+        }
+      });
+
+      document.getElementById('generateReport').addEventListener('click', generateReport);
+      document.getElementById('copyReport').addEventListener('click', async () => {
+        const text = reportOutput.textContent.includes('Clique em') ? generateReport() : reportOutput.textContent;
+        try {
+          await navigator.clipboard.writeText(text);
+          saveStatus.textContent = 'Relatório copiado para a área de transferência.';
+        } catch {
+          saveStatus.textContent = 'Não foi possível copiar automaticamente. Selecione o relatório e copie manualmente.';
+        }
+      });
+
+      document.getElementById('printPage').addEventListener('click', () => {
+        if (reportOutput.textContent.includes('Clique em')) generateReport();
+        window.print();
+      });
+
+      document.getElementById('clearForm').addEventListener('click', () => {
+        if (!confirm('Limpar todas as respostas e detalhamentos?')) return;
+        formFields.forEach((field) => {
+          field.value = '';
+        });
+        reportOutput.textContent = 'Clique em "Gerar relatório" para consolidar as respostas.';
+        localStorage.removeItem(STORAGE_KEY);
+        updateConditionalFields();
+        updateSummary();
+        saveStatus.textContent = 'Preenchimento limpo.';
+      });
+
+      restoreState();
+      updateConditionalFields();
+      updateSummary();
+    })();
+  </script>
+</body>
+</html>
