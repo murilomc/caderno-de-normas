@@ -317,7 +317,7 @@
     display: block;
   }
 
-  @media (max-width: 760px) {
+  @media (max-width: 980px) {
     :root {
       --topbar-height: 102px;
     }
@@ -341,7 +341,7 @@
     }
 
     .brand-image {
-      width: min(260px, calc(100vw - 106px));
+      width: min(300px, calc(100vw - 106px));
     }
 
     .menu-toggle {
@@ -2144,13 +2144,13 @@ Pena - detenção, de seis meses a dois anos, ou multa.</p>
         });
 
         window.addEventListener('resize', () => {
-          if (window.innerWidth > 760) closeMenu();
+          if (window.innerWidth > 980) closeMenu();
         });
       }
 
       dropdownButtons.forEach((button) => {
         button.addEventListener('click', () => {
-          if (window.innerWidth > 760) return;
+          if (window.innerWidth > 980) return;
           const dropdown = button.closest('.dropdown');
           if (!dropdown) return;
           const willOpen = !dropdown.classList.contains('is-open');
@@ -2161,7 +2161,7 @@ Pena - detenção, de seis meses a dois anos, ou multa.</p>
       });
 
       document.addEventListener('click', (event) => {
-        if (window.innerWidth <= 760 && primaryMenu && !primaryMenu.contains(event.target) && !event.target.closest('.menu-toggle')) {
+        if (window.innerWidth <= 980 && primaryMenu && !primaryMenu.contains(event.target) && !event.target.closest('.menu-toggle')) {
           closeMenu();
         }
       });
@@ -2170,6 +2170,7 @@ Pena - detenção, de seis meses a dois anos, ou multa.</p>
 
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/app.js"></script>
   <script src="assets/js/chat.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"9463c914ca684b92a43be8d35b8ddcda","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"9463c914ca684b92a43be8d35b8ddcda","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
