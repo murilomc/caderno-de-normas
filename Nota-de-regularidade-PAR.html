@@ -1,358 +1,1331 @@
 <!DOCTYPE html>
-<html lang="pt-br"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta charset="UTF-8">
-<title>Caderno de Normas - Nota de regularidade de um Processo Administrativo Disciplinar</title>
-
-  <!-- Hreflang para especificar o idioma -->
-  <link rel="alternate" hreflang="pt-BR" href="https://www.cadernodenormas.com.br/">
-  
-  <!-- Favicons do gov.br -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ferramenta de apoio para análise da regularidade formal e material de Processo Administrativo de Responsabilização com base na Lei nº 12.846/2013 e no Decreto nº 11.129/2022.">
+  <link rel="canonical" href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAR.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAR.html">
   <link rel="icon" type="image/png" sizes="32x32" href="https://www.gov.br/++theme++padrao_govbr/favicons/favicon-32x32.png">
-  <link rel="shortcut icon" type="image/png" href="https://www.gov.br/++theme++padrao_govbr/favicons/favicon-48x48.png">
+  <title>Nota de Regularidade de Processo Administrativo de Responsabilização</title>
 
-<style>
-  .anticorrupcao-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --surface: #ffffff;
+      --surface-soft: #eef4f8;
+      --text: #17212b;
+      --muted: #5f6f7f;
+      --primary: #004361;
+      --primary-strong: #063447;
+      --accent: #0b6fae;
+      --warning: #fff6cf;
+      --warning-border: #d7a300;
+      --border: #d7e0e7;
+      --success: #0f766e;
+      --danger: #a83232;
+      --shadow: 0 12px 30px rgba(17, 33, 45, 0.08);
+      --topbar-height: 122px;
+    }
 
-  .anticorrupcao-table th, .anticorrupcao-table td {
-    border: 1px solid #000;
-    padding: 8px;
-    text-align: left;
-  }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
-  .anticorrupcao-table th {
-    background-color: #003366; /* Azul escuro */
-    color: white;
-  }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.5;
+    }
 
-  .anticorrupcao-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
+    a { color: var(--accent); }
 
-  .anticorrupcao-table tr:nth-child(odd) {
-    background-color: #ffffff;
-  }
+    .page-header__inner,
+    main,
+    .footer {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
 
-  .obs {
-    background-color: #fdd835;
-    font-style: italic; /* Mudança para itálico ao invés de negrito para diferenciar as observações */
-    font-weight: normal;
-  }
+    .page-header {
+      background: #f3f5f8;
+      color: var(--text);
+      padding: var(--topbar-height) 0 0;
+    }
 
-.title-row th {
-    background-color: #007bff; /* Azul mais claro para o título */
-    color: white;
-    font-size: 1.5em; /* Tamanho maior para o título */
-  }
+    .topbar {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 1000;
+      width: 100%;
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 16px 34px rgba(4, 29, 58, 0.18);
+    }
 
- /* Estilo adicional para os campos de entrada de texto */
-  input[type="text"] {
-    width: 100%; /* Faz com que o campo de texto ocupe toda a largura da célula */
-    box-sizing: border-box; /* Garante que o padding não aumente a largura do campo */
-  }
+    .topbar__inner {
+      display: grid;
+      grid-template-columns: minmax(240px, 386px) 1fr auto;
+      align-items: center;
+      gap: 24px;
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 86px;
+      padding: 18px 0;
+    }
 
-  /* Estilo para o botão de impressão */
-  .print-button {
-    margin-top: 20px;
-    font-size: 16px;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    padding: 8px 12px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-  }
+    .site-brand {
+      display: flex;
+      align-items: center;
+      min-width: 0;
+      color: #fff;
+      text-decoration: none;
+    }
 
-  .print-button i {
-    margin-right: 8px;
-  }
+    .brand-image {
+      display: block;
+      width: min(386px, 100%);
+      height: auto;
+    }
 
-/* Estilo do link */
-  .tooltip-link {
-    position: relative;
-    text-decoration: none;
-    color: #007bff;
-  }
+    .menu-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 110px;
+      min-width: 110px;
+      height: 46px;
+      min-height: 46px;
+      padding: 0 14px;
+      background: #fff;
+      color: var(--primary);
+      border: 0;
+      border-radius: 10px;
+      font: inherit;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color .25s ease, box-shadow .25s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    }
 
-  /* Estilo do tooltip */
-  .tooltip-text {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    
-   
-    /* Posicionamento */
-    position: absolute;
-    z-index: 1;
-    top: 125%; /* Posiciona abaixo do link */
-    left: 50%;
-    margin-left: -60px; /* Metade da largura para centralizar */
+    .menu-toggle:hover,
+    .menu-toggle:focus-visible {
+      background: #f5f7fa;
+      outline: none;
+      box-shadow: 0 5px 16px rgba(0,0,0,.14);
+    }
 
-    /* Efeitos */
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
+    .menu-toggle .menu-text { font-weight: 700; }
 
-  /* Exibe o tooltip quando o usuário passa o mouse sobre o link */
-  .tooltip-link:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-  }
+    .menu-toggle .icon-open,
+    .menu-toggle .icon-close {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      font-size: 1.45rem;
+      line-height: 1;
+      font-weight: 400;
+    }
 
-#ato-ilicito {
-            width: 500px; /* Define a largura do campo select */
-            height: 35px; /* Define a altura do campo select, isso afeta a barra de rolagem interna e não o número de opções visíveis ao abrir o dropdown */
-            border: 1px solid #ccc; /* Opcional: ajusta a borda do campo */
-            border-radius: 4px; /* Opcional: adiciona bordas arredondadas */
-            padding: 5px; /* Opcional: adiciona um pouco de espaço interno para que o texto não fique muito próximo da borda */
-        }
-</style>
+    .menu-toggle .icon-close { display: none; }
+
+    .menu-toggle[aria-expanded="true"] .icon-open { display: none; }
+
+    .menu-toggle[aria-expanded="true"] .icon-close { display: inline-flex; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: clamp(14px, 2.4vw, 30px);
+      white-space: nowrap;
+      font-size: 0.96rem;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+      text-decoration: underline;
+      text-underline-offset: 6px;
+    }
+
+    .dropdown { position: relative; }
+
+    .dropdown::after {
+      content: "";
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 8px;
+    }
+
+    .dropdown:hover::after,
+    .dropdown:focus-within::after { display: block; }
+
+    .dropdown-btn {
+      background: transparent;
+      border: 0;
+      color: rgba(255,255,255,.92);
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 12px 6px;
+      border-radius: 4px;
+    }
+
+    .dropdown-btn:hover,
+    .dropdown-btn:focus-visible {
+      background: rgba(255,255,255,0.10);
+      color: #fff;
+      outline: none;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      min-width: 260px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.18);
+      overflow: hidden;
+      z-index: 1000;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 12px 18px;
+      color: #17212b;
+      text-decoration: none;
+      font-weight: 500;
+      background: #fff;
+    }
+
+    .dropdown-content a:hover {
+      background: var(--surface-soft);
+      color: var(--primary);
+    }
+
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content { display: block; }
+
+    .title-panel {
+      background: #fff;
+      padding: 28px 36px 30px;
+      border: 1px solid #e8edf2;
+      border-top: 0;
+      box-shadow: 0 8px 18px rgba(0, 67, 97, 0.05);
+      text-align: center;
+    }
+
+    .breadcrumb {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: .90rem;
+    }
+
+    .breadcrumb a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .title-panel h1 {
+      margin: 0 auto;
+      max-width: 1120px;
+      color: #111827;
+      font-size: clamp(2.1rem, 3.85vw, 3.15rem);
+      font-weight: 850;
+      line-height: 1.05;
+      text-wrap: balance;
+    }
+
+    .title-panel .lead {
+      max-width: 920px;
+      margin: 14px auto 0;
+      color: #4b5563;
+      font-size: clamp(1.02rem, 1.4vw, 1.22rem);
+      line-height: 1.5;
+    }
+
+    main { padding: 0 0 40px; }
+
+    .notice,
+    .toolbar,
+    .summary-grid,
+    .section-card,
+    .report {
+      background: var(--surface);
+      border: 1px solid var(--border);
+    }
+
+    .notice {
+      padding: 14px 18px;
+      border-left: 5px solid var(--warning-border);
+      border-bottom: 0;
+      background: var(--warning);
+      margin-top: 14px;
+    }
+
+    .notice strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .toolbar {
+      position: sticky;
+      top: var(--topbar-height);
+      z-index: 900;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px;
+      border-top: 0;
+      background: #fff;
+    }
+
+    .toolbar__group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .status {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    button {
+      min-height: 40px;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      padding: 9px 13px;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 650;
+    }
+
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-strong); }
+
+    .btn-secondary {
+      background: var(--surface-soft);
+      color: var(--primary);
+      border-color: var(--border);
+    }
+
+    .btn-danger {
+      background: #fff;
+      color: var(--danger);
+      border-color: #e0b8b8;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0;
+      margin-bottom: 14px;
+    }
+
+    .summary-card {
+      padding: 14px;
+      border-left: 1px solid var(--border);
+    }
+
+    .summary-card:first-child { border-left: 0; }
+
+    .summary-card span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .summary-card strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 1.6rem;
+      color: var(--primary);
+    }
+
+    .section-card {
+      margin-top: 14px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .section-heading {
+      margin: 0;
+      padding: 16px 18px;
+      background: var(--surface-soft);
+      color: var(--primary);
+      font-size: 1.12rem;
+    }
+
+    .table-wrap { overflow-x: auto; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 980px;
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    thead th {
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.92rem;
+    }
+
+    tbody tr:nth-child(even) { background: #fafcfd; }
+
+    .narrow { width: 72px; }
+    .answer { width: 140px; }
+    .details { width: 34%; }
+
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid #c7d3dd;
+      border-radius: 6px;
+      background: #fff;
+      color: var(--text);
+      font: inherit;
+    }
+
+    select {
+      min-height: 40px;
+      padding: 8px;
+    }
+
+    textarea {
+      min-height: 92px;
+      padding: 9px 10px;
+      resize: vertical;
+    }
+
+    .legal-ref {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      border: 0;
+      border-bottom: 1px dotted var(--accent);
+      padding: 0;
+      background: transparent;
+      color: var(--accent);
+      cursor: help;
+      font: inherit;
+      font-weight: 700;
+      min-height: auto;
+    }
+
+    .tooltip {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 130%;
+      z-index: 30;
+      width: min(480px, calc(100vw - 48px));
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      background: #102a3a;
+      color: #fff;
+      box-shadow: var(--shadow);
+      font-weight: 400;
+      line-height: 1.45;
+    }
+
+    .legal-ref:hover .tooltip,
+    .legal-ref:focus .tooltip,
+    .legal-ref.is-open .tooltip { display: block; }
+
+    .report {
+      margin-top: 18px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .report h2 {
+      margin: 0 0 12px;
+      color: var(--primary);
+    }
+
+    .report-output {
+      min-height: 180px;
+      white-space: pre-wrap;
+      border: 1px solid var(--border);
+      background: #f9fbfc;
+      padding: 14px;
+      overflow-x: auto;
+    }
+
+    .footer {
+      padding: 20px 0 36px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 980px) {
+      :root { --topbar-height: 102px; }
+
+      .page-header { padding: var(--topbar-height) 0 0; }
+      .toolbar { position: static; }
+
+      .page-header__inner,
+      main,
+      .footer {
+        width: min(100% - 20px, 1180px);
+      }
+
+      .topbar__inner {
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: start;
+        min-height: 74px;
+        gap: 12px;
+        width: min(100% - 24px, 1180px);
+        padding: 14px 0;
+      }
+
+      .brand-image {
+        width: min(300px, calc(100vw - 134px));
+      }
+
+      .menu-toggle { display: inline-flex; }
+
+      .nav-links {
+        display: none;
+        grid-column: 1 / -1;
+        justify-self: stretch;
+        width: 100%;
+        white-space: normal;
+        font-size: 0.94rem;
+        text-align: left;
+        justify-content: stretch;
+      }
+
+      .nav-links.is-open {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+        justify-items: stretch;
+        align-items: start;
+        padding: 10px 0 2px;
+        max-height: calc(100vh - 86px);
+        overflow-y: auto;
+      }
+
+      .dropdown::after { display: none !important; }
+      .nav-links .dropdown { width: 100%; }
+
+      .nav-links a,
+      .dropdown-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        min-height: 44px;
+        padding: 11px 0;
+        color: #fff;
+        text-align: left;
+        border-top: 1px solid rgba(255,255,255,0.16);
+      }
+
+      .nav-links a:hover,
+      .dropdown-btn:hover,
+      .dropdown-btn:focus-visible {
+        background: transparent;
+        text-decoration: none;
+      }
+
+      .dropdown-content {
+        position: static;
+        display: none;
+        min-width: 0;
+        margin: 0 0 8px;
+        padding: 0 0 4px 14px;
+        background: transparent;
+        border-left: 2px solid rgba(255,255,255,0.22);
+        border-radius: 0;
+        box-shadow: none;
+        overflow: visible;
+      }
+
+      .nav-links .dropdown.is-open .dropdown-content { display: grid; }
+
+      .nav-links .dropdown:not(.is-open):hover .dropdown-content,
+      .nav-links .dropdown:not(.is-open):focus-within .dropdown-content {
+        display: none;
+      }
+
+      .dropdown-content a {
+        min-height: 38px;
+        padding: 8px 0;
+        color: rgba(255,255,255,0.86);
+        background: transparent;
+        font-size: 0.92rem;
+        font-weight: 600;
+        border-top: 0;
+      }
+
+      .dropdown-content a:hover {
+        background: transparent;
+        color: #fff;
+      }
+
+      .summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .title-panel { padding: 20px 18px 22px; }
+      .title-panel h1 { font-size: clamp(1.75rem, 9vw, 2.35rem); }
+      .title-panel .lead { font-size: 1rem; }
+    }
+
+    @media (max-width: 760px) {
+      .toolbar__group {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+      }
+
+      .toolbar__group button,
+      .status { width: 100%; }
+
+      .section-card {
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+      }
+
+      .section-heading {
+        border: 1px solid var(--border);
+        margin-bottom: 10px;
+      }
+
+      .table-wrap { overflow: visible; }
+
+      table,
+      tbody {
+        display: block;
+        width: 100%;
+        min-width: 0;
+      }
+
+      thead { display: none; }
+
+      tbody tr[data-row] {
+        display: block;
+        margin-bottom: 12px;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        box-shadow: 0 8px 18px rgba(17, 33, 45, 0.06);
+      }
+
+      tbody tr[data-row] td {
+        display: block;
+        width: 100%;
+        padding: 10px 12px;
+        border-bottom: 0;
+      }
+
+      tbody tr[data-row] td + td {
+        border-top: 1px solid #edf2f6;
+      }
+
+      tbody tr[data-row] td::before {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--muted);
+        font-size: 0.78rem;
+        font-weight: 750;
+        text-transform: uppercase;
+      }
+
+      tbody tr[data-row] td:nth-child(1)::before { content: "Item"; }
+      tbody tr[data-row] td:nth-child(2)::before { content: "Aspecto analisado"; }
+      tbody tr[data-row] td:nth-child(3)::before { content: "Resposta"; }
+      tbody tr[data-row] td:nth-child(4)::before { content: "Observação"; }
+
+      textarea { min-height: 112px; }
+    }
+
+    @media (max-width: 480px) {
+      .toolbar__group,
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .menu-toggle {
+        width: 100px;
+        min-width: 100px;
+        padding: 0 10px;
+      }
+    }
+
+    @media print {
+      body { background: #fff; }
+
+      .toolbar,
+      .footer,
+      .breadcrumb,
+      .topbar,
+      .report button {
+        display: none !important;
+      }
+
+      .page-header {
+        padding: 0 0 12px;
+        background: #fff;
+      }
+
+      main,
+      .page-header__inner {
+        width: 100%;
+      }
+
+      .section-card,
+      .report,
+      .summary-grid {
+        box-shadow: none;
+      }
+
+      table {
+        min-width: 0;
+        font-size: 0.82rem;
+      }
+
+      textarea,
+      select {
+        border: 0;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <header class="page-header">
+    <div class="page-header__inner">
+      <nav class="topbar" aria-label="Navegação principal">
+        <div class="topbar__inner">
+          <a class="site-brand" href="https://www.cadernodenormas.com.br/" aria-label="Página inicial do Caderno de Normas">
+            <img class="brand-image" src="logo-caderno-normas.png" alt="Caderno de Normas do Direito Administrativo Sancionador">
+          </a>
 
-  <table class="anticorrupcao-table">
-    <tbody>
-      <tr class="title-row">
-        <th colspan="4">Caderno de Normas do Direito Administrativo Sancionador - Elementos da nota de regularidade de um Processo Administrativo de Responsabilização - PAR</th>
-      </tr>
-      <tr>
-        <th>nº</th>
-        <th>Aspectos formais</th>
-        <th>Sim/Não</th>
-        <th>Observação:</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>A autoridade instauradora detém competência para instauração? (<a href="#" class="tooltip-link">Art. 8º e seu caput da Lei nº 12.846/13<span class="tooltip-text">
-          Art. 8º A instauração e o julgamento de processo administrativo para apuração da responsabilidade de pessoa jurídica cabem à autoridade máxima de cada órgão ou entidade dos Poderes Executivo, Legislativo e Judiciário, que agirá de ofício ou mediante provocação, observados o contraditório e a ampla defesa.
-        </br></br>§ 1º A competência para a instauração e o julgamento do processo administrativo de apuração de responsabilidade da pessoa jurídica poderá ser delegada, vedada a subdelegação. </span></a>)</td>
-        <td>
-          <select>
-            <option value="" selected="selected">Selecione</option>
-            <option value="sim">Sim</option>
-            <option value="nao">Não</option>
-          </select>
-        </td>
-        <td><input type="text" name="descricao1"></td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>A designação da comissão e suas respectivas prorrogações e reconduções observaram o disposto no art. 10 da Lei nº 12.846/13?</td>
-        <td>
-          <select>
-            <option value="" selected="selected">Selecione</option>
-            <option value="sim">Sim</option>
-            <option value="nao">Não</option>
-          </select>
-        </td>
-        <td><input type="text" name="descricao2"></td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Todos os atos praticados pela comissão ocorreram sob o abrigo de portarias devidamente publicadas no Diário Oficial da União?</td>
-        <td>
-          <select>
-            <option value="" selected="selected">Selecione</option>
-            <option value="sim">Sim</option>
-            <option value="nao">Não</option>
-          </select>
-        </td>
-        <td><input type="text" name="descricao3"></td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>Todos os atos praticados pela Comissão foram consignados em atas, ofícios, termos de juntada e demais documentos pertinentes?</td>
-        <td>
-          <select>
-            <option value="" selected="selected">Selecione</option>
-            <option value="sim">Sim</option>
-            <option value="nao">Não</option>
-          </select>
-        </td>
-        <td><input type="text" name="descricao4"></td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>A comissão possibilitou que a pessoa jurídica acompanhasse o PAR por meio de seus representantes legais ou procuradores? (<a href="#" class="tooltip-link">Art. 9 do Decreto nº 11.129/22<span class="tooltip-text">
-          Art. 9º  A pessoa jurídica poderá acompanhar o PAR por meio de seus representantes legais ou procuradores, sendo-lhes assegurado amplo acesso aos autos.</span></a>)</td>
-        <td>
-          <select>
-            <option value="" selected="selected">Selecione</option>
-            <option value="sim">Sim</option>
-            <option value="nao">Não</option>
-          </select>
-        </td>
-        <td><input type="text" name="descricao5"></td>
-      </tr>
-      <tr>
-        <td>6</td>
-        <td>A pessoa jurídica foi intimada para apresentação de defesa, em observação ao <a href="#" class="tooltip-link">Art. 11 da Lei nº 12.846/13<span class="tooltip-text">
-          Art. 11. No processo administrativo para apuração de responsabilidade, será concedido à pessoa jurídica prazo de 30 (trinta) dias para defesa, contados a partir da intimação.</span></a>?</td>
-        <td>
-          <select>
-            <option value="" selected="selected">Selecione</option>
-            <option value="sim">Sim</option>
-            <option value="nao">Não</option>
-          </select>
-        </td>
-        <td><input type="text" name="descricao6"></td>
-      </tr>
-      <tr>
-        <td>7</td>
-        <td>O termo de indiciação contém os elementos mínimos do <a href="#" class="tooltip-link">Art. 6º, § 2º, do Decreto nº 11.129/22 <span class="tooltip-text">
-          § 2º  O ato de indiciação conterá, no mínimo:
-      </br></br>I - a descrição clara e objetiva do ato lesivo imputado à pessoa jurídica, com a descrição das circunstâncias relevantes;
-      </br></br>II - o apontamento das provas que sustentam o entendimento da comissão pela ocorrência do ato lesivo imputado; e
-     </br></br>III - o enquadramento legal do ato lesivo imputado à pessoa jurídica processada.</span></a>?</td>
-        <td>
-          <select>
-            <option value="" selected="selected">Selecione</option>
-            <option value="sim">Sim</option>
-            <option value="nao">Não</option>
-          </select>
-        </td>
-        <td><input type="text" name="descricao7"></td>
-      </tr>
-     
-      <tr>
-        <th>nº</th>
-        <th>Aspectos materiais</th>
-        <th>Sim/Não</th>
-        <th>Observação:</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>A pessoa jurídica apresentou a sua defesa escrita? (<a href="#" class="tooltip-link">Art. 8º do Decreto nº 11.129/22
-          <span class="tooltip-text">
-          Art. 8º  Recebida a defesa escrita, a comissão avaliará a pertinência de produzir as provas eventualmente 
-          requeridas pela pessoa jurídica processada, podendo indeferir de forma motivada os pedidos de produção de provas 
-          que sejam ilícitas, impertinentes, desnecessárias, protelatórias ou intempestivas.</span></a>)<td>
-          <select>
-            <option value="" selected="selected">Selecione</option>
-            <option value="sim">Sim</option>
-            <option value="nao">Não</option>
-          </select>
-        </td>
-        <td><input type="text" name="descricao1"></td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>A comissão analisou a defesa escrita e apresentou seus argumentos no relatório final?</td>
-        <td>
-          <select>
-            <option value="" selected="selected">Selecione</option>
-            <option value="sim">Sim</option>
-            <option value="nao">Não</option>
-          </select>
-        </td>
-        <td><input type="text" name="descricao2"></td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>As provas obtidas foram suficientes à elucidação dos fatos e estão em conformidade com a conclusão da Comissão?</td>
-        <td>
-          <select>
-            <option value="" selected="selected">Selecione</option>
-            <option value="sim">Sim</option>
-            <option value="nao">Não</option>
-          </select>
-        </td>
-        <td><input type="text" name="descricao3"></td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>A comissão avaliou a prescrição da pretensão punitiva da Administração? (art. 25 da Lei nº 12.846/13)</td>
-        <td>
-          <select>
-            <option value="" selected="selected">Selecione</option>
-            <option value="sim">Sim</option>
-            <option value="nao">Não</option>
-          </select>
-        </td>
-        <td><input type="text" name="descricao4"></td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>A comissão utilizou a calculadora de penalidade administrativa da CGU para indicar a penalidade?</td>
-        <td>
-          <select>
-            <option value="" selected="selected">Selecione</option>
-            <option value="sim">Sim</option>
-            <option value="nao">Não</option>
-          </select>
-        </td>
-        <td><input type="text" name="descricao5"></td>
-      </tr>
-      <tr>
-        <td>6</td>
-        <td>A comissão elaborou relatório final a respeito dos fatos apurados e da eventual responsabilidade administrativa da pessoa jurídica, e sugeriu, de forma motivada, as sanções a serem aplicadas ou o arquivamento do processo? (art. 11 da Lei nº 12.846/13)</td>
-        <td>
-          <select>
-            <option value="" selected="selected">Selecione</option>
-            <option value="sim">Sim</option>
-            <option value="nao">Não</option>
-          </select>
-        </td>
-        <td><input type="text" name="descricao6"></td>
-      </tr>
-      <tr>
-        <td>7</td>
-        <td>Após a conclusão do relatório final, a comissão redigiu a ata de encerramento dos trabalhos e enviou o Processo Administrativo de Responsabilização (PAR) à autoridade instauradora? (art. 12 da Lei nº 12.846/13)</td>
-        <td>
-          <select>
-            <option value="" selected="selected">Selecione</option>
-            <option value="sim">Sim</option>
-            <option value="nao">Não</option>
-          </select>
-        </td>
-        <td><input type="text" name="descricao7"></td>
-      </tr>
-      <tr>
-        <td>8</td>
-        <td>A entidade processada foi intimada a apresentar alegações finais, no prazo de 10 dias? (art. 12 da Lei nº 12.846/13)</td>
-        <td>
-          <select>
-            <option value="" selected="selected">Selecione</option>
-            <option value="sim">Sim</option>
-            <option value="nao">Não</option>
-          </select>
-        </td>
-        <td><input type="text" name="descricao8"></td>
-      </tr>
-    </tbody>
-  </table>
-  
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Abrir menu de navegação">
+            <span class="icon-open" aria-hidden="true">☰</span>
+            <span class="icon-close" aria-hidden="true">×</span>
+            <span class="menu-text">Menu</span>
+          </button>
 
-<!-- Botões de ação após a tabela -->
-<div class="action-buttons">
-  <button onclick="window.print();" class="print-button">
-    🖨️ Imprimir
-  </button>
-  <button onclick="resetForm();" class="print-button">
-    🗑️ Limpar
-  </button>
-</div>
+          <div class="nav-links" id="primary-menu">
+            <a href="https://www.cadernodenormas.com.br/">Início</a>
+            <a href="https://www.cadernodenormas.com.br/#section1">Constituição Federal</a>
 
-<script>
-function resetForm() {
-  // Reseta os seletores para o valor padrão
-  document.querySelectorAll('.anticorrupcao-table select').forEach(function(select) {
-    select.selectedIndex = 0;
-  });
-  
-  // Limpa todos os campos de texto
-  document.querySelectorAll('.anticorrupcao-table input[type="text"]').forEach(function(input) {
-    input.value = '';
-  });
-}
-</script>
-</body></html>
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-expanded="false">
+                PAD <span aria-hidden="true">▾</span>
+              </button>
+              <div class="dropdown-content">
+                <a href="https://www.cadernodenormas.com.br/Matriz-de-responsabilizacao.htm">Matriz de responsabilização</a>
+                <a href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAD.html">Nota de regularidade</a>
+                <a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAD-e-atas-deliberativas.htm">Passo a passo de um PAD</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-expanded="false">
+                PAR <span aria-hidden="true">▾</span>
+              </button>
+              <div class="dropdown-content">
+                <a href="https://www.cadernodenormas.com.br/Requisitos-Lei-anticorrupcao.html">Matriz de requisitos</a>
+                <a href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAR.html">Nota de regularidade</a>
+                <a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAR-e-atas-deliberativas.htm">Passo a passo de um PAR</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-expanded="false">
+                Leis <span aria-hidden="true">▾</span>
+              </button>
+              <div class="dropdown-content">
+                <a href="https://www.cadernodenormas.com.br/#section2">Lei nº 8.112/1990</a>
+                <a href="https://www.cadernodenormas.com.br/#section3">Lei nº 9.784/1999</a>
+                <a href="https://www.cadernodenormas.com.br/#section4">Lei nº 12.527/2011</a>
+                <a href="https://www.cadernodenormas.com.br/#section5">Lei nº 12.846/2013</a>
+                <a href="https://www.cadernodenormas.com.br/#section6">Decreto nº 11.129/2022</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-expanded="false">
+                Gestão <span aria-hidden="true">▾</span>
+              </button>
+              <div class="dropdown-content">
+                <a href="https://www.cadernodenormas.com.br/criterios-de-priorizacao.html">Critérios de priorização</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section class="title-panel" aria-labelledby="page-title">
+        <p class="breadcrumb">
+          <a href="https://www.cadernodenormas.com.br/">Caderno de Normas</a>
+          <span aria-hidden="true">›</span>
+          Processo Administrativo de Responsabilização
+        </p>
+
+        <h1 id="page-title">Nota de Regularidade de Processo Administrativo de Responsabilização</h1>
+        <p class="lead">
+          Ferramenta de apoio para verificação dos principais aspectos formais e materiais de um PAR.
+        </p>
+      </section>
+    </div>
+  </header>
+
+  <main>
+    <section class="notice" aria-label="Aviso jurídico">
+      <strong>Uso informativo e de apoio</strong>
+      Esta ferramenta não substitui a análise jurídica do caso concreto nem a consulta à legislação oficial vigente. Revise os fundamentos antes de utilizar o relatório.
+    </section>
+
+    <section class="toolbar" aria-label="Ações da ferramenta">
+      <div class="toolbar__group">
+        <button type="button" class="btn-primary" id="generateReport">Gerar relatório</button>
+        <button type="button" class="btn-secondary" id="copyReport">Copiar relatório</button>
+        <button type="button" class="btn-secondary" id="printPage">Imprimir</button>
+        <button type="button" class="btn-danger" id="clearForm">Limpar</button>
+      </div>
+      <span class="status" id="saveStatus">Preenchimento salvo automaticamente neste navegador.</span>
+    </section>
+
+    <section class="summary-grid" aria-label="Resumo do preenchimento">
+      <div class="summary-card">
+        <span>Respondidos</span>
+        <strong id="answeredCount">0</strong>
+      </div>
+      <div class="summary-card">
+        <span>Conformes</span>
+        <strong id="yesCount">0</strong>
+      </div>
+      <div class="summary-card">
+        <span>Não conformes</span>
+        <strong id="noCount">0</strong>
+      </div>
+      <div class="summary-card">
+        <span>Pendentes</span>
+        <strong id="pendingCount">15</strong>
+      </div>
+    </section>
+
+    <section class="section-card" aria-labelledby="formal-heading">
+      <h2 class="section-heading" id="formal-heading">Aspectos formais</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th class="narrow">Nº</th>
+              <th>Aspecto analisado</th>
+              <th class="answer">Sim ou Não</th>
+              <th class="details">Observação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-row="F1">
+              <td>1</td>
+              <td>
+                A autoridade instauradora detém competência para instauração?
+                <button type="button" class="legal-ref">art. 8º
+                  <span class="tooltip">A instauração e o julgamento do processo administrativo para apuração da responsabilidade de pessoa jurídica cabem à autoridade máxima de cada órgão ou entidade, admitida delegação, vedada a subdelegação.</span>
+                </button>
+              </td>
+              <td>
+                <select name="formal1" aria-label="Resposta do aspecto formal 1">
+                  <option value="">Selecione</option>
+                  <option value="sim">Sim</option>
+                  <option value="nao">Não</option>
+                </select>
+              </td>
+              <td><textarea name="obsFormal1" placeholder="Registre a autoridade competente, eventual delegação e possíveis vícios de competência."></textarea></td>
+            </tr>
+
+            <tr data-row="F2">
+              <td>2</td>
+              <td>
+                A designação da comissão e suas prorrogações e reconduções observaram o art. 10 da Lei nº 12.846/2013?
+              </td>
+              <td>
+                <select name="formal2" aria-label="Resposta do aspecto formal 2">
+                  <option value="">Selecione</option>
+                  <option value="sim">Sim</option>
+                  <option value="nao">Não</option>
+                </select>
+              </td>
+              <td><textarea name="obsFormal2" placeholder="Indique composição, estabilidade dos membros, presidência e atos de prorrogação ou recondução."></textarea></td>
+            </tr>
+
+            <tr data-row="F3">
+              <td>3</td>
+              <td>Todos os atos praticados pela comissão ocorreram sob o abrigo de portarias devidamente publicadas no Diário Oficial da União?</td>
+              <td>
+                <select name="formal3" aria-label="Resposta do aspecto formal 3">
+                  <option value="">Selecione</option>
+                  <option value="sim">Sim</option>
+                  <option value="nao">Não</option>
+                </select>
+              </td>
+              <td><textarea name="obsFormal3" placeholder="Informe portarias de instauração, prorrogação, recondução ou alteração da comissão."></textarea></td>
+            </tr>
+
+            <tr data-row="F4">
+              <td>4</td>
+              <td>Todos os atos praticados pela comissão foram consignados em atas, ofícios, termos de juntada e demais documentos pertinentes?</td>
+              <td>
+                <select name="formal4" aria-label="Resposta do aspecto formal 4">
+                  <option value="">Selecione</option>
+                  <option value="sim">Sim</option>
+                  <option value="nao">Não</option>
+                </select>
+              </td>
+              <td><textarea name="obsFormal4" placeholder="Registre documentos ausentes, incompletos ou inadequadamente formalizados."></textarea></td>
+            </tr>
+
+            <tr data-row="F5">
+              <td>5</td>
+              <td>
+                A comissão possibilitou que a pessoa jurídica acompanhasse o PAR por seus representantes legais ou procuradores?
+                <button type="button" class="legal-ref">art. 9º do Decreto
+                  <span class="tooltip">A pessoa jurídica poderá acompanhar o PAR por meio de seus representantes legais ou procuradores, sendo-lhes assegurado amplo acesso aos autos.</span>
+                </button>
+              </td>
+              <td>
+                <select name="formal5" aria-label="Resposta do aspecto formal 5">
+                  <option value="">Selecione</option>
+                  <option value="sim">Sim</option>
+                  <option value="nao">Não</option>
+                </select>
+              </td>
+              <td><textarea name="obsFormal5" placeholder="Informe a habilitação dos representantes e a forma de acesso aos autos."></textarea></td>
+            </tr>
+
+            <tr data-row="F6">
+              <td>6</td>
+              <td>
+                A pessoa jurídica foi intimada para apresentação de defesa, com observância do prazo legal?
+                <button type="button" class="legal-ref">art. 11
+                  <span class="tooltip">No PAR será concedido à pessoa jurídica prazo de trinta dias para defesa, contado da intimação.</span>
+                </button>
+              </td>
+              <td>
+                <select name="formal6" aria-label="Resposta do aspecto formal 6">
+                  <option value="">Selecione</option>
+                  <option value="sim">Sim</option>
+                  <option value="nao">Não</option>
+                </select>
+              </td>
+              <td><textarea name="obsFormal6" placeholder="Registre a data da intimação, o meio utilizado e o prazo concedido."></textarea></td>
+            </tr>
+
+            <tr data-row="F7">
+              <td>7</td>
+              <td>
+                O termo de indiciação contém os elementos mínimos exigidos pelo art. 6º, § 2º, do Decreto nº 11.129/2022?
+                <button type="button" class="legal-ref">art. 6º, § 2º
+                  <span class="tooltip">O ato de indiciação deve conter descrição clara e objetiva do ato lesivo, indicação das provas e enquadramento legal da conduta imputada à pessoa jurídica.</span>
+                </button>
+              </td>
+              <td>
+                <select name="formal7" aria-label="Resposta do aspecto formal 7">
+                  <option value="">Selecione</option>
+                  <option value="sim">Sim</option>
+                  <option value="nao">Não</option>
+                </select>
+              </td>
+              <td><textarea name="obsFormal7" placeholder="Avalie a descrição do fato, as provas apontadas e o enquadramento legal."></textarea></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section-card" aria-labelledby="material-heading">
+      <h2 class="section-heading" id="material-heading">Aspectos materiais</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th class="narrow">Nº</th>
+              <th>Aspecto analisado</th>
+              <th class="answer">Sim ou Não</th>
+              <th class="details">Observação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-row="M1">
+              <td>1</td>
+              <td>
+                A pessoa jurídica apresentou defesa escrita?
+                <button type="button" class="legal-ref">art. 8º do Decreto
+                  <span class="tooltip">Recebida a defesa, a comissão avaliará a pertinência das provas requeridas, podendo indeferir motivadamente pedidos ilícitos, impertinentes, desnecessários, protelatórios ou intempestivos.</span>
+                </button>
+              </td>
+              <td>
+                <select name="material1" aria-label="Resposta do aspecto material 1">
+                  <option value="">Selecione</option>
+                  <option value="sim">Sim</option>
+                  <option value="nao">Não</option>
+                </select>
+              </td>
+              <td><textarea name="obsMaterial1" placeholder="Registre a apresentação da defesa, sua tempestividade e eventuais requerimentos de prova."></textarea></td>
+            </tr>
+
+            <tr data-row="M2">
+              <td>2</td>
+              <td>A comissão analisou a defesa escrita e apresentou seus argumentos no relatório final?</td>
+              <td>
+                <select name="material2" aria-label="Resposta do aspecto material 2">
+                  <option value="">Selecione</option>
+                  <option value="sim">Sim</option>
+                  <option value="nao">Não</option>
+                </select>
+              </td>
+              <td><textarea name="obsMaterial2" placeholder="Identifique argumentos não enfrentados ou análise insuficiente."></textarea></td>
+            </tr>
+
+            <tr data-row="M3">
+              <td>3</td>
+              <td>As provas obtidas foram suficientes à elucidação dos fatos e estão em conformidade com a conclusão da comissão?</td>
+              <td>
+                <select name="material3" aria-label="Resposta do aspecto material 3">
+                  <option value="">Selecione</option>
+                  <option value="sim">Sim</option>
+                  <option value="nao">Não</option>
+                </select>
+              </td>
+              <td><textarea name="obsMaterial3" placeholder="Relacione as provas relevantes e eventual divergência entre prova e conclusão."></textarea></td>
+            </tr>
+
+            <tr data-row="M4">
+              <td>4</td>
+              <td>
+                A comissão avaliou a prescrição da pretensão punitiva da Administração?
+                <button type="button" class="legal-ref">art. 25
+                  <span class="tooltip">Prescrevem em cinco anos as infrações previstas na Lei nº 12.846/2013, contados da ciência da infração ou, no caso de infração permanente ou continuada, do dia em que tiver cessado.</span>
+                </button>
+              </td>
+              <td>
+                <select name="material4" aria-label="Resposta do aspecto material 4">
+                  <option value="">Selecione</option>
+                  <option value="sim">Sim</option>
+                  <option value="nao">Não</option>
+                </select>
+              </td>
+              <td><textarea name="obsMaterial4" placeholder="Registre termo inicial, marcos interruptivos e conclusão quanto à prescrição."></textarea></td>
+            </tr>
+
+            <tr data-row="M5">
+              <td>5</td>
+              <td>
+                A comissão utilizou a
+                <a href="https://epad.cgu.gov.br/publico/calculadora/calc.html?tipo=par" target="_blank" rel="noreferrer">calculadora de penalidade administrativa da CGU</a>
+                para indicar a penalidade?
+              </td>
+              <td>
+                <select name="material5" aria-label="Resposta do aspecto material 5">
+                  <option value="">Selecione</option>
+                  <option value="sim">Sim</option>
+                  <option value="nao">Não</option>
+                </select>
+              </td>
+              <td><textarea name="obsMaterial5" placeholder="Informe se houve utilização e como o resultado foi considerado."></textarea></td>
+            </tr>
+
+            <tr data-row="M6">
+              <td>6</td>
+              <td>
+                A comissão elaborou relatório final sobre os fatos e a eventual responsabilidade da pessoa jurídica, sugerindo motivadamente sanções ou arquivamento?
+                <button type="button" class="legal-ref">art. 11
+                  <span class="tooltip">A comissão deverá concluir o processo com relatório sobre os fatos apurados e a eventual responsabilidade da pessoa jurídica, sugerindo motivadamente as sanções cabíveis ou o arquivamento.</span>
+                </button>
+              </td>
+              <td>
+                <select name="material6" aria-label="Resposta do aspecto material 6">
+                  <option value="">Selecione</option>
+                  <option value="sim">Sim</option>
+                  <option value="nao">Não</option>
+                </select>
+              </td>
+              <td><textarea name="obsMaterial6" placeholder="Avalie a motivação, o enquadramento, a dosimetria e a recomendação final."></textarea></td>
+            </tr>
+
+            <tr data-row="M7">
+              <td>7</td>
+              <td>
+                Após a conclusão do relatório final, a comissão redigiu a ata de encerramento dos trabalhos e encaminhou o PAR à autoridade instauradora?
+                <button type="button" class="legal-ref">art. 12
+                  <span class="tooltip">Concluído o relatório final, o processo será encaminhado à autoridade instauradora para julgamento.</span>
+                </button>
+              </td>
+              <td>
+                <select name="material7" aria-label="Resposta do aspecto material 7">
+                  <option value="">Selecione</option>
+                  <option value="sim">Sim</option>
+                  <option value="nao">Não</option>
+                </select>
+              </td>
+              <td><textarea name="obsMaterial7" placeholder="Registre a ata de encerramento e o encaminhamento à autoridade competente."></textarea></td>
+            </tr>
+
+            <tr data-row="M8">
+              <td>8</td>
+              <td>
+                A pessoa jurídica processada foi intimada para apresentar alegações finais no prazo aplicável?
+              </td>
+              <td>
+                <select name="material8" aria-label="Resposta do aspecto material 8">
+                  <option value="">Selecione</option>
+                  <option value="sim">Sim</option>
+                  <option value="nao">Não</option>
+                </select>
+              </td>
+              <td><textarea name="obsMaterial8" placeholder="Informe a data da intimação, o prazo concedido e a apresentação das alegações finais."></textarea></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="report" aria-label="Relatório gerado">
+      <h2>Conclusão preliminar</h2>
+      <div class="report-output" id="reportOutput">Clique em "Gerar relatório" para consolidar as respostas.</div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Última atualização da ferramenta: 10/07/2026. Confira sempre a legislação oficial aplicável antes de usar o resultado.
+  </footer>
+
+  <script>
+    (() => {
+      const STORAGE_KEY = 'nota-regularidade-par-v3';
+      const menuToggle = document.querySelector('.menu-toggle');
+      const primaryMenu = document.getElementById('primary-menu');
+      const dropdownButtons = Array.from(document.querySelectorAll('.dropdown-btn'));
+      const formFields = Array.from(document.querySelectorAll('select, textarea'));
+      const answerSelects = Array.from(document.querySelectorAll('select'));
+      const reportOutput = document.getElementById('reportOutput');
+      const saveStatus = document.getElementById('saveStatus');
+
+      function closeDropdowns() {
+        document.querySelectorAll('.dropdown.is-open').forEach((dropdown) => {
+          dropdown.classList.remove('is-open');
+          dropdown.querySelector('.dropdown-btn')?.setAttribute('aria-expanded', 'false');
+        });
+      }
+
+      function closeMenu() {
+        if (!menuToggle || !primaryMenu) return;
+        primaryMenu.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Abrir menu de navegação');
+        closeDropdowns();
+      }
+
+      if (menuToggle && primaryMenu) {
+        menuToggle.addEventListener('click', () => {
+          const isOpen = primaryMenu.classList.toggle('is-open');
+          menuToggle.setAttribute('aria-expanded', String(isOpen));
+          menuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
+        });
+
+        primaryMenu.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', closeMenu);
+        });
+
+        window.addEventListener('resize', () => {
+          if (window.innerWidth > 980) closeMenu();
+        });
+      }
+
+      dropdownButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          if (window.innerWidth > 980) return;
+          const dropdown = button.closest('.dropdown');
+          if (!dropdown) return;
+          const willOpen = !dropdown.classList.contains('is-open');
+          closeDropdowns();
+          dropdown.classList.toggle('is-open', willOpen);
+          button.setAttribute('aria-expanded', String(willOpen));
+        });
+      });
+
+      document.addEventListener('click', (event) => {
+        if (window.innerWidth <= 980 && primaryMenu && !primaryMenu.contains(event.target) && !event.target.closest('.menu-toggle')) {
+          closeMenu();
+        }
+      });
+
+      function getState() {
+        return formFields.reduce((state, field) => {
+          state[field.name] = field.value;
+          return state;
+        }, {});
+      }
+
+      function saveState() {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(getState()));
+        updateSummary();
+        saveStatus.textContent = 'Preenchimento salvo automaticamente neste navegador.';
+      }
+
+      function restoreState() {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return;
+        try {
+          const state = JSON.parse(raw);
+          formFields.forEach((field) => {
+            if (Object.prototype.hasOwnProperty.call(state, field.name)) {
+              field.value = state[field.name];
+            }
+          });
+        } catch (error) {
+          console.warn('Não foi possível restaurar o preenchimento.', error);
+        }
+      }
+
+      function updateSummary() {
+        const answered = answerSelects.filter((field) => field.value).length;
+        const yes = answerSelects.filter((field) => field.value === 'sim').length;
+        const no = answerSelects.filter((field) => field.value === 'nao').length;
+
+        document.getElementById('answeredCount').textContent = answered;
+        document.getElementById('yesCount').textContent = yes;
+        document.getElementById('noCount').textContent = no;
+        document.getElementById('pendingCount').textContent = answerSelects.length - answered;
+      }
+
+      function rowData(row) {
+        const section = row.closest('section').querySelector('.section-heading').textContent.trim();
+        const item = row.dataset.row;
+        const question = row.children[1].childNodes[0].textContent.trim().replace(/\s+/g, ' ');
+        const answer = row.querySelector('select')?.value || 'pendente';
+        const observation = row.querySelector('textarea')?.value.trim() || 'Sem observação.';
+        return { section, item, question, answer, observation };
+      }
+
+      function generateReport() {
+        const rows = Array.from(document.querySelectorAll('tbody tr[data-row]')).map(rowData);
+        const yesRows = rows.filter((row) => row.answer === 'sim');
+        const noRows = rows.filter((row) => row.answer === 'nao');
+        const pendingRows = rows.filter((row) => row.answer === 'pendente');
+
+        const conclusion = noRows.length
+          ? `Foram identificados ${noRows.length} ponto(s) de possível não conformidade que demandam análise específica.`
+          : pendingRows.length
+            ? `Não foram identificadas não conformidades nas respostas preenchidas, mas permanecem ${pendingRows.length} item(ns) pendente(s).`
+            : 'Os aspectos formais e materiais examinados foram marcados como regulares, sem prejuízo da análise jurídica do caso concreto.';
+
+        const formatRows = (items) => items.map((row) =>
+          `Item ${row.item} (${row.section}): ${row.question}\nObservação: ${row.observation}`
+        ).join('\n\n') || 'Nenhum.';
+
+        const report = [
+          'NOTA PRELIMINAR DE REGULARIDADE DE PROCESSO ADMINISTRATIVO DE RESPONSABILIZAÇÃO',
+          '',
+          `Conclusão preliminar: ${conclusion}`,
+          '',
+          `Itens conformes: ${yesRows.length}`,
+          formatRows(yesRows),
+          '',
+          `Itens não conformes: ${noRows.length}`,
+          formatRows(noRows),
+          '',
+          `Itens pendentes: ${pendingRows.length}`,
+          formatRows(pendingRows),
+          '',
+          'Aviso: resultado de apoio, sem substituir análise jurídica do caso concreto ou consulta à legislação oficial vigente.'
+        ].join('\n');
+
+        reportOutput.textContent = report;
+        return report;
+      }
+
+      formFields.forEach((field) => {
+        field.addEventListener('input', saveState);
+        field.addEventListener('change', saveState);
+      });
+
+      document.querySelectorAll('.legal-ref').forEach((button) => {
+        button.addEventListener('click', () => {
+          document.querySelectorAll('.legal-ref.is-open').forEach((openButton) => {
+            if (openButton !== button) openButton.classList.remove('is-open');
+          });
+          button.classList.toggle('is-open');
+        });
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!event.target.closest('.legal-ref')) {
+          document.querySelectorAll('.legal-ref.is-open').forEach((button) => button.classList.remove('is-open'));
+        }
+      });
+
+      document.getElementById('generateReport').addEventListener('click', generateReport);
+
+      document.getElementById('copyReport').addEventListener('click', async () => {
+        const text = reportOutput.textContent.includes('Clique em') ? generateReport() : reportOutput.textContent;
+        try {
+          await navigator.clipboard.writeText(text);
+          saveStatus.textContent = 'Relatório copiado para a área de transferência.';
+        } catch {
+          saveStatus.textContent = 'Não foi possível copiar automaticamente. Selecione o relatório e copie manualmente.';
+        }
+      });
+
+      document.getElementById('printPage').addEventListener('click', () => {
+        if (reportOutput.textContent.includes('Clique em')) generateReport();
+        window.print();
+      });
+
+      document.getElementById('clearForm').addEventListener('click', () => {
+        if (!confirm('Limpar todas as respostas e observações?')) return;
+
+        formFields.forEach((field) => {
+          field.value = '';
+        });
+
+        reportOutput.textContent = 'Clique em "Gerar relatório" para consolidar as respostas.';
+        localStorage.removeItem(STORAGE_KEY);
+        updateSummary();
+        saveStatus.textContent = 'Preenchimento limpo.';
+      });
+
+      restoreState();
+      updateSummary();
+    })();
+  </script>
+</body>
+</html>

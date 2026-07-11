@@ -190,10 +190,524 @@
     }
 
 </style>
+
+<style id="modern-top-styles">
+  :root {
+    --top-primary: #004361;
+    --top-primary-strong: #063447;
+    --top-surface: #ffffff;
+    --top-text: #17212b;
+    --top-muted: #5f6f7f;
+    --top-border: #d7e0e7;
+    --top-height: 122px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .modern-page-header {
+    background: #f5f7fb;
+    color: var(--top-text);
+    padding: var(--top-height) 0 0;
+  }
+
+  .modern-page-header__inner {
+    width: min(900px, calc(100% - 32px));
+    margin: 0 auto;
+  }
+
+  .modern-topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3000;
+    width: 100%;
+    background: var(--top-primary);
+    color: #fff;
+    box-shadow: 0 16px 34px rgba(4, 29, 58, 0.18);
+  }
+
+  .modern-topbar__inner {
+    display: grid;
+    grid-template-columns: minmax(240px, 386px) 1fr auto;
+    align-items: center;
+    gap: 24px;
+    width: min(1180px, calc(100% - 32px));
+    min-height: 86px;
+    margin: 0 auto;
+    padding: 18px 0;
+  }
+
+  .modern-site-brand {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .modern-brand-image {
+    display: block;
+    width: min(386px, 100%);
+    height: auto;
+  }
+
+  .modern-menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 110px;
+    min-width: 110px;
+    height: 46px;
+    min-height: 46px;
+    padding: 0 14px;
+    background: #fff;
+    color: var(--top-primary);
+    border: 0;
+    border-radius: 10px;
+    font: inherit;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color .25s ease, box-shadow .25s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  }
+
+  .modern-menu-toggle:hover,
+  .modern-menu-toggle:focus-visible {
+    background: #f5f7fa;
+    outline: none;
+    box-shadow: 0 5px 16px rgba(0,0,0,.14);
+  }
+
+  .modern-menu-toggle .icon-open,
+  .modern-menu-toggle .icon-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    font-size: 1.45rem;
+    line-height: 1;
+    font-weight: 400;
+  }
+
+  .modern-menu-toggle .icon-close {
+    display: none;
+  }
+
+  .modern-menu-toggle[aria-expanded="true"] .icon-open {
+    display: none;
+  }
+
+  .modern-menu-toggle[aria-expanded="true"] .icon-close {
+    display: inline-flex;
+  }
+
+  .modern-nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(14px, 2.4vw, 30px);
+    white-space: nowrap;
+    font-size: .96rem;
+    font-weight: 700;
+  }
+
+  .modern-nav-links > a {
+    color: rgba(255,255,255,.92);
+    text-decoration: none;
+  }
+
+  .modern-nav-links > a:hover {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
+
+  .modern-dropdown {
+    position: relative;
+  }
+
+  .modern-dropdown::after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 8px;
+  }
+
+  .modern-dropdown:hover::after,
+  .modern-dropdown:focus-within::after {
+    display: block;
+  }
+
+  .modern-dropdown-btn {
+    min-height: 40px;
+    padding: 12px 6px;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    color: rgba(255,255,255,.92);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .modern-dropdown-btn:hover,
+  .modern-dropdown-btn:focus-visible {
+    background: rgba(255,255,255,.10);
+    color: #fff;
+    outline: none;
+  }
+
+  .modern-dropdown-content {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    z-index: 3100;
+    min-width: 260px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 12px 30px rgba(0,0,0,.18);
+  }
+
+  .modern-dropdown-content a {
+    display: block;
+    padding: 12px 18px;
+    background: #fff;
+    color: var(--top-text);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .modern-dropdown-content a:hover {
+    background: #eef4f8;
+    color: var(--top-primary);
+  }
+
+  .modern-dropdown:hover .modern-dropdown-content,
+  .modern-dropdown:focus-within .modern-dropdown-content {
+    display: block;
+  }
+
+  .modern-title-panel {
+    padding: 28px 36px 34px;
+    margin-bottom:0;
+    border:1px solid #e6edf3;
+    border-top:0;
+    border-bottom:none;
+    background:#fff;
+    text-align:center;
+    box-shadow:none;
+  }
+
+  .modern-breadcrumb {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 0 0 12px;
+    color: var(--top-muted);
+    font-size: .90rem;
+  }
+
+  .modern-breadcrumb a {
+    color: var(--top-primary);
+    text-decoration: none;
+  }
+
+  .modern-title-panel h1 {
+    max-width: 1120px;
+    margin: 0 auto;
+    color: #111827;
+    font-size: clamp(2.1rem, 3.85vw, 3.15rem);
+    font-weight: 850;
+    line-height: 1.05;
+    text-wrap: balance;
+  }
+
+  .modern-title-panel .modern-lead {
+    max-width: 920px;
+    margin: 14px auto 0;
+    color: #4b5563;
+    font-size: clamp(1.02rem, 1.4vw, 1.22rem);
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  
+
+  .container,
+  main,
+  .content{
+    background:#ffffff;
+    border:1px solid #e6edf3;
+    border-top:none;
+    box-shadow:none;
+    margin-top:0;
+    padding-top:30px;
+  }
+
+
+  .modern-title-divider{
+    width:100%;
+    height:2px;
+    background:#5cb85c;
+    margin:28px 0 0;
+    border:0;
+  }
+
+@media (max-width: 980px) {
+    :root {
+      --top-height: 102px;
+    }
+
+    .modern-page-header {
+      padding-top: var(--top-height);
+    }
+
+    .modern-page-header__inner {
+      width: min(100% - 20px, 900px);
+    }
+
+    .modern-topbar__inner {
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: start;
+      gap: 12px;
+      width: min(100% - 24px, 1180px);
+      min-height: 74px;
+      padding: 14px 0;
+    }
+
+    .modern-brand-image {
+      width: min(300px, calc(100vw - 134px));
+    }
+
+    .modern-menu-toggle {
+      display: inline-flex;
+    }
+
+    .modern-nav-links {
+      display: none;
+      grid-column: 1 / -1;
+      justify-self: stretch;
+      width: 100%;
+      white-space: normal;
+      font-size: .94rem;
+      text-align: left;
+    }
+
+    .modern-nav-links.is-open {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0;
+      justify-items: stretch;
+      align-items: start;
+      max-height: calc(100vh - 86px);
+      padding: 10px 0 2px;
+      overflow-y: auto;
+    }
+
+    .modern-dropdown::after {
+      display: none !important;
+    }
+
+    .modern-nav-links .modern-dropdown {
+      width: 100%;
+    }
+
+    .modern-nav-links > a,
+    .modern-dropdown-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      min-height: 44px;
+      padding: 11px 0;
+      border-top: 1px solid rgba(255,255,255,.16);
+      color: #fff;
+      text-align: left;
+    }
+
+    .modern-nav-links > a:hover,
+    .modern-dropdown-btn:hover,
+    .modern-dropdown-btn:focus-visible {
+      background: transparent;
+      text-decoration: none;
+    }
+
+    .modern-dropdown-content {
+      position: static;
+      display: none;
+      min-width: 0;
+      margin: 0 0 8px;
+      padding: 0 0 4px 14px;
+      overflow: visible;
+      border-left: 2px solid rgba(255,255,255,.22);
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .modern-nav-links .modern-dropdown.is-open .modern-dropdown-content {
+      display: grid;
+    }
+
+    .modern-nav-links .modern-dropdown:not(.is-open):hover .modern-dropdown-content,
+    .modern-nav-links .modern-dropdown:not(.is-open):focus-within .modern-dropdown-content {
+      display: none;
+    }
+
+    .modern-dropdown-content a {
+      min-height: 38px;
+      padding: 8px 0;
+      border-top: 0;
+      background: transparent;
+      color: rgba(255,255,255,.86);
+      font-size: .92rem;
+      font-weight: 600;
+    }
+
+    .modern-dropdown-content a:hover {
+      background: transparent;
+      color: #fff;
+    }
+
+    .modern-title-panel {
+      padding: 20px 18px 22px;
+    }
+
+    .modern-title-panel h1 {
+      font-size: clamp(1.75rem, 9vw, 2.35rem);
+    }
+
+    .modern-title-panel .modern-lead {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .modern-menu-toggle {
+      width: 100px;
+      min-width: 100px;
+      padding: 0 10px;
+    }
+  }
+
+  @media print {
+    .modern-topbar,
+    .modern-breadcrumb {
+      display: none !important;
+    }
+
+    .modern-page-header {
+      padding: 0;
+      background: #fff;
+    }
+
+    .modern-page-header__inner {
+      width: 100%;
+    }
+
+    .modern-title-panel {
+      border: 0;
+      box-shadow: none;
+    }
+  }
+</style>
+
 </head>
 <body>
+
+<header class="modern-page-header">
+  <div class="modern-page-header__inner">
+    <nav class="modern-topbar" aria-label="Navegação principal">
+      <div class="modern-topbar__inner">
+        <a class="modern-site-brand" href="https://www.cadernodenormas.com.br/" aria-label="Página inicial do Caderno de Normas">
+          <img class="modern-brand-image" src="logo-caderno-normas.png" alt="Caderno de Normas do Direito Administrativo Sancionador">
+        </a>
+
+        <button class="modern-menu-toggle" type="button" aria-expanded="false" aria-controls="modern-primary-menu" aria-label="Abrir menu de navegação">
+          <span class="icon-open" aria-hidden="true">☰</span>
+          <span class="icon-close" aria-hidden="true">×</span>
+          <span class="menu-text">Menu</span>
+        </button>
+
+        <div class="modern-nav-links" id="modern-primary-menu">
+          <a href="https://www.cadernodenormas.com.br/">Início</a>
+          <a href="https://www.cadernodenormas.com.br/#section1">Constituição Federal</a>
+
+          <div class="modern-dropdown">
+            <button class="modern-dropdown-btn" type="button" aria-expanded="false">
+              PAD <span aria-hidden="true">▾</span>
+            </button>
+            <div class="modern-dropdown-content">
+              <a href="https://www.cadernodenormas.com.br/Matriz-de-responsabilizacao.htm">Matriz de responsabilização</a>
+              <a href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAD.html">Nota de regularidade</a>
+              <a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAD-e-atas-deliberativas.htm">Passo a passo de um PAD</a>
+            </div>
+          </div>
+
+          <div class="modern-dropdown">
+            <button class="modern-dropdown-btn" type="button" aria-expanded="false">
+              PAR <span aria-hidden="true">▾</span>
+            </button>
+            <div class="modern-dropdown-content">
+              <a href="https://www.cadernodenormas.com.br/Requisitos-Lei-anticorrupcao.html">Matriz de requisitos</a>
+              <a href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAR.html">Nota de regularidade</a>
+              <a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAR-e-atas-deliberativas.htm">Passo a passo de um PAR</a>
+            </div>
+          </div>
+
+          <div class="modern-dropdown">
+            <button class="modern-dropdown-btn" type="button" aria-expanded="false">
+              Leis <span aria-hidden="true">▾</span>
+            </button>
+            <div class="modern-dropdown-content">
+              <a href="https://www.cadernodenormas.com.br/#section2">Lei nº 8.112/1990</a>
+              <a href="https://www.cadernodenormas.com.br/#section3">Lei nº 9.784/1999</a>
+              <a href="https://www.cadernodenormas.com.br/#section4">Lei nº 12.527/2011</a>
+              <a href="https://www.cadernodenormas.com.br/#section5">Lei nº 12.846/2013</a>
+              <a href="https://www.cadernodenormas.com.br/#section6">Decreto nº 11.129/2022</a>
+            </div>
+          </div>
+
+          <div class="modern-dropdown">
+            <button class="modern-dropdown-btn" type="button" aria-expanded="false">
+              Gestão <span aria-hidden="true">▾</span>
+            </button>
+            <div class="modern-dropdown-content">
+              <a href="https://www.cadernodenormas.com.br/criterios-de-priorizacao.html">Critérios de priorização</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="modern-title-panel" aria-labelledby="modern-page-title">
+      <p class="modern-breadcrumb">
+        <a href="https://www.cadernodenormas.com.br/">Caderno de Normas</a>
+        <span aria-hidden="true">›</span>
+        Processo Administrativo Disciplinar
+      </p>
+
+      <h1 id="modern-page-title">Passo a passo de um PAD e atas deliberativas</h1>
+      <p class="modern-lead">
+        Guia prático das etapas do Processo Administrativo Disciplinar, com modelos de atos, atas e documentos.
+      </p>
+      <hr class="modern-title-divider">
+    </section>
+  </div>
+</header>
+
     <div class="container">
-        <h2>Processo Administrativo Disciplinar - PAD: passo a passo com atas deliberativas e modelos práticos.</h2>
 
         <h3>Fase I – Instauração (inciso I do art. 151 da Lei 8.112/90)</h3>
         <h4>Ato de Instauração, seus elementos e publicação:</h4>
@@ -571,7 +1085,7 @@ procurador(es);</p>
             <p><strong>4ª Etapa</strong></p>
     
             <p>Envie os arquivos gerados (passos 2 e 3) para o Protocolo Digital ou via e-mail para
-            sei@economia.gov.br, de acordo com o tipo de assinatura efetuada:</p>
+            <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8dfee8e4cde8eee2e3e2e0e4eca3eae2fba3efff">[email&#160;protected]</a>, de acordo com o tipo de assinatura efetuada:</p>
     
             <p>a)  assinatura de próprio punho / documento digitalizado:</p>
     
@@ -588,7 +1102,7 @@ procurador(es);</p>
             <p>Em caso de dúvidas sobre o uso do Protocolo Digital, acesse a <a href="https://www.gov.br/economia/pt-br/acesso-a-informacao/sei/arquivos/cartilha_protocolo-digital-cidadao-1.pdf">Cartilha do Protocolo Digital - Cidadão</a>.</p>
     
             <p>b)  assinatura com o Assinador Digital do Governo Federal ou com Certificado Digital ICP-Brasil / documento
-            original: encaminhe os documentos via e-mail para sei@economia.gov.br, com o assunto "Cadastro de
+            original: encaminhe os documentos via e-mail para <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6e1d0b072e0b0d01000103070f40090118400c1c">[email&#160;protected]</a>, com o assunto "Cadastro de
             Usuário Externo";</p>
     
             <p><strong>5ª Etapa</strong></p>
@@ -1267,7 +1781,7 @@ autos do presente processo, nos termos do art. 166 da Lei n° 8.112, de
 
     <div class="back-to-top" id="back-to-top" style="display: block;">Voltar ao Topo</div>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Mostrar o botão de voltar ao topo quando a página for rolada para baixo
         window.addEventListener('scroll', function() {
             const backToTopButton = document.getElementById('back-to-top');
@@ -1307,4 +1821,68 @@ autos do presente processo, nos termos do art. 166 da Lei n° 8.112, de
 <a href="https://dantasfonseca.adv.br/" target="_blank" style="color: white; text-decoration: none;">
     Escritório Dantas Fonseca Advocacia, com sede em Brasília e atuação estratégica em Direito Público, licitações, contratos administrativos e contencioso nos tribunais superiores.
 </a>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"9463c914ca684b92a43be8d35b8ddcda","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+
+<script id="modern-top-script">
+  (() => {
+    const menuToggle = document.querySelector('.modern-menu-toggle');
+    const primaryMenu = document.getElementById('modern-primary-menu');
+    const dropdownButtons = Array.from(document.querySelectorAll('.modern-dropdown-btn'));
+
+    function closeDropdowns() {
+      document.querySelectorAll('.modern-dropdown.is-open').forEach((dropdown) => {
+        dropdown.classList.remove('is-open');
+        dropdown.querySelector('.modern-dropdown-btn')?.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    function closeMenu() {
+      if (!menuToggle || !primaryMenu) return;
+      primaryMenu.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Abrir menu de navegação');
+      closeDropdowns();
+    }
+
+    if (menuToggle && primaryMenu) {
+      menuToggle.addEventListener('click', () => {
+        const isOpen = primaryMenu.classList.toggle('is-open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
+      });
+
+      primaryMenu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', closeMenu);
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 980) closeMenu();
+      });
+    }
+
+    dropdownButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        if (window.innerWidth > 980) return;
+        const dropdown = button.closest('.modern-dropdown');
+        if (!dropdown) return;
+        const willOpen = !dropdown.classList.contains('is-open');
+        closeDropdowns();
+        dropdown.classList.toggle('is-open', willOpen);
+        button.setAttribute('aria-expanded', String(willOpen));
+      });
+    });
+
+    document.addEventListener('click', (event) => {
+      if (
+        window.innerWidth <= 980 &&
+        primaryMenu &&
+        !primaryMenu.contains(event.target) &&
+        !event.target.closest('.modern-menu-toggle')
+      ) {
+        closeMenu();
+      }
+    });
+  })();
+</script>
+
 </body></html>
