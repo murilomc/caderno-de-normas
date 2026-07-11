@@ -319,20 +319,25 @@
 
   @media (max-width: 980px) {
     :root {
-      --topbar-height: 102px;
+      --topbar-height: 0px;
     }
 
     .page-header {
-      padding: var(--topbar-height) 0 0;
+      padding: 0;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
     }
 
     .topbar__inner {
       grid-template-columns: minmax(0, 1fr) auto;
-      align-items: start;
-      min-height: 74px;
-      gap: 12px;
+      align-items: center;
+      min-height: 72px;
+      gap: 10px;
       width: min(100% - 24px, 1180px);
-      padding: 14px 0;
+      padding: 12px 0;
     }
 
     .content {
@@ -341,13 +346,16 @@
     }
 
     .brand-image {
-      width: min(300px, calc(100vw - 106px));
+      width: min(300px, calc(100vw - 132px));
+      max-width: 100%;
     }
 
     .menu-toggle {
       display: inline-flex;
       justify-self: end;
       align-self: center;
+      min-width: max-content;
+      padding: 9px 12px;
     }
 
     .nav-links {
@@ -368,7 +376,7 @@
       justify-items: stretch;
       align-items: start;
       padding: 10px 0 2px;
-      max-height: calc(100vh - 86px);
+      max-height: calc(100vh - 76px);
       overflow-y: auto;
     }
 
@@ -435,6 +443,30 @@
     .dropdown-content a:hover {
       background: transparent;
       color: #fff;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .topbar__inner {
+      width: min(100% - 18px, 1180px);
+      gap: 8px;
+    }
+
+    .brand-image {
+      width: min(230px, calc(100vw - 118px));
+    }
+
+    .menu-toggle {
+      padding: 8px 10px;
+    }
+
+    .menu-toggle span:last-child {
+      font-size: 0.92rem;
+    }
+
+    .content {
+      width: min(100% - 16px, 1180px);
+      margin-top: 14px;
     }
   }
 </style>
@@ -2170,6 +2202,7 @@ Pena - detenção, de seis meses a dois anos, ou multa.</p>
 
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/app.js"></script>
   <script src="assets/js/chat.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"9463c914ca684b92a43be8d35b8ddcda","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"9463c914ca684b92a43be8d35b8ddcda","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"9463c914ca684b92a43be8d35b8ddcda","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
