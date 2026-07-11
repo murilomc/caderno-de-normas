@@ -1,291 +1,1526 @@
 <!DOCTYPE html>
-<html lang="pt-br"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta charset="UTF-8">
-<title>Caderno de Normas - Matriz de responsabilização</title>
-
- 
-  <!-- Hreflang para especificar o idioma -->
-  <link rel="alternate" hreflang="pt-BR" href="https://www.cadernodenormas.com.br/">
-  
-  <!-- Favicons do gov.br -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ferramenta de apoio à elaboração de matriz de responsabilização em matéria disciplinar, com organização dos fatos, agentes, evidências, enquadramentos e providências recomendadas.">
+  <link rel="canonical" href="https://www.cadernodenormas.com.br/Matriz-de-responsabilizacao.htm">
+  <link rel="alternate" hreflang="pt-BR" href="https://www.cadernodenormas.com.br/Matriz-de-responsabilizacao.htm">
   <link rel="icon" type="image/png" sizes="32x32" href="https://www.gov.br/++theme++padrao_govbr/favicons/favicon-32x32.png">
-  <link rel="shortcut icon" type="image/png" href="https://www.gov.br/++theme++padrao_govbr/favicons/favicon-48x48.png">
+  <title>Matriz de Responsabilização do Processo Administrativo Disciplinar</title>
 
-
-<style>
-
-
-
-  .anticorrupcao-table {
-    width: 100%;
-    border-collapse: collapse;
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://www.cadernodenormas.com.br/Matriz-de-responsabilizacao.htm#application",
+        "name": "Matriz de Responsabilização do Processo Administrativo Disciplinar",
+        "url": "https://www.cadernodenormas.com.br/Matriz-de-responsabilizacao.htm",
+        "applicationCategory": "LegalApplication",
+        "operatingSystem": "Web",
+        "inLanguage": "pt-BR",
+        "description": "Ferramenta de apoio à organização de fatos, agentes, evidências, enquadramentos legais e providências em matéria disciplinar."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Caderno de Normas",
+            "item": "https://www.cadernodenormas.com.br/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Matriz de Responsabilização do PAD",
+            "item": "https://www.cadernodenormas.com.br/Matriz-de-responsabilizacao.htm"
+          }
+        ]
+      }
+    ]
   }
+  </script>
 
-  .anticorrupcao-table th, .anticorrupcao-table td {
-    border: 1px solid #000;
-    padding: 8px;
-    text-align: left;
-  }
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --surface: #ffffff;
+      --surface-soft: #eef4f8;
+      --text: #17212b;
+      --muted: #5f6f7f;
+      --primary: #004361;
+      --primary-strong: #063447;
+      --accent: #0b6fae;
+      --warning: #fff6cf;
+      --warning-border: #d7a300;
+      --border: #d7e0e7;
+      --success: #0f766e;
+      --danger: #a83232;
+      --shadow: 0 12px 30px rgba(17, 33, 45, 0.08);
+      --topbar-height: 122px;
+    }
 
-  .anticorrupcao-table th {
-    background-color: #003366; /* Azul escuro */
-    color: white;
-  }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.5;
+    }
 
-  .anticorrupcao-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
+    a { color: var(--accent); }
+    button, input, select, textarea { font: inherit; }
 
-  .anticorrupcao-table tr:nth-child(odd) {
-    background-color: #ffffff;
-  }
+    .page-header__inner,
+    main,
+    .footer {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
 
-  .obs {
-    background-color: #fdd835;
-    font-style: italic; /* Mudança para itálico ao invés de negrito para diferenciar as observações */
-    font-weight: normal;
-  }
+    .page-header {
+      background: #f3f5f8;
+      padding: var(--topbar-height) 0 0;
+    }
 
-.title-row th {
-    background-color: #007bff; /* Azul mais claro para o título */
-    color: white;
-    font-size: 1.5em; /* Tamanho maior para o título */
-  }
+    .topbar {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 1000;
+      width: 100%;
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 16px 34px rgba(4, 29, 58, 0.18);
+    }
 
- /* Estilo adicional para os campos de entrada de texto */
-  input[type="text"] {
-    width: 100%; /* Faz com que o campo de texto ocupe toda a largura da célula */
-    box-sizing: border-box; /* Garante que o padding não aumente a largura do campo */
-  }
+    .topbar__inner {
+      display: grid;
+      grid-template-columns: minmax(240px, 386px) 1fr auto;
+      align-items: center;
+      gap: 24px;
+      width: min(1180px, calc(100% - 32px));
+      min-height: 86px;
+      margin: 0 auto;
+      padding: 18px 0;
+    }
 
-  /* Estilo para o botão de impressão */
-  .print-button {
-    margin-top: 20px;
-    font-size: 16px;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    padding: 8px 12px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-  }
+    .site-brand {
+      display: flex;
+      align-items: center;
+      min-width: 0;
+      color: #fff;
+      text-decoration: none;
+    }
 
-  .print-button i {
-    margin-right: 8px;
-  }
+    .brand-image {
+      display: block;
+      width: min(386px, 100%);
+      height: auto;
+    }
 
-/* Estilo do link */
-  .tooltip-link {
-    position: relative;
-    text-decoration: none;
-    color: #007bff;
-  }
+    .menu-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 42px;
+      padding: 9px 14px;
+      border: 1px solid rgba(255,255,255,.42);
+      border-radius: 4px;
+      background: rgba(255,255,255,.08);
+      color: #fff;
+      font-weight: 750;
+      cursor: pointer;
+    }
 
-  /* Estilo do tooltip */
-  .tooltip-text {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    
-   
-    /* Posicionamento */
-    position: absolute;
-    z-index: 1;
-    top: 125%; /* Posiciona abaixo do link */
-    left: 50%;
-    margin-left: -60px; /* Metade da largura para centralizar */
+    .menu-toggle__icon {
+      position: relative;
+      width: 18px;
+      height: 12px;
+      border-top: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+    }
 
-    /* Efeitos */
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
+    .menu-toggle__icon::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      border-top: 2px solid currentColor;
+      transform: translateY(-50%);
+    }
 
-  /* Exibe o tooltip quando o usuário passa o mouse sobre o link */
-  .tooltip-link:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-  }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: clamp(14px, 2.4vw, 30px);
+      white-space: nowrap;
+      font-size: .96rem;
+      font-weight: 700;
+    }
 
-#ato-ilicito {
-            width: 500px; /* Define a largura do campo select */
-            height: 35px; /* Define a altura do campo select, isso afeta a barra de rolagem interna e não o número de opções visíveis ao abrir o dropdown */
-            border: 1px solid #ccc; /* Opcional: ajusta a borda do campo */
-            border-radius: 4px; /* Opcional: adiciona bordas arredondadas */
-            padding: 5px; /* Opcional: adiciona um pouco de espaço interno para que o texto não fique muito próximo da borda */
-        }
+    .nav-links a,
+    .dropdown-btn {
+      color: rgba(255,255,255,.92);
+      text-decoration: none;
+    }
 
-</style>
+    .nav-links a:hover { color: #fff; text-decoration: underline; text-underline-offset: 6px; }
+
+    .dropdown { position: relative; }
+    .dropdown-btn {
+      border: 0;
+      padding: 12px 6px;
+      border-radius: 4px;
+      background: transparent;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      z-index: 1001;
+      min-width: 270px;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 12px 30px rgba(0,0,0,.18);
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 12px 18px;
+      color: var(--text);
+      background: #fff;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover { background: var(--surface-soft); color: var(--primary); }
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content { display: block; }
+
+    .title-panel {
+      border: 1px solid #e8edf2;
+      border-top: 0;
+      padding: 28px 36px 30px;
+      background: #fff;
+      box-shadow: 0 8px 18px rgba(0, 67, 97, .05);
+      text-align: center;
+    }
+
+    .breadcrumb {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .breadcrumb a { color: var(--primary); text-decoration: none; }
+    .title-panel h1 {
+      max-width: 1120px;
+      margin: 0 auto;
+      color: #111827;
+      font-size: clamp(2.1rem, 3.85vw, 3.15rem);
+      font-weight: 850;
+      line-height: 1.05;
+      text-wrap: balance;
+    }
+
+    .title-panel .lead {
+      max-width: 920px;
+      margin: 14px auto 0;
+      color: #4b5563;
+      font-size: clamp(1.02rem, 1.4vw, 1.22rem);
+    }
+
+    main { padding: 0 0 40px; }
+
+    .notice,
+    .toolbar,
+    .summary-card,
+    .analysis-data,
+    .matrix-wrap,
+    .report {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .notice {
+      margin-top: 14px;
+      padding: 14px 18px;
+      border-left: 5px solid var(--warning-border);
+      background: var(--warning);
+      box-shadow: none;
+    }
+
+    .notice strong { display: block; margin-bottom: 4px; }
+
+    .toolbar {
+      position: sticky;
+      top: var(--topbar-height);
+      z-index: 900;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding: 12px;
+      border-top: 0;
+      box-shadow: none;
+    }
+
+    .toolbar__group { display: flex; gap: 10px; flex-wrap: wrap; }
+    .status { color: var(--muted); font-size: .9rem; }
+
+    button.action {
+      min-height: 40px;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      padding: 9px 13px;
+      font-weight: 650;
+      cursor: pointer;
+    }
+
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-strong); }
+    .btn-secondary { border-color: var(--border) !important; background: var(--surface-soft); color: var(--primary); }
+    .btn-danger { border-color: #e0b8b8 !important; background: #fff; color: var(--danger); }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0;
+      margin-bottom: 14px;
+    }
+
+    .summary-card {
+      border-left: 0;
+      padding: 14px;
+      box-shadow: none;
+    }
+    .summary-card:first-child { border-left: 1px solid var(--border); }
+    .summary-card span { display: block; color: var(--muted); font-size: .88rem; }
+    .summary-card strong { display: block; margin-top: 4px; color: var(--primary); font-size: 1.6rem; }
+
+    .analysis-data {
+      margin-bottom: 14px;
+      padding: 18px;
+      box-shadow: none;
+    }
+
+    .section-title {
+      margin: 0 0 14px;
+      color: var(--primary);
+      font-size: 1.25rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .field { display: grid; gap: 6px; }
+    .field.full { grid-column: 1 / -1; }
+    label { font-weight: 700; }
+    .hint { color: var(--muted); font-size: .82rem; font-weight: 400; }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="search"],
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid #c7d3dd;
+      border-radius: 6px;
+      background: #fff;
+      color: var(--text);
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="search"],
+    select { min-height: 42px; padding: 8px 10px; }
+    textarea { min-height: 120px; padding: 10px 12px; resize: vertical; }
+    input:focus, select:focus, textarea:focus {
+      outline: 3px solid rgba(11,111,174,.16);
+      border-color: var(--accent);
+    }
+
+    .matrix-wrap { overflow-x: auto; box-shadow: none; }
+    table { width: 100%; min-width: 980px; border-collapse: collapse; }
+    caption {
+      padding: 16px;
+      background: var(--surface-soft);
+      color: var(--primary);
+      text-align: left;
+      font-size: 1.1rem;
+      font-weight: 750;
+    }
+    th, td { padding: 12px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    thead th { background: var(--primary); color: #fff; font-size: .92rem; }
+    tbody tr:nth-child(even) { background: #fafcfd; }
+    .narrow { width: 72px; }
+    .item-column { width: 34%; }
+
+    .essential td:first-child::after {
+      content: " essencial";
+      display: block;
+      width: max-content;
+      margin-top: 6px;
+      border-radius: 999px;
+      padding: 2px 8px;
+      background: #e7f3f1;
+      color: var(--success);
+      font-size: .72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .legal-ref {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      margin-left: 4px;
+      border: 0;
+      border-bottom: 1px dotted var(--accent);
+      padding: 0;
+      background: transparent;
+      color: var(--accent);
+      font-weight: 700;
+      cursor: help;
+    }
+
+    .tooltip {
+      display: none;
+      position: absolute;
+      top: 130%;
+      left: 0;
+      z-index: 50;
+      width: min(440px, calc(100vw - 48px));
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      background: #102a3a;
+      color: #fff;
+      box-shadow: var(--shadow);
+      font-weight: 400;
+      line-height: 1.45;
+    }
+
+    .legal-ref:hover .tooltip,
+    .legal-ref:focus .tooltip,
+    .legal-ref.is-open .tooltip { display: block; }
+
+    .date-mode {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .date-mode label { display: inline-flex; align-items: center; gap: 7px; font-weight: 650; }
+    .date-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .date-fields.single { grid-template-columns: 1fr; }
+
+    .legal-selector {
+      display: grid;
+      gap: 10px;
+    }
+    .legal-options {
+      max-height: 300px;
+      overflow-y: auto;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: #fff;
+    }
+    .legal-option {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 9px;
+      align-items: start;
+      padding: 10px 12px;
+      border-bottom: 1px solid #edf2f6;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .legal-option:last-child { border-bottom: 0; }
+    .legal-option:hover { background: #f6f9fb; }
+    .legal-option input { margin-top: 4px; }
+    .no-results { display: none; padding: 14px; color: var(--muted); }
+
+    .report { margin-top: 18px; padding: 18px; box-shadow: none; }
+    .report h2 { margin: 0 0 12px; color: var(--primary); }
+    .report-output {
+      min-height: 180px;
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      padding: 14px;
+      background: #f9fbfc;
+      white-space: pre-wrap;
+    }
+
+    .footer { padding: 20px 0 36px; color: var(--muted); font-size: .92rem; }
+    [hidden] { display: none !important; }
+
+    @media (max-width: 980px) {
+      :root { --topbar-height: 88px; }
+      .page-header__inner, main, .footer { width: min(100% - 20px, 1180px); }
+      .topbar__inner {
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 12px;
+        width: min(100% - 24px, 1180px);
+        min-height: 72px;
+        padding: 10px 0;
+      }
+      .brand-image { width: min(280px, calc(100vw - 112px)); }
+      .menu-toggle {
+        display: inline-flex;
+        min-width: 82px;
+        min-height: 44px;
+        padding: 10px 13px;
+        border-radius: 8px;
+        background: rgba(255,255,255,.12);
+      }
+      .menu-toggle[aria-expanded="true"] { background: #fff; color: var(--primary); }
+      .menu-toggle[aria-expanded="true"] .menu-toggle__icon {
+        border-color: transparent;
+      }
+      .menu-toggle[aria-expanded="true"] .menu-toggle__icon::before {
+        transform: translateY(-50%) rotate(45deg);
+      }
+      .menu-toggle[aria-expanded="true"] .menu-toggle__icon::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        border-top: 2px solid currentColor;
+        transform: translateY(-50%) rotate(-45deg);
+      }
+      .nav-links {
+        display: none;
+        grid-column: 1 / -1;
+        width: 100%;
+        max-height: calc(100vh - 92px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        margin-top: 2px;
+        padding: 8px;
+        border: 1px solid rgba(255,255,255,.2);
+        border-radius: 10px;
+        background: #063447;
+        white-space: normal;
+        text-align: left;
+        box-shadow: 0 14px 30px rgba(0,0,0,.22);
+      }
+      .nav-links.is-open { display: grid; gap: 4px; }
+      .nav-links > a,
+      .dropdown-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        min-height: 48px;
+        padding: 12px 14px;
+        border: 0;
+        border-radius: 7px;
+        color: #fff;
+        background: transparent;
+        text-align: left;
+        text-decoration: none;
+      }
+      .nav-links > a:hover,
+      .nav-links > a:focus-visible,
+      .dropdown-btn:hover,
+      .dropdown-btn:focus-visible,
+      .dropdown.is-open > .dropdown-btn {
+        background: rgba(255,255,255,.11);
+        outline: none;
+        text-decoration: none;
+      }
+      .dropdown { width: 100%; }
+      .dropdown-btn span { transition: transform .2s ease; }
+      .dropdown.is-open > .dropdown-btn span { transform: rotate(180deg); }
+      .dropdown-content {
+        position: static;
+        display: none;
+        min-width: 0;
+        margin: 2px 0 6px;
+        padding: 5px;
+        border: 0;
+        border-radius: 8px;
+        background: rgba(255,255,255,.08);
+        box-shadow: none;
+      }
+      .dropdown.is-open .dropdown-content { display: grid; gap: 2px; }
+      .dropdown-content a {
+        min-height: 42px;
+        padding: 10px 12px 10px 18px;
+        border-radius: 6px;
+        color: rgba(255,255,255,.92);
+        background: transparent;
+        font-weight: 600;
+      }
+      .dropdown-content a:hover,
+      .dropdown-content a:focus-visible { background: rgba(255,255,255,.1); color: #fff; outline: none; }
+      body.menu-open { overflow: hidden; }
+      .toolbar { position: static; }
+      .summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 760px) {
+      .title-panel { padding: 20px 18px 22px; }
+      .title-panel h1 { font-size: clamp(1.55rem, 8vw, 2.05rem); }
+      .toolbar__group { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; }
+      .toolbar__group button { width: 100%; }
+      .status { width: 100%; }
+      .form-grid, .date-fields { grid-template-columns: 1fr; }
+      .matrix-wrap { overflow: visible; border: 0; background: transparent; }
+      table, tbody { display: block; width: 100%; min-width: 0; }
+      caption { display: block; margin-bottom: 10px; border: 1px solid var(--border); }
+      thead { display: none; }
+      tbody tr[data-row] {
+        display: block;
+        margin-bottom: 12px;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        box-shadow: 0 8px 18px rgba(17,33,45,.06);
+      }
+      tbody tr[data-row] td {
+        display: block;
+        width: 100%;
+        padding: 10px 12px;
+        border-bottom: 0;
+      }
+      tbody tr[data-row] td + td { border-top: 1px solid #edf2f6; }
+      tbody tr[data-row] td::before {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--muted);
+        font-size: .78rem;
+        font-weight: 750;
+        text-transform: uppercase;
+      }
+      tbody tr[data-row] td:nth-child(1)::before { content: "Item"; }
+      tbody tr[data-row] td:nth-child(2)::before { content: "Informação"; }
+      tbody tr[data-row] td:nth-child(3)::before { content: "Detalhamento"; }
+      .essential td:first-child::after { display: inline-block; margin-left: 8px; }
+    }
+
+    @media (max-width: 480px) {
+      .toolbar__group, .summary-grid { grid-template-columns: 1fr; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .topbar, .toolbar, .footer, .breadcrumb, .notice, .legal-search, .menu-toggle { display: none !important; }
+      .page-header { padding: 0; background: #fff; }
+      .title-panel { border: 0; box-shadow: none; padding: 0 0 16px; }
+      main, .page-header__inner { width: 100%; }
+      .summary-card, .analysis-data, .matrix-wrap, .report { box-shadow: none; }
+      table { min-width: 0; font-size: .8rem; }
+      textarea, input, select { border: 0; }
+      .legal-options { max-height: none; overflow: visible; }
+      .legal-option:not(:has(input:checked)) { display: none; }
+      .report { break-before: page; }
+    }
+  
+
+    /* Menu padronizado conforme a página de referência */
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      width: 100%;
+      margin-left: 0;
+      background: #004361;
+      color: #fff;
+      box-shadow: 0 16px 34px rgba(4, 29, 58, 0.18);
+    }
+
+    .topbar__inner {
+      display: grid;
+      grid-template-columns: minmax(240px, 386px) 1fr auto;
+      align-items: center;
+      gap: 24px;
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 86px;
+      padding: 18px 0;
+    }
+
+    .site-brand {
+      display: flex;
+      align-items: center;
+      min-width: 0;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .brand-image {
+      display: block;
+      width: min(386px, 100%);
+      height: auto;
+    }
+
+    .menu-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 42px;
+      padding: 9px 14px;
+      border: 1px solid rgba(255,255,255,0.42);
+      border-radius: 4px;
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      font: inherit;
+      font-weight: 750;
+      cursor: pointer;
+    }
+
+    .menu-toggle:hover,
+    .menu-toggle:focus-visible {
+      background: rgba(255,255,255,0.16);
+      outline: none;
+    }
+
+    .menu-toggle__icon {
+      position: relative;
+      width: 18px;
+      height: 12px;
+      border-top: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+    }
+
+    .menu-toggle__icon::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      border-top: 2px solid currentColor;
+      transform: translateY(-50%);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: clamp(14px, 2.4vw, 30px);
+      white-space: nowrap;
+      font-size: 0.96rem;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.92);
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+      text-decoration: underline;
+      text-underline-offset: 6px;
+    }
+
+    .dropdown { position: relative; }
+
+    .dropdown::after {
+      content: "";
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 8px;
+    }
+
+    .dropdown:hover::after,
+    .dropdown:focus-within::after { display: block; }
+
+    .dropdown-btn {
+      background: transparent;
+      border: 0;
+      color: rgba(255,255,255,.92);
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 12px 6px;
+      border-radius: 4px;
+    }
+
+    .dropdown-btn:hover,
+    .dropdown-btn:focus-visible {
+      background: rgba(255,255,255,0.10);
+      color: #fff;
+      outline: none;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      min-width: 260px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.18);
+      overflow: hidden;
+      z-index: 1000;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 12px 18px;
+      color: #17212b;
+      text-decoration: none;
+      font-weight: 500;
+      background: #fff;
+    }
+
+    .dropdown-content a:hover {
+      background: #eef4f8;
+      color: var(--primary);
+    }
+
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content { display: block; }
+
+    @media (max-width: 980px) {
+      :root { --topbar-height: 102px; --toolbar-sticky-height: 0px; }
+
+      .page-header { padding: var(--topbar-height) 0 0; }
+      .toolbar { position: static; }
+
+      .topbar__inner {
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: start;
+        min-height: 74px;
+        gap: 12px;
+        width: min(100% - 24px, 1180px);
+        padding: 14px 0;
+      }
+
+      .brand-image { width: min(300px, calc(100vw - 106px)); }
+      .menu-toggle { display: inline-flex; }
+
+      .nav-links {
+        display: none;
+        grid-column: 1 / -1;
+        justify-self: stretch;
+        width: 100%;
+        white-space: normal;
+        font-size: 0.94rem;
+        text-align: left;
+        justify-content: stretch;
+        max-height: none;
+        overflow: visible;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+      }
+
+      .nav-links.is-open {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+        justify-items: stretch;
+        align-items: start;
+        padding: 10px 0 2px;
+        max-height: calc(100vh - 86px);
+        overflow-y: auto;
+      }
+
+      .dropdown::after { display: none !important; }
+      .nav-links .dropdown { width: 100%; }
+
+      .nav-links > a,
+      .nav-links a,
+      .dropdown-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        min-height: 44px;
+        padding: 11px 0;
+        color: #fff;
+        background: transparent;
+        text-align: left;
+        border: 0;
+        border-top: 1px solid rgba(255,255,255,0.16);
+        border-radius: 0;
+      }
+
+      .nav-links a:hover,
+      .dropdown-btn:hover,
+      .dropdown-btn:focus-visible,
+      .dropdown.is-open > .dropdown-btn {
+        background: transparent;
+        text-decoration: none;
+      }
+
+      .dropdown-content {
+        position: static;
+        display: none;
+        min-width: 0;
+        margin: 0 0 8px;
+        padding: 0 0 4px 14px;
+        background: transparent;
+        border: 0;
+        border-left: 2px solid rgba(255,255,255,0.22);
+        border-radius: 0;
+        box-shadow: none;
+        overflow: visible;
+      }
+
+      .nav-links .dropdown.is-open .dropdown-content { display: grid; }
+
+      .nav-links .dropdown:not(.is-open):hover .dropdown-content,
+      .nav-links .dropdown:not(.is-open):focus-within .dropdown-content { display: none; }
+
+      .dropdown-content a {
+        min-height: 38px;
+        padding: 8px 0;
+        color: rgba(255,255,255,0.86);
+        background: transparent;
+        font-size: 0.92rem;
+        font-weight: 600;
+        border-top: 0;
+      }
+
+      .dropdown-content a:hover { background: transparent; color: #fff; }
+      body.menu-open { overflow: auto; }
+    }
+
+  </style>
 </head>
 <body>
+  <header class="page-header">
+    <div class="page-header__inner">
+      <nav class="topbar" aria-label="Navegação principal">
+        <div class="topbar__inner">
+          <a class="site-brand" href="https://www.cadernodenormas.com.br/" aria-label="Página inicial do Caderno de Normas">
+            <img class="brand-image" src="logo-caderno-normas.png" alt="Caderno de Normas do Direito Administrativo Sancionador">
+          </a>
 
-<table class="anticorrupcao-table">
-<tbody><tr class="title-row">
-    <th colspan="3">Matriz de responsabilização do processo administrativo disciplinar</th>
-  </tr>
-  <tr>
-    <th>nº</th>
-    <th>Item</th>
-   
-    <th>Detalhamento do Fato(s); Agente(s); Data ou período; Evidências; Unidade de ocorrência; Enquadramento legal; Ação recomendada.</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Descrição do fato irregular:</td>
-    <td><input type="text" name="descricao1"></td>
-  </tr>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+            <span class="menu-toggle__icon" aria-hidden="true"></span>
+            <span>Menu</span>
+          </button>
 
-  <tr>
-    <td>2</td>
-    <td>Agente público envolvido:</td>
-    <td><input type="text" name="descricao2"></td>
-  </tr>
+          <div class="nav-links" id="primary-menu">
+            <a href="https://www.cadernodenormas.com.br/">Início</a>
+            <a href="https://www.cadernodenormas.com.br/#section1">Constituição Federal</a>
 
-<tr>
-    <td>3</td>
-    <td>Data ou período do fato apurado:</td>
-    <td>data: <input type="date" id="single-date" name="single-date" placeholder="dd/mm/aaaa"> ou inserir o período:<input type="date" id="single-date" name="single-date" placeholder="dd/mm/aaaa"></td>
-  </tr>
-  <tr><td>4</td>
-    <td>Unidade em que foi praticado o ato lesivo:</td>
-    <td><input type="text" name="descricao2"></td>
-  </tr>
-<tr>
-    <td>5</td>
-    <td>Evidências ou elementos de informação que apontem para a ocorrência da irregularidade e sua vinculação ao agente:</td>
-    <td><input type="text" name="descricao3"></td>
-  </tr>
-<tr>
-</tr>
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-expanded="false">
+                PAD <span aria-hidden="true">▾</span>
+              </button>
 
-<tr>
-    <td>6</td>
-    <td>Possível enquadramento da infração nos incisos do art. 116 da Lei nº 8.112/90:</td>
-    <td>
+              <div class="dropdown-content">
+                <a href="https://www.cadernodenormas.com.br/Matriz-de-responsabilizacao.htm">Matriz de responsabilização</a>
+                <a href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAD.html">Nota de regularidade</a>
+                <a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAD-e-atas-deliberativas.htm">Passo a passo de um PAD</a>
+              </div>
+            </div>
 
-<select id="ato-ilicito" name="ato-ilicito">
-Selecione:
-<option value="1" selected="selected">------</option>
-  
-<option value="2">I - Exercer com zelo e dedicação as atribuições do cargo;</option>
-<option value="3">II - Ser leal às instituições a que servir;</option>
-<option value="4">III - Observar as normas legais e regulamentares;</option>
-<option value="5">IV - Cumprir as ordens superiores, exceto quando manifestamente ilegais;</option>
-<option value="6">V - a) Atender com presteza ao público em geral, prestando as informações requeridas, ressalvadas as protegidas por sigilo;</option>
-<option value="7">V - b) Atender com presteza à expedição de certidões requeridas para defesa de direito ou esclarecimento de situações de interesse pessoal;</option>
-<option value="8">V - c) Atender com presteza às requisições para a defesa da Fazenda Pública;</option>
-<option value="9">VI - Levar as irregularidades de que tiver ciência em razão do cargo ao conhecimento da autoridade superior ou, quando houver suspeita de envolvimento desta, ao conhecimento de outra autoridade competente para apuração;</option>
-<option value="10">VII - Zelar pela economia do material e a conservação do patrimônio público;</option>
-<option value="11">VIII - Guardar sigilo sobre assunto da repartição;</option>
-<option value="12">IX - Manter conduta compatível com a moralidade administrativa;</option>
-<option value="13">X - Ser assíduo e pontual ao serviço;</option>
-<option value="14">XI - Tratar com urbanidade as pessoas;</option>
-<option value="15">XII - Representar contra ilegalidade, omissão ou abuso de poder.</option>
-</select>
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-expanded="false">
+                PAR <span aria-hidden="true">▾</span>
+              </button>
 
-</td>
-  </tr>
+              <div class="dropdown-content">
+                <a href="https://www.cadernodenormas.com.br/Requisitos-Lei-anticorrupcao.html">Matriz de requisitos</a>
+                <a href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAR.html">Nota de regularidade</a>
+                <a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAR-e-atas-deliberativas.htm">Passo a passo de um PAR</a>
+              </div>
+            </div>
 
-<tr>
-    <td>7</td>
-    <td>Possível enquadramento da infração nos incisos do art. 117 da Lei nº 8.112/90:</td>
-    <td>
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-expanded="false">
+                Leis <span aria-hidden="true">▾</span>
+              </button>
 
-<select id="ato-ilicito" name="ato-ilicito">
-Selecione:
-<option value="1" selected="selected">------</option>
-  
-<option value="2">I - Ausentar-se do serviço durante o expediente, sem prévia autorização do chefe imediato;</option>
-<option value="3">II - Retirar, sem prévia anuência da autoridade competente, qualquer documento ou objeto da repartição;</option>
-<option value="4">III - Recusar fé a documentos públicos;</option>
-<option value="5">IV - Opor resistência injustificada ao andamento de documento e processo ou execução de serviço;</option>
-<option value="6">V - Promover manifestação de apreço ou desapreço no recinto da repartição;</option>
-<option value="7">VI - Cometer a pessoa estranha à repartição, fora dos casos previstos em lei, o desempenho de atribuição que seja de sua responsabilidade ou de seu subordinado;</option>
-<option value="8">VII - Coagir ou aliciar subordinados no sentido de filiarem-se a associação profissional ou sindical, ou a partido político;</option>
-<option value="9">VIII - Manter sob sua chefia imediata, em cargo ou função de confiança, cônjuge, companheiro ou parente até o segundo grau civil;</option>
-<option value="10">IX - Valer-se do cargo para lograr proveito pessoal ou de outrem, em detrimento da dignidade da função pública;</option>
-<option value="11">X - Participar de gerência ou administração de sociedade privada, personificada ou não personificada, exercer o comércio, exceto na qualidade de acionista, cotista ou comanditário;</option>
-<option value="12">XI - Atuar, como procurador ou intermediário, junto a repartições públicas, salvo quando se tratar de benefícios previdenciários ou assistenciais de parentes até o segundo grau, e de cônjuge ou companheiro;</option>
-<option value="13">XII - Receber propina, comissão, presente ou vantagem de qualquer espécie, em razão de suas atribuições;</option>
-<option value="14">XIII - Aceitar comissão, emprego ou pensão de estado estrangeiro;</option>
-<option value="15">XIV - Praticar usura sob qualquer de suas formas;</option>
-<option value="16">XV - Proceder de forma desidiosa;</option>
-<option value="17">XVI - Utilizar pessoal ou recursos materiais da repartição em serviços ou atividades particulares;</option>
-<option value="18">XVII - Cometer a outro servidor atribuições estranhas ao cargo que ocupa, exceto em situações de emergência e transitórias;</option>
-<option value="19">XVIII - Exercer quaisquer atividades que sejam incompatíveis com o exercício do cargo ou função e com o horário de trabalho;</option>
-<option value="20">XIX - Recusar-se a atualizar seus dados cadastrais quando solicitado.</option>
+              <div class="dropdown-content">
+                <a href="https://www.cadernodenormas.com.br/#section2">Lei nº 8.112/1990</a>
+                <a href="https://www.cadernodenormas.com.br/#section3">Lei nº 9.784/1999</a>
+                <a href="https://www.cadernodenormas.com.br/#section4">Lei nº 12.527/2011 (LAI)</a>
+                <a href="https://www.cadernodenormas.com.br/#section5">Lei nº 12.846/2013</a>
+                <a href="https://www.cadernodenormas.com.br/#section6">Decreto nº 11.129/2022</a>
+                <a href="https://www.cadernodenormas.com.br/#section7">Decreto nº 1.171/1994</a>
+                <a href="https://www.cadernodenormas.com.br/#section8">Lei nº 5.172/1966 (CTN)</a>
+                <a href="https://www.cadernodenormas.com.br/#section9">Decreto-Lei nº 4.657/1942 (LINDB)</a>
+              </div>
+            </div>
 
- 
-</select>
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-expanded="false">
+                Gestão <span aria-hidden="true">▾</span>
+              </button>
 
-</td>
-  </tr>
+              <div class="dropdown-content">
+                <a href="https://www.cadernodenormas.com.br/criterios-de-priorizacao.html">Critérios de priorização</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
 
-<tr><td>8</td>
-    <td>Ação recomendada:</td>
-    <td>
+      <section class="title-panel" aria-labelledby="page-title">
+        <p class="breadcrumb">
+          <a href="https://www.cadernodenormas.com.br/">Caderno de Normas</a>
+          <span aria-hidden="true">›</span>
+          Processo Administrativo Disciplinar
+        </p>
+        <h1 id="page-title">Matriz de Responsabilização do Processo Administrativo Disciplinar</h1>
+        <p class="lead">Ferramenta de apoio à organização dos fatos, agentes, evidências, enquadramentos legais e providências recomendadas.</p>
+      </section>
+    </div>
+  </header>
 
-      <select id="ato-ilicito" name="ato-ilicito">
-      Selecione:
-      <option value="1" selected="selected">------</option>
-        
-      <option value="2">Instauraçâo de processo administrativo disciplinar.</option>
-      <option value="3">Proposta de celebração de Termo de ajustamento de conduta.</option>
-      <option value="4">Arquivamento.</option>  
-      <option value="5">Arquivamento e recomendação de encaminhamento.</option>  
-      </select>
-      
-      </td>
-  </tr>
+  <main>
+    <section class="notice" aria-label="Aviso jurídico">
+      <strong>Uso informativo e de apoio</strong>
+      Esta ferramenta auxilia a estruturação da análise preliminar. Ela não substitui o exame jurídico do caso concreto, o juízo de admissibilidade nem a consulta à legislação oficial vigente.
+    </section>
 
-  <!-- Repetir as linhas abaixo para os demais itens da tabela -->
-  <tr>
-    <td>...</td>
-    <td>...</td>
-    <td></td>
-    
-  </tr>
- 
-</tbody></table>
+    <section class="toolbar" aria-label="Ações da ferramenta">
+      <div class="toolbar__group">
+        <button type="button" class="action btn-primary" id="generateReport">Gerar relatório</button>
+        <button type="button" class="action btn-secondary" id="copyReport">Copiar relatório</button>
+        <button type="button" class="action btn-secondary" id="printPage">Imprimir</button>
+        <button type="button" class="action btn-danger" id="clearForm">Limpar</button>
+      </div>
+      <span class="status" id="saveStatus" aria-live="polite">Preenchimento salvo automaticamente neste navegador.</span>
+    </section>
 
-<!-- Botões de ação após a tabela -->
-<div class="action-buttons">
-  <button onclick="window.print();" class="print-button">
-    🖨️ Imprimir
-  </button>
-  <button onclick="resetForm();" class="print-button">
-    🗑️ Limpar
-  </button>
-</div>
+    <section class="summary-grid" aria-label="Resumo do preenchimento">
+      <div class="summary-card"><span>Itens preenchidos</span><strong id="filledCount">0</strong></div>
+      <div class="summary-card"><span>Itens pendentes</span><strong id="pendingCount">8</strong></div>
+      <div class="summary-card"><span>Enquadramentos</span><strong id="legalCount">0</strong></div>
+      <div class="summary-card"><span>Evidências registradas</span><strong id="evidenceCount">0</strong></div>
+    </section>
 
-<script>
-function resetForm() {
-  // Reseta os seletores para o valor padrão
-  document.querySelectorAll('.anticorrupcao-table select').forEach(function(select) {
-    select.selectedIndex = 0;
-  });
-  
-  // Limpa todos os campos de texto
-  document.querySelectorAll('.anticorrupcao-table input[type="text"]').forEach(function(input) {
-    input.value = '';
-  });
-}
-</script>
+    <section class="analysis-data">
+    <h2>Dados da análise</h2>
 
+    <div class="form-grid">
 
-<script>
-    document.getElementById('start-date').addEventListener('change', function() {
-        var startDate = this.value;
-        var endDateInput = document.getElementById('end-date');
-        endDateInput.min = startDate;
-    });
-</script>
+        <div class="form-group">
+            <label for="processo">Processo</label>
+            <input
+                type="text"
+                id="processo"
+                name="processo"
+                placeholder="Número do processo (opcional)">
+        </div>
 
+        <div class="form-group">
+            <label for="unidade">Unidade</label>
+            <input
+                type="text"
+                id="unidade"
+                name="unidade"
+                placeholder="Unidade de ocorrência">
+        </div>
 
-</body></html>
+        <div class="form-group">
+            <label for="dataAnalise">Data da análise</label>
+            <input
+                type="date"
+                id="dataAnalise"
+                name="dataAnalise">
+        </div>
+
+    </div>
+</section>
+
+    <section class="matrix-wrap" aria-label="Matriz de responsabilização">
+      <table>
+        <caption>Elementos da matriz de responsabilização</caption>
+        <thead>
+          <tr>
+            <th class="narrow">Nº</th>
+            <th class="item-column">Item</th>
+            <th>Detalhamento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="essential" data-row="1">
+            <td>1</td>
+            <td>Descrição do fato irregular</td>
+            <td><textarea id="factDescription" name="factDescription" placeholder="Descreva objetivamente a conduta apurada, o contexto, a forma de execução e as circunstâncias relevantes."></textarea></td>
+          </tr>
+
+          <tr class="essential" data-row="2">
+            <td>2</td>
+            <td>Agente público envolvido</td>
+            <td><textarea id="publicAgent" name="publicAgent" placeholder="Informe nome, cargo, matrícula, vínculo, função, participação atribuída e demais elementos de identificação."></textarea></td>
+          </tr>
+
+          <tr class="essential" data-row="3">
+            <td>3</td>
+            <td>Data ou período do fato apurado</td>
+            <td>
+              <div class="date-mode" role="radiogroup" aria-label="Forma de indicação da data">
+                <label><input type="radio" name="dateMode" value="single" checked> Data específica</label>
+                <label><input type="radio" name="dateMode" value="period"> Período</label>
+              </div>
+              <div class="date-fields single" id="singleDateFields">
+                <div class="field"><label for="factDate">Data do fato</label><input type="date" id="factDate" name="factDate"></div>
+              </div>
+              <div class="date-fields" id="periodDateFields" hidden>
+                <div class="field"><label for="startDate">Data inicial</label><input type="date" id="startDate" name="startDate"></div>
+                <div class="field"><label for="endDate">Data final</label><input type="date" id="endDate" name="endDate"></div>
+              </div>
+            </td>
+          </tr>
+
+          <tr class="essential" data-row="4">
+            <td>4</td>
+            <td>Unidade em que ocorreu o fato</td>
+            <td><textarea id="occurrenceUnit" name="occurrenceUnit" placeholder="Informe órgão, unidade, setor, local ou ambiente funcional relacionado ao fato."></textarea></td>
+          </tr>
+
+          <tr class="essential" data-row="5">
+            <td>5</td>
+            <td>Evidências ou elementos de informação que indiquem a ocorrência da irregularidade e sua vinculação ao agente</td>
+            <td><textarea id="evidence" name="evidence" placeholder="Relacione documentos, depoimentos, mensagens, registros eletrônicos, relatórios, imagens, auditorias ou outros elementos disponíveis."></textarea></td>
+          </tr>
+
+          <tr data-row="6">
+            <td>6</td>
+            <td>
+              Possível enquadramento nos incisos do
+              <button type="button" class="legal-ref">art. 116 da Lei nº 8.112/1990
+                <span class="tooltip">O art. 116 reúne os deveres funcionais do servidor público federal. A seleção deve decorrer da correspondência entre a conduta descrita e o dever possivelmente violado.</span>
+              </button>
+            </td>
+            <td>
+              <div class="legal-selector" data-selector="art116">
+                <label for="search116">Selecionar um ou mais deveres funcionais</label>
+                <input class="legal-search" type="search" id="search116" placeholder="Pesquisar no art. 116" aria-label="Pesquisar hipóteses do artigo 116">
+                <div class="legal-options" id="options116">
+                  <label class="legal-option"><input type="checkbox" name="art116" value="I - Exercer com zelo e dedicação as atribuições do cargo."><span>I. Exercer com zelo e dedicação as atribuições do cargo.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art116" value="II - Ser leal às instituições a que servir."><span>II. Ser leal às instituições a que servir.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art116" value="III - Observar as normas legais e regulamentares."><span>III. Observar as normas legais e regulamentares.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art116" value="IV - Cumprir as ordens superiores, exceto quando manifestamente ilegais."><span>IV. Cumprir as ordens superiores, exceto quando manifestamente ilegais.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art116" value="V, a - Atender com presteza ao público em geral, prestando as informações requeridas, ressalvadas as protegidas por sigilo."><span>V, a. Atender com presteza ao público em geral, prestando as informações requeridas, ressalvadas as protegidas por sigilo.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art116" value="V, b - Atender com presteza à expedição de certidões requeridas para defesa de direito ou esclarecimento de situações de interesse pessoal."><span>V, b. Atender com presteza à expedição de certidões requeridas para defesa de direito ou esclarecimento de situações de interesse pessoal.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art116" value="V, c - Atender com presteza às requisições para a defesa da Fazenda Pública."><span>V, c. Atender com presteza às requisições para a defesa da Fazenda Pública.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art116" value="VI - Levar as irregularidades de que tiver ciência em razão do cargo ao conhecimento da autoridade competente."><span>VI. Levar as irregularidades de que tiver ciência em razão do cargo ao conhecimento da autoridade competente.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art116" value="VII - Zelar pela economia do material e a conservação do patrimônio público."><span>VII. Zelar pela economia do material e a conservação do patrimônio público.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art116" value="VIII - Guardar sigilo sobre assunto da repartição."><span>VIII. Guardar sigilo sobre assunto da repartição.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art116" value="IX - Manter conduta compatível com a moralidade administrativa."><span>IX. Manter conduta compatível com a moralidade administrativa.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art116" value="X - Ser assíduo e pontual ao serviço."><span>X. Ser assíduo e pontual ao serviço.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art116" value="XI - Tratar com urbanidade as pessoas."><span>XI. Tratar com urbanidade as pessoas.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art116" value="XII - Representar contra ilegalidade, omissão ou abuso de poder."><span>XII. Representar contra ilegalidade, omissão ou abuso de poder.</span></label>
+                  <div class="no-results">Nenhuma hipótese encontrada.</div>
+                </div>
+                <textarea id="art116Notes" name="art116Notes" placeholder="Explique a correspondência entre os fatos e os deveres selecionados."></textarea>
+              </div>
+            </td>
+          </tr>
+
+          <tr data-row="7">
+            <td>7</td>
+            <td>
+              Possível enquadramento nos incisos do
+              <button type="button" class="legal-ref">art. 117 da Lei nº 8.112/1990
+                <span class="tooltip">O art. 117 reúne proibições funcionais. A seleção deve indicar a hipótese que, em tese, apresenta correspondência com a conduta descrita.</span>
+              </button>
+            </td>
+            <td>
+              <div class="legal-selector" data-selector="art117">
+                <label for="search117">Selecionar uma ou mais proibições funcionais</label>
+                <input class="legal-search" type="search" id="search117" placeholder="Pesquisar no art. 117" aria-label="Pesquisar hipóteses do artigo 117">
+                <div class="legal-options" id="options117">
+                  <label class="legal-option"><input type="checkbox" name="art117" value="I - Ausentar-se do serviço durante o expediente, sem prévia autorização do chefe imediato."><span>I. Ausentar-se do serviço durante o expediente, sem prévia autorização do chefe imediato.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art117" value="II - Retirar, sem prévia anuência da autoridade competente, qualquer documento ou objeto da repartição."><span>II. Retirar, sem prévia anuência da autoridade competente, qualquer documento ou objeto da repartição.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art117" value="III - Recusar fé a documentos públicos."><span>III. Recusar fé a documentos públicos.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art117" value="IV - Opor resistência injustificada ao andamento de documento e processo ou execução de serviço."><span>IV. Opor resistência injustificada ao andamento de documento e processo ou execução de serviço.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art117" value="V - Promover manifestação de apreço ou desapreço no recinto da repartição."><span>V. Promover manifestação de apreço ou desapreço no recinto da repartição.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art117" value="VI - Cometer a pessoa estranha à repartição o desempenho de atribuição sob sua responsabilidade."><span>VI. Cometer a pessoa estranha à repartição o desempenho de atribuição sob sua responsabilidade.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art117" value="VII - Coagir ou aliciar subordinados para filiação associativa, sindical ou partidária."><span>VII. Coagir ou aliciar subordinados para filiação associativa, sindical ou partidária.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art117" value="VIII - Manter sob chefia imediata cônjuge, companheiro ou parente até o segundo grau civil."><span>VIII. Manter sob chefia imediata cônjuge, companheiro ou parente até o segundo grau civil.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art117" value="IX - Valer-se do cargo para lograr proveito pessoal ou de outrem, em detrimento da dignidade da função pública."><span>IX. Valer-se do cargo para lograr proveito pessoal ou de outrem, em detrimento da dignidade da função pública.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art117" value="X - Participar de gerência ou administração de sociedade privada ou exercer o comércio, ressalvadas as hipóteses legais."><span>X. Participar de gerência ou administração de sociedade privada ou exercer o comércio, ressalvadas as hipóteses legais.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art117" value="XI - Atuar como procurador ou intermediário junto a repartições públicas, ressalvadas as hipóteses legais."><span>XI. Atuar como procurador ou intermediário junto a repartições públicas, ressalvadas as hipóteses legais.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art117" value="XII - Receber propina, comissão, presente ou vantagem de qualquer espécie, em razão das atribuições."><span>XII. Receber propina, comissão, presente ou vantagem de qualquer espécie, em razão das atribuições.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art117" value="XIII - Aceitar comissão, emprego ou pensão de Estado estrangeiro."><span>XIII. Aceitar comissão, emprego ou pensão de Estado estrangeiro.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art117" value="XIV - Praticar usura sob qualquer de suas formas."><span>XIV. Praticar usura sob qualquer de suas formas.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art117" value="XV - Proceder de forma desidiosa."><span>XV. Proceder de forma desidiosa.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art117" value="XVI - Utilizar pessoal ou recursos materiais da repartição em serviços ou atividades particulares."><span>XVI. Utilizar pessoal ou recursos materiais da repartição em serviços ou atividades particulares.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art117" value="XVII - Cometer a outro servidor atribuições estranhas ao cargo, exceto em situações de emergência e transitórias."><span>XVII. Cometer a outro servidor atribuições estranhas ao cargo, exceto em situações de emergência e transitórias.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art117" value="XVIII - Exercer atividades incompatíveis com o cargo ou função e com o horário de trabalho."><span>XVIII. Exercer atividades incompatíveis com o cargo ou função e com o horário de trabalho.</span></label>
+                  <label class="legal-option"><input type="checkbox" name="art117" value="XIX - Recusar-se a atualizar os dados cadastrais quando solicitado."><span>XIX. Recusar-se a atualizar os dados cadastrais quando solicitado.</span></label>
+                  <div class="no-results">Nenhuma hipótese encontrada.</div>
+                </div>
+                <textarea id="art117Notes" name="art117Notes" placeholder="Explique a correspondência entre os fatos e as proibições selecionadas."></textarea>
+              </div>
+            </td>
+          </tr>
+
+          <tr class="essential" data-row="8">
+            <td>8</td>
+            <td>Ação recomendada</td>
+            <td>
+              <select id="recommendedAction" name="recommendedAction" aria-label="Ação recomendada">
+                <option value="">Selecione</option>
+                <option>Realização ou complementação do juízo de admissibilidade</option>
+                <option>Instauração de Investigação Preliminar Sumária</option>
+                <option>Instauração de Sindicância Investigativa</option>
+                <option>Instauração de Sindicância Acusatória</option>
+                <option>Instauração de Processo Administrativo Disciplinar</option>
+                <option>Proposta de celebração de Termo de Ajustamento de Conduta</option>
+                <option>Arquivamento</option>
+                <option>Arquivamento com recomendação de encaminhamento</option>
+                <option>Encaminhamento a outro órgão ou unidade competente</option>
+                <option>Encaminhamento ao Ministério Público</option>
+                <option>Encaminhamento ao Tribunal de Contas da União</option>
+                <option>Encaminhamento à autoridade policial</option>
+                <option>Encaminhamento à Controladoria-Geral da União</option>
+              </select>
+              <textarea id="actionNotes" name="actionNotes" placeholder="Fundamente a providência sugerida e registre encaminhamentos complementares."></textarea>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="report" aria-label="Relatório gerado">
+      <h2>Conclusão preliminar</h2>
+      <div class="report-output" id="reportOutput" tabindex="0">Clique em “Gerar relatório” para consolidar as informações preenchidas.</div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Última atualização da ferramenta: 10/07/2026. Confira sempre a legislação oficial aplicável antes de utilizar o resultado.
+  </footer>
+
+  <script>
+    (() => {
+      const STORAGE_KEY = 'matriz-responsabilizacao-pad-v3';
+      const fields = Array.from(document.querySelectorAll('input, select, textarea'));
+      const menuToggle = document.querySelector('.menu-toggle');
+      const primaryMenu = document.getElementById('primary-menu');
+      const dropdownButtons = Array.from(document.querySelectorAll('.dropdown-btn'));
+      const saveStatus = document.getElementById('saveStatus');
+      const reportOutput = document.getElementById('reportOutput');
+
+      const getValue = id => (document.getElementById(id)?.value || '').trim();
+      const checkedValues = name => Array.from(document.querySelectorAll(`input[name="${name}"]:checked`)).map(el => el.value);
+      const hasText = value => value.trim().length > 0;
+      const formatDate = value => {
+        if (!value) return '';
+        const [year, month, day] = value.split('-');
+        return `${day}/${month}/${year}`;
+      };
+
+      function updateDateMode() {
+        const mode = document.querySelector('input[name="dateMode"]:checked')?.value || 'single';
+        document.getElementById('singleDateFields').hidden = mode !== 'single';
+        document.getElementById('periodDateFields').hidden = mode !== 'period';
+      }
+
+      function getFactDateText() {
+        const mode = document.querySelector('input[name="dateMode"]:checked')?.value || 'single';
+        if (mode === 'single') return formatDate(getValue('factDate'));
+        const start = formatDate(getValue('startDate'));
+        const end = formatDate(getValue('endDate'));
+        if (start && end) return `de ${start} a ${end}`;
+        return start || end;
+      }
+
+      function itemCompletion() {
+        return [
+          hasText(getValue('factDescription')),
+          hasText(getValue('publicAgent')),
+          hasText(getFactDateText()),
+          hasText(getValue('occurrenceUnit')),
+          hasText(getValue('evidence')),
+          checkedValues('art116').length > 0 || hasText(getValue('art116Notes')),
+          checkedValues('art117').length > 0 || hasText(getValue('art117Notes')),
+          hasText(getValue('recommendedAction')) || hasText(getValue('actionNotes'))
+        ];
+      }
+
+      function updateSummary() {
+        const completion = itemCompletion();
+        const filled = completion.filter(Boolean).length;
+        const legal = checkedValues('art116').length + checkedValues('art117').length;
+        document.getElementById('filledCount').textContent = filled;
+        document.getElementById('pendingCount').textContent = completion.length - filled;
+        document.getElementById('legalCount').textContent = legal;
+        document.getElementById('evidenceCount').textContent = hasText(getValue('evidence')) ? '1' : '0';
+      }
+
+      function serialize() {
+        const data = {};
+        fields.forEach(field => {
+          if (!field.name) return;
+          if (field.type === 'checkbox') {
+            if (!data[field.name]) data[field.name] = [];
+            if (field.checked) data[field.name].push(field.value);
+          } else if (field.type === 'radio') {
+            if (field.checked) data[field.name] = field.value;
+          } else {
+            data[field.name] = field.value;
+          }
+        });
+        data.report = reportOutput.textContent;
+        return data;
+      }
+
+      function save() {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(serialize()));
+          saveStatus.textContent = 'Preenchimento salvo automaticamente neste navegador.';
+        } catch (error) {
+          saveStatus.textContent = 'Não foi possível salvar automaticamente neste navegador.';
+        }
+      }
+
+      function restore() {
+        try {
+          const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
+          if (!saved) return;
+          fields.forEach(field => {
+            if (!field.name || !(field.name in saved)) return;
+            if (field.type === 'checkbox') field.checked = Array.isArray(saved[field.name]) && saved[field.name].includes(field.value);
+            else if (field.type === 'radio') field.checked = saved[field.name] === field.value;
+            else field.value = saved[field.name] || '';
+          });
+          if (saved.report) reportOutput.textContent = saved.report;
+        } catch (error) {
+          localStorage.removeItem(STORAGE_KEY);
+        }
+      }
+
+      function generateReport() {
+        const process = getValue('processNumber');
+        const unit = getValue('analysisUnit');
+        const analysisDate = formatDate(getValue('analysisDate'));
+        const interested = getValue('interestedParty');
+        const analyst = getValue('analystName');
+        const reference = getValue('newsNumber');
+        const fact = getValue('factDescription');
+        const agent = getValue('publicAgent');
+        const factDate = getFactDateText();
+        const occurrenceUnit = getValue('occurrenceUnit');
+        const evidence = getValue('evidence');
+        const art116 = checkedValues('art116');
+        const art117 = checkedValues('art117');
+        const art116Notes = getValue('art116Notes');
+        const art117Notes = getValue('art117Notes');
+        const action = getValue('recommendedAction');
+        const actionNotes = getValue('actionNotes');
+
+        const lines = [];
+        lines.push('MATRIZ DE RESPONSABILIZAÇÃO DO PROCESSO ADMINISTRATIVO DISCIPLINAR');
+        lines.push('');
+        if (process) lines.push(`Processo ou expediente: ${process}`);
+        if (reference) lines.push(`Notícia de fato ou referência: ${reference}`);
+        if (unit) lines.push(`Unidade responsável: ${unit}`);
+        if (interested) lines.push(`Interessado ou noticiante: ${interested}`);
+        if (analyst) lines.push(`Responsável pela análise: ${analyst}`);
+        if (analysisDate) lines.push(`Data da análise: ${analysisDate}`);
+
+        lines.push('');
+        lines.push('1. DESCRIÇÃO DO FATO');
+        lines.push(fact || 'Não informada.');
+        lines.push('');
+        lines.push('2. AGENTE PÚBLICO ENVOLVIDO');
+        lines.push(agent || 'Não informado.');
+        lines.push('');
+        lines.push('3. DATA OU PERÍODO');
+        lines.push(factDate || 'Não informado.');
+        lines.push('');
+        lines.push('4. UNIDADE DE OCORRÊNCIA');
+        lines.push(occurrenceUnit || 'Não informada.');
+        lines.push('');
+        lines.push('5. EVIDÊNCIAS OU ELEMENTOS DE INFORMAÇÃO');
+        lines.push(evidence || 'Não informados.');
+        lines.push('');
+        lines.push('6. POSSÍVEL ENQUADRAMENTO NO ART. 116 DA LEI Nº 8.112/1990');
+        lines.push(art116.length ? art116.map(item => `• ${item}`).join('\n') : 'Nenhuma hipótese selecionada.');
+        if (art116Notes) lines.push(`Correspondência com os fatos: ${art116Notes}`);
+        lines.push('');
+        lines.push('7. POSSÍVEL ENQUADRAMENTO NO ART. 117 DA LEI Nº 8.112/1990');
+        lines.push(art117.length ? art117.map(item => `• ${item}`).join('\n') : 'Nenhuma hipótese selecionada.');
+        if (art117Notes) lines.push(`Correspondência com os fatos: ${art117Notes}`);
+        lines.push('');
+        lines.push('8. AÇÃO RECOMENDADA');
+        lines.push(action || 'Não selecionada.');
+        if (actionNotes) lines.push(`Fundamentação e encaminhamentos: ${actionNotes}`);
+        lines.push('');
+        lines.push('CONCLUSÃO PRELIMINAR');
+
+        const conclusionParts = [];
+        if (fact) conclusionParts.push('Foram registrados fatos potencialmente irregulares');
+        else conclusionParts.push('A descrição do fato ainda não foi preenchida');
+        if (agent) conclusionParts.push(`com possível vinculação ao agente informado`);
+        if (factDate) conclusionParts.push(`no período ou data de ${factDate}`);
+        if (occurrenceUnit) conclusionParts.push(`no âmbito de ${occurrenceUnit}`);
+
+        let conclusion = conclusionParts.join(', ') + '.';
+        if (art116.length || art117.length) conclusion += ' Em tese, foram selecionadas hipóteses de enquadramento funcional que devem ser confirmadas mediante exame dos elementos de autoria, materialidade, tipicidade e responsabilidade.';
+        else conclusion += ' Não foi selecionado enquadramento funcional, recomendando-se complementar a análise antes da adoção de providência conclusiva.';
+        if (action) conclusion += ` A providência preliminar indicada é: ${action}.`;
+        if (!evidence) conclusion += ' Recomenda-se identificar e registrar os elementos de informação que sustentam a ocorrência do fato e sua vinculação ao agente.';
+        conclusion += ' A conclusão depende da análise integral do caso concreto e da legislação aplicável.';
+        lines.push(conclusion);
+
+        reportOutput.textContent = lines.join('\n');
+        reportOutput.focus();
+        save();
+      }
+
+      function filterLegalOptions(searchInput) {
+        const container = searchInput.nextElementSibling;
+        const query = searchInput.value.trim().toLocaleLowerCase('pt-BR');
+        const options = Array.from(container.querySelectorAll('.legal-option'));
+        let visible = 0;
+        options.forEach(option => {
+          const match = option.textContent.toLocaleLowerCase('pt-BR').includes(query);
+          option.hidden = !match;
+          if (match) visible += 1;
+        });
+        container.querySelector('.no-results').style.display = visible ? 'none' : 'block';
+      }
+
+      fields.forEach(field => {
+        field.addEventListener('input', () => {
+          updateDateMode();
+          updateSummary();
+          save();
+        });
+        field.addEventListener('change', () => {
+          if (field.id === 'startDate') document.getElementById('endDate').min = field.value;
+          updateDateMode();
+          updateSummary();
+          save();
+        });
+      });
+
+      document.querySelectorAll('.legal-search').forEach(input => {
+        input.addEventListener('input', () => filterLegalOptions(input));
+      });
+
+      document.querySelectorAll('.legal-ref').forEach(button => {
+        button.addEventListener('click', event => {
+          event.stopPropagation();
+          button.classList.toggle('is-open');
+        });
+      });
+
+      document.addEventListener('click', () => document.querySelectorAll('.legal-ref.is-open').forEach(el => el.classList.remove('is-open')));
+
+      function closeDropdowns() {
+        document.querySelectorAll('.dropdown.is-open').forEach((dropdown) => {
+          dropdown.classList.remove('is-open');
+          dropdown.querySelector('.dropdown-btn')?.setAttribute('aria-expanded', 'false');
+        });
+      }
+
+      function closeMenu() {
+        if (!menuToggle || !primaryMenu) return;
+        primaryMenu.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        closeDropdowns();
+      }
+
+      if (menuToggle && primaryMenu) {
+        menuToggle.addEventListener('click', () => {
+          const isOpen = primaryMenu.classList.toggle('is-open');
+          menuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        primaryMenu.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', closeMenu);
+        });
+
+        window.addEventListener('resize', () => {
+          if (window.innerWidth > 980) closeMenu();
+        });
+      }
+
+      dropdownButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          if (window.innerWidth > 980) return;
+          const dropdown = button.closest('.dropdown');
+          if (!dropdown) return;
+          const willOpen = !dropdown.classList.contains('is-open');
+          closeDropdowns();
+          dropdown.classList.toggle('is-open', willOpen);
+          button.setAttribute('aria-expanded', String(willOpen));
+        });
+      });
+
+      document.addEventListener('click', (event) => {
+        if (window.innerWidth <= 980 && primaryMenu && !primaryMenu.contains(event.target) && !event.target.closest('.menu-toggle')) {
+          closeMenu();
+        }
+      });
+
+      document.getElementById('generateReport').addEventListener('click', generateReport);
+      document.getElementById('copyReport').addEventListener('click', async () => {
+        const text = reportOutput.textContent.trim();
+        try {
+          await navigator.clipboard.writeText(text);
+          saveStatus.textContent = 'Relatório copiado para a área de transferência.';
+        } catch (error) {
+          const range = document.createRange();
+          range.selectNodeContents(reportOutput);
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+          saveStatus.textContent = 'O relatório foi selecionado. Use o comando de copiar do navegador.';
+        }
+      });
+      document.getElementById('printPage').addEventListener('click', () => window.print());
+      document.getElementById('clearForm').addEventListener('click', () => {
+        if (!window.confirm('Deseja limpar todo o preenchimento e o relatório gerado?')) return;
+        fields.forEach(field => {
+          if (field.type === 'checkbox') field.checked = false;
+          else if (field.type === 'radio') field.checked = field.value === 'single';
+          else if (field.tagName === 'SELECT') field.selectedIndex = 0;
+          else field.value = '';
+        });
+        reportOutput.textContent = 'Clique em “Gerar relatório” para consolidar as informações preenchidas.';
+        localStorage.removeItem(STORAGE_KEY);
+        updateDateMode();
+        updateSummary();
+        saveStatus.textContent = 'Preenchimento limpo.';
+      });
+
+      restore();
+      updateDateMode();
+      updateSummary();
+    })();
+  </script>
+</body>
+</html>
