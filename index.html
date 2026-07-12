@@ -473,6 +473,55 @@
   }
 
   @media (max-width: 640px) {
+    #section0 .sections-container {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 18px !important;
+    }
+
+    #section0 .section,
+    #section0 .links-list,
+    #section0 .links-list li,
+    #section0 .links-list a {
+      max-width: 100% !important;
+      text-align: left !important;
+      word-break: normal !important;
+      overflow-wrap: break-word !important;
+      word-spacing: normal !important;
+      letter-spacing: 0 !important;
+      hyphens: auto !important;
+    }
+
+    #section0 .section {
+      width: 100% !important;
+      padding-inline: 14px !important;
+    }
+
+    #section0 .section h2 {
+      font-size: clamp(1.35rem, 6vw, 1.7rem) !important;
+      line-height: 1.2 !important;
+      text-align: center !important;
+    }
+
+    #section0 .links-list {
+      display: grid !important;
+      gap: 12px !important;
+      padding-left: 0 !important;
+    }
+
+    #section0 .links-list li {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+
+    #section0 .links-list a {
+      display: block !important;
+      width: 100% !important;
+      font-size: clamp(1rem, 4.4vw, 1.12rem) !important;
+      line-height: 1.35 !important;
+      white-space: normal !important;
+    }
+
     #cn-chat-panel {
       position: fixed !important;
       top: auto !important;
