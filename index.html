@@ -512,14 +512,39 @@
     }
 
     #cn-chat-header strong {
+      flex: 1 1 auto !important;
       font-size: 0.88rem !important;
       line-height: 1.25 !important;
     }
 
-    #cn-chat-expand {
+    #cn-chat-actions {
+      display: inline-flex !important;
+      flex: 0 0 auto !important;
+      align-items: center !important;
+      gap: 6px !important;
+      margin-left: auto !important;
+    }
+
+    #cn-chat-expand,
+    #cn-chat-close {
       flex: 0 0 34px !important;
       width: 34px !important;
       height: 34px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 0 !important;
+      border: 0 !important;
+      border-radius: 10px !important;
+      background: rgba(255,255,255,0.12) !important;
+      color: #fff !important;
+      cursor: pointer !important;
+      line-height: 1 !important;
+    }
+
+    #cn-chat-close {
+      font-size: 1.25rem !important;
+      font-weight: 800 !important;
     }
 
     #cn-chat-messages {
@@ -2241,7 +2266,10 @@ Pena - detenção, de seis meses a dois anos, ou multa.</p>
 <div id="cn-chat-panel" role="dialog" aria-label="Assistente de IA do Caderno de Normas.">
   <div id="cn-chat-header">
     <strong>Assistente de IA do Caderno de Normas</strong>
-    <button id="cn-chat-expand" aria-label="Ampliar tela" title="Ampliar">⤢</button>
+    <div id="cn-chat-actions">
+      <button id="cn-chat-expand" aria-label="Ampliar tela" title="Ampliar">⤢</button>
+      <button id="cn-chat-close" type="button" aria-label="Fechar chat" title="Fechar">&times;</button>
+    </div>
 
   </div>
 
@@ -2311,6 +2339,21 @@ Pena - detenção, de seis meses a dois anos, ou multa.</p>
         if (window.innerWidth <= 980 && primaryMenu && !primaryMenu.contains(event.target) && !event.target.closest('.menu-toggle')) {
           closeMenu();
         }
+      });
+    })();
+
+    (() => {
+      const chatPanel = document.getElementById('cn-chat-panel');
+      const chatButton = document.getElementById('cn-chat-btn');
+      const chatClose = document.getElementById('cn-chat-close');
+
+      if (!chatPanel || !chatClose) return;
+
+      chatClose.addEventListener('click', () => {
+        chatPanel.classList.remove('is-open', 'open', 'active', 'expanded', 'is-expanded');
+        chatPanel.style.display = 'none';
+        chatButton?.setAttribute('aria-expanded', 'false');
+        chatButton?.focus();
       });
     })();
   </script>
