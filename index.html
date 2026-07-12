@@ -471,6 +471,119 @@
       margin-top: 14px;
     }
   }
+
+  @media (max-width: 640px) {
+    #cn-chat-panel {
+      position: fixed !important;
+      top: auto !important;
+      right: 10px !important;
+      bottom: 74px !important;
+      left: auto !important;
+      width: min(360px, calc(100vw - 20px)) !important;
+      height: min(62dvh, 500px) !important;
+      max-height: calc(100dvh - 106px) !important;
+      border-radius: 14px !important;
+      overflow: hidden !important;
+    }
+
+    #cn-chat-panel[style*="display: block"],
+    #cn-chat-panel.is-open,
+    #cn-chat-panel.open,
+    #cn-chat-panel.active {
+      display: flex !important;
+      flex-direction: column !important;
+    }
+
+    #cn-chat-panel.expanded,
+    #cn-chat-panel.is-expanded {
+      top: 10px !important;
+      right: 10px !important;
+      bottom: 10px !important;
+      left: 10px !important;
+      width: auto !important;
+      height: auto !important;
+      max-height: none !important;
+    }
+
+    #cn-chat-header {
+      min-height: 48px !important;
+      padding: 10px 14px !important;
+      gap: 10px !important;
+    }
+
+    #cn-chat-header strong {
+      font-size: 0.88rem !important;
+      line-height: 1.25 !important;
+    }
+
+    #cn-chat-expand {
+      flex: 0 0 34px !important;
+      width: 34px !important;
+      height: 34px !important;
+    }
+
+    #cn-chat-messages {
+      flex: 1 1 auto !important;
+      min-height: 0 !important;
+      height: auto !important;
+      padding: 12px !important;
+      overflow-y: auto !important;
+    }
+
+    #cn-chat-messages > * {
+      max-width: 100% !important;
+      overflow-wrap: anywhere !important;
+    }
+
+    #cn-chat-footer {
+      flex: 0 0 auto !important;
+      padding: 10px 12px 8px !important;
+    }
+
+    #cn-chat-form {
+      display: grid !important;
+      grid-template-columns: minmax(0, 1fr) auto !important;
+      align-items: end !important;
+      gap: 8px !important;
+    }
+
+    #cn-chat-input {
+      width: 100% !important;
+      min-height: 48px !important;
+      max-height: 96px !important;
+      padding: 10px 12px !important;
+      resize: none !important;
+    }
+
+    #cn-chat-send {
+      min-height: 48px !important;
+      padding: 0 14px !important;
+      white-space: nowrap !important;
+    }
+
+    #cn-chat-note {
+      margin-top: 8px !important;
+      font-size: 0.72rem !important;
+      line-height: 1.35 !important;
+    }
+  }
+
+  @media (max-width: 380px) {
+    #cn-chat-panel {
+      right: 8px !important;
+      bottom: 70px !important;
+      width: calc(100vw - 16px) !important;
+      height: min(58dvh, 460px) !important;
+    }
+
+    #cn-chat-form {
+      grid-template-columns: 1fr !important;
+    }
+
+    #cn-chat-send {
+      width: 100% !important;
+    }
+  }
 </style>
   
 </head>
