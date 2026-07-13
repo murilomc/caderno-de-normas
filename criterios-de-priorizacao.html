@@ -115,7 +115,7 @@
         max-width: 100%; /* Utiliza a largura total em telas muito pequenas */
     }
 }
-</style>
+.menu-toggle__icon{position:relative;display:inline-block;width:18px;height:14px;flex:0 0 18px}.menu-toggle__icon::before,.menu-toggle__icon::after{content:"";position:absolute;left:0;width:18px;height:2px;border-radius:2px;background:currentColor}.menu-toggle__icon::before{top:0;box-shadow:0 6px 0 currentColor}.menu-toggle__icon::after{top:12px}</style>
 <script>
   var weights = {
     "Selecione": 0,  // Assume que "Selecione" é o valor inicial que não agrega peso
@@ -169,14 +169,118 @@
   }
   </script>
   
+<style id="modern-top-styles">
+:root{--top-primary:#004361;--top-text:#17212b;--top-muted:#5f6f7f;--top-border:#e6edf3;--top-bg:#f5f7fb;--top-height:122px}*{box-sizing:border-box}body{margin:0;background:var(--top-bg)}.modern-page-header{background:var(--top-bg);color:var(--top-text);padding:var(--top-height) 0 0}.modern-page-header__inner{width:min(1180px,calc(100% - 32px));margin:0 auto}.topbar{position:fixed;inset:0 0 auto 0;z-index:3000;width:100%;background:var(--top-primary);color:#fff;box-shadow:0 16px 34px rgba(4,29,58,.18)}.topbar__inner{display:grid;grid-template-columns:minmax(240px,386px) 1fr auto;align-items:center;gap:24px;width:min(1180px,calc(100% - 32px));min-height:86px;margin:0 auto;padding:18px 0}.site-brand{display:flex;align-items:center;min-width:0;color:#fff;text-decoration:none}.brand-image{display:block;width:min(386px,100%);height:auto}.menu-toggle{display:none;align-items:center;justify-content:center;gap:10px;width:110px;min-width:110px;height:46px;min-height:46px;padding:0 14px;background:#fff;color:var(--top-primary);border:0;border-radius:10px;font:inherit;font-size:1.05rem;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.08)}.menu-toggle:hover,.menu-toggle:focus-visible{background:#f5f7fa;outline:none;box-shadow:0 5px 16px rgba(0,0,0,.14)}.menu-toggle .icon-open,.menu-toggle .icon-close{display:inline-flex;align-items:center;justify-content:center;width:18px;font-size:1.45rem;line-height:1;font-weight:400}.menu-toggle .icon-close{display:none}.menu-toggle[aria-expanded="true"] .icon-open{display:none}.menu-toggle[aria-expanded="true"] .icon-close{display:inline-flex}.nav-links{display:flex;align-items:center;justify-content:flex-end;gap:clamp(14px,2.4vw,30px);white-space:nowrap;font-size:.96rem;font-weight:700}.nav-links>a{color:rgba(255,255,255,.92);text-decoration:none}.nav-links>a:hover{color:#fff;text-decoration:underline;text-underline-offset:6px}.dropdown{position:relative}.dropdown-btn{min-height:40px;padding:12px 6px;border:0;border-radius:4px;background:transparent;color:rgba(255,255,255,.92);font:inherit;font-weight:700;cursor:pointer}.dropdown-btn:hover,.dropdown-btn:focus-visible{background:rgba(255,255,255,.10);color:#fff;outline:none}.dropdown-content{display:none;position:absolute;top:calc(100% + 8px);left:0;z-index:3100;min-width:260px;overflow:hidden;border-radius:8px;background:#fff;box-shadow:0 12px 30px rgba(0,0,0,.18)}.dropdown-content a{display:block;padding:12px 18px;background:#fff;color:var(--top-text);text-decoration:none;font-weight:500}.dropdown-content a:hover{background:#eef4f8;color:var(--top-primary)}.dropdown:hover .dropdown-content,.dropdown:focus-within .dropdown-content{display:block}.modern-title-panel{padding:28px 36px 34px;border:1px solid var(--top-border);border-top:0;border-bottom:0;background:#fff;text-align:center}.modern-breadcrumb{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:0 0 12px;color:var(--top-muted);font-size:.9rem}.modern-breadcrumb a{color:var(--top-primary);text-decoration:none}.modern-title-panel h1{max-width:1120px;margin:0 auto;color:#111827;font-size:clamp(2.1rem,3.85vw,3.15rem);font-weight:850;line-height:1.05;text-wrap:balance}.modern-lead{max-width:920px;margin:14px auto 0;color:#4b5563;font-size:clamp(1.02rem,1.4vw,1.22rem);line-height:1.5;text-align:center}.modern-title-divider{width:100%;height:2px;margin:28px 0 0;border:0;background:#5cb85c}.page-content-wrap{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:30px 0 40px;background:#fff;border:1px solid var(--top-border);border-top:0}.page-content-wrap .anticorrupcao-table,.page-content-wrap .action-buttons,.page-content-wrap .readable-text{width:calc(100% - 40px);margin-left:auto;margin-right:auto}.page-content-wrap .anticorrupcao-table{min-width:760px}.table-scroll{overflow-x:auto}#ato-ilicito{width:100%;max-width:500px}@media(max-width:980px){:root{--top-height:102px}.modern-page-header{padding-top:var(--top-height)}.modern-page-header__inner,.page-content-wrap{width:min(100% - 20px,1180px)}.topbar__inner{grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:12px;width:min(100% - 24px,1180px);min-height:74px;padding:14px 0}.brand-image{width:min(300px,calc(100vw - 134px))}.menu-toggle{display:inline-flex}.nav-links{display:none;grid-column:1/-1;width:100%;white-space:normal;text-align:left}.nav-links.is-open{display:grid;grid-template-columns:1fr;max-height:calc(100vh - 86px);padding:10px 0 2px;overflow-y:auto}.nav-links>a,.dropdown-btn{display:flex;align-items:center;justify-content:space-between;width:100%;min-height:44px;padding:11px 0;border-top:1px solid rgba(255,255,255,.16);color:#fff;text-align:left}.dropdown-content{position:static;display:none;min-width:0;margin:0 0 8px;padding:0 0 4px 14px;overflow:visible;border-left:2px solid rgba(255,255,255,.22);border-radius:0;background:transparent;box-shadow:none}.dropdown.is-open .dropdown-content{display:grid}.dropdown:not(.is-open):hover .dropdown-content,.dropdown:not(.is-open):focus-within .dropdown-content{display:none}.dropdown-content a{min-height:38px;padding:8px 0;background:transparent;color:rgba(255,255,255,.86);font-size:.92rem;font-weight:600}.modern-title-panel{padding:20px 18px 22px}.modern-title-panel h1{font-size:clamp(1.75rem,9vw,2.35rem)}.modern-lead{font-size:1rem}}@media(max-width:560px){.menu-toggle{width:100px;min-width:100px;padding:0 10px}.page-content-wrap .anticorrupcao-table,.page-content-wrap .action-buttons,.page-content-wrap .readable-text{width:calc(100% - 20px)}}@media print{.topbar,.modern-breadcrumb{display:none!important}.modern-page-header{padding:0;background:#fff}.modern-page-header__inner,.page-content-wrap{width:100%;border:0}}.menu-toggle__icon{position:relative;display:inline-block;width:18px;height:14px;flex:0 0 18px}.menu-toggle__icon::before,.menu-toggle__icon::after{content:"";position:absolute;left:0;width:18px;height:2px;border-radius:2px;background:currentColor}.menu-toggle__icon::before{top:0;box-shadow:0 6px 0 currentColor}.menu-toggle__icon::after{top:12px}</style>
+<link rel="stylesheet" href="topbar.css">
+<style id="criteria-title-font-fix">
+  #modern-page-title {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 4px;
+    margin-top: 20px;
+  }
+
+  .action-buttons .print-button {
+    margin-top: 0;
+  }
+</style>
+<style id="standard-title-alignment">
+  .title-panel,
+  .modern-title-panel {
+    text-align: center;
+  }
+
+  .title-panel .breadcrumb,
+  .modern-breadcrumb {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .title-panel h1,
+  .modern-title-panel h1,
+  .title-panel .lead,
+  .modern-title-panel .modern-lead {
+    text-align: center;
+  }
+</style>
 </head>
 <body>
-<table class="anticorrupcao-table">
+<header class="modern-page-header"><div class="modern-page-header__inner"><nav class="topbar" aria-label="Navegação principal">
+        <div class="topbar__inner">
+          <a class="site-brand" href="https://www.cadernodenormas.com.br/" aria-label="Página inicial do Caderno de Normas">
+            <img class="brand-image" src="logo-caderno-normas.png" alt="Caderno de Normas do Direito Administrativo Sancionador">
+          </a>
+
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+            <span class="menu-toggle__icon" aria-hidden="true"></span>
+            <span>Menu</span>
+          </button>
+
+          <div class="nav-links" id="primary-menu">
+            <a href="https://www.cadernodenormas.com.br/">Início</a>
+            <a href="https://www.cadernodenormas.com.br/#section1">Constituição Federal</a>
+
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-expanded="false">
+                PAD <span aria-hidden="true">▾</span>
+              </button>
+
+              <div class="dropdown-content">
+                <a href="https://www.cadernodenormas.com.br/Matriz-de-responsabilizacao.html">Matriz de responsabilização</a>
+                <a href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAD.html">Nota de regularidade</a>
+                <a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAD-e-atas-deliberativas.html">Passo a passo de um PAD</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-expanded="false">
+                PAR <span aria-hidden="true">▾</span>
+              </button>
+
+              <div class="dropdown-content">
+                <a href="https://www.cadernodenormas.com.br/Requisitos-Lei-anticorrupcao.html">Matriz de requisitos</a>
+                <a href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAR.html">Nota de regularidade</a>
+                <a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAR-e-atas-deliberativas.html">Passo a passo de um PAR</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-expanded="false">
+                Leis <span aria-hidden="true">▾</span>
+              </button>
+
+              <div class="dropdown-content">
+                <a href="https://www.cadernodenormas.com.br/#section2">Lei nº 8.112/1990</a>
+                <a href="https://www.cadernodenormas.com.br/#section3">Lei nº 9.784/1999</a>
+                <a href="https://www.cadernodenormas.com.br/#section4">Lei nº 12.527/2011 (LAI)</a>
+                <a href="https://www.cadernodenormas.com.br/#section5">Lei nº 12.846/2013</a>
+                <a href="https://www.cadernodenormas.com.br/#section6">Decreto nº 11.129/2022</a>
+                <a href="https://www.cadernodenormas.com.br/#section7">Decreto nº 1.171/1994</a>
+                <a href="https://www.cadernodenormas.com.br/#section8">Lei nº 5.172/1966 (CTN)</a>
+                <a href="https://www.cadernodenormas.com.br/#section9">Decreto-Lei nº 4.657/1942 (LINDB)</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-expanded="false">
+                Gestão <span aria-hidden="true">▾</span>
+              </button>
+
+              <div class="dropdown-content">
+                <a href="https://www.cadernodenormas.com.br/criterios-de-priorizacao.html">Critérios de priorização</a>
+                <a href="https://www.cadernodenormas.com.br/governanca/" target="_blank" rel="noopener noreferrer">Governança e Gestão</a>
+             </div>
+        </div>
+      </div>
+    </div>
+  </nav><section class="modern-title-panel" aria-labelledby="modern-page-title"><p class="modern-breadcrumb"><a href="https://www.cadernodenormas.com.br/">Caderno de Normas</a><span aria-hidden="true">›</span>Gestão correcional</p><h1 id="modern-page-title">Critérios de priorização de processos correcionais</h1><p class="modern-lead">Ferramenta de apoio para classificação e ordenação de processos com base em critérios objetivos de prioridade.</p><hr class="modern-title-divider"></section></div></header>
+<main class="page-content-wrap">
+<div class="table-scroll"><table class="anticorrupcao-table">
   <thead>
-    <tr class="title-row">
-      <th colspan="4">Caderno de Normas
-        do Direito Administrativo Sancionador - Priorização de processos correcionais</th>
-    </tr>
+    
     <tr>
       <th>Critérios</th>
       <th>Pontuação</th>
@@ -275,17 +379,21 @@
       <td id="totalRow">0</td>
     </tr>
   </tbody>
-</table>
-<button onclick="window.print();" class="print-button">
-  🖨️ Imprimir
-</button>
-<button onclick="resetWeights()" class="print-button">
-  🗑️ Limpar
-</button>
+</table></div>
+<div class="action-buttons">
+  <button onclick="window.print();" class="print-button">
+    🖨️ Imprimir
+  </button>
+  <button onclick="resetWeights()" class="print-button">
+    🗑️ Limpar
+  </button>
+</div>
 
 
 <div class="readable-text"><p>Os critérios de priorização serão classificados de acordo com as seguintes orientações:</p>
 <ol><li><strong>Prazo Prescricional:</strong> Será considerada a data do conhecimento dos fatos pela autoridade competente 
   (<a href="https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm#art142§1" target="_blank">PAD</a>) ou pela ciência da infração pela autoridade competente (<a href="https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12846.htm#art25" target="_blank">PAR</a>) e, no caso de infração permanente ou continuada, do dia em que tiver cessado, caso a cessação se dê em momento posterior à ciência pela referida autoridade.</li><strong>Observações:</strong> Para definição dos prazos prescricionais da pretensão punitiva em procedimento em desfavor de agente público ou privado serão consideradas a aplicabilidade das penas em perspectiva, considerando-se os fatos narrados no momento da análise para classificação do processo.Considerando que os prazos prescricionais dos processos acusatórios (PAD, Sindicância Acusatória e PAR) não se interrompem novamente após o primeiro ato de sua instauração, ser-lhes-á atribuída pontuação mais elevada e diferenciada dos demais processos.</li><li><strong>Gravidade da conduta do agente público:</strong> Será considerada de gravidade baixa aquela com penalidade, em tese, de advertência ou suspensão até 30 dias; de gravidade moderada aquela com penalidade, em tese, de suspensão acima de 30 dias e de gravidade alta aquela com penalidade, em tese, de demissão.</li><li><strong>Gravidade da conduta do ente privado:</strong> Serão considerados a tolerância ou ciência de pessoas do corpo diretivo ou gerencial da pessoa jurídica; a existência de indícios de pagamento de vantagem indevida a agente público; a ocorrência, em razão dos fatos apurados, de interrupção no fornecimento de serviço público ou na execução de obra contratada; e o valor dos contratos mantidos ou pretendidos, relacionados aos fatos em apuração.</li><li><strong>Cargo do agente público envolvido:</strong> Será considerado o cargo ao qual o agente público estiver vinculado no momento de ocorrência dos fatos, devendo-se considerar, no caso de mais de uma gente envolvido, a ocupação do cargo de maior hierarquia.</li><li><strong>Porte do ente privado envolvido:</strong> Serão considerados os dados cadastrais fiscais da empresa e, na falta de tais dados, nas demais informações disponíveis e na legislação em vigor, considerando-se a definição constante de seu cadastro ou atribuída pela legislação em vigor no momento da análise, para classificação do processo, devendo-se considerar, no caso de mais de um ente privado envolvido, aquele de maior porte.</li><li><strong>Repercussão dos fatos no âmbito da Administração Pública:</strong> Serão considerados o número de agentes públicos, de entes privados e de unidades administrativas envolvidos; o impacto à imagem institucional perante a sociedade; a veiculação dos fatos na mídia; a existência de indícios de grave dano ao erário; o impacto gerado em razão do alcance dimensional do local de ocorrência dos fatos (nacional > regional > local) e/ou estrutura hierárquica envolvida; a existência de inquérito policial para apuração dos fatos na seara criminal; e o grau de efetividade da eventual penalidade a ser aplicada.</li></ol></div>
+</main>
+<script id="modern-top-script">(()=>{const t=document.querySelector('.menu-toggle'),m=document.getElementById('primary-menu'),bs=[...document.querySelectorAll('.dropdown-btn')];function c(){document.querySelectorAll('.dropdown.is-open').forEach(d=>{d.classList.remove('is-open');d.querySelector('.dropdown-btn')?.setAttribute('aria-expanded','false')})}function x(){if(!t||!m)return;m.classList.remove('is-open');t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Abrir menu de navegação');c()}if(t&&m){t.addEventListener('click',()=>{const o=m.classList.toggle('is-open');t.setAttribute('aria-expanded',String(o));t.setAttribute('aria-label',o?'Fechar menu de navegação':'Abrir menu de navegação')});m.querySelectorAll('a').forEach(a=>a.addEventListener('click',x));window.addEventListener('resize',()=>{if(innerWidth>980)x()})}bs.forEach(b=>b.addEventListener('click',()=>{if(innerWidth>980)return;const d=b.closest('.dropdown');if(!d)return;const o=!d.classList.contains('is-open');c();d.classList.toggle('is-open',o);b.setAttribute('aria-expanded',String(o))}));document.addEventListener('click',e=>{if(innerWidth<=980&&m&&!m.contains(e.target)&&!e.target.closest('.menu-toggle'))x()})})();</script>
 </body>
 </html>

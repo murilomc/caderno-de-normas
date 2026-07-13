@@ -722,7 +722,27 @@
         border: 0;
       }
     }
-  </style>
+  .menu-toggle__icon{position:relative;display:inline-block;width:18px;height:14px;flex:0 0 18px}.menu-toggle__icon::before,.menu-toggle__icon::after{content:"";position:absolute;left:0;width:18px;height:2px;border-radius:2px;background:currentColor}.menu-toggle__icon::before{top:0;box-shadow:0 6px 0 currentColor}.menu-toggle__icon::after{top:12px}</style>
+<link rel="stylesheet" href="topbar.css">
+<style id="standard-title-alignment">
+  .title-panel,
+  .modern-title-panel {
+    text-align: center;
+  }
+
+  .title-panel .breadcrumb,
+  .modern-breadcrumb {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .title-panel h1,
+  .modern-title-panel h1,
+  .title-panel .lead,
+  .modern-title-panel .modern-lead {
+    text-align: center;
+  }
+</style>
 </head>
 
 <body>
@@ -734,10 +754,9 @@
             <img class="brand-image" src="logo-caderno-normas.png" alt="Caderno de Normas do Direito Administrativo Sancionador">
           </a>
 
-          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Abrir menu de navegação">
-            <span class="icon-open" aria-hidden="true">☰</span>
-            <span class="icon-close" aria-hidden="true">×</span>
-            <span class="menu-text">Menu</span>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+            <span class="menu-toggle__icon" aria-hidden="true"></span>
+            <span>Menu</span>
           </button>
 
           <div class="nav-links" id="primary-menu">
@@ -748,6 +767,7 @@
               <button class="dropdown-btn" type="button" aria-expanded="false">
                 PAD <span aria-hidden="true">▾</span>
               </button>
+
               <div class="dropdown-content">
                 <a href="https://www.cadernodenormas.com.br/Matriz-de-responsabilizacao.html">Matriz de responsabilização</a>
                 <a href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAD.html">Nota de regularidade</a>
@@ -759,10 +779,11 @@
               <button class="dropdown-btn" type="button" aria-expanded="false">
                 PAR <span aria-hidden="true">▾</span>
               </button>
+
               <div class="dropdown-content">
                 <a href="https://www.cadernodenormas.com.br/Requisitos-Lei-anticorrupcao.html">Matriz de requisitos</a>
                 <a href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAR.html">Nota de regularidade</a>
-                <a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAR-e-atas-deliberativas.htm">Passo a passo de um PAR</a>
+                <a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAR-e-atas-deliberativas.html">Passo a passo de um PAR</a>
               </div>
             </div>
 
@@ -770,12 +791,16 @@
               <button class="dropdown-btn" type="button" aria-expanded="false">
                 Leis <span aria-hidden="true">▾</span>
               </button>
+
               <div class="dropdown-content">
                 <a href="https://www.cadernodenormas.com.br/#section2">Lei nº 8.112/1990</a>
                 <a href="https://www.cadernodenormas.com.br/#section3">Lei nº 9.784/1999</a>
-                <a href="https://www.cadernodenormas.com.br/#section4">Lei nº 12.527/2011</a>
+                <a href="https://www.cadernodenormas.com.br/#section4">Lei nº 12.527/2011 (LAI)</a>
                 <a href="https://www.cadernodenormas.com.br/#section5">Lei nº 12.846/2013</a>
                 <a href="https://www.cadernodenormas.com.br/#section6">Decreto nº 11.129/2022</a>
+                <a href="https://www.cadernodenormas.com.br/#section7">Decreto nº 1.171/1994</a>
+                <a href="https://www.cadernodenormas.com.br/#section8">Lei nº 5.172/1966 (CTN)</a>
+                <a href="https://www.cadernodenormas.com.br/#section9">Decreto-Lei nº 4.657/1942 (LINDB)</a>
               </div>
             </div>
 
@@ -783,13 +808,15 @@
               <button class="dropdown-btn" type="button" aria-expanded="false">
                 Gestão <span aria-hidden="true">▾</span>
               </button>
+
               <div class="dropdown-content">
                 <a href="https://www.cadernodenormas.com.br/criterios-de-priorizacao.html">Critérios de priorização</a>
-              </div>
-            </div>
-          </div>
+                <a href="https://www.cadernodenormas.com.br/governanca/" target="_blank" rel="noopener noreferrer">Governança e Gestão</a>
+             </div>
         </div>
-      </nav>
+      </div>
+    </div>
+  </nav>
 
       <section class="title-panel" aria-labelledby="page-title">
         <p class="breadcrumb">

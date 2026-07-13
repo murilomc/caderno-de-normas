@@ -195,7 +195,7 @@
         background-color: #f2f2f2;
         color: #333;
     }
-</style>
+.menu-toggle__icon{position:relative;display:inline-block;width:18px;height:14px;flex:0 0 18px}.menu-toggle__icon::before,.menu-toggle__icon::after{content:"";position:absolute;left:0;width:18px;height:2px;border-radius:2px;background:currentColor}.menu-toggle__icon::before{top:0;box-shadow:0 6px 0 currentColor}.menu-toggle__icon::after{top:12px}</style>
 
 <style id="modern-top-styles">
   :root {
@@ -224,11 +224,11 @@
   }
 
   .modern-page-header__inner {
-    width: min(900px, calc(100% - 32px));
+    width: min(1180px, calc(100% - 32px));
     margin: 0 auto;
   }
 
-  .modern-topbar {
+  .topbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -240,7 +240,7 @@
     box-shadow: 0 16px 34px rgba(4, 29, 58, 0.18);
   }
 
-  .modern-topbar__inner {
+  .topbar__inner {
     display: grid;
     grid-template-columns: minmax(240px, 386px) 1fr auto;
     align-items: center;
@@ -251,7 +251,7 @@
     padding: 18px 0;
   }
 
-  .modern-site-brand {
+  .site-brand {
     display: flex;
     align-items: center;
     min-width: 0;
@@ -259,13 +259,13 @@
     text-decoration: none;
   }
 
-  .modern-brand-image {
+  .brand-image {
     display: block;
     width: min(386px, 100%);
     height: auto;
   }
 
-  .modern-menu-toggle {
+  .menu-toggle {
     display: none;
     align-items: center;
     justify-content: center;
@@ -287,15 +287,15 @@
     box-shadow: 0 4px 12px rgba(0,0,0,.08);
   }
 
-  .modern-menu-toggle:hover,
-  .modern-menu-toggle:focus-visible {
+  .menu-toggle:hover,
+  .menu-toggle:focus-visible {
     background: #f5f7fa;
     outline: none;
     box-shadow: 0 5px 16px rgba(0,0,0,.14);
   }
 
-  .modern-menu-toggle .icon-open,
-  .modern-menu-toggle .icon-close {
+  .menu-toggle .icon-open,
+  .menu-toggle .icon-close {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -305,19 +305,19 @@
     font-weight: 400;
   }
 
-  .modern-menu-toggle .icon-close {
+  .menu-toggle .icon-close {
     display: none;
   }
 
-  .modern-menu-toggle[aria-expanded="true"] .icon-open {
+  .menu-toggle[aria-expanded="true"] .icon-open {
     display: none;
   }
 
-  .modern-menu-toggle[aria-expanded="true"] .icon-close {
+  .menu-toggle[aria-expanded="true"] .icon-close {
     display: inline-flex;
   }
 
-  .modern-nav-links {
+  .nav-links {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -327,22 +327,22 @@
     font-weight: 700;
   }
 
-  .modern-nav-links > a {
+  .nav-links > a {
     color: rgba(255,255,255,.92);
     text-decoration: none;
   }
 
-  .modern-nav-links > a:hover {
+  .nav-links > a:hover {
     color: #fff;
     text-decoration: underline;
     text-underline-offset: 6px;
   }
 
-  .modern-dropdown {
+  .dropdown {
     position: relative;
   }
 
-  .modern-dropdown::after {
+  .dropdown::after {
     content: "";
     display: none;
     position: absolute;
@@ -352,12 +352,12 @@
     height: 8px;
   }
 
-  .modern-dropdown:hover::after,
-  .modern-dropdown:focus-within::after {
+  .dropdown:hover::after,
+  .dropdown:focus-within::after {
     display: block;
   }
 
-  .modern-dropdown-btn {
+  .dropdown-btn {
     min-height: 40px;
     padding: 12px 6px;
     border: 0;
@@ -369,14 +369,14 @@
     cursor: pointer;
   }
 
-  .modern-dropdown-btn:hover,
-  .modern-dropdown-btn:focus-visible {
+  .dropdown-btn:hover,
+  .dropdown-btn:focus-visible {
     background: rgba(255,255,255,.10);
     color: #fff;
     outline: none;
   }
 
-  .modern-dropdown-content {
+  .dropdown-content {
     display: none;
     position: absolute;
     top: calc(100% + 8px);
@@ -389,7 +389,7 @@
     box-shadow: 0 12px 30px rgba(0,0,0,.18);
   }
 
-  .modern-dropdown-content a {
+  .dropdown-content a {
     display: block;
     padding: 12px 18px;
     background: #fff;
@@ -398,13 +398,13 @@
     font-weight: 500;
   }
 
-  .modern-dropdown-content a:hover {
+  .dropdown-content a:hover {
     background: #eef4f8;
     color: var(--top-primary);
   }
 
-  .modern-dropdown:hover .modern-dropdown-content,
-  .modern-dropdown:focus-within .modern-dropdown-content {
+  .dropdown:hover .dropdown-content,
+  .dropdown:focus-within .dropdown-content {
     display: block;
   }
 
@@ -462,12 +462,28 @@
   }
 
   body > .container {
+    position: relative;
+    z-index: 0;
     margin-top: 0;
     padding-top: 30px;
-    border: 1px solid var(--top-border);
+    border: 1px solid transparent;
     border-top: 0;
-    background: #fff;
+    background: transparent;
     box-shadow: none;
+  }
+
+  body > .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    z-index: -1;
+    width: min(1180px, calc(100vw - 32px));
+    transform: translateX(-50%);
+    background: #ffffff;
+    border-left: 1px solid var(--top-border);
+    border-right: 1px solid var(--top-border);
   }
 
   @media (max-width: 980px) {
@@ -480,10 +496,10 @@
     }
 
     .modern-page-header__inner {
-      width: min(100% - 20px, 900px);
+      width: min(100% - 20px, 1180px);
     }
 
-    .modern-topbar__inner {
+    .topbar__inner {
       grid-template-columns: minmax(0, 1fr) auto;
       align-items: start;
       gap: 12px;
@@ -492,15 +508,15 @@
       padding: 14px 0;
     }
 
-    .modern-brand-image {
+    .brand-image {
       width: min(300px, calc(100vw - 134px));
     }
 
-    .modern-menu-toggle {
+    .menu-toggle {
       display: inline-flex;
     }
 
-    .modern-nav-links {
+    .nav-links {
       display: none;
       grid-column: 1 / -1;
       justify-self: stretch;
@@ -510,7 +526,7 @@
       text-align: left;
     }
 
-    .modern-nav-links.is-open {
+    .nav-links.is-open {
       display: grid;
       grid-template-columns: minmax(0, 1fr);
       gap: 0;
@@ -521,16 +537,16 @@
       overflow-y: auto;
     }
 
-    .modern-dropdown::after {
+    .dropdown::after {
       display: none !important;
     }
 
-    .modern-nav-links .modern-dropdown {
+    .nav-links .dropdown {
       width: 100%;
     }
 
-    .modern-nav-links > a,
-    .modern-dropdown-btn {
+    .nav-links > a,
+    .dropdown-btn {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -542,14 +558,14 @@
       text-align: left;
     }
 
-    .modern-nav-links > a:hover,
-    .modern-dropdown-btn:hover,
-    .modern-dropdown-btn:focus-visible {
+    .nav-links > a:hover,
+    .dropdown-btn:hover,
+    .dropdown-btn:focus-visible {
       background: transparent;
       text-decoration: none;
     }
 
-    .modern-dropdown-content {
+    .dropdown-content {
       position: static;
       display: none;
       min-width: 0;
@@ -562,16 +578,16 @@
       box-shadow: none;
     }
 
-    .modern-nav-links .modern-dropdown.is-open .modern-dropdown-content {
+    .nav-links .dropdown.is-open .dropdown-content {
       display: grid;
     }
 
-    .modern-nav-links .modern-dropdown:not(.is-open):hover .modern-dropdown-content,
-    .modern-nav-links .modern-dropdown:not(.is-open):focus-within .modern-dropdown-content {
+    .nav-links .dropdown:not(.is-open):hover .dropdown-content,
+    .nav-links .dropdown:not(.is-open):focus-within .dropdown-content {
       display: none;
     }
 
-    .modern-dropdown-content a {
+    .dropdown-content a {
       min-height: 38px;
       padding: 8px 0;
       border-top: 0;
@@ -581,7 +597,7 @@
       font-weight: 600;
     }
 
-    .modern-dropdown-content a:hover {
+    .dropdown-content a:hover {
       background: transparent;
       color: #fff;
     }
@@ -600,7 +616,7 @@
   }
 
   @media (max-width: 480px) {
-    .modern-menu-toggle {
+    .menu-toggle {
       width: 100px;
       min-width: 100px;
       padding: 0 10px;
@@ -608,7 +624,7 @@
   }
 
   @media print {
-    .modern-topbar,
+    .topbar,
     .modern-breadcrumb {
       display: none !important;
     }
@@ -627,75 +643,101 @@
       box-shadow: none;
     }
   }
-</style>
+.menu-toggle__icon{position:relative;display:inline-block;width:18px;height:14px;flex:0 0 18px}.menu-toggle__icon::before,.menu-toggle__icon::after{content:"";position:absolute;left:0;width:18px;height:2px;border-radius:2px;background:currentColor}.menu-toggle__icon::before{top:0;box-shadow:0 6px 0 currentColor}.menu-toggle__icon::after{top:12px}</style>
+<link rel="stylesheet" href="topbar.css">
+<style id="standard-title-alignment">
+  .title-panel,
+  .modern-title-panel {
+    text-align: center;
+  }
 
+  .title-panel .breadcrumb,
+  .modern-breadcrumb {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .title-panel h1,
+  .modern-title-panel h1,
+  .title-panel .lead,
+  .modern-title-panel .modern-lead {
+    text-align: center;
+  }
+</style>
 </head>
 <body>
 
 <header class="modern-page-header">
   <div class="modern-page-header__inner">
-    <nav class="modern-topbar" aria-label="Navegação principal">
-      <div class="modern-topbar__inner">
-        <a class="modern-site-brand" href="https://www.cadernodenormas.com.br/" aria-label="Página inicial do Caderno de Normas">
-          <img class="modern-brand-image" src="logo-caderno-normas.png" alt="Caderno de Normas do Direito Administrativo Sancionador">
-        </a>
+    <nav class="topbar" aria-label="Navegação principal">
+        <div class="topbar__inner">
+          <a class="site-brand" href="https://www.cadernodenormas.com.br/" aria-label="Página inicial do Caderno de Normas">
+            <img class="brand-image" src="logo-caderno-normas.png" alt="Caderno de Normas do Direito Administrativo Sancionador">
+          </a>
 
-        <button class="modern-menu-toggle" type="button" aria-expanded="false" aria-controls="modern-primary-menu" aria-label="Abrir menu de navegação">
-          <span class="icon-open" aria-hidden="true">☰</span>
-          <span class="icon-close" aria-hidden="true">×</span>
-          <span class="menu-text">Menu</span>
-        </button>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+            <span class="menu-toggle__icon" aria-hidden="true"></span>
+            <span>Menu</span>
+          </button>
 
-        <div class="modern-nav-links" id="modern-primary-menu">
-          <a href="https://www.cadernodenormas.com.br/">Início</a>
-          <a href="https://www.cadernodenormas.com.br/#section1">Constituição Federal</a>
+          <div class="nav-links" id="primary-menu">
+            <a href="https://www.cadernodenormas.com.br/">Início</a>
+            <a href="https://www.cadernodenormas.com.br/#section1">Constituição Federal</a>
 
-          <div class="modern-dropdown">
-            <button class="modern-dropdown-btn" type="button" aria-expanded="false">
-              PAD <span aria-hidden="true">▾</span>
-            </button>
-            <div class="modern-dropdown-content">
-              <a href="https://www.cadernodenormas.com.br/Matriz-de-responsabilizacao.html">Matriz de responsabilização</a>
-              <a href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAD.html">Nota de regularidade</a>
-              <a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAD-e-atas-deliberativas.html">Passo a passo de um PAD</a>
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-expanded="false">
+                PAD <span aria-hidden="true">▾</span>
+              </button>
+
+              <div class="dropdown-content">
+                <a href="https://www.cadernodenormas.com.br/Matriz-de-responsabilizacao.html">Matriz de responsabilização</a>
+                <a href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAD.html">Nota de regularidade</a>
+                <a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAD-e-atas-deliberativas.html">Passo a passo de um PAD</a>
+              </div>
             </div>
-          </div>
 
-          <div class="modern-dropdown">
-            <button class="modern-dropdown-btn" type="button" aria-expanded="false">
-              PAR <span aria-hidden="true">▾</span>
-            </button>
-            <div class="modern-dropdown-content">
-              <a href="https://www.cadernodenormas.com.br/Requisitos-Lei-anticorrupcao.html">Matriz de requisitos</a>
-              <a href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAR.html">Nota de regularidade</a>
-              <a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAR-e-atas-deliberativas.htm">Passo a passo de um PAR</a>
-            </div>
-          </div>
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-expanded="false">
+                PAR <span aria-hidden="true">▾</span>
+              </button>
 
-          <div class="modern-dropdown">
-            <button class="modern-dropdown-btn" type="button" aria-expanded="false">
-              Leis <span aria-hidden="true">▾</span>
-            </button>
-            <div class="modern-dropdown-content">
-              <a href="https://www.cadernodenormas.com.br/#section2">Lei nº 8.112/1990</a>
-              <a href="https://www.cadernodenormas.com.br/#section3">Lei nº 9.784/1999</a>
-              <a href="https://www.cadernodenormas.com.br/#section4">Lei nº 12.527/2011</a>
-              <a href="https://www.cadernodenormas.com.br/#section5">Lei nº 12.846/2013</a>
-              <a href="https://www.cadernodenormas.com.br/#section6">Decreto nº 11.129/2022</a>
+              <div class="dropdown-content">
+                <a href="https://www.cadernodenormas.com.br/Requisitos-Lei-anticorrupcao.html">Matriz de requisitos</a>
+                <a href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAR.html">Nota de regularidade</a>
+                <a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAR-e-atas-deliberativas.html">Passo a passo de um PAR</a>
+              </div>
             </div>
-          </div>
 
-          <div class="modern-dropdown">
-            <button class="modern-dropdown-btn" type="button" aria-expanded="false">
-              Gestão <span aria-hidden="true">▾</span>
-            </button>
-            <div class="modern-dropdown-content">
-              <a href="https://www.cadernodenormas.com.br/criterios-de-priorizacao.html">Critérios de priorização</a>
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-expanded="false">
+                Leis <span aria-hidden="true">▾</span>
+              </button>
+
+              <div class="dropdown-content">
+                <a href="https://www.cadernodenormas.com.br/#section2">Lei nº 8.112/1990</a>
+                <a href="https://www.cadernodenormas.com.br/#section3">Lei nº 9.784/1999</a>
+                <a href="https://www.cadernodenormas.com.br/#section4">Lei nº 12.527/2011 (LAI)</a>
+                <a href="https://www.cadernodenormas.com.br/#section5">Lei nº 12.846/2013</a>
+                <a href="https://www.cadernodenormas.com.br/#section6">Decreto nº 11.129/2022</a>
+                <a href="https://www.cadernodenormas.com.br/#section7">Decreto nº 1.171/1994</a>
+                <a href="https://www.cadernodenormas.com.br/#section8">Lei nº 5.172/1966 (CTN)</a>
+                <a href="https://www.cadernodenormas.com.br/#section9">Decreto-Lei nº 4.657/1942 (LINDB)</a>
+              </div>
             </div>
-          </div>
+
+            <div class="dropdown">
+              <button class="dropdown-btn" type="button" aria-expanded="false">
+                Gestão <span aria-hidden="true">▾</span>
+              </button>
+
+              <div class="dropdown-content">
+                <a href="https://www.cadernodenormas.com.br/criterios-de-priorizacao.html">Critérios de priorização</a>
+                <a href="https://www.cadernodenormas.com.br/governanca/" target="_blank" rel="noopener noreferrer">Governança e Gestão</a>
+             </div>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
     <section class="modern-title-panel" aria-labelledby="modern-page-title">
       <p class="modern-breadcrumb">
@@ -968,14 +1010,14 @@ servidor), (cargo do servidor), matrícula SIAPE nº (número),
 
 <script id="modern-top-script">
   (() => {
-    const menuToggle = document.querySelector('.modern-menu-toggle');
-    const primaryMenu = document.getElementById('modern-primary-menu');
-    const dropdownButtons = Array.from(document.querySelectorAll('.modern-dropdown-btn'));
+    const menuToggle = document.querySelector('.menu-toggle');
+    const primaryMenu = document.getElementById('primary-menu');
+    const dropdownButtons = Array.from(document.querySelectorAll('.dropdown-btn'));
 
     function closeDropdowns() {
-      document.querySelectorAll('.modern-dropdown.is-open').forEach((dropdown) => {
+      document.querySelectorAll('.dropdown.is-open').forEach((dropdown) => {
         dropdown.classList.remove('is-open');
-        dropdown.querySelector('.modern-dropdown-btn')?.setAttribute('aria-expanded', 'false');
+        dropdown.querySelector('.dropdown-btn')?.setAttribute('aria-expanded', 'false');
       });
     }
 
@@ -1006,7 +1048,7 @@ servidor), (cargo do servidor), matrícula SIAPE nº (número),
     dropdownButtons.forEach((button) => {
       button.addEventListener('click', () => {
         if (window.innerWidth > 980) return;
-        const dropdown = button.closest('.modern-dropdown');
+        const dropdown = button.closest('.dropdown');
         if (!dropdown) return;
         const willOpen = !dropdown.classList.contains('is-open');
         closeDropdowns();
@@ -1020,7 +1062,7 @@ servidor), (cargo do servidor), matrícula SIAPE nº (número),
         window.innerWidth <= 980 &&
         primaryMenu &&
         !primaryMenu.contains(event.target) &&
-        !event.target.closest('.modern-menu-toggle')
+        !event.target.closest('.menu-toggle')
       ) {
         closeMenu();
       }
