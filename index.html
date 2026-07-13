@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Language" content="pt-BR">
   <meta name="description" content="Guia detalhado sobre as normas de Direito Sancionador, com base em anotações pessoais de Murilo de Mello Campos, atual Corregedor do Ministério do Desenvolvimento, Indústria, Comércio e Serviços (MDIC).">
 
@@ -76,51 +77,670 @@
   ]
 }
 </script>
+
+<style>
+  :root {
+    --topbar-bg: #004361;
+    --topbar-bg-strong: #00354f;
+    --topbar-text: #ffffff;
+    --topbar-height: 122px;
+  }
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  .page-header {
+    background: transparent;
+    padding: var(--topbar-height) 0 0;
+  }
+
+  .topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    background: var(--topbar-bg);
+    color: var(--topbar-text);
+    box-shadow: 0 16px 34px rgba(4, 29, 58, 0.18);
+  }
+
+  .topbar__inner {
+    display: grid;
+    grid-template-columns: minmax(240px, 386px) 1fr auto;
+    align-items: center;
+    gap: 24px;
+    width: min(1180px, calc(100% - 32px));
+    min-height: 86px;
+    margin: 0 auto;
+    padding: 18px 0;
+  }
+
+  .content {
+    width: min(1180px, calc(100% - 32px));
+    max-width: none;
+    margin: 30px auto 0;
+    overflow-x: hidden;
+  }
+
+  .content .juridical-info {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    overflow-x: hidden;
+  }
+
+  .content p,
+  .content li,
+  .content .comentario,
+  .content .textContainer,
+  .content .juridical-info,
+  .content .section {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .content a {
+    overflow-wrap: anywhere;
+  }
+
+  .content img,
+  .content iframe,
+  .content table {
+    max-width: 100%;
+  }
+
+  .content table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .site-brand {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .brand-image {
+    display: block;
+    width: min(386px, 100%);
+    height: auto;
+  }
+
+  .menu-toggle {
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+    z-index: auto;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 42px;
+    padding: 9px 14px;
+    border: 1px solid rgba(255,255,255,0.42);
+    border-radius: 4px;
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    font: inherit;
+    font-weight: 750;
+    cursor: pointer;
+    transform: none;
+  }
+
+  .menu-toggle:hover,
+  .menu-toggle:focus-visible {
+    background: rgba(255,255,255,0.16);
+    outline: none;
+  }
+
+  .menu-toggle__icon {
+    position: relative;
+    width: 18px;
+    height: 12px;
+    border-top: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+  }
+
+  .menu-toggle__icon::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    border-top: 2px solid currentColor;
+    transform: translateY(-50%);
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(14px, 2.4vw, 30px);
+    white-space: nowrap;
+    font-size: 0.96rem;
+    font-weight: 700;
+  }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.92);
+    text-decoration: none;
+  }
+
+  .nav-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown::after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 8px;
+  }
+
+  .dropdown:hover::after,
+  .dropdown:focus-within::after {
+    display: block;
+  }
+
+  .dropdown-btn {
+    background: transparent;
+    border: 0;
+    color: rgba(255,255,255,.92);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 12px 6px;
+    border-radius: 4px;
+  }
+
+  .dropdown-btn:hover,
+  .dropdown-btn:focus-visible {
+    background: rgba(255,255,255,0.10);
+    color: #fff;
+    outline: none;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    min-width: 260px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(0,0,0,.18);
+    overflow: hidden;
+    z-index: 1000;
+  }
+
+  .dropdown-content a {
+    display: block;
+    padding: 12px 18px;
+    color: #17212b;
+    text-decoration: none;
+    font-weight: 500;
+    background: #fff;
+  }
+
+  .dropdown-content a:hover {
+    background: #eef4f8;
+    color: var(--topbar-bg);
+  }
+
+  .dropdown:hover .dropdown-content,
+  .dropdown:focus-within .dropdown-content {
+    display: block;
+  }
+
+  @media (max-width: 980px) {
+    :root {
+      --topbar-height: 88px;
+    }
+
+    .page-header {
+      padding: var(--topbar-height) 0 0;
+    }
+
+    .topbar {
+      position: fixed;
+      top: 0;
+    }
+
+    .topbar__inner {
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      min-height: 72px;
+      gap: 12px;
+      width: min(100% - 24px, 1180px);
+      padding: 12px 0;
+    }
+
+    .content {
+      width: min(100% - 20px, 1180px);
+      margin-top: 18px;
+    }
+
+    .brand-image {
+      width: min(300px, calc(100vw - 132px));
+      max-width: 100%;
+    }
+
+    .menu-toggle {
+      display: inline-flex;
+      justify-self: end;
+      align-self: center;
+      min-width: max-content;
+      min-height: 44px;
+      padding: 9px 14px;
+    }
+
+    .nav-links {
+      display: none;
+      grid-column: 1 / -1;
+      justify-self: stretch;
+      justify-content: stretch;
+      width: 100%;
+      white-space: normal;
+      font-size: 0.94rem;
+      text-align: left;
+    }
+
+    .nav-links.is-open {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0;
+      justify-items: stretch;
+      align-items: start;
+      padding: 10px 0 2px;
+      max-height: calc(100vh - 88px);
+      overflow-y: auto;
+    }
+
+    .dropdown::after {
+      display: none !important;
+    }
+
+    .nav-links .dropdown {
+      width: 100%;
+    }
+
+    .nav-links a,
+    .dropdown-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      min-height: 44px;
+      padding: 11px 0;
+      color: #fff;
+      text-align: left;
+      border-top: 1px solid rgba(255,255,255,0.16);
+    }
+
+    .nav-links a:hover,
+    .dropdown-btn:hover,
+    .dropdown-btn:focus-visible {
+      background: transparent;
+      text-decoration: none;
+    }
+
+    .dropdown-content {
+      position: static;
+      display: none;
+      min-width: 0;
+      margin: 0 0 8px;
+      padding: 0 0 4px 14px;
+      background: transparent;
+      border-left: 2px solid rgba(255,255,255,0.22);
+      border-radius: 0;
+      box-shadow: none;
+      overflow: visible;
+    }
+
+    .nav-links .dropdown.is-open .dropdown-content {
+      display: grid;
+    }
+
+    .nav-links .dropdown:not(.is-open):hover .dropdown-content,
+    .nav-links .dropdown:not(.is-open):focus-within .dropdown-content {
+      display: none;
+    }
+
+    .dropdown-content a {
+      min-height: 38px;
+      padding: 8px 0;
+      color: rgba(255,255,255,0.86);
+      background: transparent;
+      font-size: 0.92rem;
+      font-weight: 600;
+      border-top: 0;
+    }
+
+    .dropdown-content a:hover {
+      background: transparent;
+      color: #fff;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .topbar__inner {
+      width: min(100% - 18px, 1180px);
+      gap: 8px;
+    }
+
+    .brand-image {
+      width: min(230px, calc(100vw - 118px));
+    }
+
+    .menu-toggle {
+      padding: 8px 10px;
+    }
+
+    .menu-toggle span:last-child {
+      font-size: 0.92rem;
+    }
+
+    .content {
+      width: min(100% - 16px, 1180px);
+      margin-top: 14px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    #section0 .sections-container {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 18px !important;
+    }
+
+    #section0 .section,
+    #section0 .links-list,
+    #section0 .links-list li,
+    #section0 .links-list a {
+      max-width: 100% !important;
+      text-align: left !important;
+      word-break: normal !important;
+      overflow-wrap: break-word !important;
+      word-spacing: normal !important;
+      letter-spacing: 0 !important;
+      hyphens: auto !important;
+    }
+
+    #section0 .section {
+      width: 100% !important;
+      padding-inline: 14px !important;
+    }
+
+    #section0 .section h2 {
+  font-size: clamp(1.18rem, 5.2vw, 1.45rem) !important;
+  line-height: 1.2 !important;
+  text-align: center !important;
+}
+
+#section0 .links-list a {
+  display: block !important;
+  width: 100% !important;
+  font-size: clamp(0.9rem, 3.8vw, 1rem) !important;
+  line-height: 1.35 !important;
+  white-space: normal !important;
+}
+
+    #section0 .links-list {
+      display: grid !important;
+      gap: 12px !important;
+      padding-left: 0 !important;
+    }
+
+    #section0 .links-list li {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+
+    #section0 .links-list a {
+      display: block !important;
+      width: 100% !important;
+      font-size: clamp(1rem, 4.4vw, 1.12rem) !important;
+      line-height: 1.35 !important;
+      white-space: normal !important;
+    }
+
+    #cn-chat-panel {
+      position: fixed !important;
+      top: auto !important;
+      right: 10px !important;
+      bottom: 74px !important;
+      left: auto !important;
+      width: min(360px, calc(100vw - 20px)) !important;
+      height: min(62dvh, 500px) !important;
+      max-height: calc(100dvh - 106px) !important;
+      border-radius: 14px !important;
+      overflow: hidden !important;
+    }
+
+    #cn-chat-panel[style*="display: block"],
+    #cn-chat-panel.is-open,
+    #cn-chat-panel.open,
+    #cn-chat-panel.active {
+      display: flex !important;
+      flex-direction: column !important;
+    }
+
+    #cn-chat-panel.expanded,
+    #cn-chat-panel.is-expanded {
+      top: 10px !important;
+      right: 10px !important;
+      bottom: 10px !important;
+      left: 10px !important;
+      width: auto !important;
+      height: auto !important;
+      max-height: none !important;
+    }
+
+    #cn-chat-header {
+      min-height: 48px !important;
+      padding: 10px 14px !important;
+      gap: 10px !important;
+    }
+
+    #cn-chat-header strong {
+      flex: 1 1 auto !important;
+      font-size: 0.88rem !important;
+      line-height: 1.25 !important;
+    }
+
+    #cn-chat-actions {
+      display: inline-flex !important;
+      flex: 0 0 auto !important;
+      align-items: center !important;
+      gap: 6px !important;
+      margin-left: auto !important;
+    }
+
+    #cn-chat-expand,
+    #cn-chat-close {
+      flex: 0 0 34px !important;
+      width: 34px !important;
+      height: 34px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 0 !important;
+      border: 0 !important;
+      border-radius: 10px !important;
+      background: rgba(255,255,255,0.12) !important;
+      color: #fff !important;
+      cursor: pointer !important;
+      line-height: 1 !important;
+    }
+
+    #cn-chat-close {
+      font-size: 1.25rem !important;
+      font-weight: 800 !important;
+    }
+
+    #cn-chat-messages {
+      flex: 1 1 auto !important;
+      min-height: 0 !important;
+      height: auto !important;
+      padding: 12px !important;
+      overflow-y: auto !important;
+    }
+
+    #cn-chat-messages > * {
+      max-width: 100% !important;
+      overflow-wrap: anywhere !important;
+    }
+
+    #cn-chat-footer {
+      flex: 0 0 auto !important;
+      padding: 10px 12px 8px !important;
+    }
+
+    #cn-chat-form {
+      display: grid !important;
+      grid-template-columns: minmax(0, 1fr) auto !important;
+      align-items: end !important;
+      gap: 8px !important;
+    }
+
+    #cn-chat-input {
+      width: 100% !important;
+      min-height: 48px !important;
+      max-height: 96px !important;
+      padding: 10px 12px !important;
+      resize: none !important;
+    }
+
+    #cn-chat-send {
+      min-height: 48px !important;
+      padding: 0 14px !important;
+      white-space: nowrap !important;
+    }
+
+    #cn-chat-note {
+      margin-top: 8px !important;
+      font-size: 0.72rem !important;
+      line-height: 1.35 !important;
+    }
+  }
+
+  @media (max-width: 380px) {
+    #cn-chat-panel {
+      right: 8px !important;
+      bottom: 70px !important;
+      width: calc(100vw - 16px) !important;
+      height: min(58dvh, 460px) !important;
+    }
+
+    #cn-chat-form {
+      grid-template-columns: 1fr !important;
+    }
+
+    #cn-chat-send {
+      width: 100% !important;
+    }
+  }
+</style>
   
 </head>
 <body>
-<div class="top">
-  
- 
-  <div class="top-topic">
-    <button type="button" class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menu" aria-expanded="false" aria-controls="sidebar">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <h1 class="two-lines" onclick="window.location.href='https://www.cadernodenormas.com.br';" style="cursor: pointer;">Caderno de Normas<br>do Direito Administrativo Sancionador</h1>
-    <div class="search-container">
-      <!-- Campo de pesquisa -->
-      <input type="text" id="pesquisa" onkeyup="searchFunction()" placeholder="Buscar lei ou norma...">
-      <!-- Botões -->
-      <div class="button-container">
-          <button id="previousBtn" onclick="rolarParaOcorrenciaAnterior()">Anterior</button>
-          <button id="nextBtn" onclick="rolarParaProximaOcorrencia()">Próximo</button>
-          <button type="submit" id="newSearchBtn" onclick="atualizarPagina()">Nova Pesquisa</button>
+<header class="page-header">
+  <nav class="topbar" aria-label="Navegação principal">
+    <div class="topbar__inner">
+      <a class="site-brand" href="https://www.cadernodenormas.com.br/" aria-label="Página inicial do Caderno de Normas">
+        <img class="brand-image" src="logo-caderno-normas.png" alt="Caderno de Normas do Direito Administrativo Sancionador">
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+        <span class="menu-toggle__icon" aria-hidden="true"></span>
+        <span>Menu</span>
+      </button>
+
+      <div class="nav-links" id="primary-menu">
+        <a href="https://www.cadernodenormas.com.br/">Início</a>
+        <a href="https://www.cadernodenormas.com.br/#section1">Constituição Federal</a>
+
+        <div class="dropdown">
+          <button class="dropdown-btn" type="button" aria-expanded="false">
+            PAD <span aria-hidden="true">▾</span>
+          </button>
+
+          <div class="dropdown-content">
+            <a href="https://www.cadernodenormas.com.br/Matriz-de-responsabilizacao.html">Matriz de responsabilização</a>
+            <a href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAD.html">Nota de regularidade</a>
+            <a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAD-e-atas-deliberativas.html">Passo a passo de um PAD</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn" type="button" aria-expanded="false">
+            PAR <span aria-hidden="true">▾</span>
+          </button>
+
+          <div class="dropdown-content">
+            <a href="https://www.cadernodenormas.com.br/Requisitos-Lei-anticorrupcao.html">Matriz de requisitos</a>
+            <a href="https://www.cadernodenormas.com.br/Nota-de-regularidade-PAR.html">Nota de regularidade</a>
+            <a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAR-e-atas-deliberativas.html">Passo a passo de um PAR</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn" type="button" aria-expanded="false">
+            Leis <span aria-hidden="true">▾</span>
+          </button>
+
+          <div class="dropdown-content">
+            <a href="https://www.cadernodenormas.com.br/#section2">Lei nº 8.112/1990</a>
+            <a href="https://www.cadernodenormas.com.br/#section3">Lei nº 9.784/1999</a>
+            <a href="https://www.cadernodenormas.com.br/#section4">Lei nº 12.527/2011 (LAI)</a>
+            <a href="https://www.cadernodenormas.com.br/#section5">Lei nº 12.846/2013</a>
+            <a href="https://www.cadernodenormas.com.br/#section6">Decreto nº 11.129/2022</a>
+            <a href="https://www.cadernodenormas.com.br/#section7">Decreto nº 1.171/1994</a>
+            <a href="https://www.cadernodenormas.com.br/#section8">Lei nº 5.172/1966 (CTN)</a>
+            <a href="https://www.cadernodenormas.com.br/#section9">Decreto-Lei nº 4.657/1942 (LINDB)</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropdown-btn" type="button" aria-expanded="false">
+            Gestão <span aria-hidden="true">▾</span>
+          </button>
+
+          <div class="dropdown-content">
+            <a href="https://www.cadernodenormas.com.br/criterios-de-priorizacao.html">Critérios de priorização</a>
+            <a href="https://www.cadernodenormas.com.br/governanca/" target="_blank" rel="noopener noreferrer">Governança e Gestão</a>
+          </div>
+        </div>
       </div>
-  </div>
-     
-    <div class="sidebar" id="sidebar">
-      <br><br><br><br><br><br>
-      
-      <a onclick="scrollToTop()">Sobre o caderno</a>
-      <a href="#section1">Constituição Federal</a>
-      <a href="#section2">Lei nº 8112/1990</a>
-      <a href="#section3">Lei nº 9.784/1999</a>
-      <a href="#section4">Lei nº 12.527/2011</a>
-      <a href="#section5">Lei nº 12.846/2013</a>
-      <a href="#section6">Decreto nº 11.129/2022</a>
-      <a href="#section7">Decreto nº 1.171/1994</a>
-      <a href="#section8">Lei nº 5.172/1966</a>
-      <a href="#section9">Decreto-Lei nº 4.657/1942</a>
-      <a href="#section10">Materiais de Apoio, com guias e passo a passo.</a>
-      <a href="https://www.cadernodenormas.com.br/governanca/" target="_blank" rel="noopener noreferrer">Governança e Gestão.</a>
-      <a onclick="rolarTotalmenteParaBaixo()">Contato</a>
-    
     </div>
-    <br>
-  </div>
-</div>
+  </nav>
+</header>
 <div class="content">
   <section id="section0">
     <div class="juridical-info">
@@ -1685,7 +2305,7 @@ Pena - detenção, de seis meses a dois anos, ou multa.</p>
 <footer class="footer">
   
     <p> Desenvolvido por Murilo de Mello Campos<br>
-      Sugestões de melhorias: murilo.campos@mdic.gov.br</p>
+      Sugestões de melhorias: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3a574f4853565514595b574a55497a575e5359145d554c145848">[email&#160;protected]</a></p>
   </footer>
 
   <!-- Botão de voltar ao topo -->
@@ -1703,7 +2323,10 @@ Pena - detenção, de seis meses a dois anos, ou multa.</p>
 <div id="cn-chat-panel" role="dialog" aria-label="Assistente de IA do Caderno de Normas.">
   <div id="cn-chat-header">
     <strong>Assistente de IA do Caderno de Normas</strong>
-    <button id="cn-chat-expand" aria-label="Ampliar tela" title="Ampliar">⤢</button>
+    <div id="cn-chat-actions">
+      <button id="cn-chat-expand" aria-label="Ampliar tela" title="Ampliar">⤢</button>
+      <button id="cn-chat-close" type="button" aria-label="Fechar chat" title="Fechar">&times;</button>
+    </div>
 
   </div>
 
@@ -1722,9 +2345,81 @@ Pena - detenção, de seis meses a dois anos, ou multa.</p>
 </div>
 
 
+  <script>
+    (() => {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const primaryMenu = document.getElementById('primary-menu');
+      const dropdownButtons = Array.from(document.querySelectorAll('.dropdown-btn'));
 
+      function closeDropdowns() {
+        document.querySelectorAll('.dropdown.is-open').forEach((dropdown) => {
+          dropdown.classList.remove('is-open');
+          dropdown.querySelector('.dropdown-btn')?.setAttribute('aria-expanded', 'false');
+        });
+      }
 
-  <script src="assets/js/app.js"></script>
+      function closeMenu() {
+        if (!menuToggle || !primaryMenu) return;
+        primaryMenu.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        closeDropdowns();
+      }
+
+      if (menuToggle && primaryMenu) {
+        menuToggle.addEventListener('click', () => {
+          const isOpen = primaryMenu.classList.toggle('is-open');
+          menuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        primaryMenu.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', closeMenu);
+        });
+
+        window.addEventListener('resize', () => {
+          if (window.innerWidth > 980) closeMenu();
+        });
+      }
+
+      dropdownButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          if (window.innerWidth > 980) return;
+          const dropdown = button.closest('.dropdown');
+          if (!dropdown) return;
+          const willOpen = !dropdown.classList.contains('is-open');
+          closeDropdowns();
+          dropdown.classList.toggle('is-open', willOpen);
+          button.setAttribute('aria-expanded', String(willOpen));
+        });
+      });
+
+      document.addEventListener('click', (event) => {
+        if (window.innerWidth <= 980 && primaryMenu && !primaryMenu.contains(event.target) && !event.target.closest('.menu-toggle')) {
+          closeMenu();
+        }
+      });
+    })();
+
+    (() => {
+      const chatPanel = document.getElementById('cn-chat-panel');
+      const chatButton = document.getElementById('cn-chat-btn');
+      const chatClose = document.getElementById('cn-chat-close');
+
+      if (!chatPanel || !chatClose) return;
+
+      chatClose.addEventListener('click', () => {
+        chatPanel.classList.remove('is-open', 'open', 'active', 'expanded', 'is-expanded');
+        chatPanel.style.display = 'none';
+        chatButton?.setAttribute('aria-expanded', 'false');
+        chatButton?.focus();
+      });
+    })();
+  </script>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/app.js"></script>
   <script src="assets/js/chat.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"9463c914ca684b92a43be8d35b8ddcda","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"9463c914ca684b92a43be8d35b8ddcda","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"9463c914ca684b92a43be8d35b8ddcda","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"9463c914ca684b92a43be8d35b8ddcda","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
