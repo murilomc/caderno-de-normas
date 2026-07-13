@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Caderno de Normas - Matriz de responsabilização</title>
+
+ 
+  <!-- Hreflang para especificar o idioma -->
+  <link rel="alternate" hreflang="pt-BR" href="https://www.cadernodenormas.com.br/">
+  
+  <!-- Favicons do gov.br -->
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.gov.br/++theme++padrao_govbr/favicons/favicon-32x32.png">
+  <link rel="shortcut icon" type="image/png" href="https://www.gov.br/++theme++padrao_govbr/favicons/favicon-48x48.png">
+
+
+<style>
+
+
+
+  .anticorrupcao-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .anticorrupcao-table th, .anticorrupcao-table td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+  }
+
+  .anticorrupcao-table th {
+    background-color: #003366; /* Azul escuro */
+    color: white;
+  }
+
+  .anticorrupcao-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  .anticorrupcao-table tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+
+  .obs {
+    background-color: #fdd835;
+    font-style: italic; /* Mudança para itálico ao invés de negrito para diferenciar as observações */
+    font-weight: normal;
+  }
+
+.title-row th {
+    background-color: #007bff; /* Azul mais claro para o título */
+    color: white;
+    font-size: 1.5em; /* Tamanho maior para o título */
+  }
+
+ /* Estilo adicional para os campos de entrada de texto */
+  input[type="text"] {
+    width: 100%; /* Faz com que o campo de texto ocupe toda a largura da célula */
+    box-sizing: border-box; /* Garante que o padding não aumente a largura do campo */
+  }
+
+  /* Estilo para o botão de impressão */
+  .print-button {
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .print-button i {
+    margin-right: 8px;
+  }
+
+/* Estilo do link */
+  .tooltip-link {
+    position: relative;
+    text-decoration: none;
+    color: #007bff;
+  }
+
+  /* Estilo do tooltip */
+  .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+   
+    /* Posicionamento */
+    position: absolute;
+    z-index: 1;
+    top: 125%; /* Posiciona abaixo do link */
+    left: 50%;
+    margin-left: -60px; /* Metade da largura para centralizar */
+
+    /* Efeitos */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  /* Exibe o tooltip quando o usuário passa o mouse sobre o link */
+  .tooltip-link:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+#ato-ilicito {
+            width: 500px; /* Define a largura do campo select */
+            height: 35px; /* Define a altura do campo select, isso afeta a barra de rolagem interna e não o número de opções visíveis ao abrir o dropdown */
+            border: 1px solid #ccc; /* Opcional: ajusta a borda do campo */
+            border-radius: 4px; /* Opcional: adiciona bordas arredondadas */
+            padding: 5px; /* Opcional: adiciona um pouco de espaço interno para que o texto não fique muito próximo da borda */
+        }
+
+</style>
+</head>
+<body>
+
+<table class="anticorrupcao-table">
+<tbody><tr class="title-row">
+    <th colspan="3">Matriz de responsabilização do processo administrativo disciplinar</th>
+  </tr>
+  <tr>
+    <th>nº</th>
+    <th>Item</th>
+   
+    <th>Detalhamento do Fato(s); Agente(s); Data ou período; Evidências; Unidade de ocorrência; Enquadramento legal; Ação recomendada.</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Descrição do fato irregular:</td>
+    <td><input type="text" name="descricao1"></td>
+  </tr>
+
+  <tr>
+    <td>2</td>
+    <td>Agente público envolvido:</td>
+    <td><input type="text" name="descricao2"></td>
+  </tr>
+
+<tr>
+    <td>3</td>
+    <td>Data ou período do fato apurado:</td>
+    <td>data: <input type="date" id="single-date" name="single-date" placeholder="dd/mm/aaaa"> ou inserir o período:<input type="date" id="single-date" name="single-date" placeholder="dd/mm/aaaa"></td>
+  </tr>
+  <tr><td>4</td>
+    <td>Unidade em que foi praticado o ato lesivo:</td>
+    <td><input type="text" name="descricao2"></td>
+  </tr>
+<tr>
+    <td>5</td>
+    <td>Evidências ou elementos de informação que apontem para a ocorrência da irregularidade e sua vinculação ao agente:</td>
+    <td><input type="text" name="descricao3"></td>
+  </tr>
+<tr>
+</tr>
+
+<tr>
+    <td>6</td>
+    <td>Possível enquadramento da infração nos incisos do art. 116 da Lei nº 8.112/90:</td>
+    <td>
+
+<select id="ato-ilicito" name="ato-ilicito">
+Selecione:
+<option value="1" selected="selected">------</option>
+  
+<option value="2">I - Exercer com zelo e dedicação as atribuições do cargo;</option>
+<option value="3">II - Ser leal às instituições a que servir;</option>
+<option value="4">III - Observar as normas legais e regulamentares;</option>
+<option value="5">IV - Cumprir as ordens superiores, exceto quando manifestamente ilegais;</option>
+<option value="6">V - a) Atender com presteza ao público em geral, prestando as informações requeridas, ressalvadas as protegidas por sigilo;</option>
+<option value="7">V - b) Atender com presteza à expedição de certidões requeridas para defesa de direito ou esclarecimento de situações de interesse pessoal;</option>
+<option value="8">V - c) Atender com presteza às requisições para a defesa da Fazenda Pública;</option>
+<option value="9">VI - Levar as irregularidades de que tiver ciência em razão do cargo ao conhecimento da autoridade superior ou, quando houver suspeita de envolvimento desta, ao conhecimento de outra autoridade competente para apuração;</option>
+<option value="10">VII - Zelar pela economia do material e a conservação do patrimônio público;</option>
+<option value="11">VIII - Guardar sigilo sobre assunto da repartição;</option>
+<option value="12">IX - Manter conduta compatível com a moralidade administrativa;</option>
+<option value="13">X - Ser assíduo e pontual ao serviço;</option>
+<option value="14">XI - Tratar com urbanidade as pessoas;</option>
+<option value="15">XII - Representar contra ilegalidade, omissão ou abuso de poder.</option>
+</select>
+
+</td>
+  </tr>
+
+<tr>
+    <td>7</td>
+    <td>Possível enquadramento da infração nos incisos do art. 117 da Lei nº 8.112/90:</td>
+    <td>
+
+<select id="ato-ilicito" name="ato-ilicito">
+Selecione:
+<option value="1" selected="selected">------</option>
+  
+<option value="2">I - Ausentar-se do serviço durante o expediente, sem prévia autorização do chefe imediato;</option>
+<option value="3">II - Retirar, sem prévia anuência da autoridade competente, qualquer documento ou objeto da repartição;</option>
+<option value="4">III - Recusar fé a documentos públicos;</option>
+<option value="5">IV - Opor resistência injustificada ao andamento de documento e processo ou execução de serviço;</option>
+<option value="6">V - Promover manifestação de apreço ou desapreço no recinto da repartição;</option>
+<option value="7">VI - Cometer a pessoa estranha à repartição, fora dos casos previstos em lei, o desempenho de atribuição que seja de sua responsabilidade ou de seu subordinado;</option>
+<option value="8">VII - Coagir ou aliciar subordinados no sentido de filiarem-se a associação profissional ou sindical, ou a partido político;</option>
+<option value="9">VIII - Manter sob sua chefia imediata, em cargo ou função de confiança, cônjuge, companheiro ou parente até o segundo grau civil;</option>
+<option value="10">IX - Valer-se do cargo para lograr proveito pessoal ou de outrem, em detrimento da dignidade da função pública;</option>
+<option value="11">X - Participar de gerência ou administração de sociedade privada, personificada ou não personificada, exercer o comércio, exceto na qualidade de acionista, cotista ou comanditário;</option>
+<option value="12">XI - Atuar, como procurador ou intermediário, junto a repartições públicas, salvo quando se tratar de benefícios previdenciários ou assistenciais de parentes até o segundo grau, e de cônjuge ou companheiro;</option>
+<option value="13">XII - Receber propina, comissão, presente ou vantagem de qualquer espécie, em razão de suas atribuições;</option>
+<option value="14">XIII - Aceitar comissão, emprego ou pensão de estado estrangeiro;</option>
+<option value="15">XIV - Praticar usura sob qualquer de suas formas;</option>
+<option value="16">XV - Proceder de forma desidiosa;</option>
+<option value="17">XVI - Utilizar pessoal ou recursos materiais da repartição em serviços ou atividades particulares;</option>
+<option value="18">XVII - Cometer a outro servidor atribuições estranhas ao cargo que ocupa, exceto em situações de emergência e transitórias;</option>
+<option value="19">XVIII - Exercer quaisquer atividades que sejam incompatíveis com o exercício do cargo ou função e com o horário de trabalho;</option>
+<option value="20">XIX - Recusar-se a atualizar seus dados cadastrais quando solicitado.</option>
+
+ 
+</select>
+
+</td>
+  </tr>
+
+<tr><td>8</td>
+    <td>Ação recomendada:</td>
+    <td>
+
+      <select id="ato-ilicito" name="ato-ilicito">
+      Selecione:
+      <option value="1" selected="selected">------</option>
+        
+      <option value="2">Instauraçâo de processo administrativo disciplinar.</option>
+      <option value="3">Proposta de celebração de Termo de ajustamento de conduta.</option>
+      <option value="4">Arquivamento.</option>  
+      <option value="5">Arquivamento e recomendação de encaminhamento.</option>  
+      </select>
+      
+      </td>
+  </tr>
+
+  <!-- Repetir as linhas abaixo para os demais itens da tabela -->
+  <tr>
+    <td>...</td>
+    <td>...</td>
+    <td></td>
+    
+  </tr>
+ 
+</tbody></table>
+
+<!-- Botões de ação após a tabela -->
+<div class="action-buttons">
+  <button onclick="window.print();" class="print-button">
+    🖨️ Imprimir
+  </button>
+  <button onclick="resetForm();" class="print-button">
+    🗑️ Limpar
+  </button>
+</div>
+
+<script>
+function resetForm() {
+  // Reseta os seletores para o valor padrão
+  document.querySelectorAll('.anticorrupcao-table select').forEach(function(select) {
+    select.selectedIndex = 0;
+  });
+  
+  // Limpa todos os campos de texto
+  document.querySelectorAll('.anticorrupcao-table input[type="text"]').forEach(function(input) {
+    input.value = '';
+  });
+}
+</script>
+
+
+<script>
+    document.getElementById('start-date').addEventListener('change', function() {
+        var startDate = this.value;
+        var endDateInput = document.getElementById('end-date');
+        endDateInput.min = startDate;
+    });
+</script>
+
+
+</body></html>
