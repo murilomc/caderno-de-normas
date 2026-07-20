@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Consulta organizada dos Enunciados da Consultoria-Geral da União publicados em 20 de julho de 2026, com pesquisa por tema, número e fundamento legal.">
+  <link rel="canonical" href="https://www.cadernodenormas.com.br/enunciados-agu">
+  <link rel="icon" type="image/png" href="https://www.cadernodenormas.com.br/flavicon2.png">
+  <title>Enunciados da AGU | Caderno de Normas</title>
+
+  <style>
+    :root {
+      --azul: #004361;
+      --azul-escuro: #00354f;
+      --azul-claro: #eaf3f7;
+      --azul-borda: #cbdde6;
+      --texto: #20303b;
+      --texto-suave: #5e6f79;
+      --fundo: #f4f7f9;
+      --branco: #ffffff;
+      --destaque: #c7922b;
+      --sombra: 0 14px 34px rgba(4, 29, 58, 0.10);
+      --largura: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--fundo);
+      color: var(--texto);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--azul);
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--azul);
+      box-shadow: 0 10px 28px rgba(4, 29, 58, 0.20);
+    }
+
+    .topbar__inner {
+      width: min(var(--largura), calc(100% - 32px));
+      min-height: 88px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 15px 0;
+    }
+
+    .brand-image {
+      display: block;
+      width: min(386px, 70vw);
+      height: auto;
+    }
+
+    .topbar__links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-weight: 700;
+    }
+
+    .topbar__links a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .topbar__links a:hover,
+    .topbar__links a:focus-visible {
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+
+    .hero {
+      background:
+        linear-gradient(135deg, rgba(0, 67, 97, 0.98), rgba(0, 53, 79, 0.94)),
+        radial-gradient(circle at top right, rgba(255,255,255,0.16), transparent 36%);
+      color: white;
+      padding: 58px 0 50px;
+    }
+
+    .hero__inner,
+    .page {
+      width: min(var(--largura), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: #d6eaf3;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 5vw, 3.8rem);
+      line-height: 1.08;
+    }
+
+    .hero__description {
+      max-width: 830px;
+      margin: 20px 0 0;
+      color: rgba(255,255,255,0.88);
+      font-size: clamp(1rem, 2vw, 1.17rem);
+    }
+
+    .hero__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .hero__meta span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 6px 12px;
+      border: 1px solid rgba(255,255,255,0.24);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.10);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .page {
+      padding: 30px 0 64px;
+    }
+
+    .notice {
+      margin-bottom: 22px;
+      padding: 16px 18px;
+      border-left: 4px solid var(--destaque);
+      border-radius: 7px;
+      background: #fff8e9;
+      color: #594618;
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 100px;
+      z-index: 50;
+      padding: 18px;
+      border: 1px solid var(--azul-borda);
+      border-radius: 12px;
+      background: rgba(255,255,255,0.96);
+      box-shadow: var(--sombra);
+      backdrop-filter: blur(12px);
+    }
+
+    .search-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto auto;
+      gap: 10px;
+    }
+
+    .search-box {
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      min-height: 48px;
+      padding: 11px 45px 11px 15px;
+      border: 1px solid #aebfc9;
+      border-radius: 8px;
+      color: var(--texto);
+      background: white;
+      font: inherit;
+      font-size: 1rem;
+    }
+
+    .search-box input:focus {
+      border-color: var(--azul);
+      outline: 3px solid rgba(0, 67, 97, 0.14);
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--azul);
+      pointer-events: none;
+    }
+
+    .button {
+      min-height: 48px;
+      padding: 10px 16px;
+      border: 1px solid var(--azul);
+      border-radius: 8px;
+      background: var(--azul);
+      color: white;
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      background: var(--azul-escuro);
+    }
+
+    .button--secondary {
+      color: var(--azul);
+      background: white;
+    }
+
+    .button--secondary:hover,
+    .button--secondary:focus-visible {
+      color: white;
+    }
+
+    .filters {
+      display: flex;
+      gap: 8px;
+      margin-top: 14px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+      scrollbar-width: thin;
+    }
+
+    .filter {
+      flex: 0 0 auto;
+      padding: 7px 12px;
+      border: 1px solid var(--azul-borda);
+      border-radius: 999px;
+      background: var(--azul-claro);
+      color: var(--azul-escuro);
+      font: inherit;
+      font-size: 0.88rem;
+      font-weight: 750;
+      cursor: pointer;
+    }
+
+    .filter[aria-pressed="true"] {
+      border-color: var(--azul);
+      background: var(--azul);
+      color: white;
+    }
+
+    .results-info {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      margin: 22px 2px 12px;
+      color: var(--texto-suave);
+      font-size: 0.94rem;
+    }
+
+    .list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .card {
+      overflow: hidden;
+      border: 1px solid #d5e0e6;
+      border-radius: 10px;
+      background: white;
+      box-shadow: 0 5px 16px rgba(4, 29, 58, 0.05);
+    }
+
+    .card[hidden] {
+      display: none;
+    }
+
+    .card__button {
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 16px;
+      padding: 19px 20px;
+      border: 0;
+      background: white;
+      color: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .card__button:hover,
+    .card__button:focus-visible {
+      background: #f7fafb;
+      outline: none;
+    }
+
+    .number {
+      min-width: 58px;
+      padding: 7px 9px;
+      border-radius: 7px;
+      background: var(--azul);
+      color: white;
+      font-weight: 850;
+      text-align: center;
+    }
+
+    .card__heading {
+      margin: 0 0 5px;
+      color: var(--azul-escuro);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.08rem, 2vw, 1.25rem);
+      line-height: 1.32;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: var(--azul-claro);
+      color: var(--azul-escuro);
+      font-size: 0.76rem;
+      font-weight: 750;
+    }
+
+    .chevron {
+      width: 13px;
+      height: 13px;
+      border-right: 2px solid var(--azul);
+      border-bottom: 2px solid var(--azul);
+      transform: rotate(45deg);
+      transition: transform 0.2s ease;
+    }
+
+    .card.is-open .chevron {
+      transform: rotate(225deg);
+    }
+
+    .card__content {
+      display: none;
+      border-top: 1px solid #dbe5ea;
+      padding: 0 20px 22px 94px;
+    }
+
+    .card.is-open .card__content {
+      display: block;
+    }
+
+    .official-label {
+      display: inline-block;
+      margin: 20px 0 8px;
+      color: var(--azul);
+      font-size: 0.78rem;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .official-text {
+      margin: 0;
+      white-space: pre-line;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.06rem;
+      line-height: 1.78;
+    }
+
+    .legal-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .legal-item {
+      padding: 14px;
+      border-radius: 8px;
+      background: #f2f6f8;
+    }
+
+    .legal-item strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--azul-escuro);
+    }
+
+    .card__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 18px;
+    }
+
+    .small-button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      padding: 8px 12px;
+      border: 1px solid var(--azul-borda);
+      border-radius: 7px;
+      background: white;
+      color: var(--azul);
+      font-size: 0.9rem;
+      font-weight: 750;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .small-button:hover,
+    .small-button:focus-visible {
+      border-color: var(--azul);
+      background: var(--azul-claro);
+    }
+
+    .empty {
+      display: none;
+      padding: 42px 20px;
+      border: 1px dashed #9fb2bd;
+      border-radius: 10px;
+      background: white;
+      text-align: center;
+    }
+
+    .empty.is-visible {
+      display: block;
+    }
+
+    footer {
+      padding: 28px 16px;
+      background: var(--azul-escuro);
+      color: rgba(255,255,255,0.82);
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: white;
+    }
+
+    @media (max-width: 820px) {
+      .topbar__links {
+        display: none;
+      }
+
+      .toolbar {
+        top: 88px;
+      }
+
+      .search-row {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .search-box {
+        grid-column: 1 / -1;
+      }
+
+      .card__button {
+        grid-template-columns: auto minmax(0, 1fr) auto;
+        gap: 11px;
+        padding: 16px 14px;
+      }
+
+      .number {
+        min-width: 48px;
+      }
+
+      .card__content {
+        padding: 0 15px 19px;
+      }
+
+      .legal-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .topbar__inner,
+      .hero__inner,
+      .page {
+        width: min(100% - 20px, var(--largura));
+      }
+
+      .brand-image {
+        width: min(300px, 78vw);
+      }
+
+      .hero {
+        padding: 38px 0;
+      }
+
+      .toolbar {
+        top: 80px;
+        padding: 12px;
+      }
+
+      .search-row {
+        grid-template-columns: 1fr;
+      }
+
+      .search-box {
+        grid-column: auto;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .results-info {
+        display: block;
+      }
+
+      .card__button {
+        grid-template-columns: auto minmax(0, 1fr);
+      }
+
+      .chevron {
+        display: none;
+      }
+
+      .card__heading {
+        font-size: 1rem;
+      }
+
+      .tags {
+        margin-top: 7px;
+      }
+    }
+
+    @media print {
+      .topbar,
+      .toolbar,
+      .hero__meta,
+      .card__actions,
+      footer {
+        display: none !important;
+      }
+
+      body {
+        background: white;
+      }
+
+      .hero {
+        padding: 20px 0;
+        background: white;
+        color: black;
+      }
+
+      .hero__description,
+      .eyebrow {
+        color: black;
+      }
+
+      .card {
+        break-inside: avoid;
+        box-shadow: none;
+      }
+
+      .card__content {
+        display: block !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a href="https://www.cadernodenormas.com.br/" aria-label="Página inicial do Caderno de Normas">
+        <img class="brand-image" src="logo-caderno-normas.png" alt="Caderno de Normas do Direito Administrativo Sancionador">
+      </a>
+      <nav class="topbar__links" aria-label="Navegação principal">
+        <a href="https://www.cadernodenormas.com.br/">Início</a>
+        <a href="https://www.cadernodenormas.com.br/#section2">Lei nº 8.112/1990</a>
+        <a href="https://www.cadernodenormas.com.br/Passo-a-passo-de-um-PAD-e-atas-deliberativas">PAD</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero__inner">
+      <p class="eyebrow">Caderno de Normas do Direito Administrativo Sancionador</p>
+      <h1>Enunciados da Consultoria-Geral da União</h1>
+      <p class="hero__description">
+        Consulta organizada dos Enunciados nº 3 a 42, publicados no Diário Oficial da União em 20 de julho de 2026. Pesquise por palavra, número, fundamento legal ou tema e abra somente o conteúdo que deseja ler.
+      </p>
+      <div class="hero__meta">
+        <span>40 enunciados</span>
+        <span>Publicação: 20/07/2026</span>
+        <span>Texto oficial da AGU</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="page">
+    <div class="notice">
+      O conteúdo abaixo foi organizado para facilitar a consulta. Em caso de dúvida, prevalece o texto publicado no Diário Oficial da União.
+    </div>
+
+    <section class="toolbar" aria-label="Ferramentas de pesquisa">
+      <div class="search-row">
+        <label class="search-box">
+          <span class="sr-only" style="position:absolute;left:-9999px">Pesquisar enunciados</span>
+          <input id="search" type="search" placeholder="Ex.: prescrição, demissão, art. 132, TAC ou enunciado 20" autocomplete="off">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+        </label>
+
+        <button class="button button--secondary" id="expandAll" type="button">Abrir todos</button>
+        <a class="button" href="enunciados_AGU.pdf" target="_blank" rel="noopener noreferrer">Abrir PDF</a>
+      </div>
+
+      <div class="filters" id="filters" aria-label="Filtrar por tema"></div>
+    </section>
+
+    <div class="results-info">
+      <span id="resultCount">40 enunciados encontrados</span>
+      <span>Clique em um enunciado para ler o texto completo</span>
+    </div>
+
+    <section class="list" id="list" aria-live="polite"></section>
+
+    <div class="empty" id="empty">
+      <strong>Nenhum enunciado foi encontrado.</strong>
+      <p>Tente pesquisar por outra palavra, número ou fundamento legal.</p>
+    </div>
+  </main>
+
+  <footer>
+    Caderno de Normas do Direito Administrativo Sancionador. Conteúdo para consulta e apoio, sem substituição da publicação oficial.
+  </footer>
+
+  <script>
+    const enunciados = [{"number": 3, "title": "É possível a responsabilização disciplinar do denunciante de má-fé quando presentes os seguintes requisitos: a) imputação de…", "statement": "I - É possível a responsabilização disciplinar do denunciante de má-fé quando presentes os seguintes requisitos: a) imputação de fato a pessoa determinada; b) ciência da falsidade do fato; c) dolo; d) desvio de finalidade; e e) potencial lesivo da denúncia.\nII -A proteção à identidade do denunciante constitui regra, mas admite afastamento excepcional, quando constatada a má-fé do denunciante, nas hipóteses, formas e limites previstos na legislação, observadas as competências próprias dos órgãos de ouvidoria,\ncorreição e apuração.", "reference": "art. 4º da Lei nº 9.784, de 1999 c/c art. 339 do Código Penal, arts. 116, 117 e 132 da Lei nº 8.112, de 1990, art. 4º-A da Lei nº 13.608, de 2018 e art. 31, §§ 3º e 4º, da Lei nº 12.527, de 2011.", "source": "Parecer nº 00005/2026/CNPAD/CGU/AGU.", "tags": ["Denúncia", "Competência"]}, {"number": 4, "title": "A demissão com base no enquadramento referente ao crime contra a administração pública (art. 132, inciso I, da Lei nº 8.112/90)…", "statement": "I - A demissão com base no enquadramento referente ao crime contra a administração pública (art. 132, inciso I, da Lei nº 8.112/90) somente será cabível com o trânsito em julgado de sentença criminal condenatória.\nII - Com base no princípio da independência das instâncias, é possível a aplicação de demissão por infrações disciplinares, ainda que esteja em curso eventual ação penal contra o servidor, desde que o enquadramento proposto seja diverso do art. 132, inciso I, da Lei nº 8.112/90.", "reference": "art. 132, inciso I, da Lei nº 8.112/90.", "source": "Parecer AGU nº GQ-124/97 e Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU.", "tags": ["Demissão"]}, {"number": 5, "title": "No âmbito dos processos administrativos disciplinares, uma vez extinta a punibilidade pela prescrição, a autoridade julgadora…", "statement": "No âmbito dos processos administrativos disciplinares, uma vez extinta a punibilidade pela prescrição, a autoridade julgadora não poderá fazer o registro do fato nos assentamentos individuais do servidor.", "reference": "art. 5º, inciso LVII, da CF/88", "source": "Parecer AGU nº GMF-03/2016 e Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU.", "tags": ["Prescrição", "Julgamento"]}, {"number": 6, "title": "Reconhecida a deficiência na instrução processual, após a entrega do relatório final, deverá o Órgão Consultivo propor nova…", "statement": "Reconhecida a deficiência na instrução processual, após a entrega do relatório final, deverá o Órgão Consultivo propor nova instauração dos trabalhos apuratórios, com ou sem o aproveitamento dos atos praticados, podendo ser mantida a composição da comissão processante, por decisão da autoridade instauradora.", "reference": "art. 169 da Lei nº 8.112/90 e art. 49 da Lei nº 9.784/99.", "source": "Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU.", "tags": ["Comissão", "Admissibilidade", "Provas"]}, {"number": 7, "title": "No exercício da atividade de assessoramento jurídico, o órgão consultivo pode opinar pela aplicação da penalidade, conforme…", "statement": "No exercício da atividade de assessoramento jurídico, o órgão consultivo pode opinar pela aplicação da penalidade, conforme sugestão final do relatório da comissão processante, ainda que o órgão correicional, no exercício de competência regimental quanto à análise de regularidade técnica e eficiência do processo disciplinar, opine pela necessidade de nova instauração do feito para novas diligências.", "reference": "art. 168 da Lei nº 8.112/90, Decreto nº 11.123/22 e Decreto nº 5.480/05.", "source": "Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU.", "tags": ["Comissão", "Admissibilidade", "Competência"]}, {"number": 8, "title": "A vinculação da autoridade julgadora às conclusões da Comissão de Processo Disciplinar não é absoluta, cabendo-lhe,…", "statement": "A vinculação da autoridade julgadora às conclusões da Comissão de Processo Disciplinar não é absoluta, cabendo-lhe, fundamentadamente, reconhecer irregularidades que ensejem nulidade total ou parcial do processo, afastar conclusões apresentadas no relatório final que não estejam em consonância com as provas dos autos ou corrigir a capitulação legal dos fatos que foram objeto de indiciação.", "reference": "art. 53 da Lei nº 9.784/99; art. 161, caput, e art. 168, ambos da Lei nº 8.112/90.", "source": "Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU.", "tags": ["Julgamento", "Comissão", "Provas"]}, {"number": 9, "title": "O princípio da proporcionalidade, no âmbito do processo administrativo disciplinar, deve ser considerado para fins de…", "statement": "I - O princípio da proporcionalidade, no âmbito do processo administrativo disciplinar, deve ser considerado para fins de enquadramento da conduta do servidor público ao respectivo ilícito funcional.\nII - Uma vez realizado o enquadramento em uma das hipóteses previstas nos incisos do art. 132 da Lei nº 8.112/1990 ou em outras situações relativas à penalidade de demissão preceituadas na legislação pátria, não há discricionariedade para se realizar a gradação da penalidade a ser adotada, de modo a ser obrigatória a aplicação da penalidade de demissão ou, conforme o caso, de cassação de aposentadoria.", "reference": "art. 132 da Lei nº 8.112/90.", "source": "Parecer AGU nº GQ-167/1998, Parecer AGU nº GQ-177/1998, Parecer AGU nº GQ-\n183/1998 e Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU.", "tags": ["Demissão", "Aposentadoria e exoneração"]}, {"number": 10, "title": "Constatada a necessidade da remessa do processo ou de seus documentos, em originais ou cópias, para eventuais providências…", "statement": "I - Constatada a necessidade da remessa do processo ou de seus documentos, em originais ou cópias, para eventuais providências afetas a outros órgãos públicos, é recomendável que a manifestação jurídica de apoio a julgamento especifique a unidade administrativa responsável pelo encaminhamento.\nII - Se nas análises jurídicas consultivas de natureza disciplinar for verificado prejuízo ao erário, o fato deve ser noticiado ao órgão competente para propor ação judicial reparatória, com a devida remessa da documentação pertinente.\nIII - Verificando-se na análise de apurações disciplinares que o fato configurador da infração administrativa também se encontra capitulado como crime, caberá a proposta de remessa de cópia dos autos ao Ministério Público.", "reference": "art. 154, parágrafo único, e art. 171, ambos da Lei nº 8.112/90.", "source": "Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU.", "tags": ["Julgamento", "Competência"]}, {"number": 11, "title": "Na manifestação jurídica em que se conclui pela aplicação da penalidade disciplinar de demissão, nas hipóteses dos incisos IX,…", "statement": "I - Na manifestação jurídica em que se conclui pela aplicação da penalidade disciplinar de demissão, nas hipóteses dos incisos IX, X, XI, XII, XIII, XIV e XVI do art. 117 e incisos I, IV,\nVIII, IX, X, XI e XII do art. 132, ambos da Lei nº 8.112/1990, caberá a proposta de envio de cópias do processo à Secretaria da Receita Federal do Brasil (SRFB).\nII - Nas hipóteses de sugestão de demissão baseadas no art. 132, inciso IV, da Lei nº 8.112/1990, caberá a proposta de encaminhamento das peças jurídicas e eventuais documentos pertinentes aos seguintes órgãos, para as providências de alçada: a)\nProcuradoria Nacional da União de Patrimônio Público e Probidade (ou o órgão equivalente que, eventualmente, vier a sucedê-la); b) Subprocuradoria-Geral Federal de Cobrança e Recuperação de Créditos da Procuradoria-Geral Federal (ou o órgão equivalente que,\neventualmente, vier a sucedê-la); c) Controladoria-Geral da União; e d) Ministério Público Federal e ao Tribunal de Contas da União, na forma do art. 15 da Lei nº 8.429/1992. A remessa da documentação pertinente já é devida, inclusive, desde a instância instauradora,\npara as medidas cautelares possíveis.\nIII - Sugerida a penalidade de demissão em processo administrativo disciplinar, caberá a proposta de remessa de cópia dos atos decisórios ao Tribunal Superior Eleitoral, para providências decorrentes em razão da previsão constante do art. 1º, inciso I, alínea \"o\", da Lei Complementar nº 64/1990, com a redação alterada pela Lei Complementar nº 135/2010.\nIV - Constatado indício de prejuízo ao erário, ainda que esteja prescrita a pretensão punitiva por parte da Administração, o fato deve ser noticiado ao órgão competente para propor ação judicial reparatória, com a remessa da documentação pertinente.\nV - Em todos os casos, a manifestação jurídica deve apontar o órgão ou a autoridade responsável pelo encaminhamento.", "reference": "art. 132 e art. 117, ambos da Lei nº 8.112/1990; art. 1º do Decreto nº 3.781/2001; e Lei Complementar nº 64/1990.", "source": "Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU.", "tags": ["Prescrição", "Demissão", "Competência"]}, {"number": 12, "title": "O juízo de admissibilidade quanto à instauração ou não de processo administrativo disciplinar, sindicância ou ainda procedimento…", "statement": "I - O juízo de admissibilidade quanto à instauração ou não de processo administrativo disciplinar, sindicância ou ainda procedimento de investigação prévia ou verificação preliminar será realizado pela autoridade administrativa competente para instaurar o processo.\nII - Eventual análise prévia deve ser procedida por setor de competência correcional da estrutura do próprio órgão.\nIII - Havendo consulta acerca de questão jurídica específica, deve ser dissipada a controvérsia pelo órgão responsável pela consultoria e assessoramento jurídico.", "reference": "art. 144, caput e parágrafo único, da Lei n° 8.112/1990; e art. 29, art. 48 e art.\n49, da Lei n° 9.784/1999", "source": "Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU.", "tags": ["Admissibilidade", "Competência"]}, {"number": 13, "title": "O Poder Público, provocado por delação de origem não confirmável (denúncia apócrifa, não identificada ou com identificação…", "statement": "I - O Poder Público, provocado por delação de origem não confirmável (denúncia apócrifa, não identificada ou com identificação diversa do emissor e serviços eletrônicos de acesso ao cidadão, por exemplo), pode, motivadamente, adotar medidas sumárias de verificação, com prudência e discrição, destinadas a apurar a plausibilidade dos fatos nela denunciados.\nII - Caso sejam encontrados elementos de verossimilhança, poderá o Poder Público formalizar a abertura do processo ou procedimento cabível.", "reference": "art. 144, caput, da Lei nº 8.112/1990", "source": "Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU.", "tags": ["Denúncia"]}, {"number": 14, "title": "O CONSULTOR-GERAL DA UNIÃO, no uso das atribuições que lhe conferem o art. 10 da Lei Complementar nº 73, de 10 de fevereiro de…", "statement": "O CONSULTOR-GERAL DA UNIÃO, no uso das atribuições que lhe conferem o art.\n10 da Lei Complementar nº 73, de 10 de fevereiro de 1993, e o art. 84, VI, do Anexo I do Decreto nº 12.540, de 30 de junho de 2025, e considerando o que consta no Processo nº 00688.000078/2026-90, resolve expedir, nesta data, o presente enunciado de caráter obrigatório a todos os órgãos da Consultoria-Geral da União e seus órgãos de execução:\nEnunciado A caracterização da infração administrativa prevista no inciso X do art. 117 da Lei nº 8.112/1990, inerente a \"participar de gerência ou administração de sociedade privada\" ou a\n\"exercer o comércio\", por parte do servidor público, pressupõe, em relação à respectiva conduta, a) o exercício de fato e b) a atuação reiterada e habitual.", "reference": "art. 117, inciso X, e art. 132, inciso XIII, da Lei nº 8.112/1990.", "source": "Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU.", "tags": ["Processo disciplinar"]}, {"number": 15, "title": "Configura infração disciplinar a formulação reiterada e abusiva de denúncia notoriamente infundada ou com o propósito de…", "statement": "Configura infração disciplinar a formulação reiterada e abusiva de denúncia notoriamente infundada ou com o propósito de prejudicar o representado por meio das instâncias administrativas.", "reference": "art. 27 e art. 30 da Lei nº 13.869/2019; e art. 20 do Decreto-lei nº 4.657/1942.", "source": "Parecer nº 100/2010/DECOR/CGU/AGU e Parecer Nº 00002/2026/GAB/CONUNI/CG U / AG U .", "tags": ["Denúncia"]}, {"number": 16, "title": "Não configura ilícito disciplinar levar ao conhecimento de órgão de controle de legalidade fatos com indícios razoáveis de…", "statement": "Não configura ilícito disciplinar levar ao conhecimento de órgão de controle de legalidade fatos com indícios razoáveis de irregularidade de que tiver ciência o servidor, mesmo que sem prévio trâmite pela via hierárquica.", "reference": "art. 116, incisos IV, VI e XII, e art. 126-A, da Lei nº 8.112/1990.", "source": "Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU.", "tags": ["Processo disciplinar"]}, {"number": 17, "title": "Situa-se na órbita do poder discricionário do gestor a possibilidade de remanejamento temporário e cautelar do acusado em…", "statement": "I - Situa-se na órbita do poder discricionário do gestor a possibilidade de remanejamento temporário e cautelar do acusado em processo administrativo disciplinar, para equipe de trabalho diversa daquela em que atue, preferencialmente na localidade de exercício, para a manutenção da normalidade do serviço público durante o transcurso da apuração disciplinar.\nII - A decisão que determinar o remanejamento temporário e cautelar do acusado evidenciará o risco iminente e demonstrará a necessidade e a adequação da medida, devendo-se dar ciência ao investigado dos elementos que motivaram a decisão.", "reference": "art. 45 da Lei nº 9.784/1999; e art. 20, parágrafo único, do Decreto-Lei nº 4.657/1942.", "source": "Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU.", "tags": ["Processo disciplinar"]}, {"number": 18, "title": "A proposta de penalidade da comissão processante, em seu relatório final, delimita, nos termos da legislação aplicável, a…", "statement": "A proposta de penalidade da comissão processante, em seu relatório final, delimita, nos termos da legislação aplicável, a autoridade competente para o julgamento, que decidirá e aplicará a sanção, ainda que delibere por pena mais branda.", "reference": "art. 141, art. 167, §§ 1º e 2º, e art. 168 da Lei nº 8.112/1990", "source": "Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU.", "tags": ["Julgamento", "Comissão", "Competência"]}, {"number": 19, "title": "O servidor efetivo de órgão de qualquer Poder que se encontre cedido a outro órgão (ocupando ou não cargo em comissão) e neste…", "statement": "I - O servidor efetivo de órgão de qualquer Poder que se encontre cedido a outro órgão (ocupando ou não cargo em comissão) e neste pratique conduta que configure ilícito disciplinar, será processado, preferencialmente, no órgão em que se tenha praticado a suposta infração administrativa, e, caso haja sugestão de demissão ou cassação de aposentadoria, será julgado pelo Ministro de Estado chefe do órgão onde tenha o vínculo efetivo, devendo, caso receba a pena demissória, perder o cargo efetivo.\nII - Na mesma hipótese, caso o processo seja instaurado pelo Ministro de Estado Chefe da Controladoria-Geral da União, se o cargo efetivo do servidor pertencer à Administração Pública Federal, poderá esta autoridade, com base na competência preconizada na legislação aplicável, julgar e aplicar a penalidade de demissão ou cassação de aposentadoria.", "reference": "art. 132 e art. 134, da Lei nº 8.112/1990; e art. 49, §1º, inciso II, da Lei nº 14.600/2023", "source": "Parecer AGU nº BBL-01/2021, Nota DECOR CGU/AGU nº 16/2008 e Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU .", "tags": ["Demissão", "Comissão", "Servidor cedido"]}, {"number": 20, "title": "Ultrapassado o prazo legal de 140 (cento e quarenta dias) para a apuração e conclusão do processo administrativo disciplinar, a…", "statement": "Ultrapassado o prazo legal de 140 (cento e quarenta dias) para a apuração e conclusão do processo administrativo disciplinar, a Administração Pública não poderá obstar,\napenas com fundamento no art. 172 da Lei nº 8.112, de 1990, a concessão de aposentadoria voluntária ou a exoneração a pedido requerida pelo servidor acusado no curso do processo, salvo a demonstração inequívoca de ter sido ele o único responsável pela demora na realização da fase de instrução processual, impedindo, por consequência, o julgamento pela autoridade competente em prazo razoável.", "reference": "art. 152, art. 167 e art. 172, da Lei nº 8.112/1990", "source": "Parecer nº 00004/2026/CNPAD/CGU/AGU e Parecer nº 00002/2026/GAB/CONUNI / CG U / AG U .", "tags": ["Julgamento", "Provas", "Servidor cedido"]}, {"number": 21, "title": "Não é cabível recurso do acusado à autoridade instauradora ou julgadora, no transcurso do Processo Administrativo Disciplinar,…", "statement": "Não é cabível recurso do acusado à autoridade instauradora ou julgadora, no transcurso do Processo Administrativo Disciplinar, em face de atos de instrução da Comissão Processante, por ausência de previsão legal expressa e inexistência de relação hierárquica entre a comissão e as referidas autoridades.", "reference": "art. 107 e art. 108 da Lei nº 8.112/1990", "source": "Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU.", "tags": ["Julgamento", "Comissão", "Provas"]}, {"number": 22, "title": "Constatados indícios de ilícitos, ocorridos anteriormente à data da posse em cargo público, que possuam relação com a…", "statement": "Constatados indícios de ilícitos, ocorridos anteriormente à data da posse em cargo público,\nque possuam relação com a investidura no cargo, deve ser instaurado processo administrativo para verificação de vícios no ato de nomeação ou posse e eventual anulação, na forma da Lei n. 9.784/1999, resguardados os princípios do contraditório e a da ampla defesa.", "reference": "art. 53 da Lei nº 9.784/1999; e art. 5º da Lei nº 8.112/1990", "source": "Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU.", "tags": ["Processo disciplinar"]}, {"number": 23, "title": "É facultada a participação do coacusado ou do respectivo representante de defesa no interrogatório de outro acusado com a…", "statement": "É facultada a participação do coacusado ou do respectivo representante de defesa no interrogatório de outro acusado com a finalidade de elucidar os fatos, oportunizando-se àquele reinquirir este por intermédio do presidente da comissão.", "reference": "art. 159, § 1º, da Lei nº 8.112/1990.", "source": "Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU.", "tags": ["Comissão"]}, {"number": 24, "title": "O servidor acusado em procedimento disciplinar não faz jus a transporte e diárias para acompanhar depoimento de testemunha fora…", "statement": "I - O servidor acusado em procedimento disciplinar não faz jus a transporte e diárias para acompanhar depoimento de testemunha fora de sua sede, por falta de amparo legal.\nII - A comissão disciplinar adotará, preferencialmente, o uso de recurso tecnológico de transmissão de som e imagem em tempo real para a realização de depoimentos,\naudiências e reuniões das comissões disciplinares (videoconferência).", "reference": "art. 173 da Lei nº 8.112/1990", "source": "Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU.", "tags": ["Comissão", "Recursos", "Videoconferência e diárias"]}, {"number": 25, "title": "A infração de abandono de cargo é de caráter permanente, tendo como termo inicial do prazo prescricional o dia em que cessar a…", "statement": "A infração de abandono de cargo é de caráter permanente, tendo como termo inicial do prazo prescricional o dia em que cessar a permanência.", "reference": "art. 138 e art. 142, §2º, da Lei nº 8.112/1990", "source": "Parecer AGU nº GMF-06/2017 e Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU.", "tags": ["Prescrição"]}, {"number": 26, "title": "Aos empregados públicos da Administração Pública Federal direta, autárquica e fundacional aplicam-se as penas previstas na CLT…", "statement": "I - Aos empregados públicos da Administração Pública Federal direta, autárquica e fundacional aplicam-se as penas previstas na CLT ou em lei específica, podendo,\nsubsidiariamente, ser utilizado o rito da Lei nº 8.112, de 1990, bem como os princípios e disposições da Lei nº 9.784, de 1999.\nII - As penalidades aplicáveis aos empregados públicos das empresas públicas,\nsociedades de economia mista e fundações públicas de direito privado que estejam cedidos à União, suas autarquias e fundações de direito público são aquelas previstas na legislação trabalhista (CLT e leis específicas), em normas internas e acordos coletivos de trabalho, não se lhes aplicando as da Lei nº 8.112, de 1990.", "reference": "art. 37, inciso II, da CF/88; art. 327, § 1º do CP; e Lei nº 8.429/1992.", "source": "Parecer nº 00001/2018/CPPAD/DECOR/CGU/AGU e Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU .", "tags": ["Servidor cedido", "Empregado público"]}, {"number": 27, "title": "É cabível a responsabilização de servidor público após a sua exoneração do respectivo cargo efetivo, devendo a penalidade ser…", "statement": "I - É cabível a responsabilização de servidor público após a sua exoneração do respectivo cargo efetivo, devendo a penalidade ser anotada nos assentamentos funcionais, bem como ser realizada a devida publicidade.\nII - Em caso de aplicação da penalidade de demissão em face de servidor público exonerado de cargo efetivo, deve haver a preservação do ato de exoneração, com a realização do registro da penalidade de demissão nos assentamentos funcionais, a fim de que surta os devidos efeitos legais.\nIII - A Administração Pública Federal, durante o período previsto no art. 172 da Lei nº 8.112/1990 observando-se o prazo de 140 dias para a conclusão do PAD, contados a partir da sua instauração, nos moldes dos artigos 152 e 167 da Lei nº 8.112/1990,\npoderá recusar o pedido de exoneração realizado pelo servidor público.", "reference": "art. 152, art. 167 e art. 172 da Lei nº 8.112/1990", "source": "Parecer nº 02/2018/CPPAD/DECOR/CGU/AGU, Parecer nº 00003/2024/CNPAD/DECOR/CGU/AGU e Parecer Nº 00002/2026/GAB/CONUNI/CGU / AG U .", "tags": ["Demissão", "Admissibilidade", "Aposentadoria e exoneração"]}, {"number": 28, "title": "A ordem judicial de suspensão da investigação ou do processo administrativo disciplinar, a partir da cientificação da decisão,…", "statement": "I - A ordem judicial de suspensão da investigação ou do processo administrativo disciplinar, a partir da cientificação da decisão, suspende o fluxo do prazo prescricional, antes ou depois da sua instauração, durante o período em que a referida decisão produzir efeitos, retomando-se a contagem, pelo prazo restante, quando cessada a suspensão.\nII - Recomenda-se que a autoridade administrativa, preferencialmente, por meio de recurso tecnológico, cientifique o servidor investigado ou acusado do início da suspensão, bem como da retomada do fluxo do prazo prescricional.", "reference": "art. 142 da Lei nº 8.112/1990", "source": "Parecer nº 0003/2018/CPPAD/DECOR/CGU/AGU e Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU .", "tags": ["Prescrição", "Admissibilidade", "Recursos"]}, {"number": 29, "title": "Há a possibilidade jurídica de convalidação, mediante ratificação por parte da autoridade competente, da instauração de processo…", "statement": "Há a possibilidade jurídica de convalidação, mediante ratificação por parte da autoridade competente, da instauração de processo administrativo disciplinar,\nanteriormente deflagrado por autoridade incompetente, com base no art. 55 da Lei nº 9.784/99, desde que não consumada a prescrição.", "reference": "art. 55 da Lei nº 9.784/1999.", "source": "Parecer nº 004/2018/CPPAD/DECOR/CGU/AGU e Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU .", "tags": ["Prescrição", "Julgamento", "Admissibilidade"]}, {"number": 30, "title": "A impossibilidade de instauração ou continuidade de processo administrativo disciplinar, em face de prescrição, não impede o…", "statement": "A impossibilidade de instauração ou continuidade de processo administrativo disciplinar, em face de prescrição, não impede o ressarcimento do dano ao erário, o qual poderá ser promovido pelos seguintes meios: a) notificação para pagamento voluntário, nos termos do art. 46, da Lei nº 8.112/90; b) instauração de processo administrativo nos termos da Lei nº 9.784/99; c) por protesto extrajudicial ou execução fiscal, precedido de processo administrativo prévio (jurisprudência do STJ); d) tomada de contas especial; ou e) cobrança judicial.", "reference": "art. 46, art. 121 a 125 da Lei nº 8.112/1990", "source": "Parecer nº 00001/2019/CNPAD/DECOR/CGU/AGU e Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU .", "tags": ["Prescrição", "Admissibilidade", "Servidor cedido"]}, {"number": 31, "title": "A autoridade administrativa competente deve conhecer de Pedido de Reconsideração, de Revisão ou Recurso Hierárquico em matéria…", "statement": "A autoridade administrativa competente deve conhecer de Pedido de Reconsideração,\nde Revisão ou Recurso Hierárquico em matéria disciplinar que também esteja sendo discutida no âmbito do Poder Judiciário, desde que preenchidos os requisitos legais e não exista decisão judicial transitada em julgado.", "reference": "art. 104 a 108 e art. 174 da Lei nº 8.112/1990", "source": "Parecer AGU nº JL 02/2020 e Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU", "tags": ["Recursos", "Competência"]}, {"number": 32, "title": "Para o cumprimento de decisão judicial, transitada em julgado, que determina a perda da função pública, a autoridade…", "statement": "I - Para o cumprimento de decisão judicial, transitada em julgado, que determina a perda da função pública, a autoridade administrativa deve editar Portaria demitindo o servidor de seu cargo ou, em caso de inativo, cassando a sua aposentadoria, havendo expressa determinação judicial nesse sentido.\nII - Tratando-se de servidor inativo e não havendo expressa determinação para a cassação de aposentadoria na decisão judicial, sugere-se solicitar esclarecimentos à autoridade judiciária, por meio do órgão contencioso competente, acerca da viabilidade de aplicação da cassação de aposentadoria.", "reference": "art. 41, § 1º, da CF/88; art. 22, art. 132, inciso I e art. 134 da Lei nº 8.112/1990", "source": "Parecer nº 00003/2019/CNPAD/DECOR/CGU/AGU e Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU .", "tags": ["Demissão", "Aposentadoria e exoneração", "Competência"]}, {"number": 33, "title": "Nas hipóteses de absolvição criminal, é possível a aplicação do prazo prescricional penal em relação à infração administrativa…", "statement": "Nas hipóteses de absolvição criminal, é possível a aplicação do prazo prescricional penal em relação à infração administrativa também capitulada como crime, na forma do art. 142, § 2º, da Lei nº 8.112, de 1990, ressalvadas as hipóteses de absolvição criminal em que o servidor acusado não possa ser responsabilizado na esfera administrativa pelo mesmo fato, nos moldes do art. 126 da Lei nº 8.112/1990 e do art.\n8º da Lei nº 13.869/2019.", "reference": "art. 126 e art. 142, § 2º, da Lei nº 8.112/ 1990; art. 7º e art. 8º da Lei nº 13.869/2019.", "source": "Parecer nº 0004/2019/CNPAD/CGU/AGU e Parecer nº 00002/2026/GAB/CONUNI/CG U / AG U .", "tags": ["Prescrição"]}, {"number": 34, "title": "A mera existência de sindicância ou de processo administrativo disciplinar não constitui, por si só, óbice à cessão do…", "statement": "A mera existência de sindicância ou de processo administrativo disciplinar não constitui, por si só, óbice à cessão do respectivo servidor público, tendo em vista tanto a observância ao princípio da presunção de inocência, insculpido no inciso LVII do art.\n5º da Constituição Federal, quanto a inexistência de qualquer previsão legal proibitiva,\nsalientando-se que a autorização da cessão se insere no âmbito da discricionariedade da autoridade administrativa, atendidos os requisitos legais.", "reference": "art. 5º, inciso LVII, da CF/88.", "source": "Parecer nº 1/2020/CNPAD/CGU/AGU e Parecer nº 00002/2026/GAB/CONUNI/CGU/ AG U .", "tags": ["Servidor cedido"]}, {"number": 35, "title": "Nos casos de infração administrativa de abandono de cargo, aplica-se o prazo prescricional para apuração disciplinar, previsto…", "statement": "I - Nos casos de infração administrativa de abandono de cargo, aplica-se o prazo prescricional para apuração disciplinar, previsto no inciso I do art. 142, da Lei n. 8.112,\nde 1990.\nII - Nas hipóteses em que a conduta do servidor enseje situação de potencial prejuízo à regularidade do serviço público, resta caracterizado o crime tipificado no art. 323 do Código Penal, atraindo a incidência do prazo prescricional penal, nos termos do §2º do art. 142 do Estatuto dos Servidores.", "reference": "art. 142, inciso I, e §2º da Lei nº 8.112/1990; e art. 323 do Código Penal.", "source": "Parecer nº 00004/2020/CNPAD/DECOR/CGU/AGU e Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU .", "tags": ["Prescrição"]}, {"number": 36, "title": "A conduta desidiosa, para desencadear a aplicação da pena de demissão, pressupõe comportamento ilícito reiterado, perseverança…", "statement": "I - A conduta desidiosa, para desencadear a aplicação da pena de demissão, pressupõe comportamento ilícito reiterado, perseverança infracional ou continuidade na perpetração de ilícitos, e não um ato isolado, embora este último possa ser admitido, como exceção e na análise do caso concreto;\nII - Um único ato de desleixo, descaso, descuido, indiferença, negligência, preguiça, indolência,\ninércia para com suas funções caracteriza-se como falta de zelo ou de deslealdade à instituição,\npassível de apuração aplicação de pena diversa;\nIII - Excepcionalmente, na esteira dos Pareceres Vinculantes GQ-127, 128, 140 e 164, admite-se a viabilidade de uma única conduta funcional configurar essa falta, da qual devem resultar graves consequências, o que deve ser analisado no caso concreto, uma vez que a habitualidade e reiteração da conduta continuam sendo requisito essencial, como regra da espécie;\nIV - Impossibilidade de mitigação da sanção prevista em lei e ausência de discricionariedade do julgador na aplicação da pena correspondente à desídia, pelo comando do art. 132 da Lei nº 8.112, de 1990;\nV - O texto legal contido no Estatuto do Servidor Público Federal afasta eventual ofensa aos princípios da razoabilidade e da proporcionalidade, e apresenta-se como norma vinculante para a autoridade administrativa julgadora ao impor a pena de demissão ao rol taxativo ali descrito, entre os quais se insere a conduta \"proceder de forma desidiosa\", prevista no inciso XV, do art. 117 do Estatuto do Servidor Público Federal.", "reference": "art. 132 e art. 117, inciso XV, da Lei nº 8.112/1990.", "source": "Parecer nº 01/2021/CNPAD/DECOR/CGU/AGU e Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU .", "tags": ["Demissão", "Julgamento"]}, {"number": 37, "title": "A vacância para ocupar outro cargo público, prevista no inciso VIII do art. 33 da Lei 8.112/90, é direito líquido e certo do…", "statement": "I - A vacância para ocupar outro cargo público, prevista no inciso VIII do art. 33 da Lei 8.112/90, é direito líquido e certo do servidor aprovado em novo concurso público e que opte por solicitar a vacância para tomar posse no novo cargo;\nII - A Administração Pública não pode se valer do comando do art. 172 da Lei 8.112/90 para obstar a vacância de servidor que responde a PAD, para posse em outro cargo público inacumulável, porque, além de tal proibição não estar expressa no art. 172, não se mostra razoável e esbarra nos princípios da proibição do excesso e presunção de inocência,\nafrontando a jurisprudência dos tribunais.", "reference": "art. 33, inciso VIII e art. 172 da Lei nº 8.112/1990.", "source": "Parecer nº 00003/2021/CNPAD/DECOR/CGU/AGU e Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU .", "tags": ["Provas"]}, {"number": 38, "title": "O Parecer nº JL-06 deve ser aplicado aos fatos conhecidos pelas autoridades competentes para instaurar o processo disciplinar a…", "statement": "I - O Parecer nº JL-06 deve ser aplicado aos fatos conhecidos pelas autoridades competentes para instaurar o processo disciplinar a partir da data de sua publicação no Diário Oficial da União;\nII - O Parecer nº JL-06 não alcança os casos já julgados; e III - Nos casos pendentes de julgamento cuja ciência ocorreu na vigência do Parecer nº AM-\n03, o Parecer nº JL-06 só pode produzir efeitos quando o novo entendimento beneficiar o acusado.", "reference": "art. 142, §1º da Lei nº 8.112/1990.", "source": "Parecer nº 00003/2022/CNPAD/DECOR/CGU/AGU e Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU .", "tags": ["Julgamento", "Competência"]}, {"number": 39, "title": "As inovações promovidas pela Lei nº 14.230, de 2021, na Lei nº 8.429, de 1992, não retroagem em relação às sanções disciplinares…", "statement": "I - As inovações promovidas pela Lei nº 14.230, de 2021, na Lei nº 8.429, de 1992, não retroagem em relação às sanções disciplinares aplicadas pela autoridade competente por ato improbidade administrativa na vigência da norma anterior;\nII - Aos atos ímprobos anteriores às inovações legislativas trazidas pela Lei nº 14.230, de 2021, e não julgados aplica-se as diretrizes da nova norma, diante a análise do caso em concreto, desde que a nova redação seja mais benéfica ao acusado.\nIII - Aos atos ímprobos anteriores ao advento da Lei nº 14.230, de 2021, e não julgados até a edição da referida lei, aplica-se a norma incidente ao tempo da prática dos respectivos atos (tempus regit actum), se, diante da análise do caso concreto, extrair-se que a nova redação trazida pela Lei nº 14.230, de 2021, apresenta-se mais maléfica ao acusado, em comparação com a redação anterior, insculpida na Lei nº 8.429, de 1992.", "reference": "art. 37, §4º da CF/88; e art. 6º da Lei nº 4.657/1942 e Lei nº 8.429/1992\n(redação da Lei nº 14.230/2021).", "source": "Parecer AGU nº BBL-08/2022 e Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU.", "tags": ["Julgamento", "Improbidade", "Competência"]}, {"number": 40, "title": "A expressão 'improbidade administrativa', constante no inciso IV do art. 132 da Lei nº 8112, de 1990, é um elemento normativo…", "statement": "A expressão 'improbidade administrativa', constante no inciso IV do art. 132 da Lei nº 8112, de 1990, é um elemento normativo jurídico, cujo conceito é dado pela Lei nº 8.429, de 1992 ou por outros tipos previstos em leis especiais, em respeito à norma prevista no art. 37, §4º, da Constituição Federal, de modo que a tipificação do art.\n132, IV, da Lei nº 8.112, de 1990, requer o enquadramento da conduta do servidor acusado em um dos tipos de improbidade descritos na Lei de Improbidade Administrativa ou outra lei que defina a conduta infracional de forma prévia,\ninequívoca (certa) e estrita.", "reference": "art. 37, §4º, e art. 5º, incisos II e XXXIX, da CF/88; Lei nº 8.429/1992 e art. 132, inciso IV, da Lei nº 8.112/1990.", "source": "Parecer nº 00003/2023/CNPAD/DECOR/CGU/AGU e Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU .", "tags": ["Improbidade"]}, {"number": 41, "title": "A nova redação conferida ao dispositivo incorporou o entendimento jurisprudencial e administrativo consolidado, dispensando a…", "statement": "I - A nova redação conferida ao dispositivo incorporou o entendimento jurisprudencial e administrativo consolidado, dispensando a prova do ato ilícito ensejador do enriquecimento.\nII - O dolo do tipo está na vontade e consciência de adquirir, para si ou para outrem, no exercício de mandato, de cargo, de emprego ou de função pública, e em razão deles, bens de qualquer natureza, cujo valor seja desproporcional à evolução do patrimônio ou à renda do agente público, dispensada outra motivação especial.\nIII - A nova redação atribuída ao dispositivo reforça a presunção legal de que a variação patrimonial a descoberto tem relação com o exercício do cargo e sua licitude deve ser provada pelo servidor.\nISSN 1677-7042 Nº 134, segunda-feira, 20 de julho de 2026 IV - Quanto ao ônus probatório, incumbe à Administração Pública provar a) a efetiva ocorrência do incremento patrimonial do servidor público, b) que esse incremento é significativo/efetivamente desproporcional com as suas fontes de renda lícitas e conhecidas, c) que ele não tem causa válida - outros rendimentos lícitos e conhecidos e d)\nque o incremento ou variação adveio do período em que o servidor público exerce ou exerceu mandato, cargo, emprego ou função pública, de modo que, provadas essas circunstâncias, opera a presunção legal relativa de que o enriquecimento é ilícito e cabe ao servidor público provar a licitude do incremento patrimonial apurado. Se o servidor público justifica o incremento patrimonial, cabe à Administração avaliar a veracidade das explicações para aceitá-las ou afastá-las, fundamentadamente, de acordo com a prova constante dos autos.", "reference": "art. 9º, inciso VII, da Lei nº 8.429/1992; e art. 132, inciso IV, da Lei nº 8.112/1990; art. 2º, §5º, da Lei nº 8.730/1993.", "source": "Parecer nº 00001/2024/CNPAD/DECOR/CGU/AGU e Parecer Nº 00002/2026/GAB/CONUNI/CGU/AGU .", "tags": ["Provas"]}, {"number": 42, "title": "Para a solução consensual de conflitos disciplinares, no âmbito da Administração Pública Federal, envolvendo servidores…", "statement": "Para a solução consensual de conflitos disciplinares, no âmbito da Administração Pública Federal, envolvendo servidores públicos, ocupantes de cargos efetivos regidos pela Lei nº 8.112/1990, a autoridade responsável deve celebrar o Termo de Ajustamento de Conduta\n(TAC), de ofício (havendo concordância do acusado) ou a requerimento do acusado, antes da instauração do processo administrativo disciplinar ou, após iniciado do PAD, mediante proposta do acusado ou sugestão da comissão disciplinar, caso:\na) se trate de infração disciplinar de menor potencial ofensivo, de modo a existir a constatação de que a penalidade administrativa aplicável, em relação à respectiva conduta, seja de advertência ou de suspensão de até 30 (trinta) dias; e b) estejam atendidos os requisitos específicos previstos no respectivo ato normativo aplicável,\ndestacando-se, atualmente, o disposto no art. 63 da Portaria Normativa CGU nº 27/2022, bem como nos artigos 4º, incisos III e IV, e 12, § 5º, inciso I, da Portaria Normativa AGU nº 92/2023.", "reference": "art. 63 da Portaria Normativa CGU nº 27/2022; art. 4º, incisos III e IV, e art. 12, § 5º,\ninciso I, da Portaria Normativa AGU nº 92/2023.", "source": "Parecer nº 00002/2025/CNPAD/DECOR/CGU/AGU e Parecer nº 00002/2026/GAB/CONUNI/CGU/AGU .", "tags": ["Comissão", "Admissibilidade", "TAC"]}];
+
+    const list = document.getElementById("list");
+    const searchInput = document.getElementById("search");
+    const filtersContainer = document.getElementById("filters");
+    const resultCount = document.getElementById("resultCount");
+    const empty = document.getElementById("empty");
+    const expandAllButton = document.getElementById("expandAll");
+
+    const normalize = (value) =>
+      value
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase();
+
+    const allTags = ["Todos", ...new Set(enunciados.flatMap(item => item.tags))];
+    let selectedTag = "Todos";
+    let allExpanded = false;
+
+    function escapeHtml(value) {
+      const div = document.createElement("div");
+      div.textContent = value || "";
+      return div.innerHTML;
+    }
+
+    function cardTemplate(item) {
+      const tags = item.tags
+        .map(tag => `<span class="tag">${escapeHtml(tag)}</span>`)
+        .join("");
+
+      return `
+        <article class="card" id="enunciado-${item.number}" data-number="${item.number}" data-tags="${escapeHtml(item.tags.join(" "))}">
+          <button class="card__button" type="button" aria-expanded="false" aria-controls="content-${item.number}">
+            <span class="number">nº ${item.number}</span>
+            <span>
+              <h2 class="card__heading">${escapeHtml(item.title)}</h2>
+              <span class="tags">${tags}</span>
+            </span>
+            <span class="chevron" aria-hidden="true"></span>
+          </button>
+
+          <div class="card__content" id="content-${item.number}">
+            <span class="official-label">Texto oficial</span>
+            <p class="official-text">${escapeHtml(item.statement)}</p>
+
+            <div class="legal-box">
+              <div class="legal-item">
+                <strong>Referência normativa</strong>
+                <span>${escapeHtml(item.reference || "Não indicada no extrato.")}</span>
+              </div>
+              <div class="legal-item">
+                <strong>Fonte</strong>
+                <span>${escapeHtml(item.source || "Não indicada no extrato.")}</span>
+              </div>
+            </div>
+
+            <div class="card__actions">
+              <button class="small-button copy-link" type="button" data-number="${item.number}">Copiar link deste enunciado</button>
+              <a class="small-button" href="enunciados_AGU.pdf" target="_blank" rel="noopener noreferrer">Conferir no PDF</a>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    list.innerHTML = enunciados.map(cardTemplate).join("");
+
+    allTags.forEach(tag => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "filter";
+      button.textContent = tag;
+      button.setAttribute("aria-pressed", tag === "Todos" ? "true" : "false");
+      button.addEventListener("click", () => {
+        selectedTag = tag;
+        document.querySelectorAll(".filter").forEach(item => {
+          item.setAttribute("aria-pressed", String(item === button));
+        });
+        applyFilters();
+      });
+      filtersContainer.appendChild(button);
+    });
+
+    function toggleCard(card, forceOpen = null) {
+      const button = card.querySelector(".card__button");
+      const shouldOpen = forceOpen === null
+        ? !card.classList.contains("is-open")
+        : forceOpen;
+
+      card.classList.toggle("is-open", shouldOpen);
+      button.setAttribute("aria-expanded", String(shouldOpen));
+    }
+
+    document.querySelectorAll(".card__button").forEach(button => {
+      button.addEventListener("click", () => {
+        toggleCard(button.closest(".card"));
+      });
+    });
+
+    document.querySelectorAll(".copy-link").forEach(button => {
+      button.addEventListener("click", async () => {
+        const url = `${location.origin}${location.pathname}#enunciado-${button.dataset.number}`;
+        try {
+          await navigator.clipboard.writeText(url);
+          const original = button.textContent;
+          button.textContent = "Link copiado";
+          setTimeout(() => button.textContent = original, 1600);
+        } catch {
+          window.prompt("Copie o endereço:", url);
+        }
+      });
+    });
+
+    function applyFilters() {
+      const query = normalize(searchInput.value.trim());
+      let visible = 0;
+
+      enunciados.forEach(item => {
+        const card = document.getElementById(`enunciado-${item.number}`);
+        const haystack = normalize([
+          item.number,
+          item.title,
+          item.statement,
+          item.reference,
+          item.source,
+          item.tags.join(" ")
+        ].join(" "));
+
+        const matchesSearch = !query || haystack.includes(query);
+        const matchesTag = selectedTag === "Todos" || item.tags.includes(selectedTag);
+        const show = matchesSearch && matchesTag;
+
+        card.hidden = !show;
+        if (show) visible += 1;
+      });
+
+      resultCount.textContent = `${visible} ${visible === 1 ? "enunciado encontrado" : "enunciados encontrados"}`;
+      empty.classList.toggle("is-visible", visible === 0);
+    }
+
+    searchInput.addEventListener("input", applyFilters);
+
+    expandAllButton.addEventListener("click", () => {
+      allExpanded = !allExpanded;
+      document.querySelectorAll(".card:not([hidden])").forEach(card => {
+        toggleCard(card, allExpanded);
+      });
+      expandAllButton.textContent = allExpanded ? "Fechar todos" : "Abrir todos";
+    });
+
+    function openFromHash() {
+      const match = location.hash.match(/^#enunciado-(\d+)$/);
+      if (!match) return;
+      const card = document.getElementById(`enunciado-${match[1]}`);
+      if (!card) return;
+      toggleCard(card, true);
+      setTimeout(() => card.scrollIntoView({ behavior: "smooth", block: "start" }), 120);
+    }
+
+    window.addEventListener("hashchange", openFromHash);
+    openFromHash();
+  </script>
+</body>
+</html>
